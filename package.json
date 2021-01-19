@@ -4,7 +4,13 @@
   "description": "The Democracy Club design system",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "watch:sass": "sass --watch src-sass/system-demo.scss src-site/styles/system.css",
+    "build:sass": "sass src-sass/system-demo.scss src-site/styles/system.css",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/DemocracyClub/design-system/issues"
   },
-  "homepage": "https://github.com/DemocracyClub/design-system#readme"
+  "homepage": "https://github.com/DemocracyClub/design-system#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.32.4"
+  }
 }
