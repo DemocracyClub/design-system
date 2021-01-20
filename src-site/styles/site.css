@@ -1,0 +1,94 @@
+html {
+  font-family: monospace;
+  font-size: 100%;
+  color: #000;
+  line-height: 1.5;
+  --dark: #000;
+  --light: #fff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+code {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 0.125em;
+}
+
+body > div {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+body > div > * {
+  padding: 3rem;
+  flex-basis: 10rem;
+}
+
+main {
+  flex-grow: 1;
+  flex-basis: calc(100% - 10rem);
+  min-height: 100vh;
+  outline: 1px dashed;
+  min-width: min(30rem, 100%);
+  overflow: hidden;
+}
+
+[href="#main"] {
+  position: absolute;
+  top: -5rem;
+}
+
+[href="#main"]:focus {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+nav > * + *, main > * + * {
+  margin-top: 1.5rem;
+}
+
+.site-grid {
+  display: grid;
+  grid-gap: 0.75rem;
+  --minimum: 10rem;
+}
+
+@supports (width: min(var(--minimum), 100%)) {
+  .site-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+  }
+}
+
+.site-grid-colors {
+  text-align: center;
+}
+
+.site-grid-color {
+  height: 10rem;
+  border: 1px solid;
+}
+
+.site-resizer {
+  resize: horizontal;
+}
+
+.site-nowrap {
+  white-space: nowrap;
+}
+
+
+

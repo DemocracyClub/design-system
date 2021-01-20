@@ -1,0 +1,28 @@
+// Generate color classes
+
+$colors: (
+  black: $black,
+  white: $white,
+  pink: $pink,
+  pinkSafe: $pinkSafe,
+  blue: $blue,
+  blueSafe: $blueSafe,
+  green: $green,
+  greenSafe: $greenSafe
+);
+
+@mixin color-modifiers($attribute: 'color') {
+  @each $name, $hex in $colors {
+    &-#{$name} {
+      #{$attribute}: $hex;
+    }
+  }
+}
+
+.ds-color {
+  @include color-modifiers($attribute: 'background-color');
+}
+
+.ds-background-color {
+  @include color-modifiers($attribute: 'background-color');
+}

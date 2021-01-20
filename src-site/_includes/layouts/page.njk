@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="{{ site.basedir }}images/favicon.svg">
+    <link rel="stylesheet" href="{{ site.basedir }}styles/site.css" />
+    <link rel="stylesheet" href="{{ site.basedir }}styles/system.css" />
+    <title>{{ title }} {% if not home %}({{ site.name }}){% endif %}</title>
+  </head>
+  <body>
+    <a href="#main">skip to content</a>
+    <div>
+      <nav>
+        <h2>Basics</h2>
+        <ul>
+          {%- for basic in collections.basicsAscending %}
+          <li>
+            <a href="{{basic.url}}">{{basic.data.title}}</a>
+          </li>
+          {%- endfor  %}
+        </ul>
+        <h2>Components</h2>
+        <ul>
+          {%- for component in collections.componentsAscending %}
+          <li>
+            <a href="{{component.url}}">{{component.data.title}}</a>
+          </li>
+          {%- endfor  %}
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <h1>{{ title }}</h1>
+        {{ content | safe }}
+      </main>
+    </div>
+  </body>
+</html>

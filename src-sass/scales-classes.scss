@@ -1,0 +1,24 @@
+// Generate scale classes
+
+$points: (
+  s1: $s1,
+  s2: $s2,
+  s3: $s3,
+  s4: $s4,
+  s5: $s5,
+  s6: $s6,
+  s7: $s7,
+  s8: $s8,
+);
+
+@mixin scale-modifiers($attribute: 'font-size') {
+  @each $name, $point in $points {
+    &-#{$name} {
+      #{$attribute}: $point;
+    }
+  }
+}
+
+.ds-font-size {
+  @include scale-modifiers($attribute: 'font-size');
+}
