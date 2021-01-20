@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: './src-site',
-      output: './docs'
+      output: './_site'
     },
     passthroughFileCopy: true
   };

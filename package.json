@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
+    "build:eleventy": "eleventy --output=docs",
     "watch:sass": "sass --watch src-sass/system-demo.scss src-site/styles/system.css",
     "build:sass": "sass src-sass/system-demo.scss src-site/styles/system.css",
     "start": "npm-run-all build:sass --parallel watch:*",
