@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="{{ site.basedir }}images/favicon.svg">
-    <link rel="stylesheet" href="{{ site.basedir }}styles/site.css" />
-    <link rel="stylesheet" href="{{ site.basedir }}styles/system.css" />
+    <link rel="icon" type="image/svg+xml" href="{{ site.basedir }}/images/favicon.svg">
+    <link rel="stylesheet" href="{{ site.basedir }}/styles/site.css" />
+    <link rel="stylesheet" href="{{ site.basedir }}/styles/system.css" />
     <title>{{ title }} {% if not home %}({{ site.name }}){% endif %}</title>
   </head>
   <body>
@@ -12,13 +12,13 @@
     <div>
       <nav>
         <a href="{{site.basedir}}">
-          <img class="site-logo" src="{{site.basedir}}images/logo.svg" alt="Design system homepage" />
+          <img class="site-logo" src="{{site.basedir}}/images/logo.svg" alt="Design system homepage" />
         </a>
         <h2>Basics</h2>
         <ul>
           {%- for basic in collections.basicsAscending %}
           <li>
-            <a href="{{basic.url}}">{{basic.data.title}}</a>
+            <a href="{{site.basedir}}{{basic.url}}">{{basic.data.title}}</a>
           </li>
           {%- endfor  %}
         </ul>
@@ -26,7 +26,7 @@
         <ul>
           {%- for component in collections.componentsAscending %}
           <li>
-            <a href="{{component.url}}">{{component.data.title}}</a>
+            <a href="{{site.basedir}}{{component.url}}">{{component.data.title}}</a>
           </li>
           {%- endfor  %}
         </ul>
