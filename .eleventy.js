@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPassthroughCopy('src-site/styles');
-  eleventyConfig.addPassthroughCopy('src-images/images');
+  eleventyConfig.addPassthroughCopy('src-site/images');
 
   eleventyConfig.addCollection('basicsAscending', (collection) =>
     collection.getFilteredByGlob('src-site/basics/*.md').sort((a, b) => {

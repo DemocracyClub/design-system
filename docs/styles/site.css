@@ -25,6 +25,12 @@ code {
   padding: 0.125em;
 }
 
+.site-logo {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+}
+
 body > div {
   display: flex;
   min-height: 100vh;
@@ -35,12 +41,12 @@ body > div {
 
 body > div > * {
   padding: 3rem;
-  flex-basis: 10rem;
+  flex-basis: 20rem;
 }
 
 main {
   flex-grow: 1;
-  flex-basis: calc(100% - 10rem);
+  flex-basis: calc(100% - 20rem);
   min-height: 100vh;
   outline: 1px dashed;
   min-width: min(30rem, 100%);
