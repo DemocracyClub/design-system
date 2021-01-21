@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy --output=docs",
+    "build:eleventy": "cross-env DESTINATION=github eleventy --output=docs",
     "exportSass": "sass-export src-sass/*.scss -o src-site/_data/sass.json --dependencies src-sass/",
     "watch:sass": "sass --watch src-sass/system-demo.scss src-site/styles/system.css",
     "build:sass": "sass src-sass/system-demo.scss src-site/styles/system.css",
     "start": "npm run exportSass && npm-run-all build:sass --parallel watch:*",
-    "build": "cross-env DESTINATION=github npm run exportSass && npm-run-all build:*"
+    "build": "npm run exportSass && npm-run-all build:*"
   },
   "repository": {
     "type": "git",
