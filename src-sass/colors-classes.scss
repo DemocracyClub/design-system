@@ -1,14 +1,15 @@
+@import 'colors.scss';
 // Generate color classes
 
 $colors: (
   black: $black,
   white: $white,
-  pink: $pink,
-  pinkSafe: $pinkSafe,
-  blue: $blue,
-  blueSafe: $blueSafe,
-  green: $green,
-  greenSafe: $greenSafe
+  pinkAccent: $pinkAccent,
+  pinkForWhite: $pinkForWhite,
+  blueForWhite: $blueForWhite,
+  blueForBlack: $blueForBlack,
+  greenForWhite: $greenForWhite,
+  greenForBlack: $greenForBlack
 );
 
 @mixin color-modifiers($attribute: 'color') {
@@ -20,9 +21,9 @@ $colors: (
 }
 
 .ds-color {
-  @include color-modifiers($attribute: 'background-color');
+  @include color-modifiers($attribute: 'color');
 }
 
-.ds-background-color {
+.ds-bg-color {
   @include color-modifiers($attribute: 'background-color');
 }

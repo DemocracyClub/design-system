@@ -1,0 +1,307 @@
+{
+  "variables": [
+    {
+      "name": "$colors",
+      "value": "( black: $black, white: $white, pinkAccent: $pinkAccent, pinkForWhite: $pinkForWhite, blueForWhite: $blueForWhite, blueForBlack: $blueForBlack, greenForWhite: $greenForWhite, greenForBlack: $greenForBlack )",
+      "mapValue": [
+        {
+          "name": "black",
+          "value": "$black",
+          "compiledValue": "#403F41"
+        },
+        {
+          "name": "white",
+          "value": "$white",
+          "compiledValue": "#fff"
+        },
+        {
+          "name": "pinkAccent",
+          "value": "$pinkAccent",
+          "compiledValue": "#EE008C"
+        },
+        {
+          "name": "pinkForWhite",
+          "value": "$pinkForWhite",
+          "compiledValue": "#D6007F"
+        },
+        {
+          "name": "blueForWhite",
+          "value": "$blueForWhite",
+          "compiledValue": "#007CAD"
+        },
+        {
+          "name": "blueForBlack",
+          "value": "$blueForBlack",
+          "compiledValue": "#00B6FF"
+        },
+        {
+          "name": "greenForWhite",
+          "value": "$greenForWhite",
+          "compiledValue": "#32841A"
+        },
+        {
+          "name": "greenForBlack",
+          "value": "$greenForBlack",
+          "compiledValue": "#4BC427"
+        }
+      ],
+      "compiledValue": "(black: #403F41, white: #fff, pinkAccent: #EE008C, pinkForWhite: #D6007F, blueForWhite: #007CAD, blueForBlack: #00B6FF, greenForWhite: #32841A, greenForBlack: #4BC427)"
+    },
+    {
+      "name": "$black",
+      "value": "#403F41",
+      "compiledValue": "#403F41"
+    },
+    {
+      "name": "$white",
+      "value": "#fff",
+      "compiledValue": "#fff"
+    },
+    {
+      "name": "$pinkAccent",
+      "value": "#EE008C",
+      "compiledValue": "#EE008C"
+    },
+    {
+      "name": "$pinkForWhite",
+      "value": "#D6007F",
+      "compiledValue": "#D6007F"
+    },
+    {
+      "name": "$blueForWhite",
+      "value": "#007CAD",
+      "compiledValue": "#007CAD"
+    },
+    {
+      "name": "$blueForBlack",
+      "value": "#00B6FF",
+      "compiledValue": "#00B6FF"
+    },
+    {
+      "name": "$greenForWhite",
+      "value": "#32841A",
+      "compiledValue": "#32841A"
+    },
+    {
+      "name": "$greenForBlack",
+      "value": "#4BC427",
+      "compiledValue": "#4BC427"
+    },
+    {
+      "name": "$points",
+      "value": "( s1: $s1, s2: $s2, s3: $s3, s4: $s4, s5: $s5, s6: $s6, s7: $s7, s8: $s8, )",
+      "mapValue": [
+        {
+          "name": "s1",
+          "value": "$s1",
+          "compiledValue": "1rem"
+        },
+        {
+          "name": "s2",
+          "value": "$s2",
+          "compiledValue": "1.25rem"
+        },
+        {
+          "name": "s3",
+          "value": "$s3",
+          "compiledValue": "1.5625rem"
+        },
+        {
+          "name": "s4",
+          "value": "$s4",
+          "compiledValue": "1.95312rem"
+        },
+        {
+          "name": "s5",
+          "value": "$s5",
+          "compiledValue": "2.44141rem"
+        },
+        {
+          "name": "s6",
+          "value": "$s6",
+          "compiledValue": "3.05176rem"
+        },
+        {
+          "name": "s7",
+          "value": "$s7",
+          "compiledValue": "3.8147rem"
+        },
+        {
+          "name": "s8",
+          "value": "$s8",
+          "compiledValue": "4.76837rem"
+        }
+      ],
+      "compiledValue": "(s1: 1rem, s2: 1.25rem, s3: 1.5625rem, s4: 1.95312rem, s5: 2.44141rem, s6: 3.05176rem, s7: 3.8147rem, s8: 4.76837rem)"
+    },
+    {
+      "name": "$pointsSmall",
+      "value": "( ss1: $ss1, ss2: $ss2, ss3: $ss3, ss4: $ss4, ss5: $ss5, ss6: $ss6, ss7: $ss7, ss8: $ss8, )",
+      "mapValue": [
+        {
+          "name": "ss1",
+          "value": "$ss1",
+          "compiledValue": "0.125rem"
+        },
+        {
+          "name": "ss2",
+          "value": "$ss2",
+          "compiledValue": "0.25rem"
+        },
+        {
+          "name": "ss3",
+          "value": "$ss3",
+          "compiledValue": "0.375rem"
+        },
+        {
+          "name": "ss4",
+          "value": "$ss4",
+          "compiledValue": "0.5rem"
+        },
+        {
+          "name": "ss5",
+          "value": "$ss5",
+          "compiledValue": "0.625rem"
+        },
+        {
+          "name": "ss6",
+          "value": "$ss6",
+          "compiledValue": "0.75rem"
+        },
+        {
+          "name": "ss7",
+          "value": "$ss7",
+          "compiledValue": "0.875rem"
+        },
+        {
+          "name": "ss8",
+          "value": "$ss8",
+          "compiledValue": "1rem"
+        }
+      ],
+      "compiledValue": "(ss1: 0.125rem, ss2: 0.25rem, ss3: 0.375rem, ss4: 0.5rem, ss5: 0.625rem, ss6: 0.75rem, ss7: 0.875rem, ss8: 1rem)"
+    },
+    {
+      "name": "$value",
+      "value": "1",
+      "compiledValue": "1"
+    },
+    {
+      "name": "$ratio",
+      "value": "1.25",
+      "compiledValue": "1.25"
+    },
+    {
+      "name": "$s1",
+      "value": "1rem",
+      "compiledValue": "1rem"
+    },
+    {
+      "name": "$s2",
+      "value": "#{$ratio}rem",
+      "compiledValue": "1.25rem"
+    },
+    {
+      "name": "$s3",
+      "value": "#{pow($ratio, 2)}rem",
+      "compiledValue": "1.5625rem"
+    },
+    {
+      "name": "$s4",
+      "value": "#{pow($ratio, 3)}rem",
+      "compiledValue": "1.95312rem"
+    },
+    {
+      "name": "$s5",
+      "value": "#{pow($ratio, 4)}rem",
+      "compiledValue": "2.44141rem"
+    },
+    {
+      "name": "$s6",
+      "value": "#{pow($ratio, 5)}rem",
+      "compiledValue": "3.05176rem"
+    },
+    {
+      "name": "$s7",
+      "value": "#{pow($ratio, 6)}rem",
+      "compiledValue": "3.8147rem"
+    },
+    {
+      "name": "$s8",
+      "value": "#{pow($ratio, 7)}rem",
+      "compiledValue": "4.76837rem"
+    },
+    {
+      "name": "$increment-small-scale",
+      "value": "0.125rem",
+      "compiledValue": "0.125rem"
+    },
+    {
+      "name": "$ss1",
+      "value": "$increment-small-scale",
+      "compiledValue": "0.125rem"
+    },
+    {
+      "name": "$ss2",
+      "value": "$ss1 + $increment-small-scale",
+      "compiledValue": "0.25rem"
+    },
+    {
+      "name": "$ss3",
+      "value": "$ss2 + $increment-small-scale",
+      "compiledValue": "0.375rem"
+    },
+    {
+      "name": "$ss4",
+      "value": "$ss3 + $increment-small-scale",
+      "compiledValue": "0.5rem"
+    },
+    {
+      "name": "$ss5",
+      "value": "$ss4 + $increment-small-scale",
+      "compiledValue": "0.625rem"
+    },
+    {
+      "name": "$ss6",
+      "value": "$ss5 + $increment-small-scale",
+      "compiledValue": "0.75rem"
+    },
+    {
+      "name": "$ss7",
+      "value": "$ss6 + $increment-small-scale",
+      "compiledValue": "0.875rem"
+    },
+    {
+      "name": "$ss8",
+      "value": "$ss7 + $increment-small-scale",
+      "compiledValue": "1rem"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "color-modifiers",
+      "parameters": [
+        "$attribute: 'color'"
+      ]
+    },
+    {
+      "name": "scale-modifiers",
+      "parameters": [
+        "$attribute: 'font-size'"
+      ]
+    },
+    {
+      "name": "small-scale-modifiers",
+      "parameters": [
+        "$attribute: 'height'"
+      ]
+    },
+    {
+      "name": "pow",
+      "parameters": [
+        "$number",
+        "$exponent"
+      ]
+    }
+  ]
+}

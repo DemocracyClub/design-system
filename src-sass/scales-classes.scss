@@ -1,4 +1,6 @@
-// Generate scale classes
+@import 'scales.scss';
+
+// Generate large scale classes
 
 $points: (
   s1: $s1,
@@ -21,4 +23,29 @@ $points: (
 
 .ds-font-size {
   @include scale-modifiers($attribute: 'font-size');
+}
+
+// Generate small scale classes
+
+$pointsSmall: (
+  ss1: $ss1,
+  ss2: $ss2,
+  ss3: $ss3,
+  ss4: $ss4,
+  ss5: $ss5,
+  ss6: $ss6,
+  ss7: $ss7,
+  ss8: $ss8,
+);
+
+@mixin small-scale-modifiers($attribute: 'height') {
+  @each $name, $point in $pointsSmall {
+    &-#{$name} {
+      #{$attribute}: $point;
+    }
+  }
+}
+
+.ds-height {
+  @include small-scale-modifiers($attribute: 'height');
 }

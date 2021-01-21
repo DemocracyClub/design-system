@@ -19,10 +19,23 @@ body {
   box-sizing: border-box;
 }
 
+h1,h2,h3,h4,h5,h6,p,li,dt,dd {
+  max-width: 80ch;
+}
+
 code {
   background-color: var(--dark);
   color: var(--light);
   padding: 0.125em;
+}
+
+ul {
+  margin-left: 2.25rem;
+}
+
+code[class^="language-"] {
+  display: block;
+  padding: 1rem;
 }
 
 .site-logo {
@@ -64,7 +77,7 @@ main {
 }
 
 nav > * + *, main > * + * {
-  margin-top: 1.5rem;
+  margin-top: 2.25rem;
 }
 
 .site-grid {
@@ -79,12 +92,9 @@ nav > * + *, main > * + * {
   }
 }
 
-.site-grid-colors {
-  text-align: center;
-}
-
-.site-grid-color {
-  height: 10rem;
+.site-swatch {
+  width: 2.25rem;
+  height: 2.25rem;
   border: 1px solid;
 }
 
@@ -96,5 +106,28 @@ nav > * + *, main > * + * {
   white-space: nowrap;
 }
 
+.site-block-black {
+  background-color: #000;
+}
 
+.site-stack > * + * {
+  margin-top: var(--stack-space, 2.25rem);
+}
+
+[class*="site-note"] {
+  padding: 1rem;
+  border: 1px solid;
+}
+
+table.site-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.site-table th, table.site-table td {
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid;
+  vertical-align: middle;
+}
 

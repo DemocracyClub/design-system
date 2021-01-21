@@ -7,10 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy --output=docs",
+    "exportSass": "sass-export src-sass/*.scss -o src-site/_data/sass.json --dependencies src-sass/",
     "watch:sass": "sass --watch src-sass/system-demo.scss src-site/styles/system.css",
     "build:sass": "sass src-sass/system-demo.scss src-site/styles/system.css",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "cross-env DESTINATION=github npm-run-all build:*"
+    "start": "npm run exportSass && npm-run-all build:sass --parallel watch:*",
+    "build": "cross-env DESTINATION=github npm run exportSass && npm-run-all build:*"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "@11ty/eleventy": "^0.11.1",
     "cross-env": "^7.0.3",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.32.4"
+    "sass": "^1.32.5",
+    "sass-export": "^1.0.6",
+    "slugify": "^1.4.6"
   }
 }

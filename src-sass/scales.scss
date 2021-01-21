@@ -23,13 +23,13 @@ $s8: #{pow($ratio, 7)}rem;
 
 // Small scale (from 0.125rem to 1rem)
 
-$increment: 0.125rem;
+$increment-small-scale: 0.125rem;
 
-$ss1: $increment;
-$ss2: $ss1 + $increment;
-$ss3: $ss2 + $increment;
-$ss4: $ss3 + $increment;
-$ss5: $ss4 + $increment;
-$ss6: $ss5 + $increment;
-$ss7: $ss6 + $increment;
-$ss8: $ss7 + $increment;
+$ss1: $increment-small-scale;
+$ss2: $ss1 + $increment-small-scale;
+$ss3: $ss2 + $increment-small-scale;
+$ss4: $ss3 + $increment-small-scale;
+$ss5: $ss4 + $increment-small-scale;
+$ss6: $ss5 + $increment-small-scale;
+$ss7: $ss6 + $increment-small-scale;
+$ss8: $ss7 + $increment-small-scale;

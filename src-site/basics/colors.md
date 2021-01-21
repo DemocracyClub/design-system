@@ -2,37 +2,84 @@
 title: Colors
 ---
 
-<div class="site-grid site-grid-colors">
-  <figure>
-    <div class="site-grid-color ds-background-color-black"></div>
-    <figcaption>$black</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-white"></div>
-    <figcaption>$white</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-pink"></div>
-    <figcaption>$pink</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-pinkSafe"></div>
-    <figcaption>$pinkSafe</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-blue"></div>
-    <figcaption>$blue</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-blueSafe"></div>
-    <figcaption>$blueSafe</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-green"></div>
-    <figcaption>$green</figcaption>
-  </figure>
-  <figure>
-    <div class="site-grid-color ds-background-color-greenSafe"></div>
-    <figcaption>$greenSafe</figcaption>
-  </figure>
-</div>
+<table class="site-table">
+  <tr>
+    <th>Token</th>
+    <th>Value</th>
+    <th>Demo</th>
+  </tr>
+  <tr>
+    <td><code>$black</code></td>
+    <td>{% var '$black' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-black"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$white</code></td>
+    <td>{% var '$white' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-white"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$pinkAccent</code></td>
+    <td>{% var '$pinkAccent' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-pinkAccent"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$pinkForWhite</code></td>
+    <td>{% var '$pinkForWhite' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-pinkForWhite"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$blueForWhite</code></td>
+    <td>{% var '$blueForWhite' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-blueForWhite"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$blueForBlack</code></td>
+    <td>{% var '$blueForBlack' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-blueForBlack"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$greenForWhite</code></td>
+    <td>{% var '$greenForWhite' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-greenForWhite"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$greenForBlack</code></td>
+    <td>{% var '$greenForBlack' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-greenForBlack"></div>
+    </td>
+  </tr>
+</table>
+
+## Accessible pairings
+
+As the names suggest, the “forWhite” colors can be safely paired with `$white` and the “forBlack” colors can be safely paired with `$black`. For example:
+
+```css
+.ds-my-component {
+  color: $white;
+  background-color: $greenForWhite;
+}
+
+.ds-my-component-reversed {
+  color: $greenForWhite;
+  background-color: $white;
+}
+```
+
+The `$pinkAccent` color should not be used as text or as a background for text. It _can_ be used for borders or other supplemental decorations.

@@ -2,73 +2,179 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
-    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
-    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="stylesheet" href="/styles/site.css" />
+    <link rel="stylesheet" href="/styles/system.css" />
     <title>Modular scale (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
     <div>
       <nav>
-        <a href="https://DemocracyClub.github.io/design-system">
-          <img class="site-logo" src="https://DemocracyClub.github.io/design-system/images/logo.svg" alt="Design system homepage" />
+        <a href="">
+          <img class="site-logo" src="/images/logo.svg" alt="Design system homepage" />
         </a>
         <h2>Basics</h2>
         <ul>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
+            <a href="/basics/colors/">Colors</a>
           </li>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/basics/modular-scale/">Modular scale</a>
+            <a href="/basics/modular-scale/">Modular scale</a>
           </li>
         </ul>
         <h2>Components</h2>
         <ul>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/components/banner/">Banner</a>
+            <a href="/components/banner/">Banner</a>
           </li>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+            <a href="/components/button/">Button</a>
           </li>
         </ul>
       </nav>
       <main id="main" tabindex="-1">
         <h1>Modular scale</h1>
-        <div class="site-resizer">
-  <p class="site-nowrap ds-font-size-s1">
-    <code>$s1</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s2">
-    <code>$s2</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s3">
-    <code>$s3</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s4">
-    <code>$s4</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s5">
-    <code>$s5</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s6">
-    <code>$s6</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s7">
-    <code>$s7</code>
-    Democratically elected official
-  </p>
-  <p class="site-nowrap ds-font-size-s8">
-    <code>$s8</code>
-    Democratically elected official
-  </p>
+        <h2>Large scale</h2>
+<p>The large scale is designed for <code>font-size</code>, <code>padding</code>, and <code>margin</code>. It ranges from <code>$s1</code> (<code>1rem</code>) up to <code>$s8</code>:</p>
+<table class="site-table">
+  <tr>
+    <th>Token</th>
+    <th>Value</th>
+    <th>Demo</th>
+  </tr>
+  <tr>
+    <td><code>$s1</code></td>
+    <td>1rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s1">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s2</code></td>
+    <td>1.25rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s2">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s3</code></td>
+    <td>1.5625rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s3">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s4</code></td>
+    <td>1.95312rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s4">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s5</code></td>
+    <td>2.44141rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s5">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s6</code></td>
+    <td>3.05176rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s6">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s7</code></td>
+    <td>3.8147rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s7">A</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$s8</code></td>
+    <td>4.76837rem</td>
+    <td>
+      <p class="site-nowrap ds-font-size-s8">A</p>
+    </td>
+  </tr>
+</table>
+<h2>Small scale</h2>
+<p>The small scale is designed for <code>border</code>, <code>outline</code>, and smaller (hairline) spaces. It ranges from <code>$ss1</code> (<code>0.125rem</code>) to <code>$ss8</code> (<code>1rem</code>; equal to <code>$s1</code>).</p>
+<table class="site-table">
+  <tr>
+    <th>Token</th>
+    <th>Value</th>
+    <th>Demo</th>
+  </tr>
+  <tr>
+    <td><code>$ss1</code></td>
+    <td>0.125rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss1"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss2</code></td>
+    <td>0.25rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss2"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss3</code></td>
+    <td>0.375rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss3"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss4</code></td>
+    <td>0.5rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss4"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss5</code></td>
+    <td>0.625rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss5"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss6</code></td>
+    <td>0.75rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss6"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss7</code></td>
+    <td>0.875rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss7"></div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>$ss8</code></td>
+    <td>1rem</td>
+    <td>
+      <div class="site-block-black ds-height-ss8"></div>
+    </td>
+  </tr>
+</table>
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="creating-new-points">
+  <h3 id="creating-new-points">🗒️ Creating new points</h3>
+  <div class="site-stack">
+<p>It is okay to create new scale points on the fly, if needed. But they should be based on the existing scales’ algorithms. To create a 9th step in the large scale, use Sass’s multiplication operator.</p>
+<pre><code class="language-css">.ds-font-size-s9 {
+  font-size: $s8 * $ratio;
+}
+</code></pre>
 </div>
+</aside>
       </main>
     </div>
   </body>

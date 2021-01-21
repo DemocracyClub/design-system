@@ -1,51 +1,51 @@
 .ds-color-black {
-  background-color: #403F41;
+  color: #403F41;
 }
 .ds-color-white {
-  background-color: #fff;
+  color: #fff;
 }
-.ds-color-pink {
-  background-color: #EE008C;
+.ds-color-pinkAccent {
+  color: #EE008C;
 }
-.ds-color-pinkSafe {
-  background-color: #D6007F;
+.ds-color-pinkForWhite {
+  color: #D6007F;
 }
-.ds-color-blue {
-  background-color: #00ACF1;
+.ds-color-blueForWhite {
+  color: #007CAD;
 }
-.ds-color-blueSafe {
-  background-color: #007CAD;
+.ds-color-blueForBlack {
+  color: #00B6FF;
 }
-.ds-color-green {
-  background-color: #48BC25;
+.ds-color-greenForWhite {
+  color: #32841A;
 }
-.ds-color-greenSafe {
-  background-color: #32841A;
+.ds-color-greenForBlack {
+  color: #4BC427;
 }
 
-.ds-background-color-black {
+.ds-bg-color-black {
   background-color: #403F41;
 }
-.ds-background-color-white {
+.ds-bg-color-white {
   background-color: #fff;
 }
-.ds-background-color-pink {
+.ds-bg-color-pinkAccent {
   background-color: #EE008C;
 }
-.ds-background-color-pinkSafe {
+.ds-bg-color-pinkForWhite {
   background-color: #D6007F;
 }
-.ds-background-color-blue {
-  background-color: #00ACF1;
-}
-.ds-background-color-blueSafe {
+.ds-bg-color-blueForWhite {
   background-color: #007CAD;
 }
-.ds-background-color-green {
-  background-color: #48BC25;
+.ds-bg-color-blueForBlack {
+  background-color: #00B6FF;
 }
-.ds-background-color-greenSafe {
+.ds-bg-color-greenForWhite {
   background-color: #32841A;
+}
+.ds-bg-color-greenForBlack {
+  background-color: #4BC427;
 }
 
 .ds-font-size-s1 {
@@ -71,6 +71,31 @@
 }
 .ds-font-size-s8 {
   font-size: 4.768371582rem;
+}
+
+.ds-height-ss1 {
+  height: 0.125rem;
+}
+.ds-height-ss2 {
+  height: 0.25rem;
+}
+.ds-height-ss3 {
+  height: 0.375rem;
+}
+.ds-height-ss4 {
+  height: 0.5rem;
+}
+.ds-height-ss5 {
+  height: 0.625rem;
+}
+.ds-height-ss6 {
+  height: 0.75rem;
+}
+.ds-height-ss7 {
+  height: 0.875rem;
+}
+.ds-height-ss8 {
+  height: 1rem;
 }
 
 /*# sourceMappingURL=system.css.map */
