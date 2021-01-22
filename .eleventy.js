@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
     const slug = slugify(title).toLowerCase();
     return `
 <aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="${slug}">
-  <h3 id="${slug}">&#xFE0F; ${title}</h3>
+  <h3 id="${slug}">⚠️ ${title}</h3>
   <div class="site-stack">${content}</div>
 </aside>`;
   });

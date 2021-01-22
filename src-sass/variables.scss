@@ -1,0 +1,72 @@
+// Colours
+
+$black: #403F41;
+$white: #fff;
+$pinkForWhite: #E6007C;
+$blueForWhite: #007CAD;
+$blueForBlack: #00B6FF;
+$greenForWhite: #32841A;
+$greenForBlack: #4BC427;
+
+// Scales
+
+@function pow($number, $exponent) {
+  $value: 1;
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+  @return $value;
+}
+
+// Large scale
+$ratio: 1.25;
+$s1: 1rem;
+$s2: #{$ratio}rem;
+$s3: #{pow($ratio, 2)}rem;
+$s4: #{pow($ratio, 3)}rem;
+$s5: #{pow($ratio, 4)}rem;
+$s6: #{pow($ratio, 5)}rem;
+$s7: #{pow($ratio, 6)}rem;
+$s8: #{pow($ratio, 7)}rem;
+
+// Small scale
+$increment-small-scale: 0.125rem;
+$ss1: $increment-small-scale;
+$ss2: $ss1 + $increment-small-scale;
+$ss3: $ss2 + $increment-small-scale;
+$ss4: $ss3 + $increment-small-scale;
+$ss5: $ss4 + $increment-small-scale;
+$ss6: $ss5 + $increment-small-scale;
+$ss7: $ss6 + $increment-small-scale;
+$ss8: $ss7 + $increment-small-scale;
+
+// Type
+
+// Font families
+$familyStandard: Georgia, serif;
+$familySpecial: Montserrat, sans-serif;
+
+// Line heights
+$lineHeight: 1.5; // WCAG 1.4.12 recommended minimum
+$lineHeightTight: 1.125;
+
+// Measure (characters per line; used with max-width typically)
+$measure: 80ch;
+
+// Body type mixin
+@mixin fontBody {
+  font-family: $familyStandard;
+  font-weight: normal;
+  line-height: $lineHeight;
+  color: $black;
+}
+
+// Headings type mixin
+@mixin fontHeading {
+  font-family: $familySpecial;
+  font-weight: normal;
+  line-height: $lineHeightTight;
+  color: $blueForWhite;
+}

@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:eleventy": "eleventy --serve",
+    "watch:eleventy": "npm run exportSass && eleventy --serve",
     "build:eleventy": "cross-env DESTINATION=github eleventy --output=docs",
-    "exportSass": "sass-export src-sass/*.scss -o src-site/_data/sass.json --dependencies src-sass/",
+    "exportSass": "sass-export src-sass/variables.scss -o src-site/_data/sass.json --dependencies src-sass/",
     "watch:sass": "sass --watch src-sass/system-demo.scss src-site/styles/system.css",
     "build:sass": "sass src-sass/system-demo.scss src-site/styles/system.css",
-    "start": "npm run exportSass && npm-run-all build:sass --parallel watch:*",
+    "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm run exportSass && npm-run-all build:*"
   },
   "repository": {

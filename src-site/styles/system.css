@@ -4,11 +4,8 @@
 .ds-color-white {
   color: #fff;
 }
-.ds-color-pinkAccent {
-  color: #EE008C;
-}
 .ds-color-pinkForWhite {
-  color: #D6007F;
+  color: #E6007C;
 }
 .ds-color-blueForWhite {
   color: #007CAD;
@@ -29,11 +26,8 @@
 .ds-bg-color-white {
   background-color: #fff;
 }
-.ds-bg-color-pinkAccent {
-  background-color: #EE008C;
-}
 .ds-bg-color-pinkForWhite {
-  background-color: #D6007F;
+  background-color: #E6007C;
 }
 .ds-bg-color-blueForWhite {
   background-color: #007CAD;
@@ -96,6 +90,77 @@
 }
 .ds-height-ss8 {
   height: 1rem;
+}
+
+.ds-type {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #403F41;
+}
+.ds-type input,
+.ds-type button,
+.ds-type textarea,
+.ds-type select {
+  font: inherit;
+}
+.ds-type small {
+  font-size: 0.875rem;
+}
+.ds-type h1, .ds-type h2, .ds-type h3, .ds-type h4, .ds-type h5, .ds-type h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  line-height: 1.125;
+  color: #007CAD;
+}
+.ds-type h1 {
+  font-size: 3.8146972656rem;
+}
+.ds-type h2 {
+  font-size: 3.0517578125rem;
+}
+.ds-type h3 {
+  font-size: 2.44140625rem;
+}
+.ds-type h4 {
+  font-size: 1.953125rem;
+}
+.ds-type h5 {
+  font-size: 1.5625rem;
+}
+.ds-type h6 {
+  font-size: 0.25rem;
+}
+.ds-type a {
+  color: inherit;
+  text-decoration: underline;
+}
+.ds-type ul:not([class]), .ds-type ol:not([class]) {
+  margin-left: 1.953125rem;
+}
+
+[class*=ds-stack] > * {
+  margin: 0;
+}
+
+.ds-stack-largest > * + * {
+  margin-top: 3.8146972656rem;
+}
+
+.ds-stack-larger > * + * {
+  margin-top: 2.44140625rem;
+}
+
+.ds-stack > * + * {
+  margin-top: 1.5625rem;
+}
+
+.ds-stack-smaller > * + * {
+  margin-top: 0.875rem;
+}
+
+.ds-stack-smallest > * + * {
+  margin-top: 0.5rem;
 }
 
 /*# sourceMappingURL=system.css.map */

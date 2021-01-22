@@ -23,13 +23,6 @@ title: Colors
     </td>
   </tr>
   <tr>
-    <td><code>$pinkAccent</code></td>
-    <td>{% var '$pinkAccent' %}</td>
-    <td>
-      <div class="site-swatch ds-bg-color-pinkAccent"></div>
-    </td>
-  </tr>
-  <tr>
     <td><code>$pinkForWhite</code></td>
     <td>{% var '$pinkForWhite' %}</td>
     <td>
@@ -82,4 +75,4 @@ As the names suggest, the “forWhite” colors can be safely paired with `$whit
 }
 ```
 
-The `$pinkAccent` color should not be used as text or as a background for text. It _can_ be used for borders or other supplemental decorations.
+The is no `$pinkForBlack` because we tried to make one and it looked _gross_.

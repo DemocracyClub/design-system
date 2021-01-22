@@ -29,13 +29,14 @@ code {
   padding: 0.125em;
 }
 
-ul {
-  margin-left: 2.25rem;
-}
-
 code[class^="language-"] {
   display: block;
   padding: 1rem;
+  white-space: pre-wrap;
+}
+
+ul {
+  margin-left: 2.25rem;
 }
 
 .site-logo {
@@ -129,5 +130,9 @@ table.site-table th, table.site-table td {
   padding: 0.75rem;
   border: 1px solid;
   vertical-align: middle;
+}
+
+.site-box-dashed {
+  border: 1px dashed;
 }
 

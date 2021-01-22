@@ -1,0 +1,35 @@
+// Scoped design system typography
+.ds-type {
+  @include fontBody;
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  small {
+    font-size: $ss7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @include fontHeading;
+  }
+
+  h1 { font-size: $s7 }
+  h2 { font-size: $s6 }
+  h3 { font-size: $s5 }
+  h4 { font-size: $s4 }
+  h5 { font-size: $s3 }
+  h6 { font-size: $ss2 }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  ul:not([class]), ol:not([class]) {
+    margin-left: $s4;
+  }
+}
