@@ -57,6 +57,13 @@ title: Colors
       <div class="site-swatch ds-bg-color-greenForBlack"></div>
     </td>
   </tr>
+  <tr>
+    <td><code>$amber</code></td>
+    <td>{% var '$amber' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-amber"></div>
+    </td>
+  </tr>
 </table>
 
 ## Accessible pairings

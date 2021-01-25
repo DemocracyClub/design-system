@@ -36,6 +36,11 @@
       "compiledValue": "#4BC427"
     },
     {
+      "name": "$amber",
+      "value": "#FFC037",
+      "compiledValue": "#FFC037"
+    },
+    {
       "name": "$value",
       "value": "1",
       "compiledValue": "1"
@@ -131,14 +136,14 @@
       "compiledValue": "1rem"
     },
     {
-      "name": "$familyStandard",
-      "value": "Georgia, serif",
-      "compiledValue": "Georgia, serif"
-    },
-    {
-      "name": "$familySpecial",
+      "name": "$familyMain",
       "value": "Montserrat, sans-serif",
       "compiledValue": "Montserrat, sans-serif"
+    },
+    {
+      "name": "$familyBody",
+      "value": "Georgia, serif",
+      "compiledValue": "Georgia, serif"
     },
     {
       "name": "$lineHeight",
@@ -165,11 +170,11 @@
       ]
     },
     {
-      "name": "fontBody",
+      "name": "fontMain",
       "parameters": []
     },
     {
-      "name": "fontHeading",
+      "name": "fontBody",
       "parameters": []
     }
   ]

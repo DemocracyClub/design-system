@@ -1,7 +1,16 @@
+// This file is for the design system site only.
+// Do not import it for production use
+
+$scope-type: true;
+
 @import 'variables.scss';
+@import 'type.scss';
+@import 'button.scss';
+@import 'call-to-action.scss';
+@import 'stack.scss';
+
+// Generate atomic classes for documentation demos
 @import 'classes-colors.scss';
 @import 'classes-scales.scss';
-@import 'type.scss';
-@import 'stack.scss';
 
 

@@ -1,5 +1,0 @@
----
-title: Banner
----
-
-TODO (banner)

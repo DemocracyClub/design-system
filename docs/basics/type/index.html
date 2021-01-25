@@ -29,10 +29,10 @@
         <h2>Components</h2>
         <ul>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/components/banner/">Banner</a>
+            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
           </li>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+            <a href="https://DemocracyClub.github.io/design-system/components/call-to-action/">Call-to-action</a>
           </li>
           <li>
             <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
@@ -41,7 +41,8 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Type</h1>
-        <h2>Headings</h2>
+        <p>These are the basic typography styles. Typically, you should simply <code>@import</code> them in your <code>index.scss</code> file. However, you can scope them to the <code>.dc-type</code> class by setting <code>$scope-type</code> to <code>true</code>. This allows you to sandbox the styles to a particular section of your production site, to avoid conflicts. The scoping option can also be used to bump up specificity where existing (non design system) styles are taking precedence. You can place <code>class=&quot;ds-type&quot;</code> on the body element if this is all you need.</p>
+<h2>Headings</h2>
 <table class="site-table">
   <tr>
     <th>Markup</th>
@@ -49,9 +50,7 @@
   </tr>
   <tr>
     <td>
-<pre><code class="language-html">&lt;div class=&quot;dc-type&quot;&gt;
-  &lt;h1&gt;Who can I vote for&lt;/h1&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;h1&gt;Who can I vote for&lt;/h1&gt;
 </code></pre>
 </td>
     <td class="ds-type">
@@ -60,9 +59,7 @@
   </tr>
   <tr>
     <td>
-<pre><code class="language-html">&lt;div class=&quot;dc-type&quot;&gt;
-  &lt;h2&gt;Who can I vote for&lt;/h2&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;h2&gt;Who can I vote for&lt;/h2&gt;
 </code></pre>
 </td>
     <td class="ds-type">
@@ -71,9 +68,7 @@
   </tr>
   <tr>
     <td>
-<pre><code class="language-html">&lt;div class=&quot;dc-type&quot;&gt;
-  &lt;h3&gt;Who can I vote for&lt;/h3&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;h3&gt;Who can I vote for&lt;/h3&gt;
 </code></pre>
 </td>
     <td class="ds-type">
@@ -82,9 +77,7 @@
   </tr>
   <tr>
     <td>
-<pre><code class="language-html">&lt;div class=&quot;dc-type&quot;&gt;
-  &lt;h4&gt;Who can I vote for&lt;/h4&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;h4&gt;Who can I vote for&lt;/h4&gt;
 </code></pre>
 </td>
     <td class="ds-type">
@@ -93,9 +86,7 @@
   </tr>
   <tr>
     <td>
-<pre><code class="language-html">&lt;div class=&quot;dc-type&quot;&gt;
-  &lt;h5&gt;Who can I vote for&lt;/h5&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;h5&gt;Who can I vote for&lt;/h5&gt;
 </code></pre>
 </td>
     <td class="ds-type">
@@ -103,6 +94,7 @@
     </td>
   </tr>
 </table>
+<p>Classes in the form <code>.ds-[heading level]</code> (e.g. <code>.ds-h2</code>) are provided to match heading font sizes where the use of a semantic heading is not appropriate. Headings should only be used to introduce sections of content.</p>
 <h2>Paragraphs</h2>
 <table class="site-table" style="table-layout: fixed">
   <tr>
@@ -111,9 +103,7 @@
   </tr>
   <tr>
     <td>
-<pre><code class="language-html">&lt;div class=&quot;dc-type&quot;&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni &lt;a href=&quot;#&quot;&gt;culpa praesentium&lt;/a&gt; aliquam magnam temporibus.&lt;/p&gt;
-&lt;/div&gt;
+<pre><code class="language-html">  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni &lt;a href=&quot;#&quot;&gt;culpa praesentium&lt;/a&gt; aliquam magnam temporibus.&lt;/p&gt;
 </code></pre>
 </td>
     <td class="ds-type">

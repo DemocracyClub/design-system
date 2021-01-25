@@ -1,0 +1,14 @@
+// Settings
+
+$scope-type: false; // Whether to scope basic type styles to the .dc-type class
+
+// Essential
+// (do not comment out)
+
+@import 'variables.scss';
+
+// Components
+
+@import 'button.scss';
+@import 'call-to-action.scss';
+@import 'stack.scss';

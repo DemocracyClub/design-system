@@ -29,10 +29,10 @@
         <h2>Components</h2>
         <ul>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/components/banner/">Banner</a>
+            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
           </li>
           <li>
-            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+            <a href="https://DemocracyClub.github.io/design-system/components/call-to-action/">Call-to-action</a>
           </li>
           <li>
             <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
@@ -41,7 +41,58 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Button</h1>
-        <p>TODO (button)</p>
+        <p>Buttons should always use the <code>&lt;button&gt;</code> element, with either the <code>type=&quot;button&quot;</code> attribution or <code>type=&quot;submit&quot;</code> for forms. for call-to-action links see <a href="/components/call-to-action">call-to-action</a>. If you do not use a <code>&lt;button&gt;</code> element, the styles will not be honoured (they are scoped in the selector as <code>button.ds-button</code>).</p>
+<p>Only use the blue version as a supplementary option; the pink (default version) should be used where there is only one button in the context.</p>
+<table class="site-table" style="table-layout: fixed">
+  <tr>
+    <th>markup</th>
+    <th>demo</th>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;button class=&quot;ds-button&quot; type=&quot;button&quot;&gt;Press me&lt;/button&gt;
+</code></pre>
+</td>
+<td>
+<div class="ds-type">
+  <button class="ds-button" type="button">Press me</button>
+</div>
+</td>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;button class=&quot;ds-button&quot; type=&quot;button&quot; disabled&gt;Press me&lt;/button&gt;
+</code></pre>
+</td>
+<td>
+<div class="ds-type">
+  <button class="ds-button" type="button" disabled>Press me</button>
+</div>
+</td>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;button class=&quot;ds-button ds-button-blue&quot; type=&quot;button&quot;&gt;Press me&lt;/button&gt;
+</code></pre>
+</td>
+<td>
+<div class="ds-type">
+  <button class="ds-button ds-button-blue" type="button">Press me</button>
+</div>
+</td>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;button class=&quot;ds-button ds-button-blue&quot; type=&quot;button&quot; disabled&gt;Press me&lt;/button&gt;
+</code></pre>
+</td>
+<td>
+<div class="ds-type">
+  <button class="ds-button ds-button-blue" type="button" disabled>Press me</button>
+</div>
+</td>
+  </tr>
+</table>
 
       </main>
     </div>

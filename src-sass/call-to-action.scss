@@ -1,0 +1,23 @@
+a.ds-cta {
+  display: inline-block;
+  color: $pinkForWhite;
+  background-color: $white;
+  font-size: $s2;
+  padding: $ss7 $s2;
+  border: $ss2 solid;
+  text-decoration: none;
+}
+
+a.ds-cta[href]:hover {
+  transform: scale(1.05);
+}
+
+a.ds-cta-blue {
+  color: $blueForWhite;
+}
+
+a.ds-cta:not([href]) {
+  opacity: 0.666;
+  cursor: not-allowed;
+  border-style: dashed;
+}

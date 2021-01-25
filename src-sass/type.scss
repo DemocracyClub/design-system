@@ -1,6 +1,6 @@
-// Scoped design system typography
-.ds-type {
-  @include fontBody;
+$scope-type: false !default;
+
+@mixin type-stuff {
 
   input,
   button,
@@ -9,27 +9,58 @@
     font: inherit;
   }
 
+  *:focus {
+    outline: $ss2 solid $amber;
+  }
+
+  div:focus,
+  [tabindex="-1"]:focus,
+  body:focus {
+    outline: none;
+  }
+
+  p, ul, ol {
+    @include fontBody;
+  }
+
   small {
     font-size: $ss7;
   }
 
+  h1, .ds-h1 { font-size: $s7 }
+  h2, .ds-h2 { font-size: $s6 }
+  h3, .ds-h3 { font-size: $s5 }
+  h4, .ds-h4 { font-size: $s4 }
+  h5, .ds-h5 { font-size: $s3 }
+  h6, .ds-h6 { font-size: $ss2 }
+
   h1, h2, h3, h4, h5, h6 {
-    @include fontHeading;
+    font-weight: 500;
   }
 
-  h1 { font-size: $s7 }
-  h2 { font-size: $s6 }
-  h3 { font-size: $s5 }
-  h4 { font-size: $s4 }
-  h5 { font-size: $s3 }
-  h6 { font-size: $ss2 }
-
   a {
-    color: inherit;
+    color: $pinkForWhite;
     text-decoration: underline;
   }
 
   ul:not([class]), ol:not([class]) {
     margin-left: $s4;
   }
+
+}
+
+@if $scope-type {
+
+  .ds-type {
+    @include fontMain;
+    @include type-stuff;
+  }
+
+} @else {
+
+  :root {
+    @include fontMain;
+  }
+  @include type-stuff;
+
 }

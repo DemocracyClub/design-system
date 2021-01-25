@@ -7,6 +7,7 @@ $blueForWhite: #007CAD;
 $blueForBlack: #00B6FF;
 $greenForWhite: #32841A;
 $greenForBlack: #4BC427;
+$amber: #FFC037;
 
 // Scales
 
@@ -45,8 +46,8 @@ $ss8: $ss7 + $increment-small-scale;
 // Type
 
 // Font families
-$familyStandard: Georgia, serif;
-$familySpecial: Montserrat, sans-serif;
+$familyMain: Montserrat, sans-serif;
+$familyBody: Georgia, serif;
 
 // Line heights
 $lineHeight: 1.5; // WCAG 1.4.12 recommended minimum
@@ -55,18 +56,15 @@ $lineHeightTight: 1.125;
 // Measure (characters per line; used with max-width typically)
 $measure: 80ch;
 
-// Body type mixin
+@mixin fontMain {
+  font-family: $familyMain;
+  font-weight: 500;
+  line-height: $lineHeightTight;
+}
+
 @mixin fontBody {
-  font-family: $familyStandard;
+  font-family: $familyBody;
   font-weight: normal;
   line-height: $lineHeight;
   color: $black;
-}
-
-// Headings type mixin
-@mixin fontHeading {
-  font-family: $familySpecial;
-  font-weight: normal;
-  line-height: $lineHeightTight;
-  color: $blueForWhite;
 }

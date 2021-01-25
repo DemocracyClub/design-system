@@ -1,0 +1,29 @@
+button.ds-button {
+  border: 0;
+  cursor: pointer;
+  color: $white;
+  background-color: $pinkForWhite;
+  font-size: $s2;
+  padding: $ss5 $s2;
+  border-bottom: $ss3 solid $black;
+}
+
+button.ds-button:hover:not([disabled]) {
+  transform: scale(1.05);
+}
+
+button.ds-button:active {
+  position: relative;
+  top: $ss3;
+  border-bottom: 0;
+}
+
+button.ds-button-blue {
+  background-color: $blueForWhite;
+}
+
+button.ds-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.666;
+}
+
