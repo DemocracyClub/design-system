@@ -69,7 +69,7 @@ button.ds-button:hover:not([disabled]) {
   transform: scale(1.05);
 }
 
-button.ds-button:active {
+button.ds-button:active:not([disabled]) {
   position: relative;
   top: 0.375rem;
   border-bottom: 0;
@@ -132,8 +132,47 @@ a.ds-cta:not([href]) {
   margin-top: 0.5rem;
 }
 
+.ds-grid > * + * {
+  margin-top: 1.5625rem;
+}
+
+@supports (width: min(var(--minimum), 100%)) {
+  .ds-grid > * + * {
+    margin-top: 0;
+  }
+
+  .ds-grid {
+    display: grid;
+    grid-gap: var(--gridGap, 1.25rem);
+    --gridCellMin: 20ch;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
+  }
+}
+.ds-card {
+  position: relative;
+  padding: 1.25rem;
+  border: 1px solid rgba(64, 63, 65, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ds-card .ds-card-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ds-card a:not(.ds-card-link) {
+  position: relative;
+}
+
 .ds-color-black {
   color: #403F41;
+}
+.ds-color-blackOpacity {
+  color: rgba(64, 63, 65, 0.2);
 }
 .ds-color-white {
   color: #fff;
@@ -159,6 +198,9 @@ a.ds-cta:not([href]) {
 
 .ds-bg-color-black {
   background-color: #403F41;
+}
+.ds-bg-color-blackOpacity {
+  background-color: rgba(64, 63, 65, 0.2);
 }
 .ds-bg-color-white {
   background-color: #fff;

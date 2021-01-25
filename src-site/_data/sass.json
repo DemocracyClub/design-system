@@ -6,6 +6,11 @@
       "compiledValue": "#403F41"
     },
     {
+      "name": "$blackOpacity",
+      "value": "rgba($black, 0.2)",
+      "compiledValue": "rgba(64, 63, 65, 0.2)"
+    },
+    {
       "name": "$white",
       "value": "#fff",
       "compiledValue": "#fff"

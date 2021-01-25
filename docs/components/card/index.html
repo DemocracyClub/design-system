@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Democracy Club’s Design System (Democracy Club Design System)</title>
+    <title>Card (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -46,9 +46,28 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Democracy Club’s Design System</h1>
-        <p>TODO: Introduction and contributing guidelines</p>
-
+        <h1>Card</h1>
+        <p>The Card component is an accessible solution to clickable cards. The <code>class=&quot;ds-card-link&quot;</code> element is activated by clicking anywhere on the card <em>except</em> where there is a supplementary link. These are positioned above the Card’s clickable are to be clickable themselves by pointer/mouse.</p>
+<div class="ds-type">
+  <div class="ds-card ds-stack">
+    <h3><a class="ds-card-link" href="#">Card</a></h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!</p>
+  </div>
+</div>
+<p>Cards containing more than one child element should use a <a href="https://DemocracyClub.github.io/design-system/components/stack">Stack</a> to place margin between child elements. Accordingly, the example takes <code>class=&quot;ds-card ds-stack&quot;</code>.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-card ds-stack&quot;&gt;
+  &lt;h3&gt;&lt;a class=&quot;ds-card-link&quot; href=&quot;#&quot;&gt;Card&lt;/a&gt;&lt;/h3&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem &lt;a href=&quot;#other-link&quot;&gt;aliquid provident&lt;/a&gt; aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="card-grids">
+  <h3 id="card-grids">🗒️ Card grids</h3>
+  <div class="site-stack">
+<p>For an example of Cards configured into a grid, see the <a href="https://DemocracyClub.github.io/design-system/components/grid">Grid</a> page.</p>
+</div>
+</aside>
       </main>
     </div>
   </body>

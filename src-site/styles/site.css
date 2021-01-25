@@ -27,6 +27,7 @@ code {
   background-color: var(--dark);
   color: var(--light);
   padding: 0.125em;
+  white-space: nowrap;
 }
 
 code[class^="language-"] {

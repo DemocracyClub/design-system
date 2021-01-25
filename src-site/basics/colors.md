@@ -16,6 +16,13 @@ title: Colors
     </td>
   </tr>
   <tr>
+    <td><code>$blackOpacity</code></td>
+    <td>{% var '$blackOpacity' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-blackOpacity"></div>
+    </td>
+  </tr>
+  <tr>
     <td><code>$white</code></td>
     <td>{% var '$white' %}</td>
     <td>
