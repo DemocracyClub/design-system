@@ -4,7 +4,7 @@ title: Grid
 
 The Grid component progressively enhances a single column layout (with basic [Stack]({{site.basedir}}/components/stack)-like spacing) into a configurable CSS Grid layout.
 
-<div class="ds-type ds-grid">
+<div class="ds-scope ds-grid site-resizer">
   <div class="ds-card ds-stack">
     <h3><a href="#" class="ds-card-link">Card 1</a></h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quae eos laboriosam vero aliquid quam soluta ad officiis quia omnis molestiae optio dolore nesciunt tempora? Dolor doloremque illum quasi exercitationem?<p>
@@ -43,7 +43,7 @@ Wherever CSS Grid is supported, so are custom properties. Hence, you can configu
   </tr>
   <tr>
     <td>
-      <code>--gridMin</code>
+      <code>--gridCellMin</code>
     </td>
     <td>
       The minimum width of a grid cell. This is entered into the <code>min()</code> function so that the smaller of this value versus <code>100%</code> is applied. This prevents overflow on small screens.

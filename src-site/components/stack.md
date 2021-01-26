@@ -2,7 +2,7 @@
 title: Stack
 ---
 
-The **Stack** is a helper component for spacing elements. It injects margin between adjacent elements along a vertical axis. You will more than likely want to use a **Stack** when dealing with flow content or composing your own component.
+The **Stack** is a helper component for spacing elements. It injects margin between adjacent elements along a vertical axis. You will more than likely want to use a **Stack** when dealing with flow content or in composing your own component.
 
 <table class="site-table">
   <tbody><tr>

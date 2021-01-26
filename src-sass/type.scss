@@ -1,6 +1,4 @@
-$scope-type: false !default;
-
-@mixin type-stuff {
+@mixin type-styles {
 
   input,
   button,
@@ -49,11 +47,11 @@ $scope-type: false !default;
 
 }
 
-@if $scope-type {
+@if $scope {
 
-  .ds-type {
+  .ds-scope {
     @include fontMain;
-    @include type-stuff;
+    @include type-styles;
   }
 
 } @else {

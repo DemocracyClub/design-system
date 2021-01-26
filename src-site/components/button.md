@@ -20,7 +20,7 @@ Only use the blue version as a supplementary option; the pink (default version) 
 
 </td>
 <td>
-<div class="ds-type">
+<div class="ds-scope">
   <button class="ds-button" type="button">Press me</button>
 </div>
 </td>
@@ -34,7 +34,7 @@ Only use the blue version as a supplementary option; the pink (default version) 
 
 </td>
 <td>
-<div class="ds-type">
+<div class="ds-scope">
   <button class="ds-button" type="button" disabled>Press me</button>
 </div>
 </td>
@@ -43,13 +43,13 @@ Only use the blue version as a supplementary option; the pink (default version) 
     <td>
 
 ```html
-<button class="ds-button ds-button-blue" type="button">Press me</button>
+<button class="ds-button-blue" type="button">Press me</button>
 ```
 
 </td>
 <td>
-<div class="ds-type">
-  <button class="ds-button ds-button-blue" type="button">Press me</button>
+<div class="ds-scope">
+  <button class="ds-button-blue" type="button">Press me</button>
 </div>
 </td>
   </tr>
@@ -57,13 +57,13 @@ Only use the blue version as a supplementary option; the pink (default version) 
     <td>
 
 ```html
-<button class="ds-button ds-button-blue" type="button" disabled>Press me</button>
+<button class="ds-button-blue" type="button" disabled>Press me</button>
 ```
 
 </td>
 <td>
-<div class="ds-type">
-  <button class="ds-button ds-button-blue" type="button" disabled>Press me</button>
+<div class="ds-scope">
+  <button class="ds-button-blue" type="button" disabled>Press me</button>
 </div>
 </td>
   </tr>

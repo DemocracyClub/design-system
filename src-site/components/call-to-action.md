@@ -20,7 +20,7 @@ Omitting the `href` is equivalent to using `disabled` on a `<button>` element, h
 
 </td>
 <td>
-<div class="ds-type">
+<div class="ds-scope">
   <a class="ds-cta" href="#">Link to something</a>
 </div>
 </td>
@@ -34,7 +34,7 @@ Omitting the `href` is equivalent to using `disabled` on a `<button>` element, h
 
 </td>
 <td>
-<div class="ds-type">
+<div class="ds-scope">
   <a class="ds-cta">Link to something</a>
 </div>
 </td>
@@ -48,7 +48,7 @@ Omitting the `href` is equivalent to using `disabled` on a `<button>` element, h
 
 </td>
 <td>
-<div class="ds-type">
+<div class="ds-scope">
   <a class="ds-cta ds-cta-blue" href="#">Link to something</a>
 </div>
 </td>
@@ -62,7 +62,7 @@ Omitting the `href` is equivalent to using `disabled` on a `<button>` element, h
 
 </td>
 <td>
-<div class="ds-type">
+<div class="ds-scope">
   <a class="ds-cta ds-cta-blue">Link to something</a>
 </div>
 </td>

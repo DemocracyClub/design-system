@@ -101,7 +101,11 @@ nav > * + *, main > * + * {
 }
 
 .site-resizer {
+  padding: 1rem;
+  border: 1px solid;
+  overflow: hidden;
   resize: horizontal;
+  position: relative;
 }
 
 .site-nowrap {

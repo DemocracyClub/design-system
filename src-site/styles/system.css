@@ -1,61 +1,61 @@
-.ds-type {
+.ds-scope {
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   line-height: 1.125;
 }
-.ds-type input,
-.ds-type button,
-.ds-type textarea,
-.ds-type select {
+.ds-scope input,
+.ds-scope button,
+.ds-scope textarea,
+.ds-scope select {
   font: inherit;
 }
-.ds-type *:focus {
+.ds-scope *:focus {
   outline: 0.25rem solid #FFC037;
 }
-.ds-type div:focus,
-.ds-type [tabindex="-1"]:focus,
-.ds-type body:focus {
+.ds-scope div:focus,
+.ds-scope [tabindex="-1"]:focus,
+.ds-scope body:focus {
   outline: none;
 }
-.ds-type p, .ds-type ul, .ds-type ol {
+.ds-scope p, .ds-scope ul, .ds-scope ol {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.5;
   color: #403F41;
 }
-.ds-type small {
+.ds-scope small {
   font-size: 0.875rem;
 }
-.ds-type h1, .ds-type .ds-h1 {
+.ds-scope h1, .ds-scope .ds-h1 {
   font-size: 3.8146972656rem;
 }
-.ds-type h2, .ds-type .ds-h2 {
+.ds-scope h2, .ds-scope .ds-h2 {
   font-size: 3.0517578125rem;
 }
-.ds-type h3, .ds-type .ds-h3 {
+.ds-scope h3, .ds-scope .ds-h3 {
   font-size: 2.44140625rem;
 }
-.ds-type h4, .ds-type .ds-h4 {
+.ds-scope h4, .ds-scope .ds-h4 {
   font-size: 1.953125rem;
 }
-.ds-type h5, .ds-type .ds-h5 {
+.ds-scope h5, .ds-scope .ds-h5 {
   font-size: 1.5625rem;
 }
-.ds-type h6, .ds-type .ds-h6 {
+.ds-scope h6, .ds-scope .ds-h6 {
   font-size: 0.25rem;
 }
-.ds-type h1, .ds-type h2, .ds-type h3, .ds-type h4, .ds-type h5, .ds-type h6 {
+.ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
   font-weight: 500;
 }
-.ds-type a {
+.ds-scope a {
   color: #E6007C;
   text-decoration: underline;
 }
-.ds-type ul:not([class]), .ds-type ol:not([class]) {
+.ds-scope ul:not([class]), .ds-scope ol:not([class]) {
   margin-left: 1.953125rem;
 }
 
-button.ds-button {
+button[class*=ds-button] {
   border: 0;
   cursor: pointer;
   color: #fff;
@@ -65,11 +65,11 @@ button.ds-button {
   border-bottom: 0.375rem solid #403F41;
 }
 
-button.ds-button:hover:not([disabled]) {
+button[class*=ds-button]:hover:not([disabled]) {
   transform: scale(1.05);
 }
 
-button.ds-button:active:not([disabled]) {
+button[class*=ds-button]:active:not([disabled]) {
   position: relative;
   top: 0.375rem;
   border-bottom: 0;
@@ -79,7 +79,7 @@ button.ds-button-blue {
   background-color: #007CAD;
 }
 
-button.ds-button[disabled] {
+button[class*=ds-button][disabled] {
   cursor: not-allowed;
   opacity: 0.666;
 }
@@ -130,6 +130,30 @@ a.ds-cta:not([href]) {
 
 .ds-stack-smallest > * + * {
   margin-top: 0.5rem;
+}
+
+.ds-cluster > *,
+.ds-cluster-right > *,
+.ds-cluster-center > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(0.375rem * -1);
+}
+
+.ds-cluster > * > *,
+.ds-cluster-right > * > *,
+.ds-cluster-center > * > * {
+  margin: 0.375rem;
+}
+
+.ds-cluster-right > * {
+  justify-content: flex-end;
+}
+
+.ds-cluster-center > * {
+  justify-content: center;
 }
 
 .ds-grid > * + * {
