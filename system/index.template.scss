@@ -9,6 +9,7 @@
 @import 'partials/_stack.scss';
 @import 'partials/_cluster.scss';
 @import 'partials/_grid.scss';
+@import 'partials/_breadcrumbs.scss';
 @import 'partials/_card.scss';
 
 // Whether to scope basic styles to the .dc-scope class
@@ -23,6 +24,7 @@ $scope: false;
   @include cluster;
   @include grid;
   @include stack;
+  @include breadcrumbs;
 }
 
 @if $scope {

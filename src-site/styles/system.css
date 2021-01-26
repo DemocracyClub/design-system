@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ds-color-black {
   color: #403F41;
 }
@@ -272,6 +273,21 @@
 }
 .ds-scope .ds-stack-smallest > * + * {
   margin-top: 0.5rem;
+}
+.ds-scope nav.ds-breadcrumbs ol {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 1.125;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ds-scope nav.ds-breadcrumbs li {
+  display: inline-block;
+}
+.ds-scope nav.ds-breadcrumbs li:not(:last-child)::after {
+  content: "  / ";
 }
 
 /*# sourceMappingURL=system.css.map */

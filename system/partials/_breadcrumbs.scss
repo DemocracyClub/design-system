@@ -1,0 +1,17 @@
+@mixin breadcrumbs {
+  nav.ds-breadcrumbs ol {
+    @include fontMain;
+    line-height: $lineHeight;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav.ds-breadcrumbs li {
+    display: inline-block;
+  }
+
+  nav.ds-breadcrumbs li:not(:last-child)::after {
+    content: '\00a0\00a0/\00a0';
+  }
+}
