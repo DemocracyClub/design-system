@@ -26,11 +26,11 @@ The cluster helper component lets you group smaller elements together in “clus
   </td>
   <td class="ds-scope" colspan="2">
     <div class="ds-cluster">
-  <div>
-    <button class="ds-button ds-button-blue">Cancel</button>
-    <button class="ds-button">Confirm</button>
-  </div>
-</div>
+      <div>
+        <button class="ds-button ds-button-blue">Cancel</button>
+        <button class="ds-button">Confirm</button>
+      </div>
+    </div>
   </td>
   </tr>
   <tr>
@@ -49,11 +49,11 @@ The cluster helper component lets you group smaller elements together in “clus
   </td>
   <td class="ds-scope" colspan="2">
     <div class="ds-cluster-center">
-  <div>
-    <button class="ds-button ds-button-blue">Cancel</button>
-    <button class="ds-button">Confirm</button>
-  </div>
-</div>
+      <div>
+        <button class="ds-button ds-button-blue">Cancel</button>
+        <button class="ds-button">Confirm</button>
+      </div>
+    </div>
   </td>
   </tr>
   <tr>
@@ -72,11 +72,11 @@ The cluster helper component lets you group smaller elements together in “clus
   </td>
   <td class="ds-scope" colspan="2">
     <div class="ds-cluster-right">
-  <div>
-    <button class="ds-button ds-button-blue">Cancel</button>
-    <button class="ds-button">Confirm</button>
-  </div>
-</div>
+      <div>
+        <button class="ds-button ds-button-blue">Cancel</button>
+        <button class="ds-button">Confirm</button>
+      </div>
+    </div>
   </td>
   </tr>
 </table>

@@ -1,4 +1,5 @@
-@mixin type-styles {
+@mixin type {
+  @include fontMain;
 
   input,
   button,
@@ -44,21 +45,5 @@
   ul:not([class]), ol:not([class]) {
     margin-left: $s4;
   }
-
-}
-
-@if $scope {
-
-  .ds-scope {
-    @include fontMain;
-    @include type-styles;
-  }
-
-} @else {
-
-  :root {
-    @include fontMain;
-  }
-  @include type-stuff;
 
 }

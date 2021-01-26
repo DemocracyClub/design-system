@@ -19,7 +19,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
 &lt;/div&gt;
 </code></pre>
   </td>
-    <td>
+    <td class="ds-scope">
       <div class="ds-stack-smallest">
         <p class="site-box-dashed">First element</p>
         <p class="site-box-dashed">Next element</p>
@@ -35,7 +35,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
 &lt;/div&gt;
 </code></pre>
   </td>
-    <td>
+    <td class="ds-scope">
     <div class="ds-stack-smaller">
       <p class="site-box-dashed">First element</p>
       <p class="site-box-dashed">Next element</p>
@@ -51,7 +51,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
 &lt;/div&gt;
 </code></pre>
   </td>
-    <td>
+    <td class="ds-scope">
       <div class="ds-stack">
         <p class="site-box-dashed">First element</p>
         <p class="site-box-dashed">Next element</p>
@@ -67,7 +67,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
 &lt;/div&gt;
 </code></pre>
   </td>
-    <td>
+    <td class="ds-scope">
       <div class="ds-stack-larger">
         <p class="site-box-dashed">First element</p>
         <p class="site-box-dashed">Next element</p>
@@ -83,7 +83,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
 &lt;/div&gt;
 </code></pre>
   </td>
-    <td>
+    <td class="ds-scope">
       <div class="ds-stack-largest">
         <p class="site-box-dashed">First element</p>
         <p class="site-box-dashed">Next element</p>

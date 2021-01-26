@@ -1,0 +1,34 @@
+// Main files
+// Do not delete these
+// you can configure which are included
+// within the 'all-styles' mixin below
+@import 'partials/_variables.scss';
+@import 'partials/_type.scss';
+@import 'partials/_button.scss';
+@import 'partials/_call-to-action.scss';
+@import 'partials/_stack.scss';
+@import 'partials/_cluster.scss';
+@import 'partials/_grid.scss';
+@import 'partials/_card.scss';
+
+// Whether to scope basic styles to the .dc-scope class
+$scope: false;
+
+// Remove components not needed here
+@mixin all-styles {
+  @include type;
+  @include button;
+  @include cta;
+  @include card;
+  @include cluster;
+  @include grid;
+  @include stack;
+}
+
+@if $scope {
+  .ds-scope {
+    @include all-styles;
+  }
+} @else {
+  @include all-styles;
+}

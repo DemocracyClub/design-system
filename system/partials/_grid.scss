@@ -1,0 +1,18 @@
+@mixin grid {
+  .ds-grid > * + * {
+    margin-top: $s3;
+  }
+
+  @supports (width: min(var(--minimum), 100%)) {
+    .ds-grid > * + * {
+      margin-top: 0;
+    }
+
+    .ds-grid {
+      display: grid;
+      grid-gap: var(--gridGap, $s2);
+      --gridCellMin: 20ch;
+      grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
+    }
+  }
+}

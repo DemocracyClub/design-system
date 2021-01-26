@@ -1,197 +1,3 @@
-.ds-scope {
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  line-height: 1.125;
-}
-.ds-scope input,
-.ds-scope button,
-.ds-scope textarea,
-.ds-scope select {
-  font: inherit;
-}
-.ds-scope *:focus {
-  outline: 0.25rem solid #FFC037;
-}
-.ds-scope div:focus,
-.ds-scope [tabindex="-1"]:focus,
-.ds-scope body:focus {
-  outline: none;
-}
-.ds-scope p, .ds-scope ul, .ds-scope ol {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #403F41;
-}
-.ds-scope small {
-  font-size: 0.875rem;
-}
-.ds-scope h1, .ds-scope .ds-h1 {
-  font-size: 3.8146972656rem;
-}
-.ds-scope h2, .ds-scope .ds-h2 {
-  font-size: 3.0517578125rem;
-}
-.ds-scope h3, .ds-scope .ds-h3 {
-  font-size: 2.44140625rem;
-}
-.ds-scope h4, .ds-scope .ds-h4 {
-  font-size: 1.953125rem;
-}
-.ds-scope h5, .ds-scope .ds-h5 {
-  font-size: 1.5625rem;
-}
-.ds-scope h6, .ds-scope .ds-h6 {
-  font-size: 0.25rem;
-}
-.ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
-  font-weight: 500;
-}
-.ds-scope a {
-  color: #E6007C;
-  text-decoration: underline;
-}
-.ds-scope ul:not([class]), .ds-scope ol:not([class]) {
-  margin-left: 1.953125rem;
-}
-
-button[class*=ds-button] {
-  border: 0;
-  cursor: pointer;
-  color: #fff;
-  background-color: #E6007C;
-  font-size: 1.25rem;
-  padding: 0.625rem 1.25rem;
-  border-bottom: 0.375rem solid #403F41;
-}
-
-button[class*=ds-button]:hover:not([disabled]) {
-  transform: scale(1.05);
-}
-
-button[class*=ds-button]:active:not([disabled]) {
-  position: relative;
-  top: 0.375rem;
-  border-bottom: 0;
-}
-
-button.ds-button-blue {
-  background-color: #007CAD;
-}
-
-button[class*=ds-button][disabled] {
-  cursor: not-allowed;
-  opacity: 0.666;
-}
-
-a.ds-cta {
-  display: inline-block;
-  color: #E6007C;
-  background-color: #fff;
-  font-size: 1.25rem;
-  padding: 0.875rem 1.25rem;
-  border: 0.25rem solid;
-  text-decoration: none;
-}
-
-a.ds-cta[href]:hover {
-  transform: scale(1.05);
-}
-
-a.ds-cta-blue {
-  color: #007CAD;
-}
-
-a.ds-cta:not([href]) {
-  opacity: 0.666;
-  cursor: not-allowed;
-  border-style: dashed;
-}
-
-[class*=ds-stack] > * {
-  margin: 0;
-}
-
-.ds-stack-largest > * + * {
-  margin-top: 3.8146972656rem;
-}
-
-.ds-stack-larger > * + * {
-  margin-top: 2.44140625rem;
-}
-
-.ds-stack > * + * {
-  margin-top: 1.5625rem;
-}
-
-.ds-stack-smaller > * + * {
-  margin-top: 0.875rem;
-}
-
-.ds-stack-smallest > * + * {
-  margin-top: 0.5rem;
-}
-
-.ds-cluster > *,
-.ds-cluster-right > *,
-.ds-cluster-center > * {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin: calc(0.375rem * -1);
-}
-
-.ds-cluster > * > *,
-.ds-cluster-right > * > *,
-.ds-cluster-center > * > * {
-  margin: 0.375rem;
-}
-
-.ds-cluster-right > * {
-  justify-content: flex-end;
-}
-
-.ds-cluster-center > * {
-  justify-content: center;
-}
-
-.ds-grid > * + * {
-  margin-top: 1.5625rem;
-}
-
-@supports (width: min(var(--minimum), 100%)) {
-  .ds-grid > * + * {
-    margin-top: 0;
-  }
-
-  .ds-grid {
-    display: grid;
-    grid-gap: var(--gridGap, 1.25rem);
-    --gridCellMin: 20ch;
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
-  }
-}
-.ds-card {
-  position: relative;
-  padding: 1.25rem;
-  border: 1px solid rgba(64, 63, 65, 0.2);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-.ds-card .ds-card-link::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.ds-card a:not(.ds-card-link) {
-  position: relative;
-}
-
 .ds-color-black {
   color: #403F41;
 }
@@ -296,6 +102,176 @@ a.ds-cta:not([href]) {
 }
 .ds-height-ss8 {
   height: 1rem;
+}
+
+.ds-scope {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 1.125;
+}
+.ds-scope input,
+.ds-scope button,
+.ds-scope textarea,
+.ds-scope select {
+  font: inherit;
+}
+.ds-scope *:focus {
+  outline: 0.25rem solid #FFC037;
+}
+.ds-scope div:focus,
+.ds-scope [tabindex="-1"]:focus,
+.ds-scope body:focus {
+  outline: none;
+}
+.ds-scope p, .ds-scope ul, .ds-scope ol {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #403F41;
+}
+.ds-scope small {
+  font-size: 0.875rem;
+}
+.ds-scope h1, .ds-scope .ds-h1 {
+  font-size: 3.8146972656rem;
+}
+.ds-scope h2, .ds-scope .ds-h2 {
+  font-size: 3.0517578125rem;
+}
+.ds-scope h3, .ds-scope .ds-h3 {
+  font-size: 2.44140625rem;
+}
+.ds-scope h4, .ds-scope .ds-h4 {
+  font-size: 1.953125rem;
+}
+.ds-scope h5, .ds-scope .ds-h5 {
+  font-size: 1.5625rem;
+}
+.ds-scope h6, .ds-scope .ds-h6 {
+  font-size: 0.25rem;
+}
+.ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
+  font-weight: 500;
+}
+.ds-scope a {
+  color: #E6007C;
+  text-decoration: underline;
+}
+.ds-scope ul:not([class]), .ds-scope ol:not([class]) {
+  margin-left: 1.953125rem;
+}
+.ds-scope button[class*=ds-button] {
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  background-color: #E6007C;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  border-bottom: 0.375rem solid #403F41;
+}
+.ds-scope button[class*=ds-button]:hover:not([disabled]) {
+  transform: scale(1.05);
+}
+.ds-scope button[class*=ds-button]:active:not([disabled]) {
+  position: relative;
+  top: 0.375rem;
+  border-bottom: 0;
+}
+.ds-scope button.ds-button-blue {
+  background-color: #007CAD;
+}
+.ds-scope button[class*=ds-button][disabled] {
+  cursor: not-allowed;
+  opacity: 0.666;
+}
+.ds-scope a.ds-cta {
+  display: inline-block;
+  color: #E6007C;
+  background-color: #fff;
+  font-size: 1.25rem;
+  padding: 0.875rem 1.25rem;
+  border: 0.25rem solid;
+  text-decoration: none;
+}
+.ds-scope a.ds-cta[href]:hover {
+  transform: scale(1.05);
+}
+.ds-scope a.ds-cta-blue {
+  color: #007CAD;
+}
+.ds-scope a.ds-cta:not([href]) {
+  opacity: 0.666;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+.ds-scope .ds-card {
+  position: relative;
+  padding: 1.25rem;
+  border: 1px solid rgba(64, 63, 65, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.ds-scope .ds-card .ds-card-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.ds-scope .ds-card a:not(.ds-card-link) {
+  position: relative;
+}
+.ds-scope .ds-cluster > *,
+.ds-scope .ds-cluster-right > *,
+.ds-scope .ds-cluster-center > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(0.375rem * -1);
+}
+.ds-scope .ds-cluster > * > *,
+.ds-scope .ds-cluster-right > * > *,
+.ds-scope .ds-cluster-center > * > * {
+  margin: 0.375rem;
+}
+.ds-scope .ds-cluster-right > * {
+  justify-content: flex-end;
+}
+.ds-scope .ds-cluster-center > * {
+  justify-content: center;
+}
+.ds-scope .ds-grid > * + * {
+  margin-top: 1.5625rem;
+}
+@supports (width: min(var(--minimum), 100%)) {
+  .ds-scope .ds-grid > * + * {
+    margin-top: 0;
+  }
+  .ds-scope .ds-grid {
+    display: grid;
+    grid-gap: var(--gridGap, 1.25rem);
+    --gridCellMin: 20ch;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
+  }
+}
+.ds-scope [class*=ds-stack] > * {
+  margin: 0;
+}
+.ds-scope .ds-stack-largest > * + * {
+  margin-top: 3.8146972656rem;
+}
+.ds-scope .ds-stack-larger > * + * {
+  margin-top: 2.44140625rem;
+}
+.ds-scope .ds-stack > * + * {
+  margin-top: 1.5625rem;
+}
+.ds-scope .ds-stack-smaller > * + * {
+  margin-top: 0.875rem;
+}
+.ds-scope .ds-stack-smallest > * + * {
+  margin-top: 0.5rem;
 }
 
 /*# sourceMappingURL=system.css.map */

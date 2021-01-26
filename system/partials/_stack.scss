@@ -1,0 +1,25 @@
+@mixin stack {
+  [class*="ds-stack"] > * {
+    margin: 0;
+  }
+
+  .ds-stack-largest > * + * {
+    margin-top: $s7;
+  }
+
+  .ds-stack-larger > * + * {
+    margin-top: $s5;
+  }
+
+  .ds-stack > * + * {
+    margin-top: $s3;
+  }
+
+  .ds-stack-smaller > * + * {
+    margin-top: $ss7;
+  }
+
+  .ds-stack-smallest > * + * {
+    margin-top: $ss4;
+  }
+}

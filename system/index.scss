@@ -1,0 +1,35 @@
+// Main files
+@import 'partials/_variables.scss';
+@import 'partials/_type.scss';
+@import 'partials/_button.scss';
+@import 'partials/_call-to-action.scss';
+@import 'partials/_stack.scss';
+@import 'partials/_cluster.scss';
+@import 'partials/_grid.scss';
+@import 'partials/_card.scss';
+
+// Generate atomic classes for documentation demos
+@import 'partials/_classes-colors.scss';
+@import 'partials/_classes-scales.scss';
+
+$scope: true;
+
+@mixin all-styles {
+  @include type;
+  @include button;
+  @include cta;
+  @include card;
+  @include cluster;
+  @include grid;
+  @include stack;
+}
+
+@if $scope {
+  .ds-scope {
+    @include all-styles;
+  }
+} @else {
+  @include all-styles;
+}
+
+
