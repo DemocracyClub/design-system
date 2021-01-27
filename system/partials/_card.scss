@@ -1,7 +1,6 @@
 @mixin card {
   .ds-card {
     position: relative;
-    padding: $s2;
     border: 1px solid $blackOpacity;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
   }
@@ -17,5 +16,22 @@
 
   .ds-card a:not(.ds-card-link) {
     position: relative;
+    z-index: 2;
+  }
+
+  .ds-card-image {
+    position: relative;
+    padding-bottom: 37.5%;
+  }
+
+  .ds-card-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ds-card-body {
+    padding: $s2;
   }
 }

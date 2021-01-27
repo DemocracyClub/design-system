@@ -11,7 +11,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
     <th>Demo</th>
   </tr>
   <tr>
-    <td><code>$ss4</code> ({% var '$ss4' %})</td>
+    <td><code>$ss5</code> ({% var '$ss5' %})</td>
     <td>
 <pre><code class="language-html">&lt;div class="ds-stack-smallest"&gt;
   &lt;div&gt;First element&lt;/div&gt;
@@ -27,7 +27,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
     </td>
   </tr>
   <tr>
-    <td><code>$ss7</code> ({% var '$ss7' %})</td>
+    <td><code>$s3</code> ({% var '$s3' %})</td>
     <td>
 <pre><code class="language-html">&lt;div class="ds-stack-smaller"&gt;
   &lt;div&gt;First element&lt;/div&gt;
@@ -59,7 +59,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
     </td>
   </tr>
   <tr>
-    <td><code>$s6</code> ({% var '$s6' %})</td>
+    <td><code>$s8</code> ({% var '$s8' %})</td>
     <td>
 <pre><code class="language-html">&lt;div class="ds-stack-larger"&gt;
   &lt;div&gt;First element&lt;/div&gt;
@@ -69,22 +69,6 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
   </td>
     <td class="ds-scope">
       <div class="ds-stack-larger">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s8</code> ({% var '$s8' %})</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-largest"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-largest">
         <div class="site-box-dashed">First element</div>
         <div class="site-box-dashed">Next element</div>
       </div>

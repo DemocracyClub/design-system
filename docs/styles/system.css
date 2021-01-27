@@ -142,7 +142,7 @@
 .ds-scope * {
   max-width: 80ch;
 }
-.ds-scope div {
+.ds-scope div, .ds-scope img, .ds-scope header, .ds-scope nav, .ds-scope main, .ds-scope footer {
   max-width: none;
 }
 .ds-scope small {
@@ -222,7 +222,6 @@
 }
 .ds-scope .ds-card {
   position: relative;
-  padding: 1.25rem;
   border: 1px solid rgba(64, 63, 65, 0.2);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
@@ -236,6 +235,20 @@
 }
 .ds-scope .ds-card a:not(.ds-card-link) {
   position: relative;
+  z-index: 2;
+}
+.ds-scope .ds-card-image {
+  position: relative;
+  padding-bottom: 37.5%;
+}
+.ds-scope .ds-card-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ds-scope .ds-card-body {
+  padding: 1.25rem;
 }
 .ds-scope .ds-cluster > *,
 .ds-scope .ds-cluster-right > *,
@@ -274,20 +287,17 @@
 .ds-scope [class*=ds-stack] > * {
   margin: 0;
 }
-.ds-scope .ds-stack-largest > * + * {
-  margin-top: 4.768371582rem;
-}
 .ds-scope .ds-stack-larger > * + * {
-  margin-top: 3.0517578125rem;
+  margin-top: 4.768371582rem;
 }
 .ds-scope .ds-stack > * + * {
   margin-top: 2.44140625rem;
 }
 .ds-scope .ds-stack-smaller > * + * {
-  margin-top: 0.875rem;
+  margin-top: 1.5625rem;
 }
 .ds-scope .ds-stack-smallest > * + * {
-  margin-top: 0.5rem;
+  margin-top: 0.625rem;
 }
 .ds-scope nav.ds-breadcrumbs ol {
   font-family: Montserrat, sans-serif;

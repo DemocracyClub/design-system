@@ -3,12 +3,8 @@
     margin: 0;
   }
 
-  .ds-stack-largest > * + * {
-    margin-top: $s8;
-  }
-
   .ds-stack-larger > * + * {
-    margin-top: $s6;
+    margin-top: $s8;
   }
 
   .ds-stack > * + * {
@@ -16,10 +12,10 @@
   }
 
   .ds-stack-smaller > * + * {
-    margin-top: $ss7;
+    margin-top: $s3;
   }
 
   .ds-stack-smallest > * + * {
-    margin-top: $ss4;
+    margin-top: $ss5;
   }
 }
