@@ -139,11 +139,9 @@
   border-left: 0.5rem solid #FFC037;
   padding-left: 1rem;
 }
-.ds-scope * {
+.ds-scope p, .ds-scope li, .ds-scope dt, .ds-scope dd, .ds-scope blockquote,
+.ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
   max-width: 80ch;
-}
-.ds-scope div, .ds-scope img, .ds-scope header, .ds-scope nav, .ds-scope main, .ds-scope footer {
-  max-width: none;
 }
 .ds-scope small {
   font-size: 0.875rem;
@@ -174,7 +172,7 @@
   text-decoration: underline;
 }
 .ds-scope ul:not([class]), .ds-scope ol:not([class]) {
-  margin-left: 1.953125rem;
+  padding-left: 1.953125rem;
 }
 .ds-scope button[class*=ds-button] {
   border: 0;
@@ -270,6 +268,12 @@
 .ds-scope .ds-cluster-center > * {
   justify-content: center;
 }
+.ds-scope .ds-grid {
+  padding: 0;
+}
+.ds-scope .ds-grid > * {
+  list-style: none;
+}
 .ds-scope .ds-grid > * + * {
   margin-top: 1.5625rem;
 }
@@ -313,6 +317,34 @@
 }
 .ds-scope nav.ds-breadcrumbs li:not(:last-child)::after {
   content: "  / ";
+}
+.ds-scope table.ds-table {
+  border: 1px solid;
+  border-top: 0;
+  border-collapse: collapse;
+  min-width: 100%;
+}
+.ds-scope table.ds-table th, .ds-scope table.ds-table td, .ds-scope table.ds-table caption {
+  text-align: left;
+  padding: 1rem;
+}
+.ds-scope table.ds-table td {
+  font-family: Georgia, serif;
+}
+.ds-scope table.ds-table tr:nth-child(even) {
+  background-color: #E4F4FB;
+}
+.ds-scope table.ds-table caption {
+  border: 1px solid #403F41;
+  border-bottom-width: 0;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+  background-color: #007CAD;
+}
+.ds-scope table.ds-table caption > * {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /*# sourceMappingURL=system.css.map */

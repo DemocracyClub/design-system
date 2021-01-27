@@ -1,0 +1,35 @@
+@mixin table {
+  table.ds-table {
+    border: 1px solid;
+    border-top: 0;
+    border-collapse: collapse;
+    min-width: 100%;
+  }
+
+  table.ds-table th, table.ds-table td, table.ds-table caption {
+    text-align: left;
+    padding: $s1;
+  }
+
+  table.ds-table td {
+    font-family: $familyBody;
+  }
+
+  table.ds-table tr:nth-child(even) {
+    background-color: $blueLight;
+  }
+
+  table.ds-table caption {
+    border: 1px solid $black;
+    border-bottom-width: 0;
+    font-weight: bold;
+    text-align: left;
+    color: $white;
+    background-color: $blueForWhite;
+  }
+
+  table.ds-table caption > * {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}

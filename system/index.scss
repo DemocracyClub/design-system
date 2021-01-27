@@ -8,6 +8,7 @@
 @import 'partials/_grid.scss';
 @import 'partials/_card.scss';
 @import 'partials/_breadcrumbs.scss';
+@import 'partials/_table.scss';
 
 // Generate atomic classes for documentation demos
 @import 'partials/_classes-colors.scss';
@@ -24,6 +25,7 @@ $scope: true;
   @include grid;
   @include stack;
   @include breadcrumbs;
+  @include table;
 }
 
 @if $scope {

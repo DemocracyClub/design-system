@@ -34,12 +34,9 @@
     padding-left: $s1;
   }
 
-  * {
+  p, li, dt, dd, blockquote,
+  h1, h2, h3, h4, h5, h6 {
     max-width: 80ch;
-  }
-
-  div, img, header, nav, main, footer {
-    max-width: none;
   }
 
   small {
@@ -63,7 +60,7 @@
   }
 
   ul:not([class]), ol:not([class]) {
-    margin-left: $s4;
+    padding-left: $s4;
   }
 
 }

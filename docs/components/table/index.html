@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Stack (Democracy Club Design System)</title>
+    <title>Table (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -61,79 +61,60 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Stack</h1>
-        <p>The <strong>Stack</strong> is a helper component for spacing elements. It injects margin between adjacent elements along a vertical axis. You will more than likely want to use a <strong>Stack</strong> when dealing with flow content or in composing your own component.</p>
-<table class="site-table">
-  <tbody><tr>
-    <th>Value</th>
-    <th>Markup</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td><code>$ss5</code> (0.625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smallest"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-smallest">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s3</code> (1.5625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smaller"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-    <div class="ds-stack-smaller">
-      <div class="site-box-dashed">First element</div>
-      <div class="site-box-dashed">Next element</div>
-    </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s5</code> (2.44141rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s8</code> (4.76837rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-larger"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-larger">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-</tbody></table>
+        <h1>Table</h1>
+        <p>Data tables must be accessible. Each must have a <code>&lt;caption&gt;</code> element. It is permissable to use a heading element <em>inside</em> the <code>&lt;caption&gt;</code> so screen reader users can navigate to it using heading shortcuts. If you do use a heading element inside the <code>&lt;caption&gt;</code> you should longer introduce the table with an heading.</p>
+<div class="ds-scope">
+  <table class="ds-table">
+    <caption><h2>Basic table with column headers</th></caption>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+    <tr>
+      <td>Row 1 / cell 1</td>
+      <td>Row 1 / cell 2</td>
+      <td>Row 1 / cell 3</td>
+    </tr>
+    <tr>
+      <td>Row 2 / cell 1</td>
+      <td>Row 2 / cell 2</td>
+      <td>Row 2 / cell 3</td>
+    </tr>
+    <tr>
+      <td>Row 3 / cell 1</td>
+      <td>Row 3 / cell 2</td>
+      <td>Row 3 / cell 3</td>
+    </tr>
+  </table>
+</div>
+<h2>Row headers</h2>
+<p>You can use either column headers (<code>&lt;th&gt;</code> in the above example), row headers (<code>&lt;th&gt;</code> with <code>scope=&quot;row&quot;</code> on each row’s first child) or both.</p>
+<div class="ds-scope">
+  <table class="ds-table">
+    <caption><h2>Basic table with column headers</th></caption>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+    <tr>
+      <th scope="row">Row 1 / row header</th>
+      <td>Row 1 / cell 2</td>
+      <td>Row 1 / cell 3</td>
+    </tr>
+    <tr>
+      <th scope="row">Row 2 / row header</th>
+      <td>Row 2 / cell 2</td>
+      <td>Row 2 / cell 3</td>
+    </tr>
+    <tr>
+      <th scope="row">Row 3 / row header</th>
+      <td>Row 3 / cell 2</td>
+      <td>Row 3 / cell 3</td>
+    </tr>
+  </table>
+</div>
       </main>
     </div>
   </body>

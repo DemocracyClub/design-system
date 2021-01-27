@@ -31,6 +31,11 @@
       "compiledValue": "#00B6FF"
     },
     {
+      "name": "$blueLight",
+      "value": "#E4F4FB",
+      "compiledValue": "#E4F4FB"
+    },
+    {
       "name": "$greenForWhite",
       "value": "#32841A",
       "compiledValue": "#32841A"

@@ -11,6 +11,7 @@
 @import 'partials/_grid.scss';
 @import 'partials/_breadcrumbs.scss';
 @import 'partials/_card.scss';
+@import 'partials/_table.scss';
 
 // Whether to scope basic styles to the .dc-scope class
 $scope: false;
@@ -25,6 +26,7 @@ $scope: false;
   @include grid;
   @include stack;
   @include breadcrumbs;
+  @include table;
 }
 
 @if $scope {

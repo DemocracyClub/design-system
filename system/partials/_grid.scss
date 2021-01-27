@@ -1,4 +1,12 @@
 @mixin grid {
+  .ds-grid {
+    padding: 0;
+  }
+
+  .ds-grid > * {
+    list-style: none;
+  }
+
   .ds-grid > * + * {
     margin-top: $s3;
   }
