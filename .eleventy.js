@@ -6,21 +6,25 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src-site/styles');
   eleventyConfig.addPassthroughCopy('src-site/images');
 
-  eleventyConfig.addCollection('basicsAscending', (collection) =>
-    collection.getFilteredByGlob('src-site/basics/*.md').sort((a, b) => {
+  const filterAscending = (collection, glob) => {
+    return collection.getFilteredByGlob(glob).sort((a, b) => {
       if (a.data.title < b.data.title) return -1;
       else if (a.data.title > b.data.title) return 1;
       else return 0;
-    })
-  );
+    });
+  }
 
-  eleventyConfig.addCollection('componentsAscending', (collection) =>
-    collection.getFilteredByGlob('src-site/components/*.md').sort((a, b) => {
-      if (a.data.title < b.data.title) return -1;
-      else if (a.data.title > b.data.title) return 1;
-      else return 0;
-    })
-  );
+  eleventyConfig.addCollection('basicsAscending', collection => {
+    return filterAscending(collection, 'src-site/basics/*.md');
+  });
+
+  eleventyConfig.addCollection('componentsAscending', collection => {
+    return filterAscending(collection, 'src-site/components/*.md');
+  });
+
+  eleventyConfig.addCollection('usageAscending', collection => {
+    return filterAscending(collection, 'src-site/usage/*.md');
+  });
 
   eleventyConfig.addPairedShortcode('note', function (content, title) {
     const slug = slugify(title).toLowerCase();

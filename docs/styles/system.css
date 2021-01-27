@@ -124,11 +124,26 @@
 .ds-scope body:focus {
   outline: none;
 }
-.ds-scope p, .ds-scope ul, .ds-scope ol {
+.ds-scope p, .ds-scope ul, .ds-scope ol, .ds-scope blockquote, .ds-scope dl {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.5;
   color: #403F41;
+}
+.ds-scope p + p {
+  margin-top: 1rem !important;
+}
+.ds-scope blockquote {
+  font-size: 1.5625rem;
+  font-style: italic;
+  border-left: 0.5rem solid #FFC037;
+  padding-left: 1rem;
+}
+.ds-scope * {
+  max-width: 80ch;
+}
+.ds-scope div {
+  max-width: none;
 }
 .ds-scope small {
   font-size: 0.875rem;
@@ -260,13 +275,13 @@
   margin: 0;
 }
 .ds-scope .ds-stack-largest > * + * {
-  margin-top: 3.8146972656rem;
+  margin-top: 4.768371582rem;
 }
 .ds-scope .ds-stack-larger > * + * {
-  margin-top: 2.44140625rem;
+  margin-top: 3.0517578125rem;
 }
 .ds-scope .ds-stack > * + * {
-  margin-top: 1.5625rem;
+  margin-top: 2.44140625rem;
 }
 .ds-scope .ds-stack-smaller > * + * {
   margin-top: 0.875rem;

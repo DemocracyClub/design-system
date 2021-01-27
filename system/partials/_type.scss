@@ -18,8 +18,28 @@
     outline: none;
   }
 
-  p, ul, ol {
+  p, ul, ol, blockquote, dl {
     @include fontBody;
+  }
+
+  // successive paragraphs are immune to Stack
+  p + p {
+    margin-top: $s1 !important;
+  }
+
+  blockquote {
+    font-size: $s3;
+    font-style: italic;
+    border-left: $ss4 solid $amber;
+    padding-left: $s1;
+  }
+
+  * {
+    max-width: 80ch;
+  }
+
+  div {
+    max-width: none;
   }
 
   small {

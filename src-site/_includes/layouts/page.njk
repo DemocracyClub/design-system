@@ -30,6 +30,14 @@
           </li>
           {%- endfor  %}
         </ul>
+        <h2>Usage</h2>
+        <ul>
+          {%- for component in collections.usageAscending %}
+          <li>
+            <a href="{{site.basedir}}{{component.url}}">{{component.data.title}}</a>
+          </li>
+          {%- endfor  %}
+        </ul>
       </nav>
       <main id="main" tabindex="-1">
         <h1>{{ title }}</h1>
