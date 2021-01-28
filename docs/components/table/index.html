@@ -62,58 +62,160 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Table</h1>
-        <p>Data tables must be accessible. Each must have a <code>&lt;caption&gt;</code> element. It is permissable to use a heading element <em>inside</em> the <code>&lt;caption&gt;</code> so screen reader users can navigate to it using heading shortcuts. If you do use a heading element inside the <code>&lt;caption&gt;</code> you should longer introduce the table with an heading.</p>
+        <p>Data tables must be accessible. Each must have a <code>&lt;caption&gt;</code> element. It is permissable to use a heading element <em>inside</em> the <code>&lt;caption&gt;</code> so screen reader users can navigate to it using heading shortcuts. For the sake of avoiding redundancy, if you do use a heading element inside the <code>&lt;caption&gt;</code> you should longer introduce the table with a heading.</p>
 <div class="ds-scope">
-  <table class="ds-table">
-    <caption><h2>Basic table with column headers</th></caption>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-    </tr>
-    <tr>
-      <td>Row 1 / cell 1</td>
-      <td>Row 1 / cell 2</td>
-      <td>Row 1 / cell 3</td>
-    </tr>
-    <tr>
-      <td>Row 2 / cell 1</td>
-      <td>Row 2 / cell 2</td>
-      <td>Row 2 / cell 3</td>
-    </tr>
-    <tr>
-      <td>Row 3 / cell 1</td>
-      <td>Row 3 / cell 2</td>
-      <td>Row 3 / cell 3</td>
-    </tr>
-  </table>
+  <div class="ds-table">
+    <table>
+      <caption><h2>Basic table with column headers</h2></caption>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+      <tr>
+        <td>Row 1 / cell 1</td>
+        <td>Row 1 / cell 2</td>
+        <td>Row 1 / cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 2 / cell 1</td>
+        <td>Row 2 / cell 2</td>
+        <td>Row 2 / cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 3 / cell 1</td>
+        <td>Row 3 / cell 2</td>
+        <td>Row 3 / cell 3</td>
+      </tr>
+    </table>
+  </div>
 </div>
+<pre><code class="language-html">&lt;div class=&quot;ds-table&quot;&gt;
+  &lt;table&gt;
+    &lt;caption&gt;&lt;h2&gt;Basic table with column headers&lt;/h2&gt;&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column 1&lt;/th&gt;
+      &lt;th&gt;Column 2&lt;/th&gt;
+      &lt;th&gt;Column 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;!-- rows here --&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
 <h2>Row headers</h2>
 <p>You can use either column headers (<code>&lt;th&gt;</code> in the above example), row headers (<code>&lt;th&gt;</code> with <code>scope=&quot;row&quot;</code> on each row’s first child) or both.</p>
 <div class="ds-scope">
-  <table class="ds-table">
-    <caption><h2>Basic table with column headers</th></caption>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-    </tr>
-    <tr>
-      <th scope="row">Row 1 / row header</th>
-      <td>Row 1 / cell 2</td>
-      <td>Row 1 / cell 3</td>
-    </tr>
-    <tr>
-      <th scope="row">Row 2 / row header</th>
-      <td>Row 2 / cell 2</td>
-      <td>Row 2 / cell 3</td>
-    </tr>
-    <tr>
-      <th scope="row">Row 3 / row header</th>
-      <td>Row 3 / cell 2</td>
-      <td>Row 3 / cell 3</td>
-    </tr>
-  </table>
+  <div class="ds-table">
+    <table>
+      <caption>Basic table with column and row headers</caption>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+      <tr>
+        <th scope="row">Row 1 / row header</th>
+        <td>Row 1 / cell 2</td>
+        <td>Row 1 / cell 3</td>
+      </tr>
+      <tr>
+        <th scope="row">Row 2 / row header</th>
+        <td>Row 2 / cell 2</td>
+        <td>Row 2 / cell 3</td>
+      </tr>
+      <tr>
+        <th scope="row">Row 3 / row header</th>
+        <td>Row 3 / cell 2</td>
+        <td>Row 3 / cell 3</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;ds-table&quot;&gt;
+  &lt;table&gt;
+    &lt;caption&gt;Basic table with column headers&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column 1&lt;/th&gt;
+      &lt;th&gt;Column 2&lt;/th&gt;
+      &lt;th&gt;Column 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Row 1 / row header&lt;/th&gt;
+      &lt;td&gt;Row 1 / cell 2&lt;/td&gt;
+      &lt;td&gt;Row 1 / cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Row 2 / row header&lt;/th&gt;
+      &lt;td&gt;Row 2 / cell 2&lt;/td&gt;
+      &lt;td&gt;Row 2 / cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Row 3 / row header&lt;/th&gt;
+      &lt;td&gt;Row 3 / cell 2&lt;/td&gt;
+      &lt;td&gt;Row 3 / cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Responsiveness</h2>
+<p>Tables should retain their structure for comprehension. Ensuring they can be used and viewed with many columns, or in smaller viewports, the containing <code>class=&quot;ds-table&quot;</code> element is scrollable along the horizontal axis.</p>
+<div class="ds-scope">
+  <div class="ds-table">
+    <table>
+      <caption><h2>Basic table with column headers</h2></caption>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+        <th>Column 5</th>
+        <th>Column 6</th>
+        <th>Column 7</th>
+        <th>Column 8</th>
+        <th>Column 9</th>
+        <th>Column 10</th>
+        <th>Column 11</th>
+        <th>Column 12</th>
+        <th>Column 13</th>
+        <th>Column 14</th>
+        <th>Column 15</th>
+      </tr>
+      <tr>
+        <td>Row 1 / cell 1</td>
+        <td>Row 1 / cell 2</td>
+        <td>Row 1 / cell 3</td>
+        <td>Row 1 / cell 4</td>
+        <td>Row 1 / cell 5</td>
+        <td>Row 1 / cell 6</td>
+        <td>Row 1 / cell 7</td>
+        <td>Row 1 / cell 8</td>
+        <td>Row 1 / cell 9</td>
+        <td>Row 1 / cell 10</td>
+        <td>Row 1 / cell 11</td>
+        <td>Row 1 / cell 12</td>
+        <td>Row 1 / cell 13</td>
+        <td>Row 1 / cell 14</td>
+        <td>Row 1 / cell 15</td>
+      </tr>
+      <tr>
+        <td>Row 2 / cell 1</td>
+        <td>Row 3 / cell 2</td>
+        <td>Row 4 / cell 3</td>
+        <td>Row 5 / cell 4</td>
+        <td>Row 6 / cell 5</td>
+        <td>Row 7 / cell 6</td>
+        <td>Row 8 / cell 7</td>
+        <td>Row 9 / cell 8</td>
+        <td>Row 9 / cell 9</td>
+        <td>Row 9 / cell 10</td>
+        <td>Row 9 / cell 11</td>
+        <td>Row 9 / cell 12</td>
+        <td>Row 9 / cell 13</td>
+        <td>Row 9 / cell 14</td>
+        <td>Row 9 / cell 15</td>
+      </tr>
+    </table>
+  </div>
 </div>
       </main>
     </div>
