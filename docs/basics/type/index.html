@@ -47,6 +47,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/header/">Header</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
           </li>
           <li>
@@ -62,8 +65,7 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Type</h1>
-        <p>These are the basic typography styles. Typically, you should simply <code>@import</code> them in your <code>index.scss</code> file. However, you can scope them to the <code>.dc-type</code> class by setting <code>$scope-type</code> to <code>true</code>. This allows you to sandbox the styles to a particular section of your production site, to avoid conflicts. The scoping option can also be used to bump up specificity where existing (non design system) styles are taking precedence. You can place <code>class=&quot;ds-scope&quot;</code> on the body element if this is all you need.</p>
-<h2>Headings</h2>
+        <h2>Headings</h2>
 <table class="site-table">
   <tr>
     <th>Markup</th>
@@ -129,6 +131,22 @@
 </td>
     <td class="ds-scope">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni <a href="#">culpa praesentium</a> aliquam magnam temporibus.</p>
+    </td>
+  </tr>
+</table>
+<h2>Blockquotes</h2>
+<table class="site-table" style="table-layout: fixed">
+  <tr>
+    <th>Markup</th>
+    <th>Demo</th>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">  &lt;blockquote&gt;Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.&lt;/blockquote&gt;
+</code></pre>
+</td>
+    <td class="ds-scope">
+      <blockquote>Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.</blockquote>
     </td>
   </tr>
 </table>

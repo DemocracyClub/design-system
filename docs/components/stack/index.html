@@ -47,6 +47,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/header/">Header</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
           </li>
           <li>
@@ -133,7 +136,18 @@
       </div>
     </td>
   </tr>
-</tbody></table>
+</tbody>
+</table>
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="paragraphs">
+  <h3 id="paragraphs">🗒️ Paragraphs</h3>
+  <div class="site-stack">
+<p>Paragraphs are immune to stack value variations. In all cases, successive paragraphs are separated by a value of <code>$s1</code> (1rem). This is enforced using an <code>!important</code> marker.</p>
+<pre><code class="language-css">p + p {
+  margin-top: $s1 !important;
+}
+</code></pre>
+</div>
+</aside>
       </main>
     </div>
   </body>

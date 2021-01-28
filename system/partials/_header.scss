@@ -1,0 +1,66 @@
+@mixin header {
+
+  .ds-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: $s2;
+  }
+
+  .ds-header-home {
+    flex-basis: 20rem;
+    margin-right: $s2;
+  }
+
+  .ds-header-home img {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+  }
+
+  .ds-header nav {
+    margin: $s1 0;
+  }
+
+  .ds-header ul {
+    padding-left: 0;
+    margin: calc(#{$ss6} * -1);
+  }
+
+  .ds-header li {
+    @include fontMain;
+    display: inline-block;
+    margin: $ss6;
+  }
+
+  .ds-header nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: $ss4;
+    border-bottom: 2px solid $white;
+  }
+
+  .ds-header a:hover {
+    border-bottom-color: $blueForWhite;
+  }
+
+  .ds-header [aria-current] {
+    border-bottom-color: $pinkForWhite;
+  }
+
+  .ds-skip-link {
+    position: absolute;
+    top: -5rem;
+    display: inline-block;
+    padding: $s1;
+    background-color: $white;
+  }
+
+  .ds-skip-link:focus {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+}

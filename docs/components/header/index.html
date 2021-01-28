@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
+    <title>Header (Democracy Club Design System)</title>
+  </head>
+  <body>
+    <a href="#main">skip to content</a>
+    <div>
+      <nav>
+        <a href="https://DemocracyClub.github.io/design-system">
+          <img class="site-logo" src="https://DemocracyClub.github.io/design-system/images/logo.svg" alt="Design system homepage" />
+        </a>
+        <h2>Basics</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/modular-scale/">Modular scale</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/type/">Type</a>
+          </li>
+        </ul>
+        <h2>Components</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/breadcrumbs/">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/call-to-action/">Call-to-action</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/card/">Card</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/header/">Header</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/table/">Table</a>
+          </li>
+        </ul>
+        <h2>Usage</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/composition/">Composition</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <h1>Header</h1>
+        <p>The Header is intended for all Democracy Club sites. It includes a logo which links to <a href="https://democracyclub.org.uk/">https://democracyclub.org.uk/</a> and a set of main navigation links for the local site. The “Home” link should link to the local site’s homepage, not <a href="https://democracyclub.org.uk/">https://democracyclub.org.uk/</a> (unless the site in question <em>is</em> democracyclub.org.uk).</p>
+<div class="ds-scope site-resizer">
+  <header class="ds-header">
+    <a class="ds-skip-link" href="#main">skip to content</a>
+    <a class="ds-header-home" href="https://democracyclub.org.uk/">
+      <img src="https://DemocracyClub.github.io/design-system/images/system/logo.svg" alt="Democracy Club home" />
+    </a>
+    <nav class="ds-cluster">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a aria-current="true" href=".path/to/about">About</a>
+        </li>
+        <li>
+          <a href="/path/to/">Our work</a>
+        </li>
+        <li>
+          <a href="#">Quests</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">Donate</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<p>Built into the Header is a skip link, which is provided to satisfy WCAG’s <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html">2.4.1 Bypass Blocks</a> criterion. This link appears on keyboard focus and lets keyboard (including screen reader) users <em>bypass</em> the page’s preamble. <strong>Importantly</strong>, for the skip link to work, you will need to place <code>id=&quot;main&quot;</code> and <code>tabindex=&quot;-1&quot;</code> on the page’s <code>&lt;main&gt;</code> element (of which there should only be one).</p>
+<pre><code class="language-html">&lt;header class=&quot;ds-header&quot;&gt;
+  &lt;a class=&quot;ds-skip-link&quot; href=&quot;#main&quot;&gt;skip to content&lt;/a&gt;
+  &lt;a class=&quot;ds-header-home&quot; href=&quot;/&quot;&gt;
+    &lt;img src=&quot;/path/to/logo.svg&quot; alt=&quot;Democracy Club home&quot; /&gt;
+  &lt;/a&gt;
+  &lt;nav class=&quot;ds-cluster&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a aria-current=&quot;true&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Our work&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Quests&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Donate&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+<p>Note the use of <code>aria-current</code> which indicates the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.</p>
+
+      </main>
+    </div>
+  </body>
+</html>

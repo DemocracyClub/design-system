@@ -355,5 +355,59 @@
   border-bottom: 1px solid;
   border-top: 1px solid;
 }
+.ds-scope .ds-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+}
+.ds-scope .ds-header-home {
+  flex-basis: 20rem;
+  margin-right: 1.25rem;
+}
+.ds-scope .ds-header-home img {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+.ds-scope .ds-header nav {
+  margin: 1rem 0;
+}
+.ds-scope .ds-header ul {
+  padding-left: 0;
+  margin: calc(0.75rem * -1);
+}
+.ds-scope .ds-header li {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 1.125;
+  display: inline-block;
+  margin: 0.75rem;
+}
+.ds-scope .ds-header nav a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 0.5rem;
+  border-bottom: 2px solid #fff;
+}
+.ds-scope .ds-header a:hover {
+  border-bottom-color: #007CAD;
+}
+.ds-scope .ds-header [aria-current] {
+  border-bottom-color: #E6007C;
+}
+.ds-scope .ds-skip-link {
+  position: absolute;
+  top: -5rem;
+  display: inline-block;
+  padding: 1rem;
+  background-color: #fff;
+}
+.ds-scope .ds-skip-link:focus {
+  top: 0.5rem;
+  left: 0.5rem;
+}
 
 /*# sourceMappingURL=system.css.map */

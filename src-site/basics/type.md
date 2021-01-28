@@ -2,8 +2,6 @@
 title: Type
 ---
 
-These are the basic typography styles. Typically, you should simply `@import` them in your `index.scss` file. However, you can scope them to the `.dc-type` class by setting `$scope-type` to `true`. This allows you to sandbox the styles to a particular section of your production site, to avoid conflicts. The scoping option can also be used to bump up specificity where existing (non design system) styles are taking precedence. You can place `class="ds-scope"` on the body element if this is all you need.
-
 ## Headings
 
 <table class="site-table">
@@ -92,6 +90,27 @@ Classes in the form `.ds-[heading level]` (e.g. `.ds-h2`) are provided to match 
 </td>
     <td class="ds-scope">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni <a href="#">culpa praesentium</a> aliquam magnam temporibus.</p>
+    </td>
+  </tr>
+</table>
+
+## Blockquotes
+
+<table class="site-table" style="table-layout: fixed">
+  <tr>
+    <th>Markup</th>
+    <th>Demo</th>
+  </tr>
+  <tr>
+    <td>
+
+```html
+  <blockquote>Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.</blockquote>
+```
+
+</td>
+    <td class="ds-scope">
+      <blockquote>Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.</blockquote>
     </td>
   </tr>
 </table>
