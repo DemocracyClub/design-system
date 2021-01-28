@@ -74,4 +74,17 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
       </div>
     </td>
   </tr>
-</tbody></table>
+</tbody>
+</table>
+
+{% note 'Paragraphs' %}
+
+Paragraphs are immune to stack value variations. In all cases, successive paragraphs are separated by a value of `$s1` ({% var '$s1' %}). This is enforced using an `!important` marker.
+
+```css
+p + p {
+  margin-top: $s1 !important;
+}
+```
+
+{% endnote %}

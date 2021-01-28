@@ -63,7 +63,7 @@ Wherever CSS Grid is supported, so are custom properties. Hence, you can configu
       The minimum width of a grid cell. This is entered into the <code>min()</code> function so that the smaller of this value versus <code>100%</code> is applied. This prevents overflow on small screens.
     </td>
     <td>
-      20ch (20 characters)
+      30ch (30 characters)
     </td>
   </tr>
   <tr>
@@ -84,7 +84,7 @@ Wherever CSS Grid is supported, so are custom properties. Hence, you can configu
 In the following example `--gridCellMin` is set to 30ch and `--gridGap` to `3rem`.
 
 ```html
-<div class="ds-grid" style="--gridCellMin: 30ch; --gridGap: 3rem;">
+<div class="ds-grid" style="--gridCellMin: 40ch; --gridGap: 3rem;">
   <!-- grid cells/items here -->
 </div>
 ```

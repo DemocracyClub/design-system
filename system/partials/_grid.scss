@@ -19,7 +19,7 @@
     .ds-grid {
       display: grid;
       grid-gap: var(--gridGap, $s2);
-      --gridCellMin: 20ch;
+      --gridCellMin: 30ch;
       grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
     }
   }
