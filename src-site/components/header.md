@@ -52,7 +52,7 @@ Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4
         <a href="#">Home</a>
       </li>
       <li>
-        <a aria-current="true" href="#">About</a>
+        <a aria-current="page" href="#">About</a>
       </li>
       <li>
         <a href="#">Our work</a>
@@ -74,4 +74,4 @@ Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4
 </header>
 ```
 
-Note the use of `aria-current` which indicates the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.
+Note the use of `aria-current="page"` which indicates which navigation link corresponds to the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.

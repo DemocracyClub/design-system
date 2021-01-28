@@ -18,7 +18,7 @@
     outline: none;
   }
 
-  p, ul, ol, blockquote, dl {
+  p, ul, ol, blockquote {
     @include fontBody;
   }
 
@@ -61,6 +61,19 @@
 
   ul:not([class]), ol:not([class]) {
     padding-left: $s4;
+  }
+
+  dt {
+    font-size: $s3;
+  }
+
+  dd {
+    @include fontBody;
+    margin-left: $s3;
+  }
+
+  dl > * + * {
+    margin-top: $ss6;
   }
 
 }

@@ -43,7 +43,7 @@ The **Stack** is a helper component for spacing elements. It injects margin betw
     </td>
   </tr>
   <tr>
-    <td><code>$s5</code> ({% var '$s5' %})</td>
+    <td><code>$s6</code> ({% var '$s6' %})</td>
     <td>
 <pre><code class="language-html">&lt;div class="ds-stack"&gt;
   &lt;div&gt;First element&lt;/div&gt;

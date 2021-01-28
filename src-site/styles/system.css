@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/montserrat-medium.woff2") format("woff2"), url("fonts/montserrat-medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .ds-color-black {
   color: #403F41;
 }
@@ -124,7 +131,7 @@
 .ds-scope body:focus {
   outline: none;
 }
-.ds-scope p, .ds-scope ul, .ds-scope ol, .ds-scope blockquote, .ds-scope dl {
+.ds-scope p, .ds-scope ul, .ds-scope ol, .ds-scope blockquote {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.5;
@@ -173,6 +180,19 @@
 }
 .ds-scope ul:not([class]), .ds-scope ol:not([class]) {
   padding-left: 1.953125rem;
+}
+.ds-scope dt {
+  font-size: 1.5625rem;
+}
+.ds-scope dd {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #403F41;
+  margin-left: 1.5625rem;
+}
+.ds-scope dl > * + * {
+  margin-top: 0.75rem;
 }
 .ds-scope button[class*=ds-button] {
   border: 0;
@@ -295,7 +315,7 @@
   margin-top: 4.768371582rem;
 }
 .ds-scope .ds-stack > * + * {
-  margin-top: 2.44140625rem;
+  margin-top: 3.0517578125rem;
 }
 .ds-scope .ds-stack-smaller > * + * {
   margin-top: 1.5625rem;
