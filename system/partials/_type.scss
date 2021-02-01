@@ -36,11 +36,11 @@
 
   p, li, dt, dd, blockquote,
   h1, h2, h3, h4, h5, h6 {
-    max-width: 80ch;
+    max-width: $measure;
   }
 
   small {
-    font-size: $ss7;
+    font-size: $ss8;
   }
 
   h1, .ds-h1 { font-size: $s7 }

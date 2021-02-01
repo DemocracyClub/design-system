@@ -2,6 +2,7 @@
 @import 'partials/_fonts.scss';
 @import 'partials/_variables.scss';
 @import 'partials/_type.scss';
+@import 'partials/_forms.scss';
 @import 'partials/_button.scss';
 @import 'partials/_call-to-action.scss';
 @import 'partials/_stack.scss';
@@ -11,6 +12,9 @@
 @import 'partials/_breadcrumbs.scss';
 @import 'partials/_table.scss';
 @import 'partials/_header.scss';
+@import 'partials/_radio.scss';
+@import 'partials/_checkbox.scss';
+@import 'partials/_utilities.scss';
 
 // Generate atomic classes for documentation demos
 @import 'partials/_classes-colors.scss';
@@ -18,8 +22,7 @@
 
 $scope: true;
 
-@mixin all-styles {
-  @include type;
+@mixin optional-styles {
   @include button;
   @include cta;
   @include card;
@@ -29,14 +32,22 @@ $scope: true;
   @include breadcrumbs;
   @include table;
   @include header;
+  @include radio;
+  @include checkbox;
 }
 
 @if $scope {
   .ds-scope {
-    @include all-styles;
+    @include type;
+    @include forms;
+    @include optional-styles;
+    @include utilities;
   }
 } @else {
-  @include all-styles;
+  @include type;
+  @include forms;
+  @include optional-styles;
+  @include utilities;
 }
 
 

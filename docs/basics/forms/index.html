@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
+    <title>Forms (Democracy Club Design System)</title>
+  </head>
+  <body>
+    <a href="#main">skip to content</a>
+    <div>
+      <nav>
+        <a href="https://DemocracyClub.github.io/design-system">
+          <img class="site-logo" src="https://DemocracyClub.github.io/design-system/images/logo.svg" alt="Design system homepage" />
+        </a>
+        <h2>Basics</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/forms/">Forms</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/modular-scale/">Modular scale</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/type/">Type</a>
+          </li>
+        </ul>
+        <h2>Components</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/breadcrumbs/">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/call-to-action/">Call-to-action</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/card/">Card</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/checkbox/">Checkbox</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/header/">Header</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/radio-button/">Radio buttons</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/table/">Table</a>
+          </li>
+        </ul>
+        <h2>Usage</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/composition/">Composition</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <h1>Forms</h1>
+        <p>Basic form styles are provided automatically. Each input/field should be organized inside a <code>class=&quot;dc-field&quot;</code> element.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-field&quot;&gt;
+  &lt;label for=&quot;username&quot;&gt;
+    Username
+    &lt;small&gt;Or enter your email address&lt;/small&gt;
+  &lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;username&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Note the use of the <code>&lt;small&gt;</code> element to provide “hint” text to the label. Placing the hint text inside the <code>&lt;label&gt;</code> ensures it is not missed by screen reader users.</p>
+<h2>Basic example</h2>
+<p>Each input must be associated to its label by making their respective <code>id</code> and <code>for</code> attributes share the same value.</p>
+<div class="ds-scope">
+  <form>
+    <div class="ds-field">
+      <label for="username">
+        Username
+        <small>Or enter your email address</small>
+      </label>
+      <input type="text" id="username">
+    </div>
+    <div class="ds-field">
+      <label for="password">
+        Password
+      </label>
+      <input type="password" id="password">
+    </div>
+    <div class="ds-field">
+      <button class="ds-button" type="submit">Log in</button>
+    </div>
+  </form>
+</div>
+<h2>Invalid fields</h2>
+<p>For accessibility, each invalid field must have</p>
+<ul>
+<li><code>aria-invalid=&quot;true&quot;</code></li>
+<li>An error message associated to the input with <code>aria-describedby</code> and placed below the input</li>
+<li>An cross emoji prefixed to the error message with alternative text reading “error”</li>
+</ul>
+<div class="ds-scope">
+  <form>
+    <div class="ds-field">
+      <label for="username">
+        Username
+        <small>Or enter your email address</small>
+      </label>
+      <input type="text" id="username" aria-invalid="true" aria-describedby="username-error">
+      <small class="ds-field-error" id="username-error">
+        <span role="img" aria-label="Error">❌</span>
+        Your username must be more than one character
+      </small>
+    </div>
+  </form>
+</div>
+<p>Field errors are <code>&lt;small&gt;</code> elements with <code>class=&quot;ds-field-error&quot;</code>. Their <code>id</code> value must match the input’s <code>aria-describedby</code> value.</p>
+<h2>Fieldsets</h2>
+<p>Fieldsets are useful for grouping fields together under a group label (<code>&lt;legend&gt;</code>). In fact, fieldsets/legends are the recommended way to label groups of radio buttons. The legend must be the first child element inside the fieldset.</p>
+<div class="ds-scope">
+  <form>
+    <fieldset>
+      <legend>Favorite type of democracy</legend>
+      <div class="ds-stack-smallest">
+        <label class="ds-field-radio">
+          <input type="radio" name="democracy" checked>
+          <span>Representative</span>
+        </label>
+        <label class="ds-field-radio">
+          <input type="radio" name="democracy">
+          <span>Direct</span>
+        </label>
+        <label class="ds-field-radio">
+          <input type="radio" name="democracy">
+          <span>Monitory</span>
+        </label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<pre><code class="language-html">&lt;fieldset&gt;
+  &lt;legend&gt;Favorite type of democracy&lt;/legend&gt;
+  &lt;div class=&quot;ds-stack-smallest&quot;&gt;
+    &lt;label class=&quot;ds-field-radio&quot;&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot; checked&gt;
+      &lt;span&gt;Representative&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;ds-field-radio&quot;&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot;&gt;
+      &lt;span&gt;Direct&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;ds-field-radio&quot;&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot;&gt;
+      &lt;span&gt;Monitory&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="stack-spacing">
+  <h3 id="stack-spacing">🗒️ Stack spacing</h3>
+  <div class="site-stack">
+<p>Note the use of the <a href="https://DemocracyClub.github.io/design-system/components/stack">Stack</a> component (<code>class=&quot;ds-stack-smallest&quot;</code>) to space out each <code>class=&quot;ds-field-radio&quot;</code> element.</p>
+</div>
+</aside>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+// Just the form layout basics
+// You need to import field types separately
+
+@mixin forms {
+  form {
+    background-color: $blueLight;
+  }
+
+  form, fieldset {
+    padding: $s3;
+  }
+
+  form * {
+    margin: 0;
+  }
+
+  fieldset {
+    border: 2px solid $black;
+  }
+
+  legend {
+    padding: 0 $ss5;
+  }
+
+  form > * + *, fieldset > *:not(legend) + * {
+    margin-top: $s4;
+  }
+
+  .ds-field label {
+    display: block;
+  }
+
+  .ds-field label small {
+    display: block;
+    margin-top: $ss2;
+  }
+
+  .ds-field > * + * {
+    margin-top: $ss3;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    padding: $ss4;
+    border: 2px solid $black;
+    width: 100%;
+    max-width: $measureReduced;
+    box-shadow: inset $ss2 $ss2 0 $blackOpacity;
+  }
+
+  .ds-field-error {
+    color: $redForBlueLight;
+    display: block;
+  }
+}
+

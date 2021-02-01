@@ -1,10 +1,11 @@
 // Main files
 // Do not delete these
 // You can configure which are included
-// within the 'all-styles' mixin below
+// within the 'optional-styles' mixin below
 @import 'partials/_fonts.scss';
 @import 'partials/_variables.scss';
 @import 'partials/_type.scss';
+@import 'partials/_forms.scss';
 @import 'partials/_button.scss';
 @import 'partials/_call-to-action.scss';
 @import 'partials/_stack.scss';
@@ -14,13 +15,15 @@
 @import 'partials/_card.scss';
 @import 'partials/_table.scss';
 @import 'partials/_header.scss';
+@import 'partials/_radio.scss';
+@import 'partials/_checkbox.scss';
+@import 'partials/_utilities.scss';
 
 // Whether to scope basic styles to the .dc-scope class
 $scope: false;
 
 // Remove components not needed here
-@mixin all-styles {
-  @include type;
+@mixin optional-styles {
   @include button;
   @include cta;
   @include card;
@@ -30,12 +33,20 @@ $scope: false;
   @include breadcrumbs;
   @include table;
   @include header;
+  @include radio;
+  @include checkbox;
 }
 
 @if $scope {
   .ds-scope {
-    @include all-styles;
+    @include type;
+    @include forms;
+    @include optional-styles;
+    @include utilities;
   }
 } @else {
-  @include all-styles;
+  @include type;
+  @include forms;
+  @include optional-styles;
+  @include utilities;
 }

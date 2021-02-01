@@ -72,6 +72,13 @@ title: Colors
     </td>
   </tr>
   <tr>
+    <td><code>$redForWhite</code> and <code>$redForBlueLight</code></td>
+    <td>{% var '$redForWhite' %}</td>
+    <td>
+      <div class="site-swatch ds-bg-color-redForWhite"></div>
+    </td>
+  </tr>
+  <tr>
     <td><code>$amber</code></td>
     <td>{% var '$amber' %}</td>
     <td>

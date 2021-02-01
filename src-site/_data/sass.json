@@ -46,6 +46,16 @@
       "compiledValue": "#4BC427"
     },
     {
+      "name": "$redForWhite",
+      "value": "#D91714",
+      "compiledValue": "#D91714"
+    },
+    {
+      "name": "$redForBlueLight",
+      "value": "$redForWhite",
+      "compiledValue": "#D91714"
+    },
+    {
       "name": "$amber",
       "value": "#FFC037",
       "compiledValue": "#FFC037"
@@ -169,6 +179,11 @@
       "name": "$measure",
       "value": "80ch",
       "compiledValue": "80ch"
+    },
+    {
+      "name": "$measureReduced",
+      "value": "50ch",
+      "compiledValue": "50ch"
     }
   ],
   "mixins": [

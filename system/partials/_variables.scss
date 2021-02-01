@@ -9,6 +9,8 @@ $blueForBlack: #00B6FF;
 $blueLight: #E4F4FB;
 $greenForWhite: #32841A;
 $greenForBlack: #4BC427;
+$redForWhite: #D91714;
+$redForBlueLight: $redForWhite;
 $amber: #FFC037;
 
 // Scales
@@ -57,11 +59,13 @@ $lineHeightTight: 1.125;
 
 // Measure (characters per line; used with max-width typically)
 $measure: 80ch;
+$measureReduced: 50ch;
 
 @mixin fontMain {
   font-family: $familyMain;
   font-weight: 500;
   line-height: $lineHeightTight;
+  color: $black;
 }
 
 @mixin fontBody {

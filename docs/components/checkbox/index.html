@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Colors (Democracy Club Design System)</title>
+    <title>Checkbox (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -73,104 +73,22 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Colors</h1>
-        <table class="site-table">
-  <tr>
-    <th>Token</th>
-    <th>Value</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td><code>$black</code></td>
-    <td>#403F41</td>
-    <td>
-      <div class="site-swatch ds-bg-color-black"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$blackOpacity</code></td>
-    <td>rgba(64, 63, 65, 0.2)</td>
-    <td>
-      <div class="site-swatch ds-bg-color-blackOpacity"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$white</code></td>
-    <td>#fff</td>
-    <td>
-      <div class="site-swatch ds-bg-color-white"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$pinkForWhite</code></td>
-    <td>#E6007C</td>
-    <td>
-      <div class="site-swatch ds-bg-color-pinkForWhite"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$blueLight</code></td>
-    <td>#E4F4FB</td>
-    <td>
-      <div class="site-swatch ds-bg-color-blueForBlack"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$blueForWhite</code></td>
-    <td>#007CAD</td>
-    <td>
-      <div class="site-swatch ds-bg-color-blueForWhite"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$blueForBlack</code></td>
-    <td>#00B6FF</td>
-    <td>
-      <div class="site-swatch ds-bg-color-blueForBlack"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$greenForWhite</code></td>
-    <td>#32841A</td>
-    <td>
-      <div class="site-swatch ds-bg-color-greenForWhite"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$greenForBlack</code></td>
-    <td>#4BC427</td>
-    <td>
-      <div class="site-swatch ds-bg-color-greenForBlack"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$redForWhite</code> and <code>$redForBlueLight</code></td>
-    <td>#D91714</td>
-    <td>
-      <div class="site-swatch ds-bg-color-redForWhite"></div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$amber</code></td>
-    <td>#FFC037</td>
-    <td>
-      <div class="site-swatch ds-bg-color-amber"></div>
-    </td>
-  </tr>
-</table>
-<h2>Accessible pairings</h2>
-<p>As the names suggest, the “forWhite” colors can be safely paired with <code>$white</code> and the “forBlack” colors can be safely paired with <code>$black</code>. For example:</p>
-<pre><code class="language-css">.ds-my-component {
-  color: $white;
-  background-color: $greenForWhite;
-}
-
-.ds-my-component-reversed {
-  color: $greenForWhite;
-  background-color: $white;
-}
+        <h1>Checkbox</h1>
+        <p>Democracy club has custom checkbox styling 🙌.</p>
+<div class="ds-scope">
+  <form>
+    <label class="ds-field-checkbox">
+      <input type="checkbox" name="agree" checked>
+      <span>I agree</span>
+    </label>
+  </form>
+</div>
+<p>But this needs you to use the following markup structure. Note the <code>ds-field-checkbox</code> class and the <code>&lt;span&gt;</code> wrapping the label text.</p>
+<pre><code class="language-html">&lt;label class=&quot;ds-field-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;agree&quot; checked&gt;
+  &lt;span&gt;I agree&lt;/span&gt;
+&lt;/label&gt;
 </code></pre>
-<p>The is no <code>$pinkForBlack</code> because we tried to make one and it looked <em>gross</em>.</p>
 
       </main>
     </div>

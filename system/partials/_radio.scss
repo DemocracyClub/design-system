@@ -1,0 +1,39 @@
+@mixin radio {
+  .ds-field-radio {
+    display: flex;
+    align-items: center;
+  }
+
+  .ds-field-radio input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .ds-field-radio > span::before {
+    content: '';
+    border-radius: 50%;
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    border: 2px solid $black;
+    margin-right: $ss3;
+    vertical-align: -0.125em;
+    background-color: $white;
+  }
+
+  .ds-field-radio > input:checked + span::before {
+    background-color: $pinkForWhite;
+    box-shadow: inset 0 0 0 $ss2 $white;
+  }
+
+  .ds-field-radio > input:focus + span {
+    text-decoration: underline;
+    text-decoration-color: $amber;
+    text-decoration-thickness: 2px;
+  }
+}

@@ -1,0 +1,43 @@
+@mixin checkbox {
+  .ds-field-checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .ds-field-checkbox input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .ds-field-checkbox > span {
+    display: flex;
+    align-items: center;
+  }
+
+  .ds-field-checkbox > span::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    border: 2px solid $black;
+    margin-right: $ss3;
+    background-color: $white;
+    float: left;
+  }
+
+  .ds-field-checkbox > input:checked + span::before {
+    text-align: center;
+    content: '✓';
+    color: $pinkForWhite;
+  }
+
+  .ds-field-checkbox > input:focus + span {
+    text-decoration: underline;
+    text-decoration-color: $amber;
+    text-decoration-thickness: 2px;
+  }
+}
