@@ -20,6 +20,9 @@
             <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/dark/">Dark theme</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/basics/forms/">Forms</a>
           </li>
           <li>
@@ -118,6 +121,21 @@
     </li>
   </ul>
 </div>
+<aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="list-semantics">
+  <h3 id="list-semantics">⚠️ List semantics</h3>
+  <div class="site-stack">
+<p>As in the preceding example, the grid is a list. It is important that itemized/grouped elements communicate themselves as lists to screen reader software, and using a <code>&lt;ul&gt;</code> is how we do that.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-grid&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;!-- grid item 1 --&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;!-- grid item 2 --&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;!-- grid item 3 --&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;!-- etc --&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+</aside>
 <h2>Configuration</h2>
 <p>Wherever CSS Grid is supported, so are custom properties. Hence, you can configure your Grid by adjusting the <code>--gridCellMin</code> and <code>--gridGap</code> values within a <code>style</code> attribute.</p>
 <table class="site-table" style="table-layout: fixed">

@@ -168,3 +168,38 @@ Tables should retain their structure for comprehension. Ensuring they can be use
     </table>
   </div>
 </div>
+
+## Dark theme
+
+Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
+
+<div class="ds-scope">
+  <div class="ds-dark" style="padding: 1rem">
+    <div class="ds-table">
+      <table>
+        <caption>Basic table with column headers</caption>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <th scope="row">Row 1 / row header</th>
+          <td>Row 1 / cell 2</td>
+          <td>Row 1 / cell 3</td>
+        </tr>
+        <tr>
+          <th scope="row">Row 2 / row header</th>
+          <td>Row 2 / cell 2</td>
+          <td>Row 2 / cell 3</td>
+        </tr>
+        <tr>
+          <th scope="row">Row 3 / row header</th>
+          <td>Row 3 / cell 2</td>
+          <td>Row 3 / cell 3</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+

@@ -112,7 +112,7 @@
   height: 1rem;
 }
 
-.ds-scope * {
+.ds-scope {
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   line-height: 1.125;
@@ -132,7 +132,7 @@
 .ds-scope body:focus {
   outline: none;
 }
-.ds-scope p, .ds-scope ul, .ds-scope ol, .ds-scope blockquote {
+.ds-scope p, .ds-scope blockquote {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.5;
@@ -270,6 +270,7 @@
   position: relative;
   top: 0.375rem;
   border-bottom: 0;
+  margin-top: 0.375rem;
 }
 .ds-scope button.ds-button-blue {
   background-color: #007CAD;
@@ -583,6 +584,23 @@
   top: 50%;
   transform: translateY(-12.5%);
   pointer-events: none;
+}
+.ds-scope .ds-dark, .ds-scope .ds-dark * {
+  color: #fff;
+  background-color: #403F41;
+}
+.ds-scope .ds-dark .ds-card,
+.ds-scope .ds-dark form {
+  border: 1px solid;
+}
+.ds-scope .ds-dark .ds-table th:not([scope=row]) {
+  color: #403F41;
+}
+.ds-scope .ds-dark .ds-select::after {
+  border-top-color: #fff;
+}
+.ds-scope .ds-dark [class*=ds-button]:not(:active) {
+  border-bottom-color: #000;
 }
 .ds-scope .ds-visually-hidden {
   clip: rect(0 0 0 0);

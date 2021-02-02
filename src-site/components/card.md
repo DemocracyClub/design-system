@@ -49,3 +49,16 @@ Insert an element with `class="ds-card-image"` enclosing an image above the `cla
 For an example of Cards configured into a grid, see the [Grid]({{site.basedir}}/components/grid) page.
 
 {% endnote %}
+
+## Dark theme
+
+Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
+
+<div class="ds-scope">
+  <div class="ds-card ds-dark">
+    <div class="ds-card-body ds-stack-smaller">
+      <h3><a class="ds-card-link" href="#">Card</a></h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!</p>
+    </div>
+  </div>
+</div>

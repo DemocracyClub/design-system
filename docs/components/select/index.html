@@ -20,6 +20,9 @@
             <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/dark/">Dark theme</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/basics/forms/">Forms</a>
           </li>
           <li>
@@ -93,18 +96,33 @@
   </form>
 </div>
 <p>The following markup structure is needed. Remember to match the <code>for</code> and <code>id</code> values to ensure accessible labeling.</p>
-<pre><code class="language-html">  &lt;div class=&quot;ds-field&quot;&gt;
-    &lt;label for=&quot;select-example&quot;&gt;Favorite type of democracy&lt;/label&gt;
-    &lt;div class=&quot;ds-select&quot;&gt;
-      &lt;select id=&quot;select-example&quot; name=&quot;select-example&quot;&gt;
-        &lt;option&gt;Representative&lt;/option&gt;
-        &lt;option&gt;Direct&lt;/option&gt;
-        &lt;option&gt;Monitory&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/div&gt;
+<pre><code class="language-html">&lt;div class=&quot;ds-field&quot;&gt;
+  &lt;label for=&quot;select-example&quot;&gt;Favorite type of democracy&lt;/label&gt;
+  &lt;div class=&quot;ds-select&quot;&gt;
+    &lt;select id=&quot;select-example&quot; name=&quot;select-example&quot;&gt;
+      &lt;option&gt;Representative&lt;/option&gt;
+      &lt;option&gt;Direct&lt;/option&gt;
+      &lt;option&gt;Monitory&lt;/option&gt;
+    &lt;/select&gt;
   &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
-
+<h2>Dark theme</h2>
+<p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
+<div class="ds-scope">
+  <form class="ds-dark">
+    <div class="ds-field">
+      <label for="select-example">Favorite type of democracy</label>
+      <div class="ds-select">
+        <select id="select-example" name="select-example">
+          <option>Representative</option>
+          <option>Direct</option>
+          <option>Monitory</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
       </main>
     </div>
   </body>

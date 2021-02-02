@@ -22,3 +22,16 @@ But this needs you to use the following markup structure. Note the `ds-field-che
 </label>
 ```
 
+## Dark theme
+
+Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
+
+<div class="ds-scope">
+  <form class="ds-dark">
+    <label class="ds-field-checkbox">
+      <input type="checkbox" name="agree" checked>
+      <span>I agree</span>
+    </label>
+  </form>
+</div>
+

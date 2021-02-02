@@ -18,6 +18,7 @@
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
 @import 'partials/_select.scss';
+@import 'partials/_dark.scss';
 @import 'partials/_utilities.scss';
 
 // Whether to scope basic styles to the .dc-scope class
@@ -41,14 +42,20 @@ $scope: false;
 
 @if $scope {
   .ds-scope {
+    @include fontMain;
     @include type;
     @include forms;
     @include optional-styles;
+    @include dark;
     @include utilities;
   }
 } @else {
+  :root {
+    @include fontMain;
+  }
   @include type;
   @include forms;
   @include optional-styles;
+  @include dark;
   @include utilities;
 }

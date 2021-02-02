@@ -45,6 +45,23 @@ The Grid component progressively enhances a single column layout (with basic [St
   </ul>
 </div>
 
+{% warning 'List semantics' %}
+
+As in the preceding example, the grid is a list. It is important that itemized/grouped elements communicate themselves as lists to screen reader software, and using a `<ul>` is how we do that.
+
+```html
+<div class="ds-grid">
+  <ul>
+    <li><!-- grid item 1 --></li>
+    <li><!-- grid item 2 --></li>
+    <li><!-- grid item 3 --></li>
+    <li><!-- etc --></li>
+  </ul>
+</div>
+```
+
+{% endwarning %}
+
 ## Configuration
 
 Wherever CSS Grid is supported, so are custom properties. Hence, you can configure your Grid by adjusting the `--gridCellMin` and `--gridGap` values within a `style` attribute.

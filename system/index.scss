@@ -15,6 +15,7 @@
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
 @import 'partials/_select.scss';
+@import 'partials/_dark.scss';
 @import 'partials/_utilities.scss';
 
 // Generate atomic classes for documentation demos
@@ -40,15 +41,21 @@ $scope: true;
 
 @if $scope {
   .ds-scope {
+    @include fontMain;
     @include type;
     @include forms;
     @include optional-styles;
+    @include dark;
     @include utilities;
   }
 } @else {
+  :root {
+    @include fontMain;
+  }
   @include type;
   @include forms;
   @include optional-styles;
+  @include dark;
   @include utilities;
 }
 

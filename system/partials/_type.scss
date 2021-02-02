@@ -1,8 +1,4 @@
 @mixin type {
-  * {
-    @include fontMain;
-  }
-
   input,
   button,
   textarea,
@@ -20,7 +16,7 @@
     outline: none;
   }
 
-  p, ul, ol, blockquote {
+  p, blockquote {
     @include fontBody;
   }
 

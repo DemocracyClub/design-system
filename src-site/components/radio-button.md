@@ -93,3 +93,27 @@ For inline radio buttons, we can use a [Cluster]({{site.basedir}}/components/clu
   </fieldset>
 </div>
 ```
+
+## Dark theme
+
+Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
+
+<div class="ds-scope">
+  <form class="ds-cluster ds-dark">
+    <fieldset>
+      <legend>Favorite type of democracy</legend>
+      <label class="ds-field-radio">
+        <input type="radio" name="democracy" checked>
+        <span>Representative</span>
+      </label>
+      <label class="ds-field-radio">
+        <input type="radio" name="democracy">
+        <span>Direct</span>
+      </label>
+      <label class="ds-field-radio">
+        <input type="radio" name="democracy">
+        <span>Monitory</span>
+      </label>
+    </fieldset>
+  </form>
+</div>
