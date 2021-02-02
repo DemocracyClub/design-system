@@ -59,6 +59,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/radio-button/">Radio buttons</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/select/">Select</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
           </li>
           <li>
@@ -129,6 +132,53 @@
   </form>
 </div>
 <p>Field errors are <code>&lt;small&gt;</code> elements with <code>class=&quot;ds-field-error&quot;</code>. Their <code>id</code> value must match the input’s <code>aria-describedby</code> value.</p>
+<pre><code class="language-html">  &lt;div class=&quot;ds-field&quot;&gt;
+    &lt;label for=&quot;username&quot;&gt;
+      Username
+      &lt;small&gt;Or enter your email address&lt;/small&gt;
+    &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;username&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;username-error&quot;&gt;
+    &lt;small class=&quot;ds-field-error&quot; id=&quot;username-error&quot;&gt;
+      &lt;span role=&quot;img&quot; aria-label=&quot;Error&quot;&gt;❌&lt;/span&gt;
+      Your username must be more than one character
+    &lt;/small&gt;
+  &lt;/div&gt;
+</code></pre>
+<p>Also note the use of <code>role=&quot;img&quot;</code> and <code>aria-label=&quot;Error&quot;</code> to ensure an appropriate accessible label for the ❌ icon.</p>
+<h2>Submission errors</h2>
+<p>If the form is invalid upon submission, a message should be displayed. Importantly, if submission is handled with JavaScript (and without a page load) this message should appear directly above the submit button, so the user can see it without scrolling.</p>
+<div class="ds-scope">
+  <form>
+    <div class="ds-field">
+      <label for="username">
+        Username
+        <small>Or enter your email address</small>
+      </label>
+      <input type="text" id="username">
+    </div>
+    <div class="ds-field">
+      <label for="password">
+        Password
+      </label>
+      <input type="password" id="password">
+    </div>
+    <div role="alert">
+      <div class="ds-error">
+        <span role="img" aria-label="Error">❌</span> Your email or password is incorrect. <a href="#">Forgot your password?</a>
+      </div>
+    </div>
+    <div class="ds-field">
+      <button class="ds-button" type="submit">Log in</button>
+    </div>
+  </form>
+</div>
+<p>In addition, it should be appended to an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live region</a>. This will announce its content in screen readers, ensuring blind screen reader users are aware the error has been invoked. Note the <code>role=&quot;alert&quot;</code> in the below example:</p>
+<pre><code class="language-html">&lt;div role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;ds-error&quot;&gt;
+    &lt;span role=&quot;img&quot; aria-label=&quot;Error&quot;&gt;❌&lt;/span&gt; Your email or password is incorrect. &lt;a href=&quot;#&quot;&gt;Forgot your password?&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <h2>Fieldsets</h2>
 <p>Fieldsets are useful for grouping fields together under a group label (<code>&lt;legend&gt;</code>). In fact, fieldsets/legends are the recommended way to label groups of radio buttons. The legend must be the first child element inside the fieldset.</p>
 <div class="ds-scope">

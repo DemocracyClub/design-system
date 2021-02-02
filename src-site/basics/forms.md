@@ -67,6 +67,62 @@ For accessibility, each invalid field must have
 
 Field errors are `<small>` elements with `class="ds-field-error"`. Their `id` value must match the input’s `aria-describedby` value.
 
+```html
+  <div class="ds-field">
+    <label for="username">
+      Username
+      <small>Or enter your email address</small>
+    </label>
+    <input type="text" id="username" aria-invalid="true" aria-describedby="username-error">
+    <small class="ds-field-error" id="username-error">
+      <span role="img" aria-label="Error">❌</span>
+      Your username must be more than one character
+    </small>
+  </div>
+```
+
+Also note the use of `role="img"` and `aria-label="Error"` to ensure an appropriate accessible label for the ❌ icon.
+
+## Submission errors
+
+If the form is invalid upon submission, a message should be displayed. Importantly, if submission is handled with JavaScript (and without a page load) this message should appear directly above the submit button, so the user can see it without scrolling.
+
+<div class="ds-scope">
+  <form>
+    <div class="ds-field">
+      <label for="username">
+        Username
+        <small>Or enter your email address</small>
+      </label>
+      <input type="text" id="username">
+    </div>
+    <div class="ds-field">
+      <label for="password">
+        Password
+      </label>
+      <input type="password" id="password">
+    </div>
+    <div role="alert">
+      <div class="ds-error">
+        <span role="img" aria-label="Error">❌</span> Your email or password is incorrect. <a href="#">Forgot your password?</a>
+      </div>
+    </div>
+    <div class="ds-field">
+      <button class="ds-button" type="submit">Log in</button>
+    </div>
+  </form>
+</div>
+
+In addition, it should be appended to an [ARIA live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). This will announce its content in screen readers, ensuring blind screen reader users are aware the error has been invoked. Note the `role="alert"` in the below example:
+
+```html
+<div role="alert">
+  <div class="ds-error">
+    <span role="img" aria-label="Error">❌</span> Your email or password is incorrect. <a href="#">Forgot your password?</a>
+  </div>
+</div>
+```
+
 ## Fieldsets
 
 Fieldsets are useful for grouping fields together under a group label (`<legend>`). In fact, fieldsets/legends are the recommended way to label groups of radio buttons. The legend must be the first child element inside the fieldset.

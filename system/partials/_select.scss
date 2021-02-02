@@ -1,0 +1,26 @@
+@mixin select {
+  .ds-select {
+    display: inline-block;
+    width: 100%;
+    max-width: $measureReduced;
+    position: relative;
+  }
+
+  .ds-select select {
+    padding-right: $s5;
+  }
+
+  .ds-select::after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 1rem solid transparent;
+    border-top-color: $pinkForWhite;
+    border-top-width: 0.9rem;
+    position: absolute;
+    right: $ss6;
+    top: 50%;
+    transform: translateY(-12.5%);
+    pointer-events: none;
+  }
+}

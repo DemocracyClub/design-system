@@ -15,7 +15,7 @@
   }
 
   fieldset {
-    border: 2px solid $black;
+    border: 2px solid;
   }
 
   legend {
@@ -36,14 +36,22 @@
   }
 
   .ds-field > * + * {
-    margin-top: $ss3;
+    margin-top: $ss4;
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
   }
 
   input[type="text"],
   input[type="password"],
-  input[type="email"] {
+  input[type="email"],
+  select {
     padding: $ss4;
-    border: 2px solid $black;
+    border: 2px solid;
     width: 100%;
     max-width: $measureReduced;
     box-shadow: inset $ss2 $ss2 0 $blackOpacity;
@@ -52,6 +60,20 @@
   .ds-field-error {
     color: $redForBlueLight;
     display: block;
+  }
+
+  .ds-error {
+    padding: $s2;
+    background-color: $redForWhite;
+    max-width: $measureReduced;
+  }
+
+  .ds-error, .ds-error * {
+    color: #fff;
+  }
+
+  .ds-error span[role="img"] {
+    filter: invert(1) grayscale(1) contrast(100);
   }
 }
 

@@ -17,6 +17,7 @@
 @import 'partials/_header.scss';
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
+@import 'partials/_select.scss';
 @import 'partials/_utilities.scss';
 
 // Whether to scope basic styles to the .dc-scope class
@@ -35,6 +36,7 @@ $scope: false;
   @include header;
   @include radio;
   @include checkbox;
+  @include select;
 }
 
 @if $scope {

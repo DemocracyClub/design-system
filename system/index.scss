@@ -14,6 +14,7 @@
 @import 'partials/_header.scss';
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
+@import 'partials/_select.scss';
 @import 'partials/_utilities.scss';
 
 // Generate atomic classes for documentation demos
@@ -34,6 +35,7 @@ $scope: true;
   @include header;
   @include radio;
   @include checkbox;
+  @include select;
 }
 
 @if $scope {

@@ -1,5 +1,7 @@
 @mixin type {
-  @include fontMain;
+  * {
+    @include fontMain;
+  }
 
   input,
   button,
@@ -75,5 +77,4 @@
   dl > * + * {
     margin-top: $ss6;
   }
-
 }
