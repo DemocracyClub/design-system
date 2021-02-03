@@ -66,3 +66,44 @@ A typical Candidate uses the following markup:
 * Choose a heading level that is appropriate for the context. In the above example, `<h3>` assumes the Candidate instance belongs to a section headed with an `<h2>`.
 * Alternative text is not necessary for the image, since the name and party affiliation already suffice in terms of pertinent info.
 
+## Dark theme
+
+<div class="ds-scope">
+  <div class="site-resizer ds-dark">
+    <ul class="ds-grid">
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Michael Rosen</a>
+          </h3>
+          <div class="ds-h6">Labour</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="{{site.basedir}}/images/candidate_example.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">David Moreland</a>
+          </h3>
+          <div class="ds-h6">Independent</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="{{site.basedir}}/images/candidate_example_2.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Giles Orpen-Smellie</a>
+          </h3>
+          <div class="ds-h6">Conservative & Unionist Party</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="{{site.basedir}}/images/candidate_example_3.jpg" alt="">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

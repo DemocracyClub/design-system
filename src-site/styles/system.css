@@ -644,7 +644,8 @@
   background-color: #403F41;
 }
 .ds-scope .ds-dark .ds-card,
-.ds-scope .ds-dark form {
+.ds-scope .ds-dark form,
+.ds-scope .ds-candidate {
   border: 1px solid;
 }
 .ds-scope .ds-dark .ds-table th:not([scope=row]) {
