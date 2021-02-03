@@ -666,11 +666,11 @@
   white-space: nowrap;
   width: 1px;
 }
-.ds-scope .ds-padded-small {
+.ds-scope .ds-padded {
   padding: 1rem;
 }
 .ds-scope .ds-padded-large {
-  padding: 1.5625rem;
+  padding: 2.44140625rem;
 }
 .ds-scope .ds-bordered {
   border: 2px solid;
@@ -678,7 +678,11 @@
 .ds-scope .ds-text-centered {
   text-align: center;
 }
-.ds-scope .ds-block-centered {
+.ds-scope .ds-text-right {
+  text-align: right;
+}
+.ds-scope [class*=ds-block-centered] {
+  display: block;
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;

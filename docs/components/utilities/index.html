@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Stack (Democracy Club Design System)</title>
+    <title>Utility classes (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -85,90 +85,135 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Stack</h1>
-        <p>The <strong>Stack</strong> is a helper component for spacing elements. It injects margin between adjacent elements along a vertical axis. You will more than likely want to use a <strong>Stack</strong> when dealing with flow content or in composing your own component.</p>
+        <h1>Utility classes</h1>
+        <p>These utility classes are a toolkit for making simple design/layout adjustments to individual elements. For generic layout helpers (concerning multiple elements), see <a href="https://DemocracyClub.github.io/design-system/components/cluster">Cluster</a>, <a href="https://DemocracyClub.github.io/design-system/components/stack">Stack</a>, and <a href="https://DemocracyClub.github.io/design-system/components/cluster">Grid</a>.</p>
 <table class="site-table">
-  <tbody><tr>
-    <th>Value</th>
-    <th>Markup</th>
-    <th>Demo</th>
+  <tr>
+    <th>
+      Class name
+    </th>
+    <th>
+      What it does
+    </th>
+    <th>
+      Demo
+    </th>
   </tr>
   <tr>
-    <td><code>$ss5</code> (0.625rem)</td>
     <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smallest"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-smallest">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s3</code> (1.5625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smaller"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-    <div class="ds-stack-smaller">
-      <div class="site-box-dashed">First element</div>
-      <div class="site-box-dashed">Next element</div>
-    </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s6</code> (3.05176rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s8</code> (4.76837rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-larger"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-larger">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-</tbody>
-</table>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="paragraphs">
-  <h3 id="paragraphs">🗒️ Paragraphs</h3>
-  <div class="site-stack">
-<p>Paragraphs are immune to stack value variations. In all cases, successive paragraphs are separated by a value of <code>$s1</code> (1rem). This is enforced using an <code>!important</code> marker.</p>
-<pre><code class="language-css">p + p {
-  margin-top: $s1 !important;
-}
-</code></pre>
+<p><code>ds-padded</code>
+</td>
+<td></p>
+<p>Adds padding of <code>$s1</code> (1rem) on all sides
+</td>
+<td class="ds-scope">
+<div class="ds-padded" style="background-color: #ddd">
+Basic padding
 </div>
-</aside>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-padded-large</code>
+</td>
+<td></p>
+<p>Adds padding of <code>$s3</code> (1.5625rem) on all sides
+</td>
+<td class="ds-scope">
+<div class="ds-padded-large" style="background-color: #ddd">
+Large padding
+</div>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-text-centered</code>
+</td>
+<td></p>
+<p>Applies center justified text
+</td>
+<td class="ds-scope">
+<p class="ds-text-centered">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic culpa, accusantium fuga, voluptate magnam excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus facilis, libero ratione cum quod id excepturi, tenetur dolorem, saepe similique dignissimos magni.
+</p>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-text-right</code>
+</td>
+<td></p>
+<p>Applies right justified text
+</td>
+<td class="ds-scope">
+<p class="ds-text-right">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic culpa, accusantium fuga, voluptate magnam excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus facilis, libero ratione cum quod id excepturi, tenetur dolorem, saepe similique dignissimos magni.
+</p>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-bordered</code>
+</td>
+<td>
+Adds a <code>2px</code> solid border matching the element’s <code>color</code>
+</td>
+<td class="ds-scope">
+<div class="ds-padded ds-bordered">
+Bordered and padded
+</div>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-visually-hidden</code>
+</td>
+<td>
+Hides an element visually <em>but</em> leaves it available to screen readers. May help to clarify things for screen reader users.
+</td>
+<td class="ds-scope">
+<p class="ds-visually-hidden">I am in screen reader output</p>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-block-centered</code>
+</td>
+<td></p>
+<p>Centers a block element, using <code>auto</code> margins, with a <code>max-width</code> of <code>$measure</code> (80ch).
+</td>
+<td class="ds-scope">
+<small>(demo not possible in this context)</small>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-block-centered-narrow</code>
+</td>
+<td></p>
+<p>Same as <code>ds-block-centered</code> but uses <code>$measureReduced</code> (50ch)
+</td>
+<td class="ds-scope">
+<small>(demo not possible in this context)</small>
+</td></p>
+  </tr>
+  <tr>
+    <td>
+<p><code>ds-h1</code>, <code>ds-h2</code>, <code>ds-h3</code>, <code>ds-h4</code>, <code>ds-h5</code>, <code>ds-h6</code>
+</td>
+<td></p>
+<p>Match the size of arbitrary text to a heading level. Only use where a heading is not appropriate.
+</td>
+<td class="ds-scope">
+<span class="ds-h1">A</span>
+<span class="ds-h2">A</span>
+<span class="ds-h3">A</span>
+<span class="ds-h4">A</span>
+<span class="ds-h5">A</span>
+<span class="ds-h6">A</span>
+</td></p>
+  </tr>
+</table>
       </main>
     </div>
   </body>
