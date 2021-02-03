@@ -1,0 +1,64 @@
+@mixin candidate {
+  .ds-candidate {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid $blackOpacity;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  }
+
+  .ds-candidate-body {
+    padding: $s1;
+    flex-grow: 999;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 66.666%;
+  }
+
+  .ds-candidate-name {
+    color: $pinkForWhite;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .ds-candidate-name a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .ds-candidate-image {
+    flex-grow: 1;
+    min-width: 10rem;
+    min-height: 10rem;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ds-candidate-image img {
+    display: block;
+    height: 100%;
+    position: absolute;
+  }
+
+  @supports (object-fit: cover) {
+    .ds-candidate-image img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .ds-candidate:focus-within {
+    outline: $ss2 solid $amber;
+  }
+
+  .ds-candidate:focus-within a:focus {
+    outline: none;
+  }
+}

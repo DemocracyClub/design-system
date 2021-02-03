@@ -13,6 +13,7 @@
 @import 'partials/_grid.scss';
 @import 'partials/_breadcrumbs.scss';
 @import 'partials/_card.scss';
+@import 'partials/_candidate.scss';
 @import 'partials/_table.scss';
 @import 'partials/_header.scss';
 @import 'partials/_radio.scss';
@@ -29,6 +30,7 @@ $scope: false;
   @include button;
   @include cta;
   @include card;
+  @include candidate;
   @include cluster;
   @include grid;
   @include stack;

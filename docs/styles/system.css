@@ -170,7 +170,7 @@
   font-size: 1.5625rem;
 }
 .ds-scope h6, .ds-scope .ds-h6 {
-  font-size: 0.25rem;
+  font-size: 1.25rem;
 }
 .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
   font-weight: 500;
@@ -328,6 +328,60 @@
 }
 .ds-scope .ds-card-body {
   padding: 1.25rem;
+}
+.ds-scope .ds-candidate {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(64, 63, 65, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.ds-scope .ds-candidate-body {
+  padding: 1rem;
+  flex-grow: 999;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 66.666%;
+}
+.ds-scope .ds-candidate-name {
+  color: #E6007C;
+  hyphens: auto;
+  word-break: break-word;
+}
+.ds-scope .ds-candidate-name a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.ds-scope .ds-candidate-image {
+  flex-grow: 1;
+  min-width: 10rem;
+  min-height: 10rem;
+  max-width: 100%;
+  position: relative;
+}
+.ds-scope .ds-candidate-image img {
+  display: block;
+  height: 100%;
+  position: absolute;
+}
+@supports (object-fit: cover) {
+  .ds-scope .ds-candidate-image img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.ds-scope .ds-candidate:focus-within {
+  outline: 0.25rem solid #FFC037;
+}
+.ds-scope .ds-candidate:focus-within a:focus {
+  outline: none;
 }
 .ds-scope .ds-cluster > *,
 .ds-scope .ds-cluster-right > *,
@@ -610,6 +664,26 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+.ds-scope .ds-padded-small {
+  padding: 1rem;
+}
+.ds-scope .ds-padded-large {
+  padding: 1.5625rem;
+}
+.ds-scope .ds-bordered {
+  border: 2px solid;
+}
+.ds-scope .ds-text-centered {
+  text-align: center;
+}
+.ds-scope .ds-block-centered {
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ds-scope .ds-block-centered-narrow {
+  max-width: 50ch;
 }
 
 /*# sourceMappingURL=system.css.map */

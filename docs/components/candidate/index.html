@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Stack (Democracy Club Design System)</title>
+    <title>Candidate (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -82,90 +82,67 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Stack</h1>
-        <p>The <strong>Stack</strong> is a helper component for spacing elements. It injects margin between adjacent elements along a vertical axis. You will more than likely want to use a <strong>Stack</strong> when dealing with flow content or in composing your own component.</p>
-<table class="site-table">
-  <tbody><tr>
-    <th>Value</th>
-    <th>Markup</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td><code>$ss5</code> (0.625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smallest"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-smallest">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s3</code> (1.5625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smaller"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-    <div class="ds-stack-smaller">
-      <div class="site-box-dashed">First element</div>
-      <div class="site-box-dashed">Next element</div>
-    </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s6</code> (3.05176rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s8</code> (4.76837rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-larger"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-larger">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-</tbody>
-</table>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="paragraphs">
-  <h3 id="paragraphs">🗒️ Paragraphs</h3>
-  <div class="site-stack">
-<p>Paragraphs are immune to stack value variations. In all cases, successive paragraphs are separated by a value of <code>$s1</code> (1rem). This is enforced using an <code>!important</code> marker.</p>
-<pre><code class="language-css">p + p {
-  margin-top: $s1 !important;
-}
-</code></pre>
+        <h1>Candidate</h1>
+        <p>The Candidate component is a special kind of card. For all other card use cases, see the generic <a href="https://DemocracyClub.github.io/design-system/components/card">Card</a>. The following demo uses a <a href="https://DemocracyClub.github.io/design-system/components/grid">Grid</a> as a list (<code>&lt;ul&gt;</code>) to display a list of cards.</p>
+<div class="ds-scope">
+  <div class="site-resizer">
+    <ul class="ds-grid">
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Michael Rosen</a>
+          </h3>
+          <div class="ds-h6">Labour</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">David Moreland</a>
+          </h3>
+          <div class="ds-h6">Independent</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_2.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Giles Orpen-Smellie</a>
+          </h3>
+          <div class="ds-h6">Conservative & Unionist Party</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_3.jpg" alt="">
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
-</aside>
+<p>A typical Candidate uses the following markup:</p>
+<pre><code class="language-html">&lt;li class=&quot;ds-candidate&quot;&gt;
+  &lt;div class=&quot;ds-candidate-body ds-stack-smallest&quot;&gt;
+    &lt;h3 class=&quot;ds-candidate-name ds-h5&quot;&gt;
+      &lt;a href=&quot;path/to/candidate&quot;&gt;Candidate name&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;div class=&quot;ds-h6&quot;&gt;Candidate party&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ds-candidate-image&quot;&gt;
+    &lt;img src=&quot;/path/to/candidate/image&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+<h2>Markup variants</h2>
+<ul>
+<li>Where the Candidate instance is standalone (not alongside others) make the <code>class=&quot;ds-candidate&quot;</code> element a <code>&lt;section&gt;</code>—not an <code>&lt;li&gt;</code>.</li>
+<li>Choose a heading level that is appropriate for the context. In the above example, <code>&lt;h3&gt;</code> assumes the Candidate instance belongs to a section headed with an <code>&lt;h2&gt;</code>.</li>
+<li>Alternative text is not necessary for the image, since the name and party affiliation already suffice in terms of pertinent info.</li>
+</ul>
+
       </main>
     </div>
   </body>
