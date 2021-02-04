@@ -319,7 +319,8 @@
   color: #E6007C;
 }
 .ds-scope summary > * {
-  all: inherit;
+  font: inherit;
+  display: inline;
 }
 .ds-scope details[open] summary {
   margin-bottom: 1rem;

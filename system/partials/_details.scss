@@ -23,7 +23,8 @@
   }
 
   summary > * {
-    all: inherit;
+    font: inherit;
+    display: inline;
   }
 
   details[open] summary {
