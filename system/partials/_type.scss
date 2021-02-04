@@ -16,7 +16,7 @@
     outline: none;
   }
 
-  p, blockquote {
+  p, blockquote, ul:not([class]) {
     @include fontBody;
   }
 
@@ -41,15 +41,16 @@
     font-size: $ss8;
   }
 
-  h1, .ds-h1 { font-size: $s7 }
-  h2, .ds-h2 { font-size: $s6 }
-  h3, .ds-h3 { font-size: $s5 }
-  h4, .ds-h4 { font-size: $s4 }
-  h5, .ds-h5 { font-size: $s3 }
-  h6, .ds-h6 { font-size: $s2 }
+  h1, .ds-h1 { font-size: $s7; font-size: clamp(#{$s5}, 7vw, #{$s7}); }
+  h2, .ds-h2 { font-size: $s6; font-size: clamp(#{$s5}, 6vw, #{$s6}); }
+  h3, .ds-h3 { font-size: $s5; font-size: clamp(#{$s4}, 5vw, #{$s5}); }
+  h4, .ds-h4 { font-size: $s4; font-size: clamp(#{$s3}, 4vw, #{$s4}); }
+  h5, .ds-h5 { font-size: $s3; font-size: clamp(#{$s2}, 3vw, #{$s3}); }
+  h6, .ds-h6 { font-size: $s2; font-size: clamp(#{$ss1}, 2vw, #{$s2}); }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
+    word-break: break-word;
   }
 
   a {

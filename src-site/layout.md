@@ -1,0 +1,44 @@
+---
+title: Page layout demo
+permalink: /layout-demo/index.html
+layout: layouts/bare.njk
+---
+
+<header class="ds-header">
+  <a class="ds-skip-link" href="#main">skip to content</a>
+  <a class="ds-header-home" href="/">
+    <img src="{{site.basedir}}/images/system/logo.svg" alt="Democracy Club home" />
+  </a>
+  <nav class="ds-cluster">
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a aria-current="page" href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Our work</a>
+      </li>
+      <li>
+        <a href="#">Quests</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Donate</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main id="main" tabindex="-1" class="ds-stack">
+  <h1>Democracy Club page layout demo</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur iusto officia necessitatibus distinctio nemo perspiciatis placeat illo facilis enim soluta et accusamus sunt ipsa fugit earum, voluptas assumenda aspernatur.</p>
+  <p>Distinctio iure explicabo quaerat repudiandae, nulla officia corporis! Eaque sapiente excepturi quas, nostrum cumque nisi. Quis eligendi necessitatibus, fugit voluptatem a, voluptatibus praesentium fugiat, nostrum doloremque eum est ratione provident.</p>
+  <h2>A subheading</h2>
+  <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
+</main>

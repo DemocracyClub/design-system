@@ -9,7 +9,7 @@
   }
 
   .ds-header-home {
-    flex-basis: 20rem;
+    flex-basis: 15rem;
     margin-right: $s2;
   }
 
@@ -26,12 +26,13 @@
   .ds-header ul {
     padding-left: 0;
     margin: calc(#{$ss6} * -1);
+    font-size: clamp(#{$ss7}, 3vw, #{$s2});
   }
 
   .ds-header li {
     @include fontMain;
     display: inline-block;
-    margin: $ss6;
+    margin: 0.666em;
   }
 
   .ds-header nav a {

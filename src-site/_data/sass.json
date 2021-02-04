@@ -177,13 +177,13 @@
     },
     {
       "name": "$measure",
-      "value": "80ch",
-      "compiledValue": "80ch"
+      "value": "45em",
+      "compiledValue": "45em"
     },
     {
       "name": "$measureReduced",
-      "value": "50ch",
-      "compiledValue": "50ch"
+      "value": "30em",
+      "compiledValue": "30em"
     }
   ],
   "mixins": [

@@ -18,6 +18,7 @@
 @import 'partials/_checkbox.scss';
 @import 'partials/_select.scss';
 @import 'partials/_dark.scss';
+@import 'partials/_page.scss';
 @import 'partials/_utilities.scss';
 
 // Generate atomic classes for documentation demos
@@ -26,6 +27,8 @@
 
 $scope: true;
 
+// Comment out the component styles
+// you don’t need
 @mixin optional-styles {
   @include button;
   @include cta;
@@ -45,21 +48,29 @@ $scope: true;
 
 @if $scope {
   .ds-scope {
+    font-size: 120%;
     @include fontMain;
     @include type;
     @include forms;
     @include optional-styles;
     @include dark;
+    @include page;
     @include utilities;
   }
 } @else {
   :root {
     @include fontMain;
   }
+
+  :root, body {
+    margin: 0;
+  }
+
   @include type;
   @include forms;
   @include optional-styles;
   @include dark;
+  @include page;
   @include utilities;
 }
 

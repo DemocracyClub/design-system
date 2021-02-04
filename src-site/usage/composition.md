@@ -1,5 +1,5 @@
 ---
-title: Composition
+title: Composing content
 ---
 
 By combining [Stacks]({{site.basedir}}/components/stack), [Grids]({{site.basedir}}/components/grid), and the various components, you can quickly compose responsive layouts like the following “kitchen sink” example.
