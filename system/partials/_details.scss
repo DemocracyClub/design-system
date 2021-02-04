@@ -1,0 +1,32 @@
+@mixin details {
+  ul.ds-details {
+    padding: 0;
+    list-style: none;
+  }
+
+  details {
+    padding: $s1 0;
+    border-style: solid;
+    border-width: 1px 0;
+  }
+
+  details + details,
+  ul.ds-details li + li details {
+    margin-top: 0;
+    border-top-width: 0;
+  }
+
+  summary {
+    cursor: pointer;
+    font-size: $s3;
+    color: $pinkForWhite;
+  }
+
+  summary > * {
+    all: inherit;
+  }
+
+  details[open] summary {
+    margin-bottom: $s1;
+  }
+}

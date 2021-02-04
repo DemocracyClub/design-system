@@ -8,6 +8,7 @@
 @import 'partials/_forms.scss';
 @import 'partials/_button.scss';
 @import 'partials/_call-to-action.scss';
+@import 'partials/_details.scss';
 @import 'partials/_stack.scss';
 @import 'partials/_cluster.scss';
 @import 'partials/_grid.scss';
@@ -29,6 +30,7 @@ $scope: false;
 @mixin optional-styles {
   @include button;
   @include cta;
+  @include details;
   @include card;
   @include candidate;
   @include cluster;
