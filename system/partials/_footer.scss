@@ -1,0 +1,12 @@
+@mixin footer {
+  .ds-footer {
+    padding: $s6;
+    border-top: $ss4 solid $blueForWhite;
+    margin-top: $s8;
+  }
+
+  .ds-copyright > * {
+    max-width: none;
+    margin: 0 !important;
+  }
+}

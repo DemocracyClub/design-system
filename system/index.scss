@@ -14,6 +14,7 @@
 @import 'partials/_breadcrumbs.scss';
 @import 'partials/_table.scss';
 @import 'partials/_header.scss';
+@import 'partials/_footer.scss';
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
 @import 'partials/_select.scss';
@@ -41,6 +42,7 @@ $scope: true;
   @include breadcrumbs;
   @include table;
   @include header;
+  @include footer;
   @include radio;
   @include checkbox;
   @include select;
@@ -48,7 +50,6 @@ $scope: true;
 
 @if $scope {
   .ds-scope {
-    font-size: 120%;
     @include fontMain;
     @include type;
     @include forms;
@@ -62,7 +63,7 @@ $scope: true;
     @include fontMain;
   }
 
-  :root, body {
+  body {
     margin: 0;
   }
 

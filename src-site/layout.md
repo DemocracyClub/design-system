@@ -42,3 +42,12 @@ layout: layouts/bare.njk
   <h2>A subheading</h2>
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
 </main>
+<footer class="ds-footer ds-dark">
+  <div class="ds-block-centered">
+    <div class="ds-copyright ds-text-centered">
+      <p>Copyright © 2021 Democracy Club</p>
+      <p>Community Interest Company</p>
+      <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
+    </div>
+  </div>
+</footer>

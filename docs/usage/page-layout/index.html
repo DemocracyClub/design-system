@@ -59,6 +59,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/details/">Details</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/footer/">Footer</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
           </li>
           <li>
@@ -92,7 +95,23 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Page layout</h1>
-        <p>See a <a href="https://DemocracyClub.github.io/design-system/layout-demo">demo of a basic page layout, featuring a Header, a main content area, and a footer</a>.</p>
+        <p>Instate a standard page layout by wrapping a <a href="https://DemocracyClub.github.io/design-system/components/header">Header</a>, a main content area, and a <a href="https://DemocracyClub.github.io/design-system/components/footer">Footer</a> in a <code>&lt;div&gt;</code> with <code>class=&quot;ds=page&quot;</code> directly inside the <code>&lt;body&gt;</code> element.</p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;div class=&quot;ds-page&quot;&gt;
+    &lt;header class=&quot;ds-header&quot;&gt;...&lt;/header&gt;
+    &lt;main id=&quot;main&quot; tabindex=&quot;-1&quot; class=&quot;ds-stack&quot;&gt;...&lt;/main&gt;
+    &lt;footer class=&quot;ds-footer&quot;&gt;...&lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h2>Notes</h2>
+<ul>
+<li>The <a href="https://DemocracyClub.github.io/design-system/components/header">Header</a> component’s prescribed markup includes a <a href="https://webaim.org/techniques/skipnav/">skip link</a>, so don’t implement one separately.</li>
+<li>For the skip link to work reliably in all browsers, the <code>&lt;main&gt;</code> element needs <code>id=&quot;main&quot;</code> and <code>tabindex=&quot;-1&quot;</code>.</li>
+<li>The <code>&lt;main&gt;</code> element needs <code>class=&quot;ds-stack&quot;</code> to insert margin between all the flow elements. For dealing with flow content, see <a href="https://DemocracyClub.github.io/design-system/usage/composition">Composing content</a>.</li>
+</ul>
+<h2>Demo</h2>
+<p>See a <a href="https://DemocracyClub.github.io/design-system/layout-demo">demo of this basic page layout</a>.</p>
 
       </main>
     </div>

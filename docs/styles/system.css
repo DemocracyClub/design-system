@@ -113,7 +113,6 @@
 }
 
 .ds-scope {
-  font-size: 120%;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   line-height: 1.125;
@@ -420,6 +419,8 @@
 .ds-scope .ds-cluster > *,
 .ds-scope .ds-cluster-right > *,
 .ds-scope .ds-cluster-center > * {
+  margin: 0;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -580,6 +581,15 @@
 .ds-scope .ds-skip-link:focus {
   top: 0.5rem;
   left: 0.5rem;
+}
+.ds-scope .ds-footer {
+  padding: 3.0517578125rem;
+  border-top: 0.5rem solid #007CAD;
+  margin-top: 4.768371582rem;
+}
+.ds-scope .ds-copyright > * {
+  max-width: none;
+  margin: 0 !important;
 }
 .ds-scope .ds-field-radio {
   display: flex;
