@@ -43,7 +43,32 @@ layout: layouts/bare.njk
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
 </main>
 <footer class="ds-footer ds-dark">
-  <div class="ds-block-centered">
+  <div class="ds-block-centered ds-text-centered ds-stack">
+    <div class="ds-cluster-center">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a aria-current="true" href=".path/to/about">About</a>
+        </li>
+        <li>
+          <a href="/path/to/">Our work</a>
+        </li>
+        <li>
+          <a href="#">Quests</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">Donate</a>
+        </li>
+      </ul>
+    </div>
     <div class="ds-copyright ds-text-centered">
       <p>Copyright © 2021 Democracy Club</p>
       <p>Community Interest Company</p>

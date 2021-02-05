@@ -95,10 +95,36 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Footer</h1>
-        <div class="ds-scope">
+        <p>A basic footer looks something like the following (as seen in <a href="https://DemocracyClub.github.io/design-system/layout-demo/">the page layout demo</a>.</p>
+<div class="ds-scope">
   <footer class="ds-footer ds-dark">
-    <div class="ds-block-centered">
-      <div class="ds-copyright ds-text-centered">
+    <div class="ds-block-centered ds-text-centered ds-stack">
+      <div class="ds-cluster-center">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a aria-current="true" href=".path/to/about">About</a>
+          </li>
+          <li>
+            <a href="/path/to/">Our work</a>
+          </li>
+          <li>
+            <a href="#">Quests</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Donate</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ds-copyright">
         <p>Copyright © 2021 Democracy Club</p>
         <p>Community Interest Company</p>
         <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
@@ -106,9 +132,16 @@
     </div>
   </footer>
 </div>
+<h2>Markup</h2>
+<p>The unique class names for this component are the containing <code>ds-footer</code> and <code>ds-copyright</code>. Everything else, including the dark theme, the “clustered” navigation and the center alignment is achieved with other component helpers and utilities.</p>
 <pre><code class="language-html">&lt;footer class=&quot;ds-footer ds-dark&quot;&gt;
-  &lt;div class=&quot;ds-block-centered&quot;&gt;
-    &lt;div class=&quot;ds-copyright ds-text-centered&quot;&gt;
+  &lt;div class=&quot;ds-block-centered ds-text-centered ds-stack&quot;&gt;
+    &lt;div class=&quot;ds-cluster-center&quot;&gt;
+      &lt;ul&gt;
+        &lt;!-- list items --&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ds-copyright&quot;&gt;
       &lt;p&gt;Copyright © 2021 Democracy Club&lt;/p&gt;
       &lt;p&gt;Community Interest Company&lt;/p&gt;
       &lt;p&gt;Company No: &lt;a href=&quot;https://beta.companieshouse.gov.uk/company/09461226&quot;&gt;09461226&lt;/a&gt;&lt;/p&gt;

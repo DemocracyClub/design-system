@@ -132,7 +132,7 @@
 .ds-scope body:focus {
   outline: none;
 }
-.ds-scope p, .ds-scope blockquote, .ds-scope ul:not([class]) {
+.ds-scope p, .ds-scope blockquote {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.5;
@@ -152,7 +152,7 @@
   max-width: 45em;
 }
 .ds-scope small {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 .ds-scope h1, .ds-scope .ds-h1 {
   font-size: 3.8146972656rem;
@@ -186,8 +186,20 @@
   color: #E6007C;
   text-decoration: underline;
 }
-.ds-scope ul:not([class]), .ds-scope ol:not([class]) {
+.ds-scope ul, .ds-scope ol {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #403F41;
   padding-left: 1.953125rem;
+}
+.ds-scope ul[class], .ds-scope ol[class],
+.ds-scope div[class] > ul:first-child,
+.ds-scope div[class] > ol:first-child {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 1.125;
+  color: #403F41;
 }
 .ds-scope dt {
   font-size: 1.5625rem;
@@ -419,7 +431,7 @@
 .ds-scope .ds-cluster > *,
 .ds-scope .ds-cluster-right > *,
 .ds-scope .ds-cluster-center > * {
-  margin: 0;
+  padding-left: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -548,7 +560,7 @@
 .ds-scope .ds-header ul {
   padding-left: 0;
   margin: calc(0.75rem * -1);
-  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  font-size: clamp(0.875rem, 3vw, 1rem);
 }
 .ds-scope .ds-header li {
   font-family: Montserrat, sans-serif;

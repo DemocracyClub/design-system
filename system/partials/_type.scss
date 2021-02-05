@@ -16,7 +16,7 @@
     outline: none;
   }
 
-  p, blockquote, ul:not([class]) {
+  p, blockquote {
     @include fontBody;
   }
 
@@ -38,7 +38,7 @@
   }
 
   small {
-    font-size: $ss8;
+    font-size: $ss7;
   }
 
   h1, .ds-h1 { font-size: $s7; font-size: clamp(#{$s5}, 7vw, #{$s7}); }
@@ -58,8 +58,15 @@
     text-decoration: underline;
   }
 
-  ul:not([class]), ol:not([class]) {
+  ul, ol {
+    @include fontBody;
     padding-left: $s4;
+  }
+
+  ul[class], ol[class],
+  div[class] > ul:first-child,
+  div[class] > ol:first-child {
+    @include fontMain;
   }
 
   dt {

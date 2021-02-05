@@ -2,10 +2,37 @@
 title: Footer
 ---
 
+A basic footer looks something like the following (as seen in [the page layout demo]({{site.basedir}}/layout-demo/).
+
 <div class="ds-scope">
   <footer class="ds-footer ds-dark">
-    <div class="ds-block-centered">
-      <div class="ds-copyright ds-text-centered">
+    <div class="ds-block-centered ds-text-centered ds-stack">
+      <div class="ds-cluster-center">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a aria-current="true" href=".path/to/about">About</a>
+          </li>
+          <li>
+            <a href="/path/to/">Our work</a>
+          </li>
+          <li>
+            <a href="#">Quests</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Donate</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ds-copyright">
         <p>Copyright © 2021 Democracy Club</p>
         <p>Community Interest Company</p>
         <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
@@ -14,10 +41,19 @@ title: Footer
   </footer>
 </div>
 
+## Markup
+
+The unique class names for this component are the containing `ds-footer` and `ds-copyright`. Everything else, including the dark theme, the “clustered” navigation and the center alignment is achieved with other component helpers and utilities.
+
 ```html
 <footer class="ds-footer ds-dark">
-  <div class="ds-block-centered">
-    <div class="ds-copyright ds-text-centered">
+  <div class="ds-block-centered ds-text-centered ds-stack">
+    <div class="ds-cluster-center">
+      <ul>
+        <!-- list items -->
+      </ul>
+    </div>
+    <div class="ds-copyright">
       <p>Copyright © 2021 Democracy Club</p>
       <p>Community Interest Company</p>
       <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>

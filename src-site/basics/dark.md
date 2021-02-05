@@ -10,6 +10,10 @@ For sections of a page that should use the dark theme, simply wrap them in an el
 </div>
 ```
 
+## Demo
+
+A few components inside a common `class="ds-dark"` wrapper:
+
 <div class="ds-scope">
   <div class="ds-dark ds-stack" style="padding: 3rem">
     <h2>Dark section</h2>
