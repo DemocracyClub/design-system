@@ -113,6 +113,7 @@
 }
 
 .ds-scope {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   line-height: 1.125;

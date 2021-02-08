@@ -54,6 +54,7 @@ $scope: false;
 // Don't touch!
 @if $scope {
   .ds-scope {
+    font-size: clamp(0.9rem, 1.5vw, #{$s2});
     @include fontMain;
     @include type;
     @include forms;
@@ -63,6 +64,7 @@ $scope: false;
   }
 } @else {
   :root {
+    font-size: clamp(0.9rem, 1.5vw, #{$s2});
     @include fontMain;
   }
   @include type;

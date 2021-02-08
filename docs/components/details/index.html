@@ -114,7 +114,6 @@
     </li>
   </ul>
 </div>
-<h2>Markup</h2>
 <p>Note the <code>class=&quot;ds-details&quot;</code> class on the containing <code>&lt;ul&gt;</code>. It’s recommended each <code>&lt;summary&gt;</code> element contains a heading of the appropriate level for the surrounding document structure. This makes it easier for screen reader users to navigate between details elements / subsections.</p>
 <pre><code class="language-html">&lt;ul class=&quot;ds-details&quot;&gt;
   &lt;li&gt;
@@ -135,7 +134,25 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="open-by-default">
+  <h3 id="open-by-default">🗒️ Open by default</h3>
+  <div class="site-stack">
+<p>In some cases, it might be pertinent to have a Details component open by default. You can use the <code>open</code> property for this.</p>
+<pre><code class="language-html">&lt;details open&gt;
+  &lt;summary&gt;
+    &lt;h2&gt;I should be open already&lt;/h2&gt;
+  &lt;/summary&gt;
+  &lt;p&gt;This should be visible as the user arrives on the page&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<details open>
+  <summary>
+    <h2>I should be open already</h2>
+  </summary>
+  <p>This should be visible as the user arrives on the page</p>
+</details>
+</div>
+</aside>
       </main>
     </div>
   </body>

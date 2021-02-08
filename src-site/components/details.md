@@ -23,8 +23,6 @@ The Details component wraps a set of standard `<details>` elements in an unorder
   </ul>
 </div>
 
-## Markup
-
 Note the `class="ds-details"` class on the containing `<ul>`. It’s recommended each `<summary>` element contains a heading of the appropriate level for the surrounding document structure. This makes it easier for screen reader users to navigate between details elements / subsections.
 
 ```html
@@ -47,3 +45,25 @@ Note the `class="ds-details"` class on the containing `<ul>`. It’s recommended
   </li>
 </ul>
 ```
+
+{% note 'Open by default' %}
+
+In some cases, it might be pertinent to have a Details component open by default. You can use the `open` property for this.
+
+```html
+<details open>
+  <summary>
+    <h2>I should be open already</h2>
+  </summary>
+  <p>This should be visible as the user arrives on the page</p>
+</details>
+```
+
+<details open>
+  <summary>
+    <h2>I should be open already</h2>
+  </summary>
+  <p>This should be visible as the user arrives on the page</p>
+</details>
+
+{% endnote %}
