@@ -44,10 +44,10 @@ The Candidate component is a special kind of card. For all other card use cases,
   </div>
 </div>
 
-A typical Candidate uses the following markup:
+Each Candidate in the list of Candidates from the previous example uses the following markup. Do not place any more content than the (linked) candidate name and party affiliation for Candidates in a list.
 
 ```html
-<li class="ds-candidate">
+<div class="ds-candidate">
   <div class="ds-candidate-body ds-stack-smallest">
     <h3 class="ds-candidate-name ds-h5">
       <a href="path/to/candidate">Candidate name</a>
@@ -57,14 +57,44 @@ A typical Candidate uses the following markup:
   <div class="ds-candidate-image">
     <img src="/path/to/candidate/image" alt="">
   </div>
-</li>
+</div>
 ```
 
 ## Markup variants
 
-* Where the Candidate instance is standalone (not alongside others) make the `class="ds-candidate"` element a `<section>`—not an `<li>`.
 * Choose a heading level that is appropriate for the context. In the above example, `<h3>` assumes the Candidate instance belongs to a section headed with an `<h2>`.
 * Alternative text is not necessary for the image, since the name and party affiliation already suffice in terms of pertinent info.
+* For standalone Candidate components (not included alongside others in a list) use a `<div>` for the outer `class="ds-candidate"` element. It is permissable to use longform content in a standalone content, in place of the party name. Note the use of increase spacing by replacing `ds-stack-smallest` with `ds-stack-smaller`. Also note the removal of the link around the candidate name since a standalone Candidate is intended for the candidate page itself.
+
+```html
+<div class="ds-candidate">
+  <div class="ds-candidate-body ds-stack-smaller">
+    <h2 class="ds-candidate-name ds-h3">
+      Candidate name
+    </h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.<p>
+  </div>
+  <div class="ds-candidate-image">
+    <img src="/path/to/candidate/image" alt="">
+  </div>
+</div>
+```
+
+### Standalone Candidate demo
+
+<div class="ds-scope">
+  <div class="ds-candidate">
+    <div class="ds-candidate-body ds-stack-smaller">
+      <h2 class="ds-candidate-name ds-h3">
+        Candidate name
+      </h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.<p>
+    </div>
+    <div class="ds-candidate-image">
+      <img src="{{site.basedir}}/images/candidate_example.jpg" alt="">
+    </div>
+  </div>
+</div>
 
 ## Dark theme
 

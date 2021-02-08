@@ -138,8 +138,8 @@
     </ul>
   </div>
 </div>
-<p>A typical Candidate uses the following markup:</p>
-<pre><code class="language-html">&lt;li class=&quot;ds-candidate&quot;&gt;
+<p>Each Candidate in the list of Candidates from the previous example uses the following markup. Do not place any more content than the (linked) candidate name and party affiliation for Candidates in a list.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-candidate&quot;&gt;
   &lt;div class=&quot;ds-candidate-body ds-stack-smallest&quot;&gt;
     &lt;h3 class=&quot;ds-candidate-name ds-h5&quot;&gt;
       &lt;a href=&quot;path/to/candidate&quot;&gt;Candidate name&lt;/a&gt;
@@ -149,14 +149,40 @@
   &lt;div class=&quot;ds-candidate-image&quot;&gt;
     &lt;img src=&quot;/path/to/candidate/image&quot; alt=&quot;&quot;&gt;
   &lt;/div&gt;
-&lt;/li&gt;
+&lt;/div&gt;
 </code></pre>
 <h2>Markup variants</h2>
 <ul>
-<li>Where the Candidate instance is standalone (not alongside others) make the <code>class=&quot;ds-candidate&quot;</code> element a <code>&lt;section&gt;</code>—not an <code>&lt;li&gt;</code>.</li>
 <li>Choose a heading level that is appropriate for the context. In the above example, <code>&lt;h3&gt;</code> assumes the Candidate instance belongs to a section headed with an <code>&lt;h2&gt;</code>.</li>
 <li>Alternative text is not necessary for the image, since the name and party affiliation already suffice in terms of pertinent info.</li>
+<li>For standalone Candidate components (not included alongside others in a list) use a <code>&lt;div&gt;</code> for the outer <code>class=&quot;ds-candidate&quot;</code> element. It is permissable to use longform content in a standalone content, in place of the party name. Note the use of increase spacing by replacing <code>ds-stack-smallest</code> with <code>ds-stack-smaller</code>. Also note the removal of the link around the candidate name since a standalone Candidate is intended for the candidate page itself.</li>
 </ul>
+<pre><code class="language-html">&lt;div class=&quot;ds-candidate&quot;&gt;
+  &lt;div class=&quot;ds-candidate-body ds-stack-smaller&quot;&gt;
+    &lt;h2 class=&quot;ds-candidate-name ds-h3&quot;&gt;
+      Candidate name
+    &lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.&lt;p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ds-candidate-image&quot;&gt;
+    &lt;img src=&quot;/path/to/candidate/image&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Standalone Candidate demo</h3>
+<div class="ds-scope">
+  <div class="ds-candidate">
+    <div class="ds-candidate-body ds-stack-smaller">
+      <h2 class="ds-candidate-name ds-h3">
+        Candidate name
+      </h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.<p>
+    </div>
+    <div class="ds-candidate-image">
+      <img src="https://DemocracyClub.github.io/design-system/images/candidate_example.jpg" alt="">
+    </div>
+  </div>
+</div>
 <h2>Dark theme</h2>
 <div class="ds-scope">
   <div class="site-resizer ds-dark">
