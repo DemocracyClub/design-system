@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Radio buttons (Democracy Club Design System)</title>
+    <title>Filter (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -97,109 +97,46 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Radio buttons</h1>
-        <p>Sets of radio buttons come in a common fieldset and are labeled by the fieldset’s legend.</p>
+        <h1>Filter</h1>
+        <p>The Filter component offers a set of filters for selecting pertinent data.</p>
 <div class="ds-scope">
-  <form>
-    <fieldset>
-      <legend>Favorite type of democracy</legend>
-      <div class="ds-stack-smallest">
-        <label class="ds-field-radio">
-          <input type="radio" name="democracy" checked>
-          <span>Representative</span>
-        </label>
-        <label class="ds-field-radio">
-          <input type="radio" name="democracy">
-          <span>Direct</span>
-        </label>
-        <label class="ds-field-radio">
-          <input type="radio" name="democracy">
-          <span>Monitory</span>
-        </label>
-      </div>
-    </fieldset>
-  </form>
+  <aside class="ds-filter ds-stack-smaller" aria-labelledby="filter-label">
+    <div class="ds-cluster">
+      <ul>
+        <li id="filter-label" class="ds-filter-label" aria-hidden="true">Filter:</li>
+        <li><a href="?all" aria-current="page">All</a></li>
+        <li><a href="?ready">Ready for data entry</a></li>
+      </ul>
+    </div>
+    <details>
+      <summary>Advanced filters</summary>
+      Advanced filters here
+    </details>
+  </aside>
 </div>
-<p>Each radio button is wrapped in a <code>&lt;label&gt;</code> with <code>class=&quot;ds-field-radio&quot;</code> and the label text must be wrapped in a <code>&lt;span&gt;</code> for custom styling purposes.</p>
-<p>We can use a <a href="https://DemocracyClub.github.io/design-system/components/stack">Stack</a> component to space out each <code>class=&quot;ds-field-radio&quot;</code> element (<code>class=&quot;ds-stack-smallest&quot;</code>).</p>
-<pre><code class="language-html">&lt;fieldset&gt;
-  &lt;legend&gt;Favorite type of democracy&lt;/legend&gt;
-  &lt;div class=&quot;ds-stack-smallest&quot;&gt;
-    &lt;label class=&quot;ds-field-radio&quot;&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot; checked&gt;
-      &lt;span&gt;Representative&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;ds-field-radio&quot;&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot;&gt;
-      &lt;span&gt;Direct&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;ds-field-radio&quot;&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot;&gt;
-      &lt;span&gt;Monitory&lt;/span&gt;
-    &lt;/label&gt;
+<h2>Markup</h2>
+<pre><code class="language-html">&lt;aside class=&quot;ds-filter ds-stack-smaller&quot; aria-labelledby=&quot;filter-label&quot;&gt;
+  &lt;div class=&quot;ds-cluster&quot;&gt;
+    &lt;ul&gt;
+      &lt;li id=&quot;filter-label&quot; class=&quot;ds-filter-label&quot; aria-hidden=&quot;true&quot;&gt;Filter:&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;?all&quot; aria-current=&quot;page&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;?ready&quot;&gt;Ready for data entry&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
-&lt;/fieldset&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Advanced filters&lt;/summary&gt;
+    [Advanced filters here]
+  &lt;/details&gt;
+&lt;/aside&gt;
 </code></pre>
-<h2>Inline radio buttons</h2>
-<div class="ds-scope">
-  <form class="ds-cluster">
-    <fieldset>
-      <legend>Favorite type of democracy</legend>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy" checked>
-        <span>Representative</span>
-      </label>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy">
-        <span>Direct</span>
-      </label>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy">
-        <span>Monitory</span>
-      </label>
-    </fieldset>
-  </form>
-</div>
-<p>For inline radio buttons, we can use a <a href="https://DemocracyClub.github.io/design-system/components/cluster">Cluster</a> component, like so:</p>
-<pre><code class="language-html">&lt;div class=&quot;ds-cluster&quot;&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Favorite type of democracy&lt;/legend&gt;
-    &lt;label class=&quot;ds-field-radio&quot;&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot; checked&gt;
-      &lt;span&gt;Representative&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;ds-field-radio&quot;&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot;&gt;
-      &lt;span&gt;Direct&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;ds-field-radio&quot;&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;democracy&quot;&gt;
-      &lt;span&gt;Monitory&lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/fieldset&gt;
-&lt;/div&gt;
-</code></pre>
-<h2>Dark theme</h2>
-<p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
-<div class="ds-scope">
-  <form class="ds-cluster ds-dark">
-    <fieldset>
-      <legend>Favorite type of democracy</legend>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy" checked>
-        <span>Representative</span>
-      </label>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy">
-        <span>Direct</span>
-      </label>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy">
-        <span>Monitory</span>
-      </label>
-    </fieldset>
-  </form>
-</div>
+<ul>
+<li>The component incorporates a <a href="https://DemocracyClub.github.io/design-system/components/cluster">Cluster</a> and a <a href="(https://DemocracyClub.github.io/design-system/components/stack)">Stack</a> for layout.</li>
+<li>The element is an <code>&lt;aside&gt;</code> so it is discoverable using screen readers and is labeled using the first list item of the filters list (<code>aria-labelledby</code> and the <code>id</code> match).</li>
+<li>This element is hidden to assistive technologies with <code>aria-hidden</code> so is it is not enumerated as part of the list (this does not negate the <code>aria-labelledby</code> labeling mechanism).</li>
+<li>Advanced filters can be accessed using a <a href="https://DemocracyClub.github.io/design-system/components/details">Details</a> component.</li>
+<li>The <code>aria-current=&quot;page&quot;</code> attribution is used on the currently selected filter (as defined by the query parameter).</li>
+</ul>
+
       </main>
     </div>
   </body>

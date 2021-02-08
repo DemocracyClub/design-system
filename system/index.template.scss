@@ -21,6 +21,7 @@
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
 @import 'partials/_select.scss';
+@import 'partials/_filter.scss';
 @import 'partials/_dark.scss';
 @import 'partials/_page.scss';
 @import 'partials/_utilities.scss';
@@ -48,6 +49,7 @@ $scope: false;
   @include checkbox;
   @include page;
   @include select;
+  @include filter;
 }
 
 // Don't touch!

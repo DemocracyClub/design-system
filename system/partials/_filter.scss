@@ -1,0 +1,35 @@
+@mixin filter {
+  .ds-filter {
+    background-color: $blueLight;
+    padding: $s2;
+  }
+
+  .ds-filter ul {
+    @include fontMain;
+  }
+
+  .ds-filter ul a {
+    text-decoration: none;
+    padding: $ss3 $s1;
+    border: 2px solid;
+  }
+
+  .ds-filter ul a[aria-current] {
+    display: inline-block;
+    color: $white;
+    background-color: $pinkForWhite;
+    border-color: $pinkForWhite;
+  }
+
+  .ds-filter > a {
+    padding: $s1 0;
+  }
+
+  .ds-filter-label {
+    text-transform: uppercase;
+  }
+
+  .ds-filter summary {
+    font-size: inherit;
+  }
+}
