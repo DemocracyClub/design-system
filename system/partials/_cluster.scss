@@ -8,13 +8,13 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    margin: calc(#{$ss3} * -1);
+    margin: calc(#{$ss5} * -1);
   }
 
   .ds-cluster > * > *,
   .ds-cluster-right > * > *,
   .ds-cluster-center > * > * {
-    margin: $ss3;
+    margin: $ss5;
   }
 
   .ds-cluster-right > * {

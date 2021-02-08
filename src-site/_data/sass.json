@@ -177,8 +177,8 @@
     },
     {
       "name": "$measure",
-      "value": "45em",
-      "compiledValue": "45em"
+      "value": "40em",
+      "compiledValue": "40em"
     },
     {
       "name": "$measureReduced",

@@ -6,6 +6,10 @@
     font: inherit;
   }
 
+  * {
+    margin: 0;
+  }
+
   *:focus {
     outline: $ss2 solid $amber;
   }

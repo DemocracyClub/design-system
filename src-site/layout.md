@@ -70,6 +70,9 @@ layout: layouts/bare.njk
       </ul>
     </div>
     <div class="ds-copyright ds-text-centered">
+      <a href="https://democracyclub.org.uk/">
+        <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
+      </a>
       <p>Copyright © 2021 Democracy Club</p>
       <p>Community Interest Company</p>
       <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>

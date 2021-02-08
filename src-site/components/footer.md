@@ -33,6 +33,9 @@ A basic footer looks something like the following (as seen in [the page layout d
         </ul>
       </div>
       <div class="ds-copyright">
+        <a href="https://democracyclub.org.uk/">
+          <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
+        </a>
         <p>Copyright © 2021 Democracy Club</p>
         <p>Community Interest Company</p>
         <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
@@ -54,6 +57,9 @@ The unique class names for this component are the containing `ds-footer` and `ds
       </ul>
     </div>
     <div class="ds-copyright">
+      <a href="https://democracyclub.org.uk/">
+        <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
+      </a>
       <p>Copyright © 2021 Democracy Club</p>
       <p>Community Interest Company</p>
       <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
