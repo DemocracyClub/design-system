@@ -105,3 +105,7 @@ dist
 
 # Eleventy local development
 _site
+
+# Python package
+.eggs
+*.egg-info
