@@ -6,6 +6,7 @@
 @import 'partials/_variables.scss';
 @import 'partials/_type.scss';
 @import 'partials/_forms.scss';
+@import 'partials/_description-lists.scss';
 @import 'partials/_button.scss';
 @import 'partials/_call-to-action.scss';
 @import 'partials/_details.scss';
@@ -33,6 +34,7 @@ $scope: false;
 
 // Remove components not needed here
 @mixin optional-styles {
+  @include description-lists;
   @include button;
   @include cta;
   @include details;

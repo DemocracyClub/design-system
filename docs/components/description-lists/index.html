@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Filter (Democracy Club Design System)</title>
+    <title>Description lists (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -100,46 +100,69 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Filter</h1>
-        <p>The Filter component offers a set of filters for selecting pertinent data.</p>
+        <h1>Description lists</h1>
+        <p>Use a description (or “definition”) list to highlight key information, such a contact details. Use a <a href="https://DemocracyClub.github.io/design-system/components/table">Table</a> if the information is more complex than simple key/value pairs.</p>
 <div class="ds-scope">
-  <aside class="ds-filter ds-stack-smaller" aria-labelledby="filter-label">
-    <div class="ds-cluster">
-      <ul>
-        <li id="filter-label" class="ds-filter-label" aria-hidden="true">Filter:</li>
-        <li><a href="?all" aria-current="page">All</a></li>
-        <li><a href="?ready">Ready for data entry</a></li>
-      </ul>
+  <dl class="ds-descriptions">
+    <div>
+      <dt>Facebook</dt>
+      <dd><a href="https://www.facebook.com/shaunbaileyuk">www.facebook.com/shaunbaileyuk</a></dd>
     </div>
-    <details>
-      <summary>Advanced filters</summary>
-      Advanced filters here
-    </details>
-  </aside>
+    <div>
+      <dt>Homepage</dt>
+      <div>
+        <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
+      </div>
+    </div>
+    <div>
+      <dt>Instagram</dt>
+      <dd><a href="https://www.instagram.com/shaunbaileyam/">https://www.instagram.com/shaunbaileyam</a></dd>
+    </div>
+    <div>
+      <dt>Email</dt>
+      <dd>shaunbailey@shaunbailey.co.uk</dd>
+    </div>
+  </dl>
 </div>
 <h2>Markup</h2>
-<pre><code class="language-html">&lt;aside class=&quot;ds-filter ds-stack-smaller&quot; aria-labelledby=&quot;filter-label&quot;&gt;
-  &lt;div class=&quot;ds-cluster&quot;&gt;
-    &lt;ul&gt;
-      &lt;li id=&quot;filter-label&quot; class=&quot;ds-filter-label&quot; aria-hidden=&quot;true&quot;&gt;Filter:&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;?all&quot; aria-current=&quot;page&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;?ready&quot;&gt;Ready for data entry&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+<p>The container must be a <code>&lt;dl&gt;</code> and must have <code>class=&quot;ds-descriptions&quot;</code>. Each row is wrapped in an unattributed <code>&lt;div&gt;</code>.</p>
+<pre><code class="language-html">&lt;dl class=&quot;ds-descriptions&quot;&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Facebook&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&quot;https://www.facebook.com/shaunbaileyuk&quot;&gt;www.facebook.com/shaunbaileyuk&lt;/a&gt;&lt;/dd&gt;
   &lt;/div&gt;
-  &lt;details&gt;
-    &lt;summary&gt;Advanced filters&lt;/summary&gt;
-    [Advanced filters here]
-  &lt;/details&gt;
-&lt;/aside&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Homepage&lt;/dt&gt;
+    &lt;div&gt;
+      &lt;dd&gt;&lt;a href=&quot;https://shaunbailey.uk/&quot;&gt;https://shaunbailey.uk&lt;/a&gt;&lt;/dd&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Instagram&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&quot;https://www.instagram.com/shaunbaileyam/&quot;&gt;https://www.instagram.com/shaunbaileyam&lt;/a&gt;&lt;/dd&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Email&lt;/dt&gt;
+    &lt;dd&gt;shaunbailey@shaunbailey.co.uk&lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
 </code></pre>
-<ul>
-<li>The component incorporates a <a href="https://DemocracyClub.github.io/design-system/components/cluster">Cluster</a> and a <a href="(https://DemocracyClub.github.io/design-system/components/stack)">Stack</a> for layout.</li>
-<li>The element is an <code>&lt;aside&gt;</code> so it is discoverable using screen readers and is labeled using the first list item of the filters list (<code>aria-labelledby</code> and the <code>id</code> match).</li>
-<li>This element is hidden to assistive technologies with <code>aria-hidden</code> so is it is not enumerated as part of the list (this does not negate the <code>aria-labelledby</code> labeling mechanism).</li>
-<li>Advanced filters can be accessed using a <a href="https://DemocracyClub.github.io/design-system/components/details">Details</a> component.</li>
-<li>The <code>aria-current=&quot;page&quot;</code> attribution is used on the currently selected filter (as defined by the query parameter).</li>
-</ul>
-
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="multiple-definitions">
+  <h3 id="multiple-definitions">🗒️ Multiple definitions</h3>
+  <div class="site-stack">
+<p>You are unlikely to need multiple definitions per definition title (<code>&lt;dt&gt;</code>). However, this is supported by allowing the wrapping of <code>&lt;dd&gt;</code>s in a nested <code>&lt;div&gt;</code>:</p>
+<pre><code class="language-html">&lt;dl class=&quot;ds-descriptions&quot;&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Definition title&lt;/dt&gt;
+    &lt;div&gt;
+      &lt;dd&gt;Definition 1&lt;/dd&gt;
+      &lt;dd&gt;Definition 2&lt;/dd&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+</code></pre>
+</div>
+</aside>
       </main>
     </div>
   </body>

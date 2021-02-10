@@ -169,6 +169,68 @@ Tables should retain their structure for comprehension. Ensuring they can be use
   </div>
 </div>
 
+## Tables in cards
+
+You can use a [Card]({{site.basedir}}/components/card) to “lift” a table and give it more affordance in the page.
+
+<div class="ds-scope">
+  <div class="ds-card ds-padded">
+    <div class="ds-table">
+      <table>
+        <caption>Table inside a card</caption>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <th scope="row">Row 1 / row header</th>
+          <td>Row 1 / cell 2</td>
+          <td>Row 1 / cell 3</td>
+        </tr>
+        <tr>
+          <th scope="row">Row 2 / row header</th>
+          <td>Row 2 / cell 2</td>
+          <td>Row 2 / cell 3</td>
+        </tr>
+        <tr>
+          <th scope="row">Row 3 / row header</th>
+          <td>Row 3 / cell 2</td>
+          <td>Row 3 / cell 3</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="ds-card ds-padded">
+  <div class="ds-table">
+    <table>
+      <!-- table markup -->
+    </table>
+  </div>
+</div>
+```
+
+{% note 'Padding options' %}
+
+In this case, the `ds-padded` [utility class]({{site.basedir}}/components/utilities) to pad the card. Alternatively, I could wrap the table in a `class="ds-card-body"` element.
+
+```html
+<div class="ds-card ds-padded">
+  <div class="ds-card-body">
+    <div class="ds-table">
+      <table>
+        <!-- table markup -->
+      </table>
+    </div>
+  </div>
+</div>
+```
+
+{% endnote %}
+
 ## Dark theme
 
 Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.

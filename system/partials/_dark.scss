@@ -10,10 +10,6 @@
     border: 1px solid;
   }
 
-  .ds-dark .ds-table th:not([scope="row"]) {
-    color: $black;
-  }
-
   .ds-dark .ds-select::after {
     border-top-color: $white;
   }

@@ -127,6 +127,7 @@
 }
 .ds-scope * {
   margin: 0;
+  word-break: break-word;
 }
 .ds-scope *:focus {
   outline: 0.25rem solid #FFC037;
@@ -206,7 +207,7 @@
   color: #403F41;
 }
 .ds-scope dt {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
 }
 .ds-scope dd {
   font-family: Georgia, serif;
@@ -276,6 +277,38 @@
 }
 .ds-scope .ds-error span[role=img] {
   filter: invert(1) grayscale(1) contrast(100);
+}
+.ds-scope dl.ds-descriptions > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ds-scope dl.ds-descriptions dt,
+.ds-scope dl.ds-descriptions dd {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+.ds-scope dl.ds-descriptions dt {
+  padding-right: 1.25rem;
+}
+.ds-scope dl.ds-descriptions > div + div {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(64, 63, 65, 0.2);
+}
+.ds-scope dl.ds-descriptions dd + dd {
+  margin-top: 0.75rem;
+}
+.ds-scope dl.ds-descriptions > div > * {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.ds-scope dl.ds-descriptions dt {
+  flex-basis: 25%;
+  min-width: 15rem;
+}
+.ds-scope dl.ds-descriptions dt + * {
+  flex-basis: 75%;
 }
 .ds-scope button[class*=ds-button] {
   border: 0;
@@ -509,7 +542,6 @@
 }
 .ds-scope .ds-table table {
   position: relative;
-  border: 1px solid;
   border-top: 0;
   border-collapse: collapse;
   min-width: 100%;
@@ -518,6 +550,9 @@
 .ds-scope .ds-table th, .ds-scope .ds-table td, .ds-scope .ds-table caption {
   padding: 1rem;
 }
+.ds-scope .ds-table caption {
+  padding-left: 0;
+}
 .ds-scope .ds-table td {
   font-family: Georgia, serif;
 }
@@ -525,21 +560,22 @@
   background-color: #E4F4FB;
 }
 .ds-scope .ds-table caption {
-  border: 1px solid #403F41;
-  border-bottom-width: 0;
-  font-weight: bold;
+  font-size: 1.5625rem;
   text-align: left;
-  color: #fff;
-  background-color: #007CAD;
+  font-weight: bold;
+  border-bottom: 1px solid;
 }
 .ds-scope .ds-table caption > * {
   font-size: inherit;
   font-weight: inherit;
 }
+.ds-scope .ds-table td + td,
+.ds-scope .ds-table th + th,
+.ds-scope .ds-table th + td {
+  border-left: 1px solid;
+}
 .ds-scope .ds-table th:not([scope=row]) {
-  background-color: #fff;
   border-bottom: 1px solid;
-  border-top: 1px solid;
 }
 .ds-scope .ds-header {
   display: flex;
@@ -741,9 +777,6 @@
 .ds-scope .ds-dark form,
 .ds-scope .ds-dark .ds-candidate {
   border: 1px solid;
-}
-.ds-scope .ds-dark .ds-table th:not([scope=row]) {
-  color: #403F41;
 }
 .ds-scope .ds-dark .ds-select::after {
   border-top-color: #fff;

@@ -56,6 +56,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/description-lists/">Description lists</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/details/">Details</a>
           </li>
           <li>
@@ -253,6 +256,61 @@
     </table>
   </div>
 </div>
+<h2>Tables in cards</h2>
+<p>You can use a <a href="https://DemocracyClub.github.io/design-system/components/card">Card</a> to “lift” a table and give it more affordance in the page.</p>
+<div class="ds-scope">
+  <div class="ds-card ds-padded">
+    <div class="ds-table">
+      <table>
+        <caption>Table inside a card</caption>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <th scope="row">Row 1 / row header</th>
+          <td>Row 1 / cell 2</td>
+          <td>Row 1 / cell 3</td>
+        </tr>
+        <tr>
+          <th scope="row">Row 2 / row header</th>
+          <td>Row 2 / cell 2</td>
+          <td>Row 2 / cell 3</td>
+        </tr>
+        <tr>
+          <th scope="row">Row 3 / row header</th>
+          <td>Row 3 / cell 2</td>
+          <td>Row 3 / cell 3</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;ds-card ds-padded&quot;&gt;
+  &lt;div class=&quot;ds-table&quot;&gt;
+    &lt;table&gt;
+      &lt;!-- table markup --&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="padding-options">
+  <h3 id="padding-options">🗒️ Padding options</h3>
+  <div class="site-stack">
+<p>In this case, the <code>ds-padded</code> <a href="https://DemocracyClub.github.io/design-system/components/utilities">utility class</a> to pad the card. Alternatively, I could wrap the table in a <code>class=&quot;ds-card-body&quot;</code> element.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-card ds-padded&quot;&gt;
+  &lt;div class=&quot;ds-card-body&quot;&gt;
+    &lt;div class=&quot;ds-table&quot;&gt;
+      &lt;table&gt;
+        &lt;!-- table markup --&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+</aside>
 <h2>Dark theme</h2>
 <p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
 <div class="ds-scope">
