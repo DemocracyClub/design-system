@@ -278,6 +278,21 @@
 .ds-scope .ds-error span[role=img] {
   filter: invert(1) grayscale(1) contrast(100);
 }
+.ds-scope [class*=ds-stack] > * {
+  margin: 0;
+}
+.ds-scope .ds-stack-larger > * + * {
+  margin-top: 4.768371582rem;
+}
+.ds-scope .ds-stack > * + * {
+  margin-top: 3.0517578125rem;
+}
+.ds-scope .ds-stack-smaller > * + * {
+  margin-top: 1.5625rem;
+}
+.ds-scope .ds-stack-smallest > * + * {
+  margin-top: 0.625rem;
+}
 .ds-scope dl.ds-descriptions > div {
   display: flex;
   flex-wrap: wrap;
@@ -354,6 +369,48 @@
   opacity: 0.666;
   cursor: not-allowed;
   border-style: dashed;
+}
+.ds-scope .ds-cluster > *,
+.ds-scope .ds-cluster-right > *,
+.ds-scope .ds-cluster-center > * {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(0.625rem * -1);
+}
+.ds-scope .ds-cluster > * > *,
+.ds-scope .ds-cluster-right > * > *,
+.ds-scope .ds-cluster-center > * > * {
+  margin: 0.625rem;
+}
+.ds-scope .ds-cluster-right > * {
+  justify-content: flex-end;
+}
+.ds-scope .ds-cluster-center > * {
+  justify-content: center;
+}
+.ds-scope .ds-grid {
+  padding: 0;
+}
+.ds-scope .ds-grid > * {
+  list-style: none;
+}
+.ds-scope .ds-grid > * + * {
+  margin-top: 1.5625rem;
+}
+@supports (width: min(var(--minimum), 100%)) {
+  .ds-scope .ds-grid > * + * {
+    margin-top: 0;
+  }
+  .ds-scope .ds-grid {
+    display: grid;
+    grid-gap: var(--gridGap, 1.25rem);
+    --gridCellMin: 30ch;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
+  }
 }
 .ds-scope ul.ds-details {
   padding: 0;
@@ -463,63 +520,6 @@
 }
 .ds-scope .ds-candidate:focus-within a:focus {
   outline: none;
-}
-.ds-scope .ds-cluster > *,
-.ds-scope .ds-cluster-right > *,
-.ds-scope .ds-cluster-center > * {
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin: calc(0.625rem * -1);
-}
-.ds-scope .ds-cluster > * > *,
-.ds-scope .ds-cluster-right > * > *,
-.ds-scope .ds-cluster-center > * > * {
-  margin: 0.625rem;
-}
-.ds-scope .ds-cluster-right > * {
-  justify-content: flex-end;
-}
-.ds-scope .ds-cluster-center > * {
-  justify-content: center;
-}
-.ds-scope .ds-grid {
-  padding: 0;
-}
-.ds-scope .ds-grid > * {
-  list-style: none;
-}
-.ds-scope .ds-grid > * + * {
-  margin-top: 1.5625rem;
-}
-@supports (width: min(var(--minimum), 100%)) {
-  .ds-scope .ds-grid > * + * {
-    margin-top: 0;
-  }
-  .ds-scope .ds-grid {
-    display: grid;
-    grid-gap: var(--gridGap, 1.25rem);
-    --gridCellMin: 30ch;
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
-  }
-}
-.ds-scope [class*=ds-stack] > * {
-  margin: 0;
-}
-.ds-scope .ds-stack-larger > * + * {
-  margin-top: 4.768371582rem;
-}
-.ds-scope .ds-stack > * + * {
-  margin-top: 3.0517578125rem;
-}
-.ds-scope .ds-stack-smaller > * + * {
-  margin-top: 1.5625rem;
-}
-.ds-scope .ds-stack-smallest > * + * {
-  margin-top: 0.625rem;
 }
 .ds-scope nav.ds-breadcrumbs ol {
   font-family: Montserrat, sans-serif;
