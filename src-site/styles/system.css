@@ -132,6 +132,10 @@
 .ds-scope *:focus {
   outline: 0.25rem solid #FFC037;
 }
+.ds-scope img {
+  max-width: 100%;
+  height: auto;
+}
 .ds-scope div:focus,
 .ds-scope [tabindex="-1"]:focus,
 .ds-scope body:focus {
@@ -401,7 +405,7 @@
 .ds-scope .ds-grid > * + * {
   margin-top: 1.5625rem;
 }
-@supports (width: min(var(--minimum), 100%)) {
+@supports (width: min(20px, 100%)) {
   .ds-scope .ds-grid > * + * {
     margin-top: 0;
   }

@@ -11,14 +11,14 @@
     margin-top: $s3;
   }
 
-  @supports (width: min(var(--minimum), 100%)) {
+  @supports (width: min(20px, 100%)) {
     .ds-grid > * + * {
       margin-top: 0;
     }
 
     .ds-grid {
       display: grid;
-      grid-gap: var(--gridGap, $s2);
+      grid-gap: var(--gridGap, #{$s2});
       --gridCellMin: 30ch;
       grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr));
     }
