@@ -1,0 +1,23 @@
+%ds-with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(#{$s1} * -1);
+}
+
+%ds-with-sidebar .ds-sidebar {
+  margin: $s1;
+  flex-grow: 1;
+}
+
+%ds-with-sidebar .ds-not-sidebar {
+  margin: $s1;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - #{$s1});
+}
+
+@mixin sidebar {
+  .ds-with-sidebar {
+    @extend %ds-with-sidebar;
+  }
+}

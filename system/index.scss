@@ -10,6 +10,7 @@
 @import 'partials/_stack.scss';
 @import 'partials/_cluster.scss';
 @import 'partials/_grid.scss';
+@import 'partials/_sidebar.scss';
 @import 'partials/_card.scss';
 @import 'partials/_candidate.scss';
 @import 'partials/_breadcrumbs.scss';
@@ -38,6 +39,7 @@ $scope: true;
   @include cta;
   @include cluster;
   @include grid;
+  @include sidebar;
   @include details;
   @include card;
   @include candidate;
