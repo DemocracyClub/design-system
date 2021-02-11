@@ -11,7 +11,7 @@
     margin-top: $s3;
   }
 
-  @supports (width: min(20px, 100%)) {
+  @supports (width: calc(min(20px, 100%))) {
     .ds-grid > * + * {
       margin-top: 0;
     }
