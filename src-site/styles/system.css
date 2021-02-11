@@ -6,6 +6,21 @@
   font-style: normal;
   font-display: swap; }
 
+.ds-scope .ds-with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(1rem * -1); }
+
+.ds-scope .ds-with-sidebar .ds-sidebar {
+  margin: 1rem;
+  flex-grow: 1; }
+
+.ds-scope .ds-with-sidebar .ds-not-sidebar {
+  margin: 1rem;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - 1rem); }
+
 .ds-color-black {
   color: #403F41; }
 
