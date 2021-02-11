@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 import os
+import json
 
 from setuptools import setup
 
+def get_version():
+    package_json = json.load(open("package.json"))
+    return package_json["version"]
+
 setup(
     name="dc_design_system",
-    version="0.0.1",
+    version=get_version(),
     description="SCSS and images for the DC design system",
     author="Sym Roe",
     author_email="sym.roe@democracyclub.org.uk",
