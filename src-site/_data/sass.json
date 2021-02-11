@@ -188,6 +188,12 @@
   ],
   "mixins": [
     {
+      "name": "min",
+      "parameters": [
+        "$numbers..."
+      ]
+    },
+    {
       "name": "pow",
       "parameters": [
         "$number",

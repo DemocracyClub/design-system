@@ -7,7 +7,7 @@ layout: layouts/bare.njk
 <header class="ds-header">
   <a class="ds-skip-link" href="#main">skip to content</a>
   <a class="ds-header-home" href="/">
-    <img src="{{site.basedir}}/images/system/logo.svg" alt="Democracy Club home" />
+    <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
   </a>
   <nav class="ds-cluster">
     <ul>

@@ -8,7 +8,7 @@ The Header is intended for all Democracy Club sites. It includes a logo which li
   <header class="ds-header">
     <a class="ds-skip-link" href="#main">skip to content</a>
     <a class="ds-header-home" href="https://democracyclub.org.uk/">
-      <img src="{{site.basedir}}/images/system/logo.svg" alt="Democracy Club home" />
+      <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
     </a>
     <nav class="ds-cluster">
       <ul>

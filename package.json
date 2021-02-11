@@ -10,8 +10,8 @@
     "watch:eleventy": "npm run exportSass && eleventy --serve",
     "build:eleventy": "cross-env DESTINATION=github eleventy --output=docs",
     "exportSass": "sass-export system/partials/_variables.scss -o src-site/_data/sass.json --dependencies system/",
-    "watch:sass": "sass --watch system/index.scss src-site/styles/system.css",
-    "build:sass": "sass system/index.scss src-site/styles/system.css",
+    "watch:sass": "node-sass --watch system/index.scss src-site/styles/system.css",
+    "build:sass": "node-sass system/index.scss src-site/styles/system.css",
     "start": "npm run copyAssets && npm-run-all build:sass --parallel watch:*",
     "build": "npm run copyAssets && npm run exportSass && npm-run-all build:*"
   },
@@ -29,6 +29,7 @@
     "@11ty/eleventy": "^0.11.1",
     "cross-env": "^7.0.3",
     "csso-cli": "^3.0.0",
+    "node-sass": "^5.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.32.6",
     "sass-export": "^1.0.6",
