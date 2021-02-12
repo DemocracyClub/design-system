@@ -1,5 +1,9 @@
 @mixin select {
   .ds-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
     display: inline-block;
     width: 100%;
     max-width: $measureReduced;

@@ -1,21 +1,29 @@
+%ds-stack-larger > *,
+%ds-stack > *,
+%ds-stack-smaller > *,
+%ds-stack-smallest > * {
+  margin: 0;
+}
+
+%ds-stack-larger > * + * {
+  margin-top: $s8;
+}
+
+%ds-stack > * + * {
+  margin-top: $s6;
+}
+
+%ds-stack-smaller > * + * {
+  margin-top: $s3;
+}
+
+%ds-stack-smallest > * + * {
+  margin-top: $ss2;
+}
+
 @mixin stack {
-  [class*="ds-stack"] > * {
-    margin: 0;
-  }
-
-  .ds-stack-larger > * + * {
-    margin-top: $s8;
-  }
-
-  .ds-stack > * + * {
-    margin-top: $s6;
-  }
-
-  .ds-stack-smaller > * + * {
-    margin-top: $s3;
-  }
-
-  .ds-stack-smallest > * + * {
-    margin-top: $ss5;
-  }
+  .ds-stack-larger { @extend %ds-stack-larger }
+  .ds-stack { @extend %ds-stack }
+  .ds-stack-smaller { @extend %ds-stack-smaller }
+  .ds-stack-smallest { @extend %ds-stack-smallest }
 }

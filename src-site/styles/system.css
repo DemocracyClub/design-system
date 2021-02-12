@@ -6,6 +6,69 @@
   font-style: normal;
   font-display: swap; }
 
+.ds-scope .ds-stack-larger > *,
+.ds-scope .ds-stack > *,
+.ds-scope .ds-card .ds-card-body > *,
+.ds-scope .ds-stack-smaller > *,
+.ds-scope .ds-copyright > *,
+.ds-scope .ds-stack-smallest > * {
+  margin: 0; }
+
+.ds-scope .ds-stack-larger > * + * {
+  margin-top: 4.76837rem; }
+
+.ds-scope .ds-stack > * + * {
+  margin-top: 3.05176rem; }
+
+.ds-scope .ds-card .ds-card-body > * + *, .ds-scope .ds-stack-smaller > * + * {
+  margin-top: 1.5625rem; }
+
+.ds-scope .ds-copyright > * + *, .ds-scope .ds-stack-smallest > * + * {
+  margin-top: 0.25rem; }
+
+.ds-scope .ds-cluster > *, .ds-scope .ds-header nav > *,
+.ds-scope .ds-cluster-right > *,
+.ds-scope .ds-cluster-center > * {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(0.625rem * -1); }
+
+.ds-scope .ds-cluster > * > *, .ds-scope .ds-header nav > * > *,
+.ds-scope .ds-cluster-right > * > *,
+.ds-scope .ds-cluster-center > * > * {
+  margin: 0.625rem; }
+
+
+.ds-scope .ds-cluster-right > * {
+  justify-content: flex-end; }
+
+
+.ds-scope .ds-cluster-center > * {
+  justify-content: center; }
+
+.ds-scope .ds-grid {
+  padding: 0; }
+
+.ds-scope .ds-grid > * {
+  list-style: none;
+  margin: 0; }
+
+.ds-scope .ds-grid > * + * {
+  margin-top: 1.5625rem; }
+
+@supports (width: calc(min(20px, 100%))) {
+  .ds-scope .ds-grid > * + * {
+    margin-top: 0; }
+  .ds-scope .ds-grid {
+    display: grid;
+    grid-gap: var(--gridGap, 1.25rem);
+    --gridCellMin: 30ch;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr)); } }
+
 .ds-scope .ds-with-sidebar > * {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +83,106 @@
   flex-basis: 0;
   flex-grow: 999;
   min-width: calc(50% - 1rem); }
+
+.ds-scope .ds-card {
+  position: relative;
+  border: 1px solid rgba(64, 63, 65, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+
+.ds-scope .ds-card .ds-card-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.ds-scope .ds-card a:not(.ds-card-link) {
+  position: relative;
+  z-index: 2; }
+
+.ds-scope .ds-card .ds-card-image {
+  position: relative;
+  padding-bottom: 37.5%; }
+
+.ds-scope .ds-card .ds-card-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.ds-scope .ds-card .ds-card-body {
+  padding: 1.95312rem; }
+
+.ds-scope .ds-footer {
+  padding: 4.76837rem 1.25rem;
+  border-top: 0.5rem solid #007CAD;
+  margin-top: 4.76837rem; }
+
+.ds-scope .ds-copyright {
+  max-width: none; }
+
+.ds-scope .ds-copyright p {
+  margin: 0 !important; }
+
+.ds-scope .ds-copyright img {
+  max-width: 15rem;
+  margin-bottom: 0.5rem; }
+
+.ds-scope .ds-footer, .ds-scope .ds-dark, .ds-scope .ds-footer *, .ds-scope .ds-dark * {
+  color: #fff;
+  background-color: #403F41; }
+
+.ds-scope .ds-footer .ds-card, .ds-scope .ds-dark .ds-card,
+.ds-scope .ds-footer form,
+.ds-scope .ds-dark form,
+.ds-scope .ds-footer .ds-candidate,
+.ds-scope .ds-dark .ds-candidate {
+  border: 1px solid; }
+
+.ds-scope .ds-footer .ds-select::after, .ds-scope .ds-dark .ds-select::after {
+  border-top-color: #fff; }
+
+.ds-scope .ds-footer [class*="ds-button"]:not(:active), .ds-scope .ds-dark [class*="ds-button"]:not(:active) {
+  border-bottom-color: #000; }
+
+.ds-scope .ds-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+.ds-scope .ds-padded {
+  padding: 1rem; }
+
+.ds-scope .ds-padded-large {
+  padding: 2.44141rem; }
+
+.ds-scope .ds-bordered {
+  border: 2px solid; }
+
+.ds-scope .ds-text-left {
+  text-align: left; }
+
+.ds-scope .ds-text-centered {
+  text-align: center; }
+
+.ds-scope .ds-text-right {
+  text-align: right; }
+
+.ds-scope .ds-block-centered,
+.ds-scope .ds-block-centered-narrow {
+  display: block;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto; }
+
+
+.ds-scope .ds-block-centered-narrow {
+  max-width: 30em; }
 
 .ds-color-black {
   color: #403F41; }
@@ -140,7 +303,7 @@
   .ds-scope *:focus {
     outline: 0.25rem solid #FFC037; }
   .ds-scope img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
     height: auto; }
   .ds-scope div:focus,
@@ -200,7 +363,8 @@
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     line-height: 1.125;
-    color: #403F41; }
+    color: #403F41;
+    padding-left: 0; }
   .ds-scope dt {
     font-size: 1.25rem; }
   .ds-scope dd {
@@ -255,16 +419,6 @@
     color: #fff; }
   .ds-scope .ds-error span[role="img"] {
     filter: invert(1) grayscale(1) contrast(100); }
-  .ds-scope [class*="ds-stack"] > * {
-    margin: 0; }
-  .ds-scope .ds-stack-larger > * + * {
-    margin-top: 4.76837rem; }
-  .ds-scope .ds-stack > * + * {
-    margin-top: 3.05176rem; }
-  .ds-scope .ds-stack-smaller > * + * {
-    margin-top: 1.5625rem; }
-  .ds-scope .ds-stack-smallest > * + * {
-    margin-top: 0.625rem; }
   .ds-scope dl.ds-descriptions > div {
     display: flex;
     flex-wrap: wrap; }
@@ -325,38 +479,6 @@
     opacity: 0.666;
     cursor: not-allowed;
     border-style: dashed; }
-  .ds-scope .ds-cluster > *,
-  .ds-scope .ds-cluster-right > *,
-  .ds-scope .ds-cluster-center > * {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: calc(0.625rem * -1); }
-  .ds-scope .ds-cluster > * > *,
-  .ds-scope .ds-cluster-right > * > *,
-  .ds-scope .ds-cluster-center > * > * {
-    margin: 0.625rem; }
-  .ds-scope .ds-cluster-right > * {
-    justify-content: flex-end; }
-  .ds-scope .ds-cluster-center > * {
-    justify-content: center; }
-  .ds-scope .ds-grid {
-    padding: 0; }
-  .ds-scope .ds-grid > * {
-    list-style: none; }
-  .ds-scope .ds-grid > * + * {
-    margin-top: 1.5625rem; }
-  @supports (width: calc(min(20px, 100%))) {
-    .ds-scope .ds-grid > * + * {
-      margin-top: 0; }
-    .ds-scope .ds-grid {
-      display: grid;
-      grid-gap: var(--gridGap, 1.25rem);
-      --gridCellMin: 30ch;
-      grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr)); } }
   .ds-scope ul.ds-details {
     padding: 0;
     list-style: none; }
@@ -377,30 +499,6 @@
     display: inline; }
   .ds-scope details[open] summary {
     margin-bottom: 1rem; }
-  .ds-scope .ds-card {
-    position: relative;
-    border: 1px solid rgba(64, 63, 65, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-  .ds-scope .ds-card .ds-card-link::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-  .ds-scope .ds-card a:not(.ds-card-link) {
-    position: relative;
-    z-index: 2; }
-  .ds-scope .ds-card-image {
-    position: relative;
-    padding-bottom: 37.5%; }
-  .ds-scope .ds-card-image img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-  .ds-scope .ds-card-body {
-    padding: 1.25rem; }
   .ds-scope .ds-candidate {
     position: relative;
     display: flex;
@@ -503,16 +601,13 @@
   .ds-scope .ds-header nav {
     margin: 1rem 0; }
   .ds-scope .ds-header ul {
-    padding-left: 0;
-    margin: calc(0.75rem * -1);
     font-size: clamp(0.875rem, 3vw, 1rem); }
   .ds-scope .ds-header li {
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     line-height: 1.125;
     color: #403F41;
-    display: inline-block;
-    margin: 0.666em; }
+    display: inline-block; }
   .ds-scope .ds-header nav a {
     text-decoration: none;
     color: inherit;
@@ -532,16 +627,6 @@
   .ds-scope .ds-skip-link:focus {
     top: 0.5rem;
     left: 0.5rem; }
-  .ds-scope .ds-footer {
-    padding: 4.76837rem 1.25rem;
-    border-top: 0.5rem solid #007CAD;
-    margin-top: 4.76837rem; }
-  .ds-scope .ds-copyright > p + p {
-    max-width: none;
-    margin-top: 0 !important; }
-  .ds-scope .ds-copyright img {
-    max-width: 15rem;
-    margin-bottom: 0.5rem; }
   .ds-scope .ds-field-radio {
     display: flex;
     align-items: center;
@@ -644,45 +729,9 @@
     text-transform: uppercase; }
   .ds-scope .ds-filter summary {
     font-size: inherit; }
-  .ds-scope .ds-dark, .ds-scope .ds-dark * {
-    color: #fff;
-    background-color: #403F41; }
-  .ds-scope .ds-dark .ds-card,
-  .ds-scope .ds-dark form,
-  .ds-scope .ds-dark .ds-candidate {
-    border: 1px solid; }
-  .ds-scope .ds-dark .ds-select::after {
-    border-top-color: #fff; }
-  .ds-scope .ds-dark [class*="ds-button"]:not(:active) {
-    border-bottom-color: #000; }
   .ds-scope .ds-page main {
     margin-left: auto;
     margin-right: auto;
     max-width: 40em;
     margin-top: 4.76837rem;
     padding: 0 1.25rem; }
-  .ds-scope .ds-visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px; }
-  .ds-scope .ds-padded {
-    padding: 1rem; }
-  .ds-scope .ds-padded-large {
-    padding: 2.44141rem; }
-  .ds-scope .ds-bordered {
-    border: 2px solid; }
-  .ds-scope .ds-text-centered {
-    text-align: center; }
-  .ds-scope .ds-text-right {
-    text-align: right; }
-  .ds-scope [class*="ds-block-centered"] {
-    display: block;
-    max-width: 40em;
-    margin-left: auto;
-    margin-right: auto; }
-  .ds-scope .ds-block-centered-narrow {
-    max-width: 30em; }

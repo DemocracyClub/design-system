@@ -1,43 +1,57 @@
-// Utility classes etc
+%ds-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+%ds-padded {
+  padding: $s1;
+}
+
+%ds-padded-large {
+  padding: $s5;
+}
+
+%ds-bordered {
+  border: 2px solid;
+}
+
+%ds-text-left {
+  text-align: left;
+}
+
+%ds-text-centered {
+  text-align: center;
+}
+
+%ds-text-right {
+  text-align: right;
+}
+
+%ds-block-centered,
+%ds-block-centered-narrow {
+  display: block;
+  max-width: $measure;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%ds-block-centered-narrow {
+  max-width: $measureReduced;
+}
+
 @mixin utilities {
-  .ds-visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-
-  .ds-padded {
-    padding: $s1;
-  }
-
-  .ds-padded-large {
-    padding: $s5;
-  }
-
-  .ds-bordered {
-    border: 2px solid;
-  }
-
-  .ds-text-centered {
-    text-align: center;
-  }
-
-  .ds-text-right {
-    text-align: right;
-  }
-
-  [class*="ds-block-centered"] {
-    display: block;
-    max-width: $measure;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .ds-block-centered-narrow {
-    max-width: $measureReduced;
-  }
+  .ds-visually-hidden { @extend %ds-visually-hidden }
+  .ds-padded { @extend %ds-padded }
+  .ds-padded-large { @extend %ds-padded-large }
+  .ds-text-left { @extend %ds-text-left }
+  .ds-bordered { @extend %ds-bordered }
+  .ds-text-centered { @extend %ds-text-centered }
+  .ds-text-right { @extend %ds-text-right }
+  .ds-block-centered { @extend %ds-block-centered }
+  .ds-block-centered-narrow { @extend %ds-block-centered-narrow }
 }

@@ -16,7 +16,7 @@
   }
 
   img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
     height: auto;
   }
@@ -78,6 +78,7 @@
   div[class] > ul:first-child,
   div[class] > ol:first-child {
     @include fontMain;
+    padding-left: 0;
   }
 
   dt {

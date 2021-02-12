@@ -2,10 +2,12 @@
 title: Footer
 ---
 
-A basic footer looks something like the following (as seen in [the page layout demo]({{site.basedir}}/layout-demo/).
+A basic footer looks something like the following (as seen in [the page layout demo]({{site.basedir}}/layout-demo/). All the `ds-footer` class does is add some padding, the blue top border, and extend the [Dark theme]({{site.basedir}}/basics/dark).
+
+Aside from that, only `ds-copyright` is unique to this component. The content of the footer can be constructed from other components according to your needs. In the following example, a list of “quick links” is provided alongside the copyright.
 
 <div class="ds-scope">
-  <footer class="ds-footer ds-dark">
+  <footer class="ds-footer">
     <div class="ds-block-centered ds-text-centered ds-stack">
       <div class="ds-cluster-center">
         <ul>
@@ -49,7 +51,7 @@ A basic footer looks something like the following (as seen in [the page layout d
 The unique class names for this component are the containing `ds-footer` and `ds-copyright`. Everything else, including the dark theme, the “clustered” navigation and the center alignment is achieved with other component helpers and utilities.
 
 ```html
-<footer class="ds-footer ds-dark">
+<footer class="ds-footer">
   <div class="ds-block-centered ds-text-centered ds-stack">
     <div class="ds-cluster-center">
       <ul>

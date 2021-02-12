@@ -2,7 +2,7 @@
 title: Utility classes
 ---
 
-These utility classes are a toolkit for making simple design/layout adjustments to individual elements. For generic layout helpers (concerning multiple elements), see [Cluster]({{site.basedir}}/components/cluster), [Stack]({{site.basedir}}/components/stack), and [Grid]({{site.basedir}}/components/cluster).
+These utility classes are a toolkit for making simple design/layout adjustments to individual elements. For generic layout helpers (concerning multiple elements), see [Cluster]({{site.basedir}}/components/cluster), [Stack]({{site.basedir}}/components/stack), [Grid]({{site.basedir}}/components/grid), and [Sidebar]({{site.basedir}}/components/sidebar).
 
 <table class="site-table">
   <tr>
@@ -44,6 +44,20 @@ Adds padding of `$s3` ({% var '$s3' %}) on all sides
       <div class="ds-padded-large" style="background-color: #ddd">
         Large padding
       </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+`ds-text-left`
+    </td>
+    <td>
+Applies left justified text (usually to override centre or right justified text that has been applied to a parent)
+    </td>
+    <td class="ds-scope">
+      <p class="ds-text-left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic culpa, accusantium fuga, voluptate magnam excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus facilis, libero ratione cum quod id excepturi, tenetur dolorem, saepe similique dignissimos magni.
+      </p>
     </td>
   </tr>
   <tr>
@@ -134,8 +148,7 @@ Same as `ds-block-centered` but uses `$measureReduced` ({% var '$measureReduced'
 `ds-h1`, `ds-h2`, `ds-h3`, `ds-h4`, `ds-h5`, `ds-h6`
     </td>
     <td>
-
-Match the size of arbitrary text to a heading level. Only use where a heading is not appropriate.
+Match the size of arbitrary text to a heading level. Only use where a heading element is not appropriate.
     </td>
     <td class="ds-scope">
       <span class="ds-h1">A</span>

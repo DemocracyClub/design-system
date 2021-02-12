@@ -15,12 +15,15 @@ Instate a standard page layout by wrapping a [Header]({{site.basedir}}/component
 </body>
 ```
 
+{% note 'Demo' %}
+
+See a [demo of this basic page layout]({{site.basedir}}/layout-demo).
+
+{% endnote %}
+
 ## Notes
 
 * The [Header]({{site.basedir}}/components/header) component’s prescribed markup includes a [skip link](https://webaim.org/techniques/skipnav/), so don’t implement one separately.
 * For the skip link to work reliably in all browsers, the `<main>` element needs `id="main"` and `tabindex="-1"`.
 * The `<main>` element needs `class="ds-stack"` (see [Stack]({{site.basedir}}/components.stack)) to insert margin between all the flow elements. For dealing with flow content, see [Composing content]({{site.basedir}}/usage/composition).
 
-## Demo
-
-See a [demo of this basic page layout]({{site.basedir}}/layout-demo).

@@ -1,27 +1,31 @@
+%ds-cluster > *,
+%ds-cluster-right > *,
+%ds-cluster-center > * {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(#{$ss5} * -1);
+}
+
+%ds-cluster > * > *,
+%ds-cluster-right > * > *,
+%ds-cluster-center > * > * {
+  margin: $ss5;
+}
+
+%ds-cluster-right > * {
+  justify-content: flex-end;
+}
+
+%ds-cluster-center > * {
+  justify-content: center;
+}
+
 @mixin cluster {
-  .ds-cluster > *,
-  .ds-cluster-right > *,
-  .ds-cluster-center > * {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: calc(#{$ss5} * -1);
-  }
-
-  .ds-cluster > * > *,
-  .ds-cluster-right > * > *,
-  .ds-cluster-center > * > * {
-    margin: $ss5;
-  }
-
-  .ds-cluster-right > * {
-    justify-content: flex-end;
-  }
-
-  .ds-cluster-center > * {
-    justify-content: center;
-  }
+  .ds-cluster { @extend %ds-cluster }
+  .ds-cluster-right { @extend %ds-cluster-right }
+  .ds-cluster-center { @extend %ds-cluster-center }
 }

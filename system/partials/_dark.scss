@@ -1,20 +1,22 @@
+%ds-dark, %ds-dark * {
+  color: $white;
+  background-color: $black;
+}
+
+%ds-dark .ds-card,
+%ds-dark form,
+%ds-dark .ds-candidate {
+  border: 1px solid;
+}
+
+%ds-dark .ds-select::after {
+  border-top-color: $white;
+}
+
+%ds-dark [class*="ds-button"]:not(:active) {
+  border-bottom-color: #000;
+}
+
 @mixin dark {
-  .ds-dark, .ds-dark * {
-    color: $white;
-    background-color: $black;
-  }
-
-  .ds-dark .ds-card,
-  .ds-dark form,
-  .ds-dark .ds-candidate {
-    border: 1px solid;
-  }
-
-  .ds-dark .ds-select::after {
-    border-top-color: $white;
-  }
-
-  .ds-dark [class*="ds-button"]:not(:active) {
-    border-bottom-color: #000;
-  }
+  .ds-dark { @extend %ds-dark }
 }

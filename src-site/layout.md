@@ -9,7 +9,7 @@ layout: layouts/bare.njk
   <a class="ds-header-home" href="/">
     <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
   </a>
-  <nav class="ds-cluster">
+  <nav>
     <ul>
       <li>
         <a href="#">Home</a>
@@ -42,7 +42,7 @@ layout: layouts/bare.njk
   <h2>A subheading</h2>
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
 </main>
-<footer class="ds-footer ds-dark">
+<footer class="ds-footer">
   <div class="ds-block-centered ds-text-centered ds-stack">
     <div class="ds-cluster-center">
       <ul>

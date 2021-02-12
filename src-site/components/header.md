@@ -10,7 +10,7 @@ The Header is intended for all Democracy Club sites. It includes a logo which li
     <a class="ds-header-home" href="https://democracyclub.org.uk/">
       <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
     </a>
-    <nav class="ds-cluster">
+    <nav>
       <ul>
         <li>
           <a href="/">Home</a>
@@ -46,7 +46,7 @@ Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4
   <a class="ds-header-home" href="/">
     <img src="/path/to/logo.svg" alt="Democracy Club home" />
   </a>
-  <nav class="ds-cluster">
+  <nav>
     <ul>
       <li>
         <a href="#">Home</a>
@@ -74,4 +74,8 @@ Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4
 </header>
 ```
 
-Note the use of `aria-current="page"` which indicates which navigation link corresponds to the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.
+{% note 'Current page indication' %}
+
+The `aria-current="page"` attribution indicates which navigation link corresponds to the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.
+
+{% endnote %}

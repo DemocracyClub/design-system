@@ -20,19 +20,17 @@
   }
 
   .ds-header nav {
+    @extend %ds-cluster;
     margin: $s1 0;
   }
 
   .ds-header ul {
-    padding-left: 0;
-    margin: calc(#{$ss6} * -1);
     font-size: clamp(#{$ss7}, 3vw, #{$s1});
   }
 
   .ds-header li {
     @include fontMain;
     display: inline-block;
-    margin: 0.666em;
   }
 
   .ds-header nav a {
