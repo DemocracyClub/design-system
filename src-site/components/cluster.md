@@ -80,3 +80,13 @@ The cluster helper component lets you group smaller elements together in “clus
   </td>
   </tr>
 </table>
+
+## Tighter clustering
+
+You can reduce the space/margin between Cluster elements by using the `ds-cluster-tight` class _in addition_ to your chosen Cluster class. For example, a tightly clustered, right-justified example would be attributed like this:
+
+```html
+<div class="ds-cluster-right ds-cluster-tight">
+  <!-- cluster innards -->
+</div>
+```

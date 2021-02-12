@@ -111,7 +111,7 @@
     <a class="ds-header-home" href="https://democracyclub.org.uk/">
       <img src="https://DemocracyClub.github.io/design-system/images/logo.svg" alt="Democracy Club home" />
     </a>
-    <nav class="ds-cluster">
+    <nav>
       <ul>
         <li>
           <a href="/">Home</a>
@@ -144,7 +144,7 @@
   &lt;a class=&quot;ds-header-home&quot; href=&quot;/&quot;&gt;
     &lt;img src=&quot;/path/to/logo.svg&quot; alt=&quot;Democracy Club home&quot; /&gt;
   &lt;/a&gt;
-  &lt;nav class=&quot;ds-cluster&quot;&gt;
+  &lt;nav&gt;
     &lt;ul&gt;
       &lt;li&gt;
         &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
@@ -171,8 +171,12 @@
   &lt;/nav&gt;
 &lt;/header&gt;
 </code></pre>
-<p>Note the use of <code>aria-current=&quot;page&quot;</code> which indicates which navigation link corresponds to the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.</p>
-
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="current-page-indication">
+  <h3 id="current-page-indication">🗒️ Current page indication</h3>
+  <div class="site-stack">
+<p>The <code>aria-current=&quot;page&quot;</code> attribution indicates which navigation link corresponds to the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.</p>
+</div>
+</aside>
       </main>
     </div>
   </body>

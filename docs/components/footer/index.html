@@ -104,9 +104,10 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Footer</h1>
-        <p>A basic footer looks something like the following (as seen in <a href="https://DemocracyClub.github.io/design-system/layout-demo/">the page layout demo</a>.</p>
+        <p>A basic footer looks something like the following (as seen in <a href="https://DemocracyClub.github.io/design-system/layout-demo/">the page layout demo</a>. All the <code>ds-footer</code> class does is add some padding, the blue top border, and extend the <a href="https://DemocracyClub.github.io/design-system/basics/dark">Dark theme</a>.</p>
+<p>Aside from that, only <code>ds-copyright</code> is unique to this component. The content of the footer can be constructed from other components according to your needs. In the following example, a list of “quick links” is provided alongside the copyright.</p>
 <div class="ds-scope">
-  <footer class="ds-footer ds-dark">
+  <footer class="ds-footer">
     <div class="ds-block-centered ds-text-centered ds-stack">
       <div class="ds-cluster-center">
         <ul>
@@ -146,7 +147,7 @@
 </div>
 <h2>Markup</h2>
 <p>The unique class names for this component are the containing <code>ds-footer</code> and <code>ds-copyright</code>. Everything else, including the dark theme, the “clustered” navigation and the center alignment is achieved with other component helpers and utilities.</p>
-<pre><code class="language-html">&lt;footer class=&quot;ds-footer ds-dark&quot;&gt;
+<pre><code class="language-html">&lt;footer class=&quot;ds-footer&quot;&gt;
   &lt;div class=&quot;ds-block-centered ds-text-centered ds-stack&quot;&gt;
     &lt;div class=&quot;ds-cluster-center&quot;&gt;
       &lt;ul&gt;

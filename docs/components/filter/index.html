@@ -106,41 +106,91 @@
         <h1>Filter</h1>
         <p>The Filter component offers a set of filters for selecting pertinent data.</p>
 <div class="ds-scope">
-  <aside class="ds-filter ds-stack-smaller" aria-labelledby="filter-label">
-    <div class="ds-cluster">
+  <aside class="ds-filter" aria-labelledby="filter-label">
+    <div class="ds-filter-cluster">
       <ul>
         <li id="filter-label" class="ds-filter-label" aria-hidden="true">Filter:</li>
-        <li><a href="?all" aria-current="page">All</a></li>
+        <li><a href="?all" aria-current="true">All</a></li>
         <li><a href="?ready">Ready for data entry</a></li>
       </ul>
     </div>
     <details>
       <summary>Advanced filters</summary>
-      Advanced filters here
+      <div class="ds-advanced-filters">
+        <div class="ds-filter-cluster">
+          <ul aria-labelledby="adv-filter-label-1">
+            <li id="adv-filter-label-1" class="ds-filter-label" aria-hidden="true">Lock status:</li>
+            <li><a href="?all" aria-current="true">All</a></li>
+            <li><a href="?locked">Locked</a></li>
+            <li><a href="?locksuggestion">Lock suggestion</a></li>
+            <li><a href="?locksuggestion">Unlocked</a></li>
+          </ul>
+        </div>
+        <div class="ds-filter-cluster">
+          <ul aria-labelledby="adv-filter-label-2">
+            <li id="adv-filter-label-2" class="ds-filter-label" aria-hidden="true">Has SoPN:</li>
+            <li><a href="?all" aria-current="true">All</a></li>
+            <li><a href="?yes">Yes</a></li>
+            <li><a href="?no">No</a></li>
+          </ul>
+        </div>
+        <div class="ds-filter-cluster">
+          <ul aria-labelledby="adv-filter-label-3">
+            <li id="adv-filter-label-3" class="ds-filter-label" aria-hidden="true">Election type:</li>
+            <li><a href="?all" aria-current="true">All</a></li>
+            <li><a href="?greaterlondon">Greater London Assembly</a></li>
+            <li><a href="?local">Local</a></li>
+            <li><a href="?mayoral">Mayoral</a></li>
+            <li><a href="?police">Police &amp; Crime Commissioner</a></li>
+            <li><a href="?scottish">Scottish parliament</a></li>
+            <li><a href="?cymru">Senedd Cymru</a></li>
+          </ul>
+        </div>
+      </div>
     </details>
   </aside>
 </div>
 <h2>Markup</h2>
-<pre><code class="language-html">&lt;aside class=&quot;ds-filter ds-stack-smaller&quot; aria-labelledby=&quot;filter-label&quot;&gt;
-  &lt;div class=&quot;ds-cluster&quot;&gt;
+<pre><code class="language-html">&lt;aside class=&quot;ds-filter&quot; aria-labelledby=&quot;filter-label&quot;&gt;
+  &lt;div class=&quot;ds-filter-cluster&quot;&gt;
     &lt;ul&gt;
       &lt;li id=&quot;filter-label&quot; class=&quot;ds-filter-label&quot; aria-hidden=&quot;true&quot;&gt;Filter:&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;?all&quot; aria-current=&quot;page&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;?all&quot; aria-current=&quot;true&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;?ready&quot;&gt;Ready for data entry&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
   &lt;details&gt;
     &lt;summary&gt;Advanced filters&lt;/summary&gt;
-    [Advanced filters here]
+    &lt;div class=&quot;ds-advanced-filters&quot;&gt;
+      &lt;div class=&quot;ds-filter-cluster&quot;&gt;
+        &lt;ul aria-labelledby=&quot;adv-filter-label-1&quot;&gt;
+          &lt;li id=&quot;adv-filter-label-1&quot; class=&quot;ds-filter-label&quot; aria-hidden=&quot;true&quot;&gt;Advanced filter label:&lt;/li&gt;
+          &lt;!-- filter option &lt;li&gt;s --&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ds-filter-cluster&quot;&gt;
+        &lt;ul aria-labelledby=&quot;adv-filter-label-1&quot;&gt;
+          &lt;li id=&quot;adv-filter-label-2&quot; class=&quot;ds-filter-label&quot; aria-hidden=&quot;true&quot;&gt;Advanced filter label:&lt;/li&gt;
+          &lt;!-- filter option &lt;li&gt;s --&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ds-filter-cluster&quot;&gt;
+        &lt;ul aria-labelledby=&quot;adv-filter-label-1&quot;&gt;
+          &lt;li id=&quot;adv-filter-label-3&quot; class=&quot;ds-filter-label&quot; aria-hidden=&quot;true&quot;&gt;Advanced filter label:&lt;/li&gt;
+          &lt;!-- filter option &lt;li&gt;s --&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/details&gt;
 &lt;/aside&gt;
 </code></pre>
 <ul>
-<li>The component incorporates a <a href="https://DemocracyClub.github.io/design-system/components/cluster">Cluster</a> and a <a href="(https://DemocracyClub.github.io/design-system/components/stack)">Stack</a> for layout.</li>
-<li>The element is an <code>&lt;aside&gt;</code> so it is discoverable using screen readers and is labeled using the first list item of the filters list (<code>aria-labelledby</code> and the <code>id</code> match).</li>
+<li>The element is an <code>&lt;aside&gt;</code> so it is discoverable using screen readers and is labeled using the first list item of the top-level filters list (<code>aria-labelledby</code> and the <code>id</code> match).</li>
 <li>This element is hidden to assistive technologies with <code>aria-hidden</code> so is it is not enumerated as part of the list (this does not negate the <code>aria-labelledby</code> labeling mechanism).</li>
 <li>Advanced filters can be accessed using a <a href="https://DemocracyClub.github.io/design-system/components/details">Details</a> component.</li>
-<li>The <code>aria-current=&quot;page&quot;</code> attribution is used on the currently selected filter (as defined by the query parameter).</li>
+<li>Advanced filters are grouped inside the <code>class=&quot;ds-advanced-filters&quot;</code> element.</li>
+<li>Each advanced filter <code>&lt;ul&gt;</code> is labeled by the first <code>&lt;li&gt;</code> element using <code>aria-labelledby</code></li>
+<li>The <code>aria-current=&quot;true&quot;</code> attribution is used on the currently selected filter (as defined by the query parameter).</li>
 </ul>
 
       </main>

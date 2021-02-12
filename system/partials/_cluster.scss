@@ -24,8 +24,17 @@
   justify-content: center;
 }
 
+%ds-cluster-tight > * {
+  margin: calc(#{$ss2} * -1);
+}
+
+%ds-cluster-tight > * > * {
+  margin: $ss2;
+}
+
 @mixin cluster {
   .ds-cluster { @extend %ds-cluster }
   .ds-cluster-right { @extend %ds-cluster-right }
   .ds-cluster-center { @extend %ds-cluster-center }
+  .ds-cluster-tight { @extend %ds-cluster-tight }
 }

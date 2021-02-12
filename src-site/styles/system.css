@@ -10,8 +10,10 @@
 .ds-scope .ds-stack > *,
 .ds-scope .ds-card .ds-card-body > *,
 .ds-scope .ds-stack-smaller > *,
+.ds-scope .ds-filter > *,
 .ds-scope .ds-copyright > *,
-.ds-scope .ds-stack-smallest > * {
+.ds-scope .ds-stack-smallest > *,
+.ds-scope .ds-advanced-filters > * {
   margin: 0; }
 
 .ds-scope .ds-stack-larger > * + * {
@@ -20,13 +22,13 @@
 .ds-scope .ds-stack > * + * {
   margin-top: 3.05176rem; }
 
-.ds-scope .ds-card .ds-card-body > * + *, .ds-scope .ds-stack-smaller > * + * {
+.ds-scope .ds-card .ds-card-body > * + *, .ds-scope .ds-stack-smaller > * + *, .ds-scope .ds-filter > * + * {
   margin-top: 1.5625rem; }
 
-.ds-scope .ds-copyright > * + *, .ds-scope .ds-stack-smallest > * + * {
+.ds-scope .ds-copyright > * + *, .ds-scope .ds-stack-smallest > * + *, .ds-scope .ds-advanced-filters > * + * {
   margin-top: 0.25rem; }
 
-.ds-scope .ds-cluster > *, .ds-scope .ds-header nav > *,
+.ds-scope .ds-cluster > *, .ds-scope .ds-header nav > *, .ds-scope .ds-filter-cluster > *,
 .ds-scope .ds-cluster-right > *,
 .ds-scope .ds-cluster-center > * {
   padding-left: 0;
@@ -37,7 +39,7 @@
   align-items: center;
   margin: calc(0.625rem * -1); }
 
-.ds-scope .ds-cluster > * > *, .ds-scope .ds-header nav > * > *,
+.ds-scope .ds-cluster > * > *, .ds-scope .ds-header nav > * > *, .ds-scope .ds-filter-cluster > * > *,
 .ds-scope .ds-cluster-right > * > *,
 .ds-scope .ds-cluster-center > * > * {
   margin: 0.625rem; }
@@ -49,6 +51,12 @@
 
 .ds-scope .ds-cluster-center > * {
   justify-content: center; }
+
+.ds-scope .ds-cluster-tight > *, .ds-scope .ds-filter-cluster > * {
+  margin: calc(0.25rem * -1); }
+
+.ds-scope .ds-cluster-tight > * > *, .ds-scope .ds-filter-cluster > * > * {
+  margin: 0.25rem; }
 
 .ds-scope .ds-grid {
   padding: 0; }
@@ -394,11 +402,6 @@
     margin-top: 0.25rem; }
   .ds-scope .ds-field > * + * {
     margin-top: 0.5rem; }
-  .ds-scope select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    display: block; }
   .ds-scope input[type="text"],
   .ds-scope input[type="password"],
   .ds-scope input[type="email"],
@@ -688,6 +691,10 @@
     text-decoration-color: #FFC037;
     text-decoration-thickness: 2px; }
   .ds-scope .ds-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
     display: inline-block;
     width: 100%;
     max-width: 30em;
@@ -715,6 +722,7 @@
     line-height: 1.125;
     color: #403F41; }
   .ds-scope .ds-filter ul a {
+    display: inline-block;
     text-decoration: none;
     padding: 0.375rem 1rem;
     border: 2px solid; }
@@ -729,6 +737,8 @@
     text-transform: uppercase; }
   .ds-scope .ds-filter summary {
     font-size: inherit; }
+  .ds-scope .ds-filter details ul {
+    font-size: 0.85em; }
   .ds-scope .ds-page main {
     margin-left: auto;
     margin-right: auto;

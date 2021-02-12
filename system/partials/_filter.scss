@@ -2,6 +2,12 @@
   .ds-filter {
     background-color: $blueLight;
     padding: $s2;
+    @extend %ds-stack-smaller;
+  }
+
+  .ds-filter-cluster {
+    @extend %ds-cluster;
+    @extend %ds-cluster-tight;
   }
 
   .ds-filter ul {
@@ -9,6 +15,7 @@
   }
 
   .ds-filter ul a {
+    display: inline-block;
     text-decoration: none;
     padding: $ss3 $s1;
     border: 2px solid;
@@ -31,5 +38,13 @@
 
   .ds-filter summary {
     font-size: inherit;
+  }
+
+  .ds-filter details ul {
+    font-size: 0.85em;
+  }
+
+  .ds-advanced-filters {
+    @extend %ds-stack-smallest;
   }
 }
