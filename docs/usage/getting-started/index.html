@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Details (Democracy Club Design System)</title>
+    <title>Getting started (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -106,65 +106,73 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Details</h1>
-        <p>The Details component wraps a set of standard <code>&lt;details&gt;</code> elements in an unordered list. Use this component to summarize longform content and make it easier to locate sections.</p>
-<div class="ds-scope">
-  <ul class="ds-details">
-    <li>
-      <details>
-        <summary><h2>Where to vote</h2></summary>
-        <p>At your local polling station</p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary><h2>How do I vote</h2></summary>
-        <p>This election uses Single Transferable Vote.</p >
-        <p>Rank the candidates by your preference: 1, 2, 3… You don't have to rank all the candidates, but you must at least mark your first choice.</p>
-        <p>Read the instructions at the top of your ballot paper carefully.</p>
-      </details>
-    </li>
-  </ul>
-</div>
-<p>Note the <code>class=&quot;ds-details&quot;</code> class on the containing <code>&lt;ul&gt;</code>. It’s recommended each <code>&lt;summary&gt;</code> element contains a heading of the appropriate level for the surrounding document structure. This makes it easier for screen reader users to navigate between details elements / subsections.</p>
-<pre><code class="language-html">&lt;ul class=&quot;ds-details&quot;&gt;
-  &lt;li&gt;
-    &lt;details&gt;
-      &lt;summary&gt;&lt;h2&gt;Where to vote&lt;/h2&gt;&lt;/summary&gt;
-      &lt;p&gt;At your local polling station&lt;/p&gt;
-    &lt;/details&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;details&gt;
-      &lt;summary&gt;
-        &lt;h2&gt;How do I vote&lt;/h2&gt;
-      &lt;/summary&gt;
-      &lt;p&gt;This election uses Single Transferable Vote.&lt;/p &gt;
-      &lt;p&gt;Rank the candidates by your preference: 1, 2, 3… You don't have to rank all the candidates, but you must at least mark your first choice.&lt;/p&gt;
-      &lt;p&gt;Read the instructions at the top of your ballot paper carefully.&lt;/p&gt;
-    &lt;/details&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+        <h1>Getting started</h1>
+        <h2>Installation</h2>
+<p>Install the design system in your project as a python package:</p>
+<pre><code class="language-python">pip install git+https://github.com/DemocracyClub/design-system.git@python-package
 </code></pre>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="open-by-default">
-  <h3 id="open-by-default">🗒️ Open by default</h3>
-  <div class="site-stack">
-<p>In some cases, it might be pertinent to have a Details component open by default. You can use the <code>open</code> property for this.</p>
-<pre><code class="language-html">&lt;details open&gt;
-  &lt;summary&gt;
-    &lt;h2&gt;I should be open already&lt;/h2&gt;
-  &lt;/summary&gt;
-  &lt;p&gt;This should be visible as the user arrives on the page&lt;/p&gt;
-&lt;/details&gt;
+<p>Now simply import <code>dc_design_system</code>:</p>
+<pre><code>import dc_design_system
 </code></pre>
-<details open>
-  <summary>
-    <h2>I should be open already</h2>
-  </summary>
-  <p>This should be visible as the user arrives on the page</p>
-</details>
-</div>
-</aside>
+<p>The only thing this package does is to expose the directory it lives in, which we’ll use in the <strong>Sass compilation</strong> step to follow.</p>
+<pre><code>&gt;&gt;&gt; import dc_design_system
+&gt;&gt;&gt; dc_design_system.DC_SYSTEM_PATH
+'/home/symroe/.envs/design_system/lib/python3.8/site-packages/dc_design_system'
+</code></pre>
+<h2>Structure</h2>
+<p>The design system folder contains fonts, images and Sass partials:</p>
+<pre><code class="language-html">📁 fonts
+📁 images
+📁 partials
+index.template.scss
+docs.scss
+</code></pre>
+<p>The <code>docs.scss</code> file can be ignored. This just powers the design system used inside this documentation.</p>
+<p>The <code>index.template.scss</code> file is a template for how you would pull in the partials and get the system running in your project.</p>
+<h2>Sass compilation</h2>
+<p>The first thing you need to do is take <code>index.template.scss</code>, rename it if you desire, and make it the “in” file for Sass compilation. To reach the associated partials, you will need to configure <code>libsass</code> to use the folder exposed in the installation step above as an <code>include-path</code>.</p>
+<p>Note the <code>optional-styles</code> block in that file. For efficiency, you should comment out any components here you know you don’t need, keeping the design system’s footprint as small as possible. In the following example, I have commented out the <a href="https://DemocracyClub.github.io/design-system/components/sidebar">Sidebar</a>, <a href="https://DemocracyClub.github.io/design-system/components/table">Table</a>, and <a href="https://DemocracyClub.github.io/design-system/components/select">Select</a> components.</p>
+<pre><code class="language-css">@mixin optional-styles {
+  @include description-lists;
+  @include button;
+  @include cta;
+  @include cluster;
+  @include grid;
+  // @include sidebar;
+  @include details;
+  @include card;
+  @include candidate;
+  @include breadcrumbs;
+  // @include table;
+  @include header;
+  @include footer;
+  @include radio;
+  @include checkbox;
+  // @include select;
+  @include filter;
+}
+</code></pre>
+<h2>Scoping</h2>
+<p>Also in <code>index.template.scss</code> you will notice the following line:</p>
+<pre><code>$scope: false;
+</code></pre>
+<p>If set to true, all of the styles you generate are scoped to the <code>ds-scope</code> class. For example, the <code>.ds-stack &gt; *</code> selector will become <code>.ds-scope .ds-stack &gt; *</code>, meaning you must have a parent with <code>class=&quot;ds-scope&quot;</code> for the styles to be honoured.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-scope&quot;&gt;
+  &lt;!-- design system styles honoured --&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;!-- design system styles NOT honoured --&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This allows you to more safely add design system components alongside existing styles. Ideally, you would not use scoping and just defer to the design system for all your styling. Unless there is a real need for scoping, best to leave it as <code>false</code>.</p>
+<h2>CSS optimization</h2>
+<p>Although the design system—even including <em>all</em> of the components—is relatively small, it’s still recommended you minimize the output CSS using a tool like CSSO(https://github.com/css/csso). Include the minimized file in a <code>&lt;link&gt;</code> element in the head of your document in the standard fashion.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/system.min.css&quot; /&gt;
+</code></pre>
+<h2>Next steps</h2>
+<p>Follow the HTML examples in individual components docs. If you are making a page layout from scratch, see <a href="https://DemocracyClub.github.io/design-system/usage/page-layout">Page layout</a>.</p>
+
       </main>
     </div>
   </body>
