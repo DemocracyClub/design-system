@@ -17,7 +17,7 @@ Now simply import `dc_design_system`:
 import dc_design_system
 ```
 
-The only thing this package does is to expose the directory it lives in, which we’ll use in the **Sass compilation** step to follow.
+The only thing this package does is to expose the directory it lives in, which we’ll use in the **Sass compilation** step to follow. It’s also needed to path to the images and fonts folders.
 
 ```
 >>> import dc_design_system
