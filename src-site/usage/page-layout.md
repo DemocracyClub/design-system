@@ -3,7 +3,7 @@ title: Page layout
 layout: layouts/page.njk
 ---
 
-Instate a standard page layout by wrapping a [Header]({{site.basedir}}/components/header), a main content area, and a [Footer]({{site.basedir}}/components/footer) in a `<div>` with `class="ds=page"` directly inside the `<body>` element.
+Instate a standard page layout by wrapping a [Header]({{site.basedir}}/components/header), a main content area, and a [Footer]({{site.basedir}}/components/footer) in a `<div>` with `class="ds-page"` directly inside the `<body>` element.
 
 ```html
 <body>

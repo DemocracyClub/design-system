@@ -52,7 +52,7 @@ Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4
         <a href="#">Home</a>
       </li>
       <li>
-        <a aria-current="page" href="#">About</a>
+        <a aria-current="true" href="#">About</a>
       </li>
       <li>
         <a href="#">Our work</a>
@@ -76,6 +76,6 @@ Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4
 
 {% note 'Current page indication' %}
 
-The `aria-current="page"` attribution indicates which navigation link corresponds to the current page. This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.
+The `aria-current="true"` attribution indicates which navigation link corresponds to the current location (the `true` value is used in place of `page` because of the relationship to [Sub-navigation]({{site.basedir}}/components/subnavigation)). This is placed on “About” (as in the previous code sample) where the user is currently on the about page. This attribute helps screen reader users with wayfinding and is the non-visual equivalent of the pink underline.
 
 {% endnote %}

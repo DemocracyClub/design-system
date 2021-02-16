@@ -36,6 +36,22 @@ layout: layouts/bare.njk
   </nav>
 </header>
 <main id="main" tabindex="-1" class="ds-stack">
+  <nav class="ds-subnav" aria-label="About">
+    <ul>
+      <li>
+        <a href="/about" aria-current="true">About</a>
+      </li>
+      <li>
+        <a href="/team">The Team</a>
+      </li>
+      <li>
+        <a href="/jobs">Jobs</a>
+      </li>
+      <li>
+        <a href="/funding">Funding</a>
+      </li>
+    </ul>
+  </nav>
   <h1>Democracy Club page layout demo</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur iusto officia necessitatibus distinctio nemo perspiciatis placeat illo facilis enim soluta et accusamus sunt ipsa fugit earum, voluptas assumenda aspernatur.</p>
   <p>Distinctio iure explicabo quaerat repudiandae, nulla officia corporis! Eaque sapiente excepturi quas, nostrum cumque nisi. Quis eligendi necessitatibus, fugit voluptatem a, voluptatibus praesentium fugiat, nostrum doloremque eum est ratione provident.</p>
