@@ -19,6 +19,7 @@
 @import 'partials/_candidate.scss';
 @import 'partials/_table.scss';
 @import 'partials/_header.scss';
+@import 'partials/_subnav.scss';
 @import 'partials/_footer.scss';
 @import 'partials/_radio.scss';
 @import 'partials/_checkbox.scss';
@@ -47,6 +48,7 @@ $scope: false;
   @include breadcrumbs;
   @include table;
   @include header;
+  @include subnav;
   @include footer;
   @include radio;
   @include checkbox;

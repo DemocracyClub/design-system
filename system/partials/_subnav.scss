@@ -1,0 +1,30 @@
+@mixin subnav {
+  .ds-subnav {
+    @extend %ds-cluster;
+    color: $pinkForWhite;
+    font-size: clamp(#{$s2}, 2.5vw, #{$s3});
+  }
+
+  .ds-subnav > * {
+    margin: calc(#{$ss6} * -1) calc(#{$s4} * -1);
+  }
+
+  .ds-subnav > * > * {
+    margin: $ss6 $s4;
+    position: relative;
+  }
+
+  .ds-subnav a {
+    text-decoration: none;
+  }
+
+  .ds-subnav li:not(:last-child) a::after {
+    content: '\00b7';
+    position: absolute;
+    right: calc(#{$s4} * -1 - 4px);
+  }
+
+  .ds-subnav [aria-current] {
+    border-bottom: 2px solid;
+  }
+}

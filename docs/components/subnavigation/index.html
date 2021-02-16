@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Cluster (Democracy Club Design System)</title>
+    <title>Sub-navigation (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -109,82 +109,59 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Cluster</h1>
-        <p>The cluster helper component lets you group smaller elements together in “clusters”. These elements are spaced evenly along both axes without “left over” margin indenting the elements undesirably (irrespective of wrapping).</p>
-<table class="site-table" style="table-layout: fixed">
-  <tr>
-    <th>Alignment</th>
-    <th>Markup</th>
-    <th colspan="2">Demo</th>
-  </tr>
-  <tr>
-    <td>left (default)</td>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-cluster&quot;&gt;
-  &lt;div&gt;
-    &lt;button class=&quot;ds-button ds-button-blue&quot;&gt;Cancel&lt;/button&gt;
-    &lt;button class=&quot;ds-button&quot;&gt;Confirm&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+        <h1>Sub-navigation</h1>
+        <p>Use the Sub-navigation component when there are pages available related to the chosen main navigation link (as indicated by <code>aria-current=&quot;true&quot;</code> in the <a href="https://DemocracyClub.github.io/design-system/components/header">Header</a> component above it). For example, if the chosen route on <a href="https://democracyclub.org.uk">democracyclub.org.uk</a> is “About”, use Sub-navigation to provide links to “About” (the index page), “The Team”, “Jobs”, and “Funding”. This group of pages represents a subsection of the site called “About”.</p>
+<div class="ds-scope">
+  <nav class="ds-subnav" aria-label="About">
+    <ul>
+      <li>
+        <a href="/about" aria-current="true">About</a>
+      </li>
+      <li>
+        <a href="/team">The Team</a>
+      </li>
+      <li>
+        <a href="/jobs">Jobs</a>
+      </li>
+      <li>
+        <a href="/funding">Funding</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<p>The <code>class=&quot;ds-subnav&quot;</code> element is a <code>&lt;nav&gt;</code>, exposing it as a landmark region to screen readers. Note the use of <code>aria-label=&quot;About&quot;</code>. This differentiates this navigation landmark from the main one above it in screen reader landmark listings. Where the section is “Our work”, use <code>aria-label=&quot;Our work&quot;</code>.</p>
+<p>The <code>aria-current=&quot;true&quot;</code> attribution indicates the current page, in this case the first, index page.</p>
+<pre><code class="language-html">  &lt;nav class=&quot;ds-subnav&quot; aria-label=&quot;About&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;/about&quot; aria-current=&quot;true&quot;&gt;About&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;/team&quot;&gt;The Team&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;/jobs&quot;&gt;Jobs&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;/funding&quot;&gt;Funding&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
 </code></pre>
-  </td>
-  <td class="ds-scope" colspan="2">
-    <div class="ds-cluster">
-      <div>
-        <button class="ds-button ds-button-blue">Cancel</button>
-        <button class="ds-button">Confirm</button>
-      </div>
-    </div>
-  </td>
-  </tr>
-  <tr>
-    <td>center</td>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-cluster-center&quot;&gt;
-  &lt;div&gt;
-    &lt;button class=&quot;ds-button ds-button-blue&quot;&gt;Cancel&lt;/button&gt;
-    &lt;button class=&quot;ds-button&quot;&gt;Confirm&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="source-order">
+  <h3 id="source-order">⚠️ Source order</h3>
+  <div class="site-stack">
+<p>As demonstrated in the <a href="https://DemocracyClub.github.io/design-system/layout-demo">page layout demo</a>, the Sub-navigation component should appear first inside the <code>&lt;main&gt;</code> element, <em>before</em> the page’s <code>&lt;h1&gt;</code>. This is better for screen reader accessibility than the reverse configuration used in the live <a href="https://democracyclub.org.uk">democracyclub.org.uk</a> site at the time of writing.</p>
+<pre><code class="language-html">&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;
+  &lt;nav class=&quot;ds-subnav&quot; aria-label=&quot;About&quot;&gt;
+    &lt;!-- Sub-navigation links --&gt;
+  &lt;/nav&gt;
+  &lt;h1&gt;About&lt;/h1&gt;
+  &lt;!-- main content --&gt;
+&lt;/main&gt;
 </code></pre>
-  </td>
-  <td class="ds-scope" colspan="2">
-    <div class="ds-cluster-center">
-      <div>
-        <button class="ds-button ds-button-blue">Cancel</button>
-        <button class="ds-button">Confirm</button>
-      </div>
-    </div>
-  </td>
-  </tr>
-  <tr>
-    <td>right</td>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-cluster-right&quot;&gt;
-  &lt;div&gt;
-    &lt;button class=&quot;ds-button ds-button-blue&quot;&gt;Cancel&lt;/button&gt;
-    &lt;button class=&quot;ds-button&quot;&gt;Confirm&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-  <td class="ds-scope" colspan="2">
-    <div class="ds-cluster-right">
-      <div>
-        <button class="ds-button ds-button-blue">Cancel</button>
-        <button class="ds-button">Confirm</button>
-      </div>
-    </div>
-  </td>
-  </tr>
-</table>
-<h2>Tighter clustering</h2>
-<p>You can reduce the space/margin between Cluster elements by using the <code>ds-cluster-tight</code> class <em>in addition</em> to your chosen Cluster class. For example, a tightly clustered, right-justified example would be attributed like this:</p>
-<pre><code class="language-html">&lt;div class=&quot;ds-cluster-right ds-cluster-tight&quot;&gt;
-  &lt;!-- cluster innards --&gt;
-&lt;/div&gt;
-</code></pre>
-
+</div>
+</aside>
       </main>
     </div>
   </body>

@@ -16,6 +16,9 @@
         </a>
         <h2>Basics</h2>
         <ul>
+          <li>
+            <a href="{{site.basedir}}/usage/getting-started"><strong>Getting started</strong></a>
+          </li>
           {%- for basic in collections.basicsAscending %}
           <li>
             <a href="{{site.basedir}}{{basic.url}}">{{basic.data.title}}</a>
@@ -30,7 +33,7 @@
           </li>
           {%- endfor  %}
         </ul>
-        <h2>Usage</h2>
+        <h2>Composition</h2>
         <ul>
           {%- for component in collections.usageAscending %}
           <li>

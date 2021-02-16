@@ -75,8 +75,8 @@
   }
 
   ul[class], ol[class],
-  div[class] > ul:first-child,
-  div[class] > ol:first-child {
+  [class] > ul:first-child,
+  [class] > ol:first-child {
     @include fontMain;
     padding-left: 0;
   }
