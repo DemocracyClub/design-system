@@ -33,10 +33,10 @@
 
   dl.ds-descriptions dt {
     flex-basis: 25%;
-    min-width: 15rem;
   }
 
   dl.ds-descriptions dt + * {
     flex-basis: 75%;
+    min-width: min(35rem, 100%);
   }
 }

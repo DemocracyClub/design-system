@@ -443,10 +443,10 @@
     flex-grow: 0;
     flex-shrink: 1; }
   .ds-scope dl.ds-descriptions dt {
-    flex-basis: 25%;
-    min-width: 15rem; }
+    flex-basis: 25%; }
   .ds-scope dl.ds-descriptions dt + * {
-    flex-basis: 75%; }
+    flex-basis: 75%;
+    min-width: min(35rem, 100%); }
   .ds-scope button[class*="ds-button"] {
     border: 0;
     cursor: pointer;
