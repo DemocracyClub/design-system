@@ -8,7 +8,6 @@
 
   * {
     margin: 0;
-    word-break: break-word;
   }
 
   *:focus {
@@ -50,6 +49,13 @@
 
   small {
     font-size: $ss7;
+  }
+
+  h1, .ds-h1,
+  h2, .ds-h2,
+  h3, .ds-h3
+  h4, .ds-h4 {
+    word-break: break-word;
   }
 
   h1, .ds-h1 { font-size: $s7; font-size: clamp(#{$s5}, 7vw, #{$s7}); }

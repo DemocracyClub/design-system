@@ -306,8 +306,7 @@
   .ds-scope select {
     font: inherit; }
   .ds-scope * {
-    margin: 0;
-    word-break: break-word; }
+    margin: 0; }
   .ds-scope *:focus {
     outline: 0.25rem solid #FFC037; }
   .ds-scope img {
@@ -335,6 +334,10 @@
     max-width: 40em; }
   .ds-scope small {
     font-size: 0.875rem; }
+  .ds-scope h1, .ds-scope .ds-h1,
+  .ds-scope h2, .ds-scope .ds-h2,
+  .ds-scope h3, .ds-scope .ds-h3 h4, .ds-scope .ds-h4 {
+    word-break: break-word; }
   .ds-scope h1, .ds-scope .ds-h1 {
     font-size: 3.8147rem;
     font-size: clamp(2.44141rem, 7vw, 3.8147rem); }
