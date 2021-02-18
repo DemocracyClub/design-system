@@ -8,7 +8,7 @@
   }
 
   .ds-candidate-body {
-    padding: $s1;
+    padding: $s3;
     flex-grow: 999;
     align-self: center;
     display: flex;
@@ -33,6 +33,7 @@
   }
 
   .ds-candidate-image {
+    background-color: $blackOpacity;
     flex-grow: 1;
     min-width: 10rem;
     min-height: 10rem;

@@ -63,7 +63,8 @@
 
 .ds-scope .ds-grid > * {
   list-style: none;
-  margin: 0; }
+  margin: 0;
+  max-width: none; }
 
 .ds-scope .ds-grid > * + * {
   margin-top: 1.5625rem; }
@@ -309,6 +310,8 @@
     margin: 0; }
   .ds-scope *:focus {
     outline: 0.25rem solid #FFC037; }
+  .ds-scope header, .ds-scope main, .ds-scope footer, .ds-scope nav, .ds-scope aside, .ds-scope section, .ds-scope details, .ds-scope summary {
+    display: block; }
   .ds-scope img {
     display: inline-block;
     max-width: 100%;
@@ -513,7 +516,7 @@
     border: 1px solid rgba(64, 63, 65, 0.2);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .ds-scope .ds-candidate-body {
-    padding: 1rem;
+    padding: 1.5625rem;
     flex-grow: 999;
     align-self: center;
     display: flex;
@@ -532,6 +535,7 @@
     left: 0;
     z-index: 2; }
   .ds-scope .ds-candidate-image {
+    background-color: rgba(64, 63, 65, 0.2);
     flex-grow: 1;
     min-width: 10rem;
     min-height: 10rem;
@@ -600,13 +604,14 @@
     padding: 1.25rem; }
   .ds-scope .ds-header-home {
     flex-basis: 15rem;
+    flex-grow: 0;
     margin-right: 1.25rem; }
   .ds-scope .ds-header-home img {
     width: 100%;
     max-width: 20rem;
     height: auto; }
   .ds-scope .ds-header nav {
-    margin: 1rem 0; }
+    margin: 1rem 0 1rem auto; }
   .ds-scope .ds-header ul {
     font-size: clamp(0.875rem, 3vw, 1rem); }
   .ds-scope .ds-header li {
@@ -711,28 +716,29 @@
     text-decoration-color: #FFC037;
     text-decoration-thickness: 2px; }
   .ds-scope .ds-select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
     display: block;
     display: inline-block;
     width: 100%;
     max-width: 30em;
     position: relative; }
-  .ds-scope .ds-select select {
-    padding-right: 2.44141rem; }
-  .ds-scope .ds-select::after {
-    content: '';
-    height: 0;
-    width: 0;
-    border: 1rem solid transparent;
-    border-top-color: #E6007C;
-    border-top-width: 0.9rem;
-    position: absolute;
-    right: 0.75rem;
-    top: 50%;
-    transform: translateY(-12.5%);
-    pointer-events: none; }
+  @supports (-moz-appearance: none) or (-webkit-appearance: none) or (appearance: none) {
+    .ds-scope .ds-select select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-right: 2.44141rem; }
+    .ds-scope .ds-select::after {
+      content: '';
+      height: 0;
+      width: 0;
+      border: 1rem solid transparent;
+      border-top-color: #E6007C;
+      border-top-width: 0.9rem;
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-12.5%);
+      pointer-events: none; } }
   .ds-scope .ds-filter {
     background-color: #E4F4FB;
     padding: 1.25rem; }

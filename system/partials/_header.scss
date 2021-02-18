@@ -10,6 +10,7 @@
 
   .ds-header-home {
     flex-basis: 15rem;
+    flex-grow: 0;
     margin-right: $s2;
   }
 
@@ -21,7 +22,7 @@
 
   .ds-header nav {
     @extend %ds-cluster;
-    margin: $s1 0;
+    margin: $s1 0 $s1 auto;
   }
 
   .ds-header ul {

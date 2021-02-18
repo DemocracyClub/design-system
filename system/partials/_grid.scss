@@ -5,6 +5,7 @@
 %ds-grid > * {
   list-style: none;
   margin: 0;
+  max-width: none;
 }
 
 %ds-grid > * + * {
