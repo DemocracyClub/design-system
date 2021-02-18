@@ -431,6 +431,7 @@
     padding: 0;
     max-width: none; }
   .ds-scope dl.ds-descriptions dt {
+    line-height: 1.5;
     padding-right: 1.25rem; }
   .ds-scope dl.ds-descriptions > div + div {
     margin-top: 0.75rem;

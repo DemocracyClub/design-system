@@ -5,26 +5,30 @@ title: Description lists
 Use a description (or “definition”) list to highlight key information, such a contact details. Use a [Table]({{site.basedir}}/components/table) if the information is more complex than simple key/value pairs.
 
 <div class="ds-scope">
-  <dl class="ds-descriptions">
-    <div>
-      <dt>Facebook</dt>
-      <dd><a href="https://www.facebook.com/shaunbaileyuk">www.facebook.com/shaunbaileyuk</a></dd>
+  <div class="ds-card">
+    <div class="ds-card-body">
+      <dl class="ds-descriptions">
+        <div>
+          <dt>Facebook</dt>
+          <dd><a href="https://www.facebook.com/shaunbaileyuk">www.facebook.com/shaunbaileyuk</a></dd>
+        </div>
+        <div>
+          <dt>Homepage</dt>
+          <div>
+            <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
+          </div>
+        </div>
+        <div>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/shaunbaileyam/">https://www.instagram.com/shaunbaileyam</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd>shaunbailey@shaunbailey.co.uk</dd>
+        </div>
+      </dl>
     </div>
-    <div>
-      <dt>Homepage</dt>
-      <div>
-        <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
-      </div>
-    </div>
-    <div>
-      <dt>Instagram</dt>
-      <dd><a href="https://www.instagram.com/shaunbaileyam/">https://www.instagram.com/shaunbaileyam</a></dd>
-    </div>
-    <div>
-      <dt>Email</dt>
-      <dd>shaunbailey@shaunbailey.co.uk</dd>
-    </div>
-  </dl>
+  </div>
 </div>
 
 ## Markup
