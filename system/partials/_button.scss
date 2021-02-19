@@ -10,14 +10,15 @@
   }
 
   button[class*="ds-button"]:hover:not([disabled]) {
-    transform: scale(1.05);
+    //transform: scale(1.05);
   }
 
   button[class*="ds-button"]:active:not([disabled]) {
     position: relative;
     top: $ss3;
     border-bottom: 0;
-    margin-top: $ss3;
+    outline: none;
+    margin-bottom: $ss3;
   }
 
   button.ds-button-blue {
