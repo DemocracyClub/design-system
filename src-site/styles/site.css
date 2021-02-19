@@ -36,7 +36,7 @@ code[class^="language-"] {
   white-space: pre-wrap;
 }
 
-ul {
+ul, ol {
   padding-left: 2.25rem;
 }
 
