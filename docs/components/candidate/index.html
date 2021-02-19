@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
+    <title>Candidate (Democracy Club Design System)</title>
+  </head>
+  <body>
+    <a href="#main">skip to content</a>
+    <div>
+      <nav>
+        <a href="https://DemocracyClub.github.io/design-system">
+          <img class="site-logo" src="https://DemocracyClub.github.io/design-system/images/logo.svg" alt="Design system homepage" />
+        </a>
+        <h2>Basics</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/getting-started"><strong>Getting started</strong></a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/dark/">Dark theme</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/forms/">Forms</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/modular-scale/">Modular scale</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/type/">Type</a>
+          </li>
+        </ul>
+        <h2>Components</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/breadcrumbs/">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/call-to-action/">Call-to-action</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/candidate/">Candidate</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/card/">Card</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/checkbox/">Checkbox</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/description-lists/">Description lists</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/details/">Details</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/filter/">Filter</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/footer/">Footer</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/header/">Header</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/radio-button/">Radio buttons</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/select/">Select</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/sidebar/">Sidebar</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/subnavigation/">Sub-navigation</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/table/">Table</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/utilities/">Utility classes</a>
+          </li>
+        </ul>
+        <h2>Composition</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/composition/">Composing content</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/page-layout/">Page layout</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <h1>Candidate</h1>
+        <p>The Candidate component is a special kind of card. For all other card use cases, see the generic <a href="https://DemocracyClub.github.io/design-system/components/card">Card</a>. The following demo uses a <a href="https://DemocracyClub.github.io/design-system/components/grid">Grid</a> as a list (<code>&lt;ul&gt;</code>) to display a list of cards.</p>
+<div class="ds-scope">
+  <div class="site-resizer">
+    <ul class="ds-grid">
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Michael Rosen</a>
+          </h3>
+          <div class="ds-h6">Labour</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">David Moreland</a>
+          </h3>
+          <div class="ds-h6">Independent</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_2.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Giles Orpen-Smellie</a>
+          </h3>
+          <div class="ds-h6">Conservative & Unionist Party</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_3.jpg" alt="">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<p>Each Candidate in the list of Candidates from the previous example uses the following markup. Do not place any more content than the (linked) candidate name and party affiliation for Candidates in a list.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-candidate&quot;&gt;
+  &lt;div class=&quot;ds-candidate-body ds-stack-smallest&quot;&gt;
+    &lt;h3 class=&quot;ds-candidate-name ds-h5&quot;&gt;
+      &lt;a href=&quot;path/to/candidate&quot;&gt;Candidate name&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;div class=&quot;ds-h6&quot;&gt;Candidate party&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ds-candidate-image&quot;&gt;
+    &lt;img src=&quot;/path/to/candidate/image&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Markup variants</h2>
+<ul>
+<li>Choose a heading level that is appropriate for the context. In the above example, <code>&lt;h3&gt;</code> assumes the Candidate instance belongs to a section headed with an <code>&lt;h2&gt;</code>.</li>
+<li>Alternative text is not necessary for the image, since the name and party affiliation already suffice in terms of pertinent info.</li>
+<li>For standalone Candidate components (not included alongside others in a list) use a <code>&lt;div&gt;</code> for the outer <code>class=&quot;ds-candidate&quot;</code> element. It is permissable to use longform content in a standalone content, in place of the party name. Note the use of increase spacing by replacing <code>ds-stack-smallest</code> with <code>ds-stack-smaller</code>. Also note the removal of the link around the candidate name since a standalone Candidate is intended for the candidate page itself.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;ds-candidate&quot;&gt;
+  &lt;div class=&quot;ds-candidate-body ds-stack-smaller&quot;&gt;
+    &lt;h2 class=&quot;ds-candidate-name ds-h3&quot;&gt;
+      Candidate name
+    &lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.&lt;p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ds-candidate-image&quot;&gt;
+    &lt;img src=&quot;/path/to/candidate/image&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Standalone Candidate demo</h3>
+<div class="ds-scope">
+  <div class="ds-candidate">
+    <div class="ds-candidate-body ds-stack-smaller">
+      <h2 class="ds-candidate-name ds-h3">
+        Candidate name
+      </h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.<p>
+    </div>
+    <div class="ds-candidate-image">
+      <img src="https://DemocracyClub.github.io/design-system/images/candidate_example.jpg" alt="">
+    </div>
+  </div>
+</div>
+<h2>Dark theme</h2>
+<div class="ds-scope">
+  <div class="site-resizer ds-dark">
+    <ul class="ds-grid">
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Michael Rosen</a>
+          </h3>
+          <div class="ds-h6">Labour</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">David Moreland</a>
+          </h3>
+          <div class="ds-h6">Independent</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_2.jpg" alt="">
+        </div>
+      </li>
+      <li class="ds-candidate">
+        <div class="ds-candidate-body ds-stack-smallest">
+          <h3 class="ds-candidate-name ds-h5">
+            <a href="path/to/candidate">Giles Orpen-Smellie</a>
+          </h3>
+          <div class="ds-h6">Conservative & Unionist Party</div>
+        </div>
+        <div class="ds-candidate-image">
+          <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_3.jpg" alt="">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </main>
+    </div>
+  </body>
+</html>

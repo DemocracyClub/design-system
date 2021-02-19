@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
+    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
+    <title>Select (Democracy Club Design System)</title>
+  </head>
+  <body>
+    <a href="#main">skip to content</a>
+    <div>
+      <nav>
+        <a href="https://DemocracyClub.github.io/design-system">
+          <img class="site-logo" src="https://DemocracyClub.github.io/design-system/images/logo.svg" alt="Design system homepage" />
+        </a>
+        <h2>Basics</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/getting-started"><strong>Getting started</strong></a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/colors/">Colors</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/dark/">Dark theme</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/forms/">Forms</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/modular-scale/">Modular scale</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/basics/type/">Type</a>
+          </li>
+        </ul>
+        <h2>Components</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/breadcrumbs/">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/button/">Button</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/call-to-action/">Call-to-action</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/candidate/">Candidate</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/card/">Card</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/checkbox/">Checkbox</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/description-lists/">Description lists</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/details/">Details</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/filter/">Filter</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/footer/">Footer</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/grid/">Grid</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/header/">Header</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/radio-button/">Radio buttons</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/select/">Select</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/sidebar/">Sidebar</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/stack/">Stack</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/subnavigation/">Sub-navigation</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/table/">Table</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/utilities/">Utility classes</a>
+          </li>
+        </ul>
+        <h2>Composition</h2>
+        <ul>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/composition/">Composing content</a>
+          </li>
+          <li>
+            <a href="https://DemocracyClub.github.io/design-system/usage/page-layout/">Page layout</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <h1>Select</h1>
+        <p>Democracy Club’s custom select elements use the standard <code>&lt;select&gt;</code> element under the hood, and no JavaScript.</p>
+<div class="ds-scope">
+  <form>
+    <div class="ds-field">
+      <label for="select-example">Favorite type of democracy</label>
+      <div class="ds-select">
+        <select id="select-example" name="select-example">
+          <option>Representative</option>
+          <option>Direct</option>
+          <option>Monitory</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+<p>The following markup structure is needed. Remember to match the <code>for</code> and <code>id</code> values to ensure accessible labeling.</p>
+<pre><code class="language-html">&lt;div class=&quot;ds-field&quot;&gt;
+  &lt;label for=&quot;select-example&quot;&gt;Favorite type of democracy&lt;/label&gt;
+  &lt;div class=&quot;ds-select&quot;&gt;
+    &lt;select id=&quot;select-example&quot; name=&quot;select-example&quot;&gt;
+      &lt;option&gt;Representative&lt;/option&gt;
+      &lt;option&gt;Direct&lt;/option&gt;
+      &lt;option&gt;Monitory&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Dark theme</h2>
+<p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
+<div class="ds-scope">
+  <form class="ds-dark">
+    <div class="ds-field">
+      <label for="select-example">Favorite type of democracy</label>
+      <div class="ds-select">
+        <select id="select-example" name="select-example">
+          <option>Representative</option>
+          <option>Direct</option>
+          <option>Monitory</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+      </main>
+    </div>
+  </body>
+</html>
