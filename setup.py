@@ -17,13 +17,13 @@ setup(
     packages=[
         "dc_design_system",
         "dc_design_system/system",
-        "dc_design_system/static/fonts",
+        "dc_design_system/static/scss/fonts",
         "dc_design_system/static/images",
     ],
     package_dir={
         "dc_design_system": "python-package",
         "dc_design_system/system": "system",
-        "dc_design_system/static/fonts": "system/fonts",
+        "dc_design_system/static/scss/fonts": "system/fonts",
         "dc_design_system/static/images": "system/images",
     },
     package_data={
@@ -31,7 +31,7 @@ setup(
             "*",
             "**/*",
         ],
-        "dc_design_system/static/fonts": [
+        "dc_design_system/static/scss/fonts": [
             "*",
             "**/*",
         ],
