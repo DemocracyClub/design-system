@@ -23,6 +23,12 @@ Use the Sub-navigation component when there are pages available related to the c
   </nav>
 </div>
 
+{% note 'Breadcrumbs' %}
+
+If you wish to indicate _depth_ of location (how many links deep into a subsection of the site), use the [Breadcrumbs]({{site.basedir}}/components/breadcrumbs) component instead.
+
+{% endnote %}
+
 The `class="ds-subnav"` element is a `<nav>`, exposing it as a landmark region to screen readers. Note the use of `aria-label="About"`. This differentiates this navigation landmark from the main one above it in screen reader landmark listings. Where the section is “Our work”, use `aria-label="Our work"`.
 
 The `aria-current="true"` attribution indicates the current page, in this case the first, index page.

@@ -110,7 +110,8 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Breadcrumbs</h1>
-        <p>Breadcrumbs are best used as a supplement to a principle navigation system.</p>
+        <p>Use the Breadcrumbs component when the site structure is several levels deep and a secondary wayfinding mechanism (in addition to the <a href="https://DemocracyClub.github.io/design-system/components/header">Header’s</a> navigation links) may be useful.</p>
+<p>Unlike <a href="https://DemocracyClub.github.io/design-system/components/subnavigation">Sub-navigation</a>, breadcrumbs represent levels of depth reading from left to right. Use <a href="https://DemocracyClub.github.io/design-system/components/subnavigation">Sub-navigation</a> where each link represents a topic belonging to the <em>same</em> level.</p>
 <div class="ds-scope">
   <nav class="ds-breadcrumbs" aria-label="Where you are">
     <ol>
@@ -126,7 +127,7 @@
     </ol>
   </nav>
 </div>
-<p>Since breadcrumbs constitute a kind of navigation, a <code>&lt;nav&gt;</code> element is required, along with a descriptive label using <code>aria-label</code>. The current page (the final breadcrumb) should be unlinked..</p>
+<p>Since breadcrumbs constitute a kind of navigation, a <code>&lt;nav&gt;</code> element is required, along with a descriptive label using <code>aria-label</code>. The current page (the final breadcrumb) should be unlinked.</p>
 <pre><code class="language-html">&lt;nav class=&quot;ds-breadcrumbs&quot; aria-label=&quot;Where you are&quot;&gt;
   &lt;ol&gt;
     &lt;li&gt;

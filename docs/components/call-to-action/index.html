@@ -110,8 +110,8 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Call-to-action</h1>
-        <p>Calls-to-action (CTAs) are links, therefore styles are only honored for <code>&lt;a&gt;</code> elements with <code>href</code> attributes. For button styles see <a href="https://DemocracyClub.github.io/design-system/components/button">button</a>.</p>
-<p>Omitting the <code>href</code> is equivalent to using <code>disabled</code> on a <code>&lt;button&gt;</code> element, hence the opacity and cursor styles matching those of disabled <a href="https://DemocracyClub.github.io/design-system/components/button">buttons</a>.</p>
+        <p>Use Calls-to-action (CTAs) for linking to important places. Calls-to-action are highlighted hyperlinks. Accordingly, styles are only honored for <code>&lt;a&gt;</code> elements with <code>href</code> attributes. For button styles see <a href="https://DemocracyClub.github.io/design-system/components/button">Button</a>.</p>
+<p>Omitting the <code>href</code> is equivalent to using <code>disabled</code> on a <code>&lt;button&gt;</code> element, hence the opacity and cursor styles matching those of disabled <a href="https://DemocracyClub.github.io/design-system/components/button">Buttons</a>.</p>
 <table class="site-table" style="table-layout: fixed">
   <tr>
     <th>markup</th>
@@ -159,6 +159,74 @@
 <div class="ds-scope">
   <a class="ds-cta ds-cta-blue">Link to something</a>
 </div>
+</td>
+  </tr>
+</table>
+<h2>Dark theme</h2>
+<p>Invoke the dark theme on any component by applying class=&quot;ds-dark&quot; to a container element.</p>
+<table class="site-table" style="table-layout: fixed">
+  <tr>
+    <th>markup</th>
+    <th>demo</th>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
+  &lt;a class=&quot;ds-cta&quot; href=&quot;#&quot;&gt;Link to something&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+<td>
+  <div class="ds-scope">
+    <div class="ds-dark" style="padding: 1rem">
+      <a class="ds-cta" href="#">Link to something</a>
+    </div>
+  </div>
+</td>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
+  &lt;a class=&quot;ds-cta&quot;&gt;Link to something&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+<td>
+  <div class="ds-scope">
+    <div class="ds-dark" style="padding: 1rem">
+      <a class="ds-cta">Link to something</a>
+    </div>
+  </div>
+</td>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
+  &lt;a class=&quot;ds-cta ds-cta-blue&quot; href=&quot;#&quot;&gt;Link to something&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+<td>
+  <div class="ds-scope">
+    <div class="ds-dark" style="padding: 1rem">
+      <a class="ds-cta ds-cta-blue" href="#">Link to something</a>
+    </div>
+  </div>
+</td>
+  </tr>
+  <tr>
+    <td>
+<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
+  &lt;a class=&quot;ds-cta ds-cta-blue&quot;&gt;Link to something&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+<td>
+  <div class="ds-scope">
+    <div class="ds-dark" style="padding: 1rem">
+      <a class="ds-cta ds-cta-blue">Link to something</a>
+    </div>
+  </div>
 </td>
   </tr>
 </table>

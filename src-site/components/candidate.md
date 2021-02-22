@@ -2,6 +2,8 @@
 title: Candidate
 ---
 
+Use the Candidate component for summarizing key information about a political candidate.
+
 The Candidate component is a special kind of card. For all other card use cases, see the generic [Card]({{site.basedir}}/components/card). The following demo uses a [Grid]({{site.basedir}}/components/grid) as a list (`<ul>`) to display a list of cards.
 
 <div class="ds-scope">
@@ -80,7 +82,7 @@ Each Candidate in the list of Candidates from the previous example uses the foll
 </div>
 ```
 
-### Standalone Candidate demo
+### Standalone Candidate
 
 <div class="ds-scope">
   <div class="ds-candidate">
@@ -97,6 +99,8 @@ Each Candidate in the list of Candidates from the previous example uses the foll
 </div>
 
 ## Dark theme
+
+Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
 
 <div class="ds-scope">
   <div class="site-resizer ds-dark">

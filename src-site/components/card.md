@@ -2,7 +2,7 @@
 title: Card
 ---
 
-The Card component is an accessible solution to clickable cards. The `class="ds-card-link"` element is activated by clicking anywhere on the card _except_ where there is a supplementary link. These are positioned above the Card’s clickable area to be clickable themselves by pointer/mouse.
+Use the Card component to encapsulate and highlight key information among prose. To make the _whole_ card clickable apply `class="ds-card-link"` to the principle link inside the card. Other, supplementary links are raised above this clickable area to still be operable.
 
 <div class="ds-scope">
   <div class="ds-card">
@@ -26,6 +26,14 @@ The `.ds-card-body` class extends the `.ds-card-smaller` class from [Stack]({{si
 </div>
 ```
 
+{% warning 'Not everything is a card!' %}
+
+At the time of writing, Cards are used liberally across the Democracy Club sites. Don’t “turn everything up to eleven”; as a rule of thumb, only use a standalone Card once or twice in a page.
+
+Only use multiple successive cards within a [Grid]({{site.basedir}}/components/grid). See an example on the [Grid]({{site.basedir}}/components/grid) page.
+
+{% endwarning %}
+
 ## Image cards
 
 Insert an element with `class="ds-card-image"` enclosing an image above the `class="ds-card-body"` element. Regardless of the aspect ratio of the supplied image, it will be displayed at 16:9. The `object-fit: cover` declaration ensures the image is cropped rather than squashed within the space.
@@ -43,12 +51,6 @@ Insert an element with `class="ds-card-image"` enclosing an image above the `cla
     </div>
   </div>
 </div>
-
-{% note 'Card grids' %}
-
-For an example of Cards configured into a grid, see the [Grid]({{site.basedir}}/components/grid) page.
-
-{% endnote %}
 
 ## Dark theme
 

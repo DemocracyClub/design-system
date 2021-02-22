@@ -184,6 +184,11 @@
       "name": "$measureReduced",
       "value": "30em",
       "compiledValue": "30em"
+    },
+    {
+      "name": "$cardShadow",
+      "value": "0 2px 4px 0 rgba(0,0,0,0.1)",
+      "compiledValue": "0 2px 4px 0 rgba(0, 0, 0, 0.1)"
     }
   ],
   "mixins": [

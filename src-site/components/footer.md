@@ -2,6 +2,8 @@
 title: Footer
 ---
 
+Use the Footer component to add quick links, company, and contact information to the foot of a page.
+
 A basic footer looks something like the following (as seen in [the page layout demo]({{site.basedir}}/layout-demo/). All the `ds-footer` class does is add some padding, the blue top border, and extend the [Dark theme]({{site.basedir}}/basics/dark).
 
 Aside from that, only `ds-copyright` is unique to this component. The content of the footer can be constructed from other components according to your needs. In the following example, a list of “quick links” is provided alongside the copyright.

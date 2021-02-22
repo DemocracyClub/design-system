@@ -488,6 +488,11 @@
     opacity: 0.666;
     cursor: not-allowed;
     border-style: dashed; }
+  .ds-scope .ds-dark a.ds-cta {
+    background: transparent;
+    color: #fff; }
+  .ds-scope .ds-dark a.ds-cta-blue {
+    color: #00B6FF; }
   .ds-scope ul.ds-details {
     padding: 0;
     list-style: none; }
@@ -508,6 +513,14 @@
     display: inline; }
   .ds-scope details[open] summary {
     margin-bottom: 1rem; }
+  .ds-scope summary::marker,
+  .ds-scope summary::-webkit-details-marker {
+    display: none; }
+  .ds-scope summary::before {
+    line-height: 1;
+    content: '▸\0020\0020'; }
+  .ds-scope details[open] summary::before {
+    content: '▾\0020\0020'; }
   .ds-scope .ds-candidate {
     position: relative;
     display: flex;

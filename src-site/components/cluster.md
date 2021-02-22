@@ -2,7 +2,7 @@
 title: Cluster
 ---
 
-The cluster helper component lets you group smaller elements together in “clusters”. These elements are spaced evenly along both axes without “left over” margin indenting the elements undesirably (irrespective of wrapping).
+Use a Cluster when you want to group inline elements closely together without having to worry about margin and wrapping behavior. Cluster elements have margin between them but no “left over” margin around them.
 
 <table class="site-table" style="table-layout: fixed">
   <tr>
