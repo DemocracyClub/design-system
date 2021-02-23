@@ -22,6 +22,7 @@
 @import 'partials/_checkbox.scss';
 @import 'partials/_select.scss';
 @import 'partials/_filter.scss';
+@import 'partials/_codeblock.scss';
 @import 'partials/_dark.scss';
 @import 'partials/_page.scss';
 @import 'partials/_utilities.scss';
@@ -53,6 +54,7 @@ $scope: true;
   @include checkbox;
   @include select;
   @include filter;
+  @include codeblock;
 }
 
 @if $scope {

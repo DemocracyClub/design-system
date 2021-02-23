@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Call-to-action (Democracy Club Design System)</title>
+    <title>Code block (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -112,127 +112,69 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Call-to-action</h1>
-        <p>Use Calls-to-action (CTAs) for linking to important places. Calls-to-action are highlighted hyperlinks. Accordingly, styles are only honored for <code>&lt;a&gt;</code> elements with <code>href</code> attributes. For button styles see <a href="https://DemocracyClub.github.io/design-system/components/button">Button</a>.</p>
-<p>Omitting the <code>href</code> is equivalent to using <code>disabled</code> on a <code>&lt;button&gt;</code> element, hence the opacity and cursor styles matching those of disabled <a href="https://DemocracyClub.github.io/design-system/components/button">Buttons</a>.</p>
-<table class="site-table" style="table-layout: fixed">
-  <tr>
-    <th>markup</th>
-    <th>demo</th>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;a class=&quot;ds-cta&quot; href=&quot;#&quot;&gt;Link to something&lt;/a&gt;
-</code></pre>
-</td>
-<td>
+        <h1>Code block</h1>
+        <p>When sharing blocks of code, you have two formatting options: <em>wrapping</em> or <em>scrolling</em>.</p>
+<h2>Wrapping code</h2>
+<p>This is the default, using <code>class=&quot;ds-codeblock&quot;</code>.</p>
 <div class="ds-scope">
-  <a class="ds-cta" href="#">Link to something</a>
+<pre class="ds-codeblock"><code>{
+  "notifications": [
+    {
+      "url": "http://www.eoni.org.uk/Vote/Voting-at-a-polling-place",
+      "title": "You need to show photographic ID to vote in this election",
+      "detail": "Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.",
+      "type": "voter_id"
+    }
+  ]
+}</code></pre>
 </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;a class=&quot;ds-cta&quot;&gt;Link to something&lt;/a&gt;
+<pre><code class="language-html">&lt;pre class=&quot;ds-codeblock&quot;&gt;&lt;code&gt;{
+  &quot;notifications&quot;: [
+    {
+      &quot;url&quot;: &quot;http://www.eoni.org.uk/Vote/Voting-at-a-polling-place&quot;,
+      &quot;title&quot;: &quot;You need to show photographic ID to vote in this election&quot;,
+      &quot;detail&quot;: &quot;Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.&quot;,
+      &quot;type&quot;: &quot;voter_id&quot;
+    }
+  ]
+}&lt;/code&gt;&lt;/pre&gt;
 </code></pre>
-</td>
-<td>
+<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="are-you-confused">
+  <h3 id="are-you-confused">🗒️ Are you confused?</h3>
+  <div class="site-stack">
+<p>To be clear, the black code blocks here are part of the documentation <em>for</em> code blocks. The grey code blocks are what you’ll actually see in the product/site. 😬</p>
+</div>
+</aside>
+<h2>Scrolling code</h2>
+<p>Add <code>class=&quot;ds-codeblock-scroll&quot;</code>. This option may be better for readability for some kinds of code.</p>
 <div class="ds-scope">
-  <a class="ds-cta">Link to something</a>
+<pre class="ds-codeblock ds-codeblock-scroll"><code>{
+  "notifications": [
+    {
+      "url": "http://www.eoni.org.uk/Vote/Voting-at-a-polling-place",
+      "title": "You need to show photographic ID to vote in this election",
+      "detail": "Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.",
+      "type": "voter_id"
+    }
+  ]
+}</code></pre>
 </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;a class=&quot;ds-cta ds-cta-blue&quot; href=&quot;#&quot;&gt;Link to something&lt;/a&gt;
+<pre><code class="language-html">&lt;pre class=&quot;ds-codeblock ds-codeblock-scroll&quot;&gt;&lt;code&gt;{
+  &quot;notifications&quot;: [
+    {
+      &quot;url&quot;: &quot;http://www.eoni.org.uk/Vote/Voting-at-a-polling-place&quot;,
+      &quot;title&quot;: &quot;You need to show photographic ID to vote in this election&quot;,
+      &quot;detail&quot;: &quot;Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.&quot;,
+      &quot;type&quot;: &quot;voter_id&quot;
+    }
+  ]
+}&lt;/code&gt;&lt;/pre&gt;
 </code></pre>
-</td>
-<td>
+<h2>Inline code</h2>
+<p>Snippets of inline code (placed in paragraphs, typically) are styled by default. Just use the <code>&lt;code&gt;</code> tag:</p>
 <div class="ds-scope">
-  <a class="ds-cta ds-cta-blue" href="#">Link to something</a>
+  <p>Let me tell you about the <code>$variable</code> I came up with.</p>
 </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;a class=&quot;ds-cta ds-cta-blue&quot;&gt;Link to something&lt;/a&gt;
-</code></pre>
-</td>
-<td>
-<div class="ds-scope">
-  <a class="ds-cta ds-cta-blue">Link to something</a>
-</div>
-</td>
-  </tr>
-</table>
-<h2>Dark theme</h2>
-<p>Invoke the dark theme on any component by applying class=&quot;ds-dark&quot; to a container element.</p>
-<table class="site-table" style="table-layout: fixed">
-  <tr>
-    <th>markup</th>
-    <th>demo</th>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
-  &lt;a class=&quot;ds-cta&quot; href=&quot;#&quot;&gt;Link to something&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta" href="#">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
-  &lt;a class=&quot;ds-cta&quot;&gt;Link to something&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
-  &lt;a class=&quot;ds-cta ds-cta-blue&quot; href=&quot;#&quot;&gt;Link to something&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta ds-cta-blue" href="#">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;div class=&quot;ds-dark&quot;&gt;
-  &lt;a class=&quot;ds-cta ds-cta-blue&quot;&gt;Link to something&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta ds-cta-blue">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-</table>
       </main>
     </div>
   </body>

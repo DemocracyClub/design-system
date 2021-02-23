@@ -24,6 +24,13 @@
     height: auto;
   }
 
+  code {
+    color: $black;
+    background-color: $blackOpacity;
+    word-break: break-word;
+    padding: 0 $ss3;
+  }
+
   div:focus,
   [tabindex="-1"]:focus,
   body:focus {
