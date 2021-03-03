@@ -17,6 +17,8 @@
   }
 
   summary {
+    @include fontMain;
+    font-style: normal;
     cursor: pointer;
     font-size: $s3;
     color: $pinkForWhite;

@@ -72,6 +72,20 @@ In some cases, it might be pertinent to have a Details component open by default
 
 {% endnote %}
 
+## Details inside `<blockquote>`s
+
+To truncate candidate statements, you can use a Details component with the summary label “Full statement”:
+
+<div class="ds-scope">
+  <blockquote class="ds-stack-smaller">
+    <p>To stand again as the UKIP candidate for Redcar is fantastic and reflects the fact I was born in Middlesbrough.</p>
+    <details>
+      <summary>Full statement</summary>
+      <p>I work, run my business, and live in the constituency. What also makes me unique among the other candidates is my military service, having served in both the Regular Army and what is now the Reserve for forty two years.</p>
+    </details>
+  </blockquote>
+</div>
+
 ## Dark theme
 
 Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.

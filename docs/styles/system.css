@@ -510,6 +510,11 @@
     margin-top: 0;
     border-top-width: 0; }
   .ds-scope summary {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 1.125;
+    color: #403F41;
+    font-style: normal;
     cursor: pointer;
     font-size: 1.5625rem;
     color: #E6007C; }
