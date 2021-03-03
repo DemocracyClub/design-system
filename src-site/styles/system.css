@@ -363,7 +363,7 @@
     font-size: clamp(1.25rem, 3vw, 1.5625rem); }
   .ds-scope h6, .ds-scope .ds-h6 {
     font-size: 1.25rem;
-    font-size: clamp(0.125rem, 2vw, 1.25rem); }
+    font-size: clamp(0.875rem, 2vw, 1.25rem); }
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
     font-weight: 500;
     word-break: break-word; }
@@ -544,7 +544,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 66.666%; }
+    flex-basis: 50%; }
   .ds-scope .ds-candidate-name {
     hyphens: auto;
     word-break: break-word; }
@@ -560,9 +560,11 @@
     background-color: rgba(64, 63, 65, 0.2);
     flex-grow: 1;
     min-width: 10rem;
+    min-width: min(10rem, 100%);
     min-height: 10rem;
     max-width: 100%;
-    position: relative; }
+    position: relative;
+    aspect-ratio: 1/1; }
   .ds-scope .ds-candidate-image img {
     display: block;
     height: 100%;
@@ -575,6 +577,11 @@
     outline: 0.25rem solid #FFC037; }
   .ds-scope .ds-candidate:focus-within a:focus {
     outline: none; }
+  .ds-scope :not(li).ds-candidate .ds-candidate-body {
+    flex-basis: 50%; }
+  .ds-scope :not(li).ds-candidate .ds-candidate-image {
+    min-width: 20rem;
+    min-width: min(20rem, 100%); }
   .ds-scope nav.ds-breadcrumbs ol {
     font-family: Montserrat, sans-serif;
     font-weight: 500;

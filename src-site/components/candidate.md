@@ -91,6 +91,7 @@ Each Candidate in the list of Candidates from the previous example uses the foll
         Candidate name
       </h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.<p>
+      <p>Animi maiores, earum quisquam porro mollitia maxime pariatur iure esse nesciunt obcaecati deleniti explicabo a, veritatis voluptatum, suscipit ipsum illo provident temporibus.</p>
     </div>
     <div class="ds-candidate-image">
       <img src="{{site.basedir}}/images/candidate_example.jpg" alt="">
