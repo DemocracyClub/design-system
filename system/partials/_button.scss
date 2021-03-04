@@ -25,5 +25,9 @@
     cursor: not-allowed;
     opacity: 0.666;
   }
+
+  .ds-dark button[class*="ds-button"][disabled]:active {
+    border-bottom-color: #000;
+  }
 }
 

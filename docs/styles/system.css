@@ -517,6 +517,8 @@
   .ds-scope button[class*="ds-button"][disabled] {
     cursor: not-allowed;
     opacity: 0.666; }
+  .ds-scope .ds-dark button[class*="ds-button"][disabled]:active {
+    border-bottom-color: #000; }
   .ds-scope a.ds-cta {
     display: inline-block;
     color: #E6007C;
