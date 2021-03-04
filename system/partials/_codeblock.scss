@@ -1,0 +1,36 @@
+@mixin codeblock {
+  pre.ds-codeblock {
+    padding: $s1;
+    background-color: $blackOpacity;
+    line-height: $lineHeightTight;
+    scrollbar-width: thin;
+    scrollbar-color: $blueForWhite $black;
+  }
+
+  pre.ds-codeblock code {
+    display: block;
+    white-space: pre-wrap;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  pre.ds-codeblock.ds-codeblock-scroll {
+    overflow-x: auto;
+  }
+
+  pre.ds-codeblock.ds-codeblock-scroll code {
+    white-space: pre;
+  }
+
+  ::-webkit-scrollbar {
+    width: $s1;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $blueForWhite;
+  }
+}

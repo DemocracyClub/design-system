@@ -2,7 +2,7 @@
 title: Filter
 ---
 
-The Filter component offers a set of filters for selecting pertinent data.
+Use the Filter component to offer search filters so that users can focus in on what they are looking for. The outer element takes `class="ds-filter"`.
 
 <div class="ds-scope">
   <aside class="ds-filter" aria-labelledby="filter-label">

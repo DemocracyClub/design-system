@@ -54,9 +54,41 @@ layout: layouts/bare.njk
   </nav>
   <h1>Democracy Club page layout demo</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur iusto officia necessitatibus distinctio nemo perspiciatis placeat illo facilis enim soluta et accusamus sunt ipsa fugit earum, voluptas assumenda aspernatur.</p>
+    <dl class="ds-descriptions">
+    <div>
+      <dt>Facebook</dt>
+      <dd><a href="https://www.facebook.com/shaunbaileyuk">www.facebook.com/shaunbaileyuk</a></dd>
+    </div>
+    <div>
+      <dt>Homepage</dt>
+      <div>
+        <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
+      </div>
+    </div>
+    <div>
+      <dt>Instagram</dt>
+      <dd><a href="https://www.instagram.com/shaunbaileyam/">https://www.instagram.com/shaunbaileyam</a></dd>
+    </div>
+    <div>
+      <dt>Email</dt>
+      <dd>shaunbailey@shaunbailey.co.uk</dd>
+    </div>
+  </dl>
   <p>Distinctio iure explicabo quaerat repudiandae, nulla officia corporis! Eaque sapiente excepturi quas, nostrum cumque nisi. Quis eligendi necessitatibus, fugit voluptatem a, voluptatibus praesentium fugiat, nostrum doloremque eum est ratione provident.</p>
   <h2>A subheading</h2>
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
+  <div class="ds-candidate">
+    <div class="ds-candidate-body ds-stack-smaller">
+      <h2 class="ds-candidate-name ds-h3">
+        Candidate name
+      </h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, suscipit fugit veritatis impedit, distinctio sint commodi labore porro ipsum, a officiis nesciunt aspernatur consequatur. Atque ab eligendi maxime rerum consequatur.<p>
+      <p>Animi maiores, earum quisquam porro mollitia maxime pariatur iure esse nesciunt obcaecati deleniti explicabo a, veritatis voluptatum, suscipit ipsum illo provident temporibus.</p>
+    </div>
+    <div class="ds-candidate-image">
+      <img src="{{site.basedir}}/images/candidate_example_2.jpg" alt="">
+    </div>
+  </div>
 </main>
 <footer class="ds-footer">
   <div class="ds-block-centered ds-text-centered ds-stack">

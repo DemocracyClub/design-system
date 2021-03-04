@@ -9,10 +9,6 @@
     border-bottom: $ss3 solid $black;
   }
 
-  button[class*="ds-button"]:hover:not([disabled]) {
-    //transform: scale(1.05);
-  }
-
   button[class*="ds-button"]:active:not([disabled]) {
     position: relative;
     top: $ss3;
@@ -28,6 +24,10 @@
   button[class*="ds-button"][disabled] {
     cursor: not-allowed;
     opacity: 0.666;
+  }
+
+  .ds-dark button[class*="ds-button"][disabled]:active {
+    border-bottom-color: #000;
   }
 }
 

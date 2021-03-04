@@ -17,6 +17,8 @@
   }
 
   summary {
+    @include fontMain;
+    font-style: normal;
     cursor: pointer;
     font-size: $s3;
     color: $pinkForWhite;
@@ -29,5 +31,19 @@
 
   details[open] summary {
     margin-bottom: $s1;
+  }
+
+  summary::marker,
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    line-height: 1;
+    content: '▸\0020\0020'
+  }
+
+  details[open] summary::before {
+    content: '▾\0020\0020';
   }
 }

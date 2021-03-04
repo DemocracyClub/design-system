@@ -2,7 +2,7 @@
 title: Header
 ---
 
-The Header is intended for all Democracy Club sites. It includes a logo which links to [https://democracyclub.org.uk/](https://democracyclub.org.uk/) and a set of main navigation links for the local site. The “Home” link should link to the local site’s homepage, not [https://democracyclub.org.uk/](https://democracyclub.org.uk/) (unless the site in question _is_ democracyclub.org.uk).
+Use the Header to brand your Democracy Club site and provide the main navigation. It includes a logo which links to [https://democracyclub.org.uk/](https://democracyclub.org.uk/) and a set of main navigation links for the local site. The “Home” link should link to the local site’s homepage, not [https://democracyclub.org.uk/](https://democracyclub.org.uk/) (unless the site in question _is_ democracyclub.org.uk).
 
 <div class="ds-scope site-resizer">
   <header class="ds-header">

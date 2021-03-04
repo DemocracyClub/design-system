@@ -59,6 +59,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/codeblock/">Code block</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/description-lists/">Description lists</a>
           </li>
           <li>
@@ -110,7 +113,7 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Details</h1>
-        <p>The Details component wraps a set of standard <code>&lt;details&gt;</code> elements in an unordered list. Use this component to summarize longform content and make it easier to locate sections.</p>
+        <p>Use <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> to summarize longform content and make it easier to locate sections. If you have multiple sections, wrap the <code>&lt;details&gt;</code> elements in a list, using <code>class=&quot;ds-details&quot;</code> on the <code>&lt;ul&gt;</code>.</p>
 <div class="ds-scope">
   <ul class="ds-details">
     <li>
@@ -129,11 +132,13 @@
     </li>
   </ul>
 </div>
-<p>Note the <code>class=&quot;ds-details&quot;</code> class on the containing <code>&lt;ul&gt;</code>. It’s recommended each <code>&lt;summary&gt;</code> element contains a heading of the appropriate level for the surrounding document structure. This makes it easier for screen reader users to navigate between details elements / subsections.</p>
+<p>It’s recommended each <code>&lt;summary&gt;</code> element contains a heading of the appropriate level for the surrounding document structure. This makes it easier for screen reader users to navigate between details elements / subsections.</p>
 <pre><code class="language-html">&lt;ul class=&quot;ds-details&quot;&gt;
   &lt;li&gt;
     &lt;details&gt;
-      &lt;summary&gt;&lt;h2&gt;Where to vote&lt;/h2&gt;&lt;/summary&gt;
+      &lt;summary&gt;
+        &lt;h2&gt;Where to vote&lt;/h2&gt;
+      &lt;/summary&gt;
       &lt;p&gt;At your local polling station&lt;/p&gt;
     &lt;/details&gt;
   &lt;/li&gt;
@@ -157,17 +162,52 @@
   &lt;summary&gt;
     &lt;h2&gt;I should be open already&lt;/h2&gt;
   &lt;/summary&gt;
-  &lt;p&gt;This should be visible as the user arrives on the page&lt;/p&gt;
+  &lt;p&gt;This should be visible as the user arrives on the page.&lt;/p&gt;
 &lt;/details&gt;
 </code></pre>
-<details open>
-  <summary>
-    <h2>I should be open already</h2>
-  </summary>
-  <p>This should be visible as the user arrives on the page</p>
-</details>
+<div class="ds-scope">
+  <details open>
+    <summary>
+      <h2>I should be open already</h2>
+    </summary>
+    <p>This should be visible as the user arrives on the page.</p>
+  </details>
+</div>
 </div>
 </aside>
+<h2>Details inside <code>&lt;blockquote&gt;</code>s</h2>
+<p>To truncate candidate statements, you can use a Details component with the summary label “Full statement”:</p>
+<div class="ds-scope">
+  <blockquote class="ds-stack-smaller">
+    <p>To stand again as the UKIP candidate for Redcar is fantastic and reflects the fact I was born in Middlesbrough.</p>
+    <details>
+      <summary>Full statement</summary>
+      <p>I work, run my business, and live in the constituency. What also makes me unique among the other candidates is my military service, having served in both the Regular Army and what is now the Reserve for forty two years.</p>
+    </details>
+  </blockquote>
+</div>
+<h2>Dark theme</h2>
+<p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
+<div class="ds-scope">
+  <div class="ds-dark" style="padding: 1.5rem">
+    <ul class="ds-details">
+      <li>
+        <details>
+          <summary><h2>Where to vote</h2></summary>
+          <p>At your local polling station</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><h2>How do I vote</h2></summary>
+          <p>This election uses Single Transferable Vote.</p >
+          <p>Rank the candidates by your preference: 1, 2, 3… You don't have to rank all the candidates, but you must at least mark your first choice.</p>
+          <p>Read the instructions at the top of your ballot paper carefully.</p>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>
       </main>
     </div>
   </body>

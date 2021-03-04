@@ -2,7 +2,7 @@
 title: Select
 ---
 
-Democracy Club’s custom select elements use the standard `<select>` element under the hood, and no JavaScript.
+Democracy Club’s custom select components use the standard `<select>` element under the hood, and no JavaScript.
 
 <div class="ds-scope">
   <form>

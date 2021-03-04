@@ -59,6 +59,9 @@
             <a href="https://DemocracyClub.github.io/design-system/components/cluster/">Cluster</a>
           </li>
           <li>
+            <a href="https://DemocracyClub.github.io/design-system/components/codeblock/">Code block</a>
+          </li>
+          <li>
             <a href="https://DemocracyClub.github.io/design-system/components/description-lists/">Description lists</a>
           </li>
           <li>
@@ -110,7 +113,7 @@
       </nav>
       <main id="main" tabindex="-1">
         <h1>Card</h1>
-        <p>The Card component is an accessible solution to clickable cards. The <code>class=&quot;ds-card-link&quot;</code> element is activated by clicking anywhere on the card <em>except</em> where there is a supplementary link. These are positioned above the Card’s clickable area to be clickable themselves by pointer/mouse.</p>
+        <p>Use the Card component to encapsulate and highlight key information among prose. To make the <em>whole</em> card clickable apply <code>class=&quot;ds-card-link&quot;</code> to the principle link inside the card. Other, supplementary links are raised above this clickable area to still be operable.</p>
 <div class="ds-scope">
   <div class="ds-card">
     <div class="ds-card-body">
@@ -129,6 +132,13 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+<aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="not-everything-is-a-card!">
+  <h3 id="not-everything-is-a-card!">⚠️ Not everything is a card!</h3>
+  <div class="site-stack">
+<p>At the time of writing, Cards are used liberally across the Democracy Club sites. Don’t “turn everything up to eleven”; as a rule of thumb, only use a standalone Card once or twice in a page.</p>
+<p>Only use multiple successive cards within a <a href="https://DemocracyClub.github.io/design-system/components/grid">Grid</a>. See an example on the <a href="https://DemocracyClub.github.io/design-system/components/grid">Grid</a> page.</p>
+</div>
+</aside>
 <h2>Image cards</h2>
 <p>Insert an element with <code>class=&quot;ds-card-image&quot;</code> enclosing an image above the <code>class=&quot;ds-card-body&quot;</code> element. Regardless of the aspect ratio of the supplied image, it will be displayed at 16:9. The <code>object-fit: cover</code> declaration ensures the image is cropped rather than squashed within the space.</p>
 <div class="ds-scope">
@@ -144,19 +154,15 @@
     </div>
   </div>
 </div>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="card-grids">
-  <h3 id="card-grids">🗒️ Card grids</h3>
-  <div class="site-stack">
-<p>For an example of Cards configured into a grid, see the <a href="https://DemocracyClub.github.io/design-system/components/grid">Grid</a> page.</p>
-</div>
-</aside>
 <h2>Dark theme</h2>
 <p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
 <div class="ds-scope">
-  <div class="ds-card ds-dark">
-    <div class="ds-card-body">
-      <h3><a class="ds-card-link" href="#">Card</a></h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!</p>
+  <div class="ds-dark ds-padded">
+    <div class="ds-card">
+      <div class="ds-card-body">
+        <h3><a class="ds-card-link" href="#">Card</a></h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!</p>
+      </div>
     </div>
   </div>
 </div>

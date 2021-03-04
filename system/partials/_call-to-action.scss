@@ -22,4 +22,13 @@
     cursor: not-allowed;
     border-style: dashed;
   }
+
+  .ds-dark a.ds-cta {
+    background: transparent;
+    color: $white;
+  }
+
+  .ds-dark a.ds-cta-blue {
+    color: $blueForBlack;
+  }
 }

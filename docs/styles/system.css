@@ -300,7 +300,48 @@
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   line-height: 1.125;
-  color: #403F41; }
+  color: #403F41;
+  /*dl.ds-descriptions > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  dl.ds-descriptions dt,
+  dl.ds-descriptions dd {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+  }
+
+  dl.ds-descriptions dt {
+    line-height: 1.25;
+    padding-right: $s2;
+  }
+
+  dl.ds-descriptions > div + div {
+    margin-top: $ss6;
+    padding-top: $ss6;
+    border-top: 1px solid $blackOpacity;
+  }
+
+  dl.ds-descriptions dd + dd {
+    margin-top: $ss6;
+  }
+
+  dl.ds-descriptions > div > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  dl.ds-descriptions dt {
+    flex-basis: calc(25% - 1.25rem);
+  }
+
+  dl.ds-descriptions dt + * {
+    flex-basis: 75%;
+    min-width: min(20rem, 100%);
+  }*/ }
   .ds-scope input,
   .ds-scope button,
   .ds-scope textarea,
@@ -316,6 +357,11 @@
     display: inline-block;
     max-width: 100%;
     height: auto; }
+  .ds-scope code {
+    color: #403F41;
+    background-color: rgba(64, 63, 65, 0.2);
+    word-break: break-word;
+    padding: 0 0.375rem; }
   .ds-scope div:focus,
   .ds-scope [tabindex="-1"]:focus,
   .ds-scope body:focus {
@@ -358,7 +404,7 @@
     font-size: clamp(1.25rem, 3vw, 1.5625rem); }
   .ds-scope h6, .ds-scope .ds-h6 {
     font-size: 1.25rem;
-    font-size: clamp(0.125rem, 2vw, 1.25rem); }
+    font-size: clamp(0.875rem, 2vw, 1.25rem); }
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
     font-weight: 500;
     word-break: break-word; }
@@ -379,8 +425,6 @@
     line-height: 1.125;
     color: #403F41;
     padding-left: 0; }
-  .ds-scope dt {
-    font-size: 1.25rem; }
   .ds-scope dd {
     font-family: Georgia, serif;
     font-weight: normal;
@@ -430,29 +474,30 @@
     filter: invert(1) grayscale(1) contrast(100); }
   .ds-scope dl.ds-descriptions > div {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
+  .ds-scope dl.ds-descriptions > div + div {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(64, 63, 65, 0.2); }
   .ds-scope dl.ds-descriptions dt,
   .ds-scope dl.ds-descriptions dd {
     margin: 0;
     padding: 0;
     max-width: none; }
-  .ds-scope dl.ds-descriptions dt {
-    line-height: 1.5;
-    padding-right: 1.25rem; }
-  .ds-scope dl.ds-descriptions > div + div {
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid rgba(64, 63, 65, 0.2); }
+  .ds-scope dl.ds-descriptions > div > dt {
+    line-height: 1.125;
+    flex-basis: 10rem;
+    padding-right: 1.25rem;
+    flex-grow: 1; }
+  .ds-scope dl.ds-descriptions dt + * {
+    flex-basis: calc(100% - 12rem);
+    flex-grow: 666;
+    min-width: 50%; }
+  .ds-scope dl.ds-descriptions dt + * {
+    word-break: break-word; }
   .ds-scope dl.ds-descriptions dd + dd {
     margin-top: 0.75rem; }
-  .ds-scope dl.ds-descriptions > div > * {
-    flex-grow: 0;
-    flex-shrink: 1; }
-  .ds-scope dl.ds-descriptions dt {
-    flex-basis: 25%; }
-  .ds-scope dl.ds-descriptions dt + * {
-    flex-basis: 75%;
-    min-width: min(35rem, 100%); }
   .ds-scope button[class*="ds-button"] {
     border: 0;
     cursor: pointer;
@@ -472,6 +517,8 @@
   .ds-scope button[class*="ds-button"][disabled] {
     cursor: not-allowed;
     opacity: 0.666; }
+  .ds-scope .ds-dark button[class*="ds-button"][disabled]:active {
+    border-bottom-color: #000; }
   .ds-scope a.ds-cta {
     display: inline-block;
     color: #E6007C;
@@ -488,6 +535,11 @@
     opacity: 0.666;
     cursor: not-allowed;
     border-style: dashed; }
+  .ds-scope .ds-dark a.ds-cta {
+    background: transparent;
+    color: #fff; }
+  .ds-scope .ds-dark a.ds-cta-blue {
+    color: #00B6FF; }
   .ds-scope ul.ds-details {
     padding: 0;
     list-style: none; }
@@ -500,6 +552,11 @@
     margin-top: 0;
     border-top-width: 0; }
   .ds-scope summary {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 1.125;
+    color: #403F41;
+    font-style: normal;
     cursor: pointer;
     font-size: 1.5625rem;
     color: #E6007C; }
@@ -508,6 +565,14 @@
     display: inline; }
   .ds-scope details[open] summary {
     margin-bottom: 1rem; }
+  .ds-scope summary::marker,
+  .ds-scope summary::-webkit-details-marker {
+    display: none; }
+  .ds-scope summary::before {
+    line-height: 1;
+    content: '▸\0020\0020'; }
+  .ds-scope details[open] summary::before {
+    content: '▾\0020\0020'; }
   .ds-scope .ds-candidate {
     position: relative;
     display: flex;
@@ -521,7 +586,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 66.666%; }
+    flex-basis: 50%; }
   .ds-scope .ds-candidate-name {
     hyphens: auto;
     word-break: break-word; }
@@ -537,9 +602,11 @@
     background-color: rgba(64, 63, 65, 0.2);
     flex-grow: 1;
     min-width: 10rem;
+    min-width: min(10rem, 100%);
     min-height: 10rem;
     max-width: 100%;
-    position: relative; }
+    position: relative;
+    aspect-ratio: 1/1; }
   .ds-scope .ds-candidate-image img {
     display: block;
     height: 100%;
@@ -552,6 +619,11 @@
     outline: 0.25rem solid #FFC037; }
   .ds-scope .ds-candidate:focus-within a:focus {
     outline: none; }
+  .ds-scope :not(li).ds-candidate .ds-candidate-body {
+    flex-basis: 50%; }
+  .ds-scope :not(li).ds-candidate .ds-candidate-image {
+    min-width: 20rem;
+    min-width: min(20rem, 100%); }
   .ds-scope nav.ds-breadcrumbs ol {
     font-family: Montserrat, sans-serif;
     font-weight: 500;
@@ -610,7 +682,7 @@
     max-width: 20rem;
     height: auto; }
   .ds-scope .ds-header nav {
-    margin: 1rem 0 1rem auto; }
+    margin: 1rem 0 1rem; }
   .ds-scope .ds-header ul {
     font-size: clamp(0.875rem, 3vw, 1rem); }
   .ds-scope .ds-header li {
@@ -764,6 +836,29 @@
     font-size: inherit; }
   .ds-scope .ds-filter details ul {
     font-size: 0.85em; }
+  .ds-scope pre.ds-codeblock {
+    padding: 1rem;
+    background-color: rgba(64, 63, 65, 0.2);
+    line-height: 1.125;
+    scrollbar-width: thin;
+    scrollbar-color: #007CAD #403F41; }
+  .ds-scope pre.ds-codeblock code {
+    display: block;
+    white-space: pre-wrap;
+    padding: 0;
+    background-color: transparent; }
+  .ds-scope pre.ds-codeblock.ds-codeblock-scroll {
+    overflow-x: auto; }
+  .ds-scope pre.ds-codeblock.ds-codeblock-scroll code {
+    white-space: pre; }
+  .ds-scope ::-webkit-scrollbar {
+    width: 1rem; }
+  .ds-scope ::-webkit-scrollbar-track {
+    background-color: #403F41; }
+  .ds-scope ::-webkit-scrollbar-thumb {
+    background-color: #007CAD; }
+  .ds-scope .ds-page {
+    overflow-x: hidden; }
   .ds-scope .ds-page main {
     margin-left: auto;
     margin-right: auto;

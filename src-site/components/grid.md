@@ -2,7 +2,9 @@
 title: Grid
 ---
 
-The Grid component progressively enhances a single column layout (with basic [Stack]({{site.basedir}}/components/stack)-like spacing) into a configurable CSS Grid layout.
+Use the Grid component to display related/equivalent items such as [Cards]({{site.basedir}}/components/card) in a responsive grid-like formation.
+
+Grid progressively enhances a single column layout (with basic [Stack]({{site.basedir}}/components/stack)-like spacing) into a configurable CSS Grid layout.
 
 <div class="ds-scope site-resizer">
   <ul class="ds-grid">

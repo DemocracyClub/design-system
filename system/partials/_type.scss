@@ -24,6 +24,13 @@
     height: auto;
   }
 
+  code {
+    color: $black;
+    background-color: $blackOpacity;
+    word-break: break-word;
+    padding: 0 $ss3;
+  }
+
   div:focus,
   [tabindex="-1"]:focus,
   body:focus {
@@ -67,7 +74,7 @@
   h3, .ds-h3 { font-size: $s5; font-size: clamp(#{$s4}, 5vw, #{$s5}); }
   h4, .ds-h4 { font-size: $s4; font-size: clamp(#{$s3}, 4vw, #{$s4}); }
   h5, .ds-h5 { font-size: $s3; font-size: clamp(#{$s2}, 3vw, #{$s3}); }
-  h6, .ds-h6 { font-size: $s2; font-size: clamp(#{$ss1}, 2vw, #{$s2}); }
+  h6, .ds-h6 { font-size: $s2; font-size: clamp(#{$ss7}, 2vw, #{$s2}); }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
@@ -89,10 +96,6 @@
   [class] > ol:first-child {
     @include fontMain;
     padding-left: 0;
-  }
-
-  dt {
-    font-size: $s2;
   }
 
   dd {
