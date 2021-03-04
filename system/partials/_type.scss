@@ -98,10 +98,6 @@
     padding-left: 0;
   }
 
-  dt {
-    font-size: $s2;
-  }
-
   dd {
     @include fontBody;
     margin-left: $s3;

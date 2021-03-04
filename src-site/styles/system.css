@@ -300,7 +300,48 @@
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   line-height: 1.125;
-  color: #403F41; }
+  color: #403F41;
+  /*dl.ds-descriptions > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  dl.ds-descriptions dt,
+  dl.ds-descriptions dd {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+  }
+
+  dl.ds-descriptions dt {
+    line-height: 1.25;
+    padding-right: $s2;
+  }
+
+  dl.ds-descriptions > div + div {
+    margin-top: $ss6;
+    padding-top: $ss6;
+    border-top: 1px solid $blackOpacity;
+  }
+
+  dl.ds-descriptions dd + dd {
+    margin-top: $ss6;
+  }
+
+  dl.ds-descriptions > div > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  dl.ds-descriptions dt {
+    flex-basis: calc(25% - 1.25rem);
+  }
+
+  dl.ds-descriptions dt + * {
+    flex-basis: 75%;
+    min-width: min(20rem, 100%);
+  }*/ }
   .ds-scope input,
   .ds-scope button,
   .ds-scope textarea,
@@ -384,8 +425,6 @@
     line-height: 1.125;
     color: #403F41;
     padding-left: 0; }
-  .ds-scope dt {
-    font-size: 1.25rem; }
   .ds-scope dd {
     font-family: Georgia, serif;
     font-weight: normal;
@@ -435,29 +474,30 @@
     filter: invert(1) grayscale(1) contrast(100); }
   .ds-scope dl.ds-descriptions > div {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
+  .ds-scope dl.ds-descriptions > div + div {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(64, 63, 65, 0.2); }
   .ds-scope dl.ds-descriptions dt,
   .ds-scope dl.ds-descriptions dd {
     margin: 0;
     padding: 0;
     max-width: none; }
-  .ds-scope dl.ds-descriptions dt {
-    line-height: 1.5;
-    padding-right: 1.25rem; }
-  .ds-scope dl.ds-descriptions > div + div {
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid rgba(64, 63, 65, 0.2); }
+  .ds-scope dl.ds-descriptions > div > dt {
+    line-height: 1.125;
+    flex-basis: 10rem;
+    padding-right: 1.25rem;
+    flex-grow: 1; }
+  .ds-scope dl.ds-descriptions dt + * {
+    flex-basis: calc(100% - 12rem);
+    flex-grow: 666;
+    min-width: 50%; }
+  .ds-scope dl.ds-descriptions dt + * {
+    word-break: break-word; }
   .ds-scope dl.ds-descriptions dd + dd {
     margin-top: 0.75rem; }
-  .ds-scope dl.ds-descriptions > div > * {
-    flex-grow: 0;
-    flex-shrink: 1; }
-  .ds-scope dl.ds-descriptions dt {
-    flex-basis: 25%; }
-  .ds-scope dl.ds-descriptions dt + * {
-    flex-basis: 75%;
-    min-width: min(35rem, 100%); }
   .ds-scope button[class*="ds-button"] {
     border: 0;
     cursor: pointer;
@@ -815,6 +855,8 @@
     background-color: #403F41; }
   .ds-scope ::-webkit-scrollbar-thumb {
     background-color: #007CAD; }
+  .ds-scope .ds-page {
+    overflow-x: hidden; }
   .ds-scope .ds-page main {
     margin-left: auto;
     margin-right: auto;

@@ -1,4 +1,8 @@
 @mixin page {
+  .ds-page {
+    overflow-x: hidden;
+  }
+
   .ds-page main {
     margin-left: auto;
     margin-right: auto;
