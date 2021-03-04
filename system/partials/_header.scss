@@ -22,7 +22,7 @@
 
   .ds-header nav {
     @extend %ds-cluster;
-    margin: $s1 0 $s1 auto;
+    margin: $s1 0 $s1;
   }
 
   .ds-header ul {

@@ -682,7 +682,7 @@
     max-width: 20rem;
     height: auto; }
   .ds-scope .ds-header nav {
-    margin: 1rem 0 1rem auto; }
+    margin: 1rem 0 1rem; }
   .ds-scope .ds-header ul {
     font-size: clamp(0.875rem, 3vw, 1rem); }
   .ds-scope .ds-header li {
