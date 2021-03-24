@@ -48,6 +48,7 @@
     width: 100%;
     max-width: $measureReduced;
     box-shadow: inset $ss2 $ss2 0 $blackOpacity;
+    box-sizing: border-box;
   }
 
   .ds-field-error {
