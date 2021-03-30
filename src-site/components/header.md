@@ -6,8 +6,9 @@ Use the Header to brand your Democracy Club site and provide the main navigation
 
 <div class="ds-scope site-resizer">
   <header class="ds-header">
-    <a class="ds-header-home" href="https://democracyclub.org.uk/">
-      <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
+    <a class="ds-logo" href="/">
+      <img src="{{site.basedir}}/images/logo_icon.svg" alt="" />
+      <span>democracy<br>club</span>
     </a>
     <nav>
       <ul>

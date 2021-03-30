@@ -6,6 +6,13 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/montserrat-light.woff2") format("woff2"), url("fonts/montserrat-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
 .ds-scope .ds-stack-larger > *,
 .ds-scope .ds-stack > *,
 .ds-scope .ds-card .ds-card-body > *,
@@ -422,6 +429,8 @@
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
     font-weight: 500;
     word-break: break-word; }
+  .ds-scope h1, .ds-scope h2 {
+    font-weight: 300; }
   .ds-scope a {
     color: #E6007C;
     text-decoration: underline; }
@@ -689,6 +698,26 @@
     text-decoration: underline;
     text-decoration-thickness: 0.125rem;
     color: #00B6FF; }
+  .ds-scope .ds-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+    color: inherit; }
+  .ds-scope .ds-logo:not(:last-child):not(:only-child) {
+    margin-right: 1.5625rem; }
+  .ds-scope .ds-logo img {
+    height: 4.5rem;
+    margin-right: 0.625rem; }
+  .ds-scope .ds-logo span {
+    font-weight: 300;
+    font-size: 1.5625rem; }
+  .ds-scope .ds-logo em {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 0.375rem; }
   .ds-scope .ds-header {
     display: flex;
     flex-wrap: wrap;

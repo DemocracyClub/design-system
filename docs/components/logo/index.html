@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="stylesheet" href="/styles/site.css" />
     <link rel="stylesheet" href="/styles/system.css" />
-    <title>Code block (Democracy Club Design System)</title>
+    <title>Logo (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -121,69 +121,57 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Code block</h1>
-        <p>When sharing blocks of code, you have two formatting options: <em>wrapping</em> or <em>scrolling</em>.</p>
-<h2>Wrapping code</h2>
-<p>This is the default, using <code>class=&quot;ds-codeblock&quot;</code>.</p>
+        <h1>Logo</h1>
+        <p>The logo component is a link back to the local site’s homepage, most commonly included in the <a href="/components/header">Header</a>. This text-based logo replaces purely image-based versions for ease of translation.</p>
 <div class="ds-scope">
-<pre class="ds-codeblock"><code>{
-  "notifications": [
-    {
-      "url": "http://www.eoni.org.uk/Vote/Voting-at-a-polling-place",
-      "title": "You need to show photographic ID to vote in this election",
-      "detail": "Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.",
-      "type": "voter_id"
-    }
-  ]
-}</code></pre>
+  <div class="ds-stack-smaller">
+    <div>
+      <a class="ds-logo" href="/">
+        <img src="/images/logo_icon.svg" alt="" />
+        <span>democracy<br>club</span>
+      </a>
+    </div>
+    <div>
+      <a class="ds-logo" href="/">
+        <img src="/images/logo_icon.svg" alt="" />
+        <span>Who Can I Vote For?</span>
+      </a>
+    </div>
+    <div>
+      <a class="ds-logo" href="/">
+        <img src="/images/logo_icon.svg" alt="" />
+        <span>Where Do I Vote?</span>
+      </a>
+    </div>
+  </div>
 </div>
-<pre><code class="language-html">&lt;pre class=&quot;ds-codeblock&quot;&gt;&lt;code&gt;{
-  &quot;notifications&quot;: [
-    {
-      &quot;url&quot;: &quot;http://www.eoni.org.uk/Vote/Voting-at-a-polling-place&quot;,
-      &quot;title&quot;: &quot;You need to show photographic ID to vote in this election&quot;,
-      &quot;detail&quot;: &quot;Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.&quot;,
-      &quot;type&quot;: &quot;voter_id&quot;
-    }
-  ]
-}&lt;/code&gt;&lt;/pre&gt;
+<h2>Markup</h2>
+<p>Since the text itself acts as the accessible label for the <code>ds-logo</code> link, the check mark graphic can be considered decorative. Therefore, it is supplied an empty <code>alt</code> string to suppress its readout in screen readers.</p>
+<pre><code class="language-html">&lt;a class=&quot;ds-logo&quot; href=&quot;/&quot;&gt;
+  &lt;img src=&quot;/images/logo_icon.svg&quot; alt=&quot;&quot; /&gt;
+  &lt;span&gt;democracy club&lt;/span&gt;
+&lt;/a&gt;
 </code></pre>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="are-you-confused">
-  <h3 id="are-you-confused">🗒️ Are you confused?</h3>
-  <div class="site-stack">
-<p>To be clear, the black code blocks here are part of the documentation <em>for</em> code blocks. The grey code blocks are what you’ll actually see in the product/site. 😬</p>
-</div>
-</aside>
-<h2>Scrolling code</h2>
-<p>Add <code>class=&quot;ds-codeblock-scroll&quot;</code>. This option may be better for readability for some kinds of code.</p>
+<h3>Welsh variant</h3>
 <div class="ds-scope">
-<pre class="ds-codeblock ds-codeblock-scroll"><code>{
-  "notifications": [
-    {
-      "url": "http://www.eoni.org.uk/Vote/Voting-at-a-polling-place",
-      "title": "You need to show photographic ID to vote in this election",
-      "detail": "Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.",
-      "type": "voter_id"
-    }
-  ]
-}</code></pre>
+  <a class="ds-logo" href="/">
+    <img src="/images/logo_icon.svg" alt="" />
+    <span>
+      Where Do I Vote?
+      <em lang="cy">Ble Ydw i’n Pleidleisio?</em>
+    </span>
+  </a>
 </div>
-<pre><code class="language-html">&lt;pre class=&quot;ds-codeblock ds-codeblock-scroll&quot;&gt;&lt;code&gt;{
-  &quot;notifications&quot;: [
-    {
-      &quot;url&quot;: &quot;http://www.eoni.org.uk/Vote/Voting-at-a-polling-place&quot;,
-      &quot;title&quot;: &quot;You need to show photographic ID to vote in this election&quot;,
-      &quot;detail&quot;: &quot;Voters in Northern Ireland are required to show one form of photo ID, like a passport or driving licence.&quot;,
-      &quot;type&quot;: &quot;voter_id&quot;
-    }
-  ]
-}&lt;/code&gt;&lt;/pre&gt;
+<p>Welsh versions of the logo should be in English <em>and</em> Welsh, using an <code>&lt;em&gt;</code> element to encapsulate the Welsh translation. The <code>&lt;em&gt;</code> needs to take <code>lang=&quot;cy&quot;</code>.</p>
+<pre><code class="language-html">&lt;a class=&quot;ds-logo&quot; href=&quot;/&quot;&gt;
+  &lt;img src=&quot;/images/logo_icon.svg&quot; alt=&quot;&quot; /&gt;
+  &lt;span&gt;
+    Where Do I Vote?
+    &lt;em lang=&quot;cy&quot;&gt;Ble Ydw i’n Pleidleisio?&lt;/em&gt;
+  &lt;/span&gt;
+&lt;/a&gt;
 </code></pre>
-<h2>Inline code</h2>
-<p>Snippets of inline code (placed in paragraphs, typically) are styled by default. Just use the <code>&lt;code&gt;</code> tag:</p>
-<div class="ds-scope">
-  <p>Let me tell you about the <code>$variable</code> I came up with.</p>
-</div>
+
       </main>
     </div>
   </body>

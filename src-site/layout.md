@@ -13,8 +13,9 @@ layout: layouts/bare.njk
   </ul>
 </aside>
 <header class="ds-header">
-  <a class="ds-header-home" href="/">
-    <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
+  <a class="ds-logo" href="/">
+    <img src="{{site.basedir}}/images/logo_icon.svg" alt="" />
+    <span>democracy<br>club</span>
   </a>
   <nav>
     <ul>

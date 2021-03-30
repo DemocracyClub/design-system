@@ -1,0 +1,31 @@
+@mixin logo {
+  .ds-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+    color: inherit;
+  }
+
+  .ds-logo:not(:last-child):not(:only-child) {
+    margin-right: $s3;
+  }
+
+  .ds-logo img {
+    height: 4.5rem;
+    margin-right: $ss5;
+  }
+
+  .ds-logo span {
+    font-weight: 300;
+    font-size: $s3;
+  }
+
+  .ds-logo em {
+    display: block;
+    font-size: $s2;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: $ss3;
+  }
+}
