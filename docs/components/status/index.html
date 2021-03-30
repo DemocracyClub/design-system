@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="stylesheet" href="/styles/site.css" />
     <link rel="stylesheet" href="/styles/system.css" />
-    <title>Type (Democracy Club Design System)</title>
+    <title>Status (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -118,98 +118,29 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Type</h1>
-        <h2>Headings</h2>
-<table class="site-table">
-  <tr>
-    <th>Markup</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;h1&gt;Who can I vote for&lt;/h1&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <h1>Who can I vote for?</h1>
-    </td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;h2&gt;Who can I vote for&lt;/h2&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <h2>Who can I vote for?</h2>
-    </td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;h3&gt;Who can I vote for&lt;/h3&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <h3>Who can I vote for?</h3>
-    </td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;h4&gt;Who can I vote for&lt;/h4&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <h4>Who can I vote for?</h4>
-    </td>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">&lt;h5&gt;Who can I vote for&lt;/h5&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <h5>Who can I vote for?</h5>
-    </td>
-  </tr>
-</table>
-<p>Classes in the form <code>.ds-[heading level]</code> (e.g. <code>.ds-h2</code>) are provided to match heading font sizes where the use of a semantic heading is not appropriate. Headings should only be used to introduce sections of content.</p>
-<h2>Paragraphs</h2>
-<table class="site-table" style="table-layout: fixed">
-  <tr>
-    <th>Markup</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni &lt;a href=&quot;#&quot;&gt;culpa praesentium&lt;/a&gt; aliquam magnam temporibus.&lt;/p&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni <a href="#">culpa praesentium</a> aliquam magnam temporibus.</p>
-    </td>
-  </tr>
-</table>
-<h2>Blockquotes</h2>
-<table class="site-table" style="table-layout: fixed">
-  <tr>
-    <th>Markup</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td>
-<pre><code class="language-html">  &lt;blockquote&gt;Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.&lt;/blockquote&gt;
-</code></pre>
-</td>
-    <td class="ds-scope">
-      <blockquote>Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.</blockquote>
-    </td>
-  </tr>
-</table>
-<aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="white-space">
-  <h3 id="white-space">⚠️ White space</h3>
-  <div class="site-stack">
-<p>For consistency, the design system does not apply margin directly to elements. Instead, it is applied contextually using the <a href="/components/stack">Stack</a> component.</p>
+        <h1>Status</h1>
+        <p>Use a status component to keep users informed of the changing state of the site and the status of tasks they’ve undertaken using the site. You can include multiple status messages of different varieties (<code>ds-status-message</code> (standard), <code>ds-status-success</code>, <code>ds-status-error</code>) within the <code>ds-status</code> element.</p>
+<div class="ds-scope">
+  <aside class="ds-status" aria-label="Status">
+    <ul class="ds-stack-smallest">
+      <li class="ds-status-message">A basic status message</li>
+      <li class="ds-status-success">A success message</li>
+      <li class="ds-status-error">An error message</li>
+    </ul>
+  </aside>
 </div>
-</aside>
+<h2>Markup</h2>
+<p>The status component is a simple <code>&lt;aside&gt;</code> with the label “Status” which collects status messages together in a list. Successive status messages are separated by applying <code>ds-stack-smallest</code> to the <code>&lt;ul&gt;</code> element.</p>
+<pre><code class="language-html">&lt;aside class=&quot;ds-status&quot; aria-label=&quot;Status&quot;&gt;
+  &lt;ul class=&quot;ds-stack&quot;&gt;
+    &lt;li class=&quot;ds-status-message&quot;&gt;A basic status message&lt;/li&gt;
+    &lt;li class=&quot;ds-status-success&quot;&gt;A success message&lt;/li&gt;
+    &lt;li class=&quot;ds-status-error&quot;&gt;An error message&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+</code></pre>
+<p>The status component should typically be added to the page just below the <code>&lt;h1&gt;</code> (main) heading. See the <a href="/layout-demo">layout demo</a>.</p>
+
       </main>
     </div>
   </body>

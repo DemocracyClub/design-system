@@ -849,6 +849,21 @@
     font-size: inherit; }
   .ds-scope .ds-filter details ul {
     font-size: 0.85em; }
+  .ds-scope .ds-status ul {
+    list-style: none; }
+  .ds-scope .ds-status ul li {
+    max-width: none; }
+  .ds-scope [class*="ds-status-"] {
+    padding: 0.625rem;
+    font-size: 1rem;
+    background-color: #403F41;
+    color: #fff; }
+  .ds-scope .ds-status-message {
+    background-color: #007CAD; }
+  .ds-scope .ds-status-success {
+    background-color: #32841A; }
+  .ds-scope .ds-status-error {
+    background-color: #D91714; }
   .ds-scope pre.ds-codeblock {
     padding: 1rem;
     background-color: rgba(64, 63, 65, 0.2);

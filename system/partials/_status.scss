@@ -1,0 +1,28 @@
+@mixin status {
+  .ds-status ul {
+    list-style: none;
+  }
+
+  .ds-status ul li {
+    max-width: none;
+  }
+
+  [class*="ds-status-"] {
+    padding: $ss5;
+    font-size: $ss8;
+    background-color: $black;
+    color: $white;
+  }
+
+  .ds-status-message {
+    background-color: $blueForWhite;
+  } 
+
+  .ds-status-success {
+    background-color: $greenForWhite;
+  }
+
+  .ds-status-error {
+    background-color: $redForWhite;
+  }
+}
