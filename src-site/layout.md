@@ -4,8 +4,15 @@ permalink: /layout-demo/index.html
 layout: layouts/bare.njk
 ---
 
+<a class="ds-skip-link" href="#main">skip to content</a>
+<aside class="ds-language" aria-labelledby="language-label">
+  <ul>
+    <li id="language-label" aria-hidden="true">Language:</li>
+    <li><a href="/english" lang="en" aria-current="true">English</a></li>
+    <li><a href="/cymraeg" lang="cy">Cymraeg</a></li>
+  </ul>
+</aside>
 <header class="ds-header">
-  <a class="ds-skip-link" href="#main">skip to content</a>
   <a class="ds-header-home" href="/">
     <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
   </a>

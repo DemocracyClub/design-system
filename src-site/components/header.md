@@ -6,7 +6,6 @@ Use the Header to brand your Democracy Club site and provide the main navigation
 
 <div class="ds-scope site-resizer">
   <header class="ds-header">
-    <a class="ds-skip-link" href="#main">skip to content</a>
     <a class="ds-header-home" href="https://democracyclub.org.uk/">
       <img src="{{site.basedir}}/images/logo.svg" alt="Democracy Club home" />
     </a>
@@ -37,8 +36,6 @@ Use the Header to brand your Democracy Club site and provide the main navigation
     </nav>
   </header>
 </div>
-
-Built into the Header is a skip link, which is provided to satisfy WCAG’s [2.4.1 Bypass Blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html) criterion. This link appears on keyboard focus and lets keyboard (including screen reader) users _bypass_ the page’s preamble. **Importantly**, for the skip link to work, you will need to place `id="main"` and `tabindex="-1"` on the page’s `<main>` element (of which there should only be one).
 
 ```html
 <header class="ds-header">

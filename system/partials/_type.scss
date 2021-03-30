@@ -37,6 +37,19 @@
     outline: none;
   }
 
+  .ds-skip-link {
+    position: absolute;
+    top: -5rem;
+    display: inline-block;
+    padding: $s1;
+    background-color: $white;
+  }
+
+  .ds-skip-link:focus {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
   p, blockquote {
     @include fontBody;
   }

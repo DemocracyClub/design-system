@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="stylesheet" href="/styles/site.css" />
     <link rel="stylesheet" href="/styles/system.css" />
-    <title>Stack (Democracy Club Design System)</title>
+    <title>Language (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -115,91 +115,35 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Stack</h1>
-        <p>Use the Stack to inject margin between adjacent elements along a vertical axis. This is preferred to adding margin directly to individual elements because the need for margin is a question of context.</p>
-<p>You will more than likely want to use a Stack when dealing with any kind of flow content.</p>
-<table class="site-table">
-  <tbody><tr>
-    <th>Value</th>
-    <th>Markup</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td><code>$ss5</code> (0.625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smallest"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-smallest">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s3</code> (1.5625rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-smaller"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-    <div class="ds-stack-smaller">
-      <div class="site-box-dashed">First element</div>
-      <div class="site-box-dashed">Next element</div>
-    </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s6</code> (3.05176rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>$s8</code> (4.76837rem)</td>
-    <td>
-<pre><code class="language-html">&lt;div class="ds-stack-larger"&gt;
-  &lt;div&gt;First element&lt;/div&gt;
-  &lt;div&gt;Next element&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-  </td>
-    <td class="ds-scope">
-      <div class="ds-stack-larger">
-        <div class="site-box-dashed">First element</div>
-        <div class="site-box-dashed">Next element</div>
-      </div>
-    </td>
-  </tr>
-</tbody>
-</table>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="paragraphs">
-  <h3 id="paragraphs">🗒️ Paragraphs</h3>
-  <div class="site-stack">
-<p>Paragraphs are immune to stack value variations. In all cases, successive paragraphs are separated by a value of <code>$s1</code> (1rem). This is enforced using an <code>!important</code> marker.</p>
-<pre><code class="language-css">p + p {
-  margin-top: $s1 !important;
-}
-</code></pre>
+        <h1>Language</h1>
+        <p>Include the language component as the first element after the skip link (see the <a href="/layout-demo">layout demo</a> source).</p>
+<div class="ds-scope">
+  <aside class="ds-language" aria-labelledby="language-label">
+    <ul>
+      <li id="language-label" aria-hidden="true">Language:</li>
+      <li><a href="/english" lang="en" aria-current="true">English</a></li>
+      <li><a href="/cymraeg" lang="cy">Cymraeg</a></li>
+    </ul>
+  </aside>
 </div>
-</aside>
+<h2>Markup</h2>
+<pre><code class="language-html">&lt;aside class=&quot;ds-language&quot; aria-labelledby=&quot;language-label&quot;&gt;
+  &lt;ul&gt;
+    &lt;li id=&quot;language-label&quot; aria-hidden=&quot;true&quot;&gt;Language:&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/english&quot; lang=&quot;en&quot; aria-current=&quot;true&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/cymraeg&quot; lang=&quot;cy&quot;&gt;Cymraeg&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+</code></pre>
+<ul>
+<li>The language component is discoverable using screen readers as a complementary landmark (<code>&lt;aside&gt;</code>) with the identifying label “language”</li>
+<li>The languages appear as a list. The first item, acting as the labeling element is not counted in the list in screen reader output since it uses <code>aria-hidden=&quot;true&quot;</code></li>
+<li>Each language must be identified using the correct ISO. For example, Cymraeg (Welsh) takes <code>lang=&quot;cy&quot;</code></li>
+<li>The currently selected language is indicated using <code>aria-current=&quot;true&quot;</code></li>
+</ul>
+<h2>Behavior</h2>
+<p>It is recommended the language component is removed from the top of the page once a language has been selected, to reduce clutter. This should be persisted across pages using <code>localStorage</code> or similar. The language options should be repreated in the footer and persist so they can be accessed at all times.</p>
+
       </main>
     </div>
   </body>

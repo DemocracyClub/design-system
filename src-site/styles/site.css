@@ -63,7 +63,6 @@ main {
   flex-grow: 1;
   flex-basis: calc(100% - 20rem);
   min-height: 100vh;
-  outline: 1px dashed;
   min-width: min(30rem, 100%);
   overflow: hidden;
 }

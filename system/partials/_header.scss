@@ -1,5 +1,4 @@
 @mixin header {
-
   .ds-header {
     display: flex;
     flex-wrap: wrap;
@@ -49,18 +48,4 @@
   .ds-header [aria-current] {
     border-bottom-color: $pinkForWhite;
   }
-
-  .ds-skip-link {
-    position: absolute;
-    top: -5rem;
-    display: inline-block;
-    padding: $s1;
-    background-color: $white;
-  }
-
-  .ds-skip-link:focus {
-    top: 0.5rem;
-    left: 0.5rem;
-  }
-
 }

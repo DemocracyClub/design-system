@@ -28,8 +28,9 @@
 .ds-scope .ds-copyright > * + *, .ds-scope .ds-stack-smallest > * + *, .ds-scope .ds-advanced-filters > * + * {
   margin-top: 0.25rem; }
 
-.ds-scope .ds-cluster > *, .ds-scope .ds-header nav > *, .ds-scope .ds-subnav > *, .ds-scope .ds-filter-cluster > *,
+.ds-scope .ds-cluster > *, .ds-scope .ds-language > *, .ds-scope .ds-header nav > *, .ds-scope .ds-subnav > *, .ds-scope .ds-filter-cluster > *,
 .ds-scope .ds-cluster-right > *,
+.ds-scope .ds-language > *,
 .ds-scope .ds-cluster-center > * {
   padding-left: 0;
   list-style: none;
@@ -39,13 +40,15 @@
   align-items: center;
   margin: calc(0.625rem * -1); }
 
-.ds-scope .ds-cluster > * > *, .ds-scope .ds-header nav > * > *, .ds-scope .ds-subnav > * > *, .ds-scope .ds-filter-cluster > * > *,
+.ds-scope .ds-cluster > * > *, .ds-scope .ds-language > * > *, .ds-scope .ds-header nav > * > *, .ds-scope .ds-subnav > * > *, .ds-scope .ds-filter-cluster > * > *,
 .ds-scope .ds-cluster-right > * > *,
+.ds-scope .ds-language > * > *,
 .ds-scope .ds-cluster-center > * > * {
   margin: 0.625rem; }
 
 
-.ds-scope .ds-cluster-right > * {
+.ds-scope .ds-cluster-right > *,
+.ds-scope .ds-language > * {
   justify-content: flex-end; }
 
 
@@ -138,21 +141,23 @@
   max-width: 15rem;
   margin-bottom: 0.5rem; }
 
-.ds-scope .ds-footer, .ds-scope .ds-dark, .ds-scope .ds-footer *, .ds-scope .ds-dark * {
+.ds-scope .ds-footer, .ds-scope .ds-language, .ds-scope .ds-dark, .ds-scope .ds-footer *, .ds-scope .ds-language *, .ds-scope .ds-dark * {
   color: #fff;
   background-color: #403F41; }
 
-.ds-scope .ds-footer .ds-card, .ds-scope .ds-dark .ds-card,
+.ds-scope .ds-footer .ds-card, .ds-scope .ds-language .ds-card, .ds-scope .ds-dark .ds-card,
 .ds-scope .ds-footer form,
+.ds-scope .ds-language form,
 .ds-scope .ds-dark form,
 .ds-scope .ds-footer .ds-candidate,
+.ds-scope .ds-language .ds-candidate,
 .ds-scope .ds-dark .ds-candidate {
   border: 1px solid; }
 
-.ds-scope .ds-footer .ds-select::after, .ds-scope .ds-dark .ds-select::after {
+.ds-scope .ds-footer .ds-select::after, .ds-scope .ds-language .ds-select::after, .ds-scope .ds-dark .ds-select::after {
   border-top-color: #fff; }
 
-.ds-scope .ds-footer [class*="ds-button"]:not(:active), .ds-scope .ds-dark [class*="ds-button"]:not(:active) {
+.ds-scope .ds-footer [class*="ds-button"]:not(:active), .ds-scope .ds-language [class*="ds-button"]:not(:active), .ds-scope .ds-dark [class*="ds-button"]:not(:active) {
   border-bottom-color: #000; }
 
 .ds-scope .ds-visually-hidden {
@@ -366,6 +371,15 @@
   .ds-scope [tabindex="-1"]:focus,
   .ds-scope body:focus {
     outline: none; }
+  .ds-scope .ds-skip-link {
+    position: absolute;
+    top: -5rem;
+    display: inline-block;
+    padding: 1rem;
+    background-color: #fff; }
+  .ds-scope .ds-skip-link:focus {
+    top: 0.5rem;
+    left: 0.5rem; }
   .ds-scope p, .ds-scope blockquote {
     font-family: Georgia, serif;
     font-weight: normal;
@@ -460,7 +474,8 @@
     border: 2px solid;
     width: 100%;
     max-width: 30em;
-    box-shadow: inset 0.25rem 0.25rem 0 rgba(64, 63, 65, 0.2); }
+    box-shadow: inset 0.25rem 0.25rem 0 rgba(64, 63, 65, 0.2);
+    box-sizing: border-box; }
   .ds-scope .ds-field-error {
     color: #D91714;
     display: block; }
@@ -667,6 +682,13 @@
     border-left: 1px solid; }
   .ds-scope .ds-table th:not([scope="row"]) {
     border-bottom: 1px solid; }
+  .ds-scope .ds-language {
+    padding: 0.625rem;
+    font-size: 1rem; }
+  .ds-scope .ds-language [aria-current] {
+    text-decoration: underline;
+    text-decoration-thickness: 0.125rem;
+    color: #00B6FF; }
   .ds-scope .ds-header {
     display: flex;
     flex-wrap: wrap;
@@ -701,15 +723,6 @@
     border-bottom-color: #007CAD; }
   .ds-scope .ds-header [aria-current] {
     border-bottom-color: #E6007C; }
-  .ds-scope .ds-skip-link {
-    position: absolute;
-    top: -5rem;
-    display: inline-block;
-    padding: 1rem;
-    background-color: #fff; }
-  .ds-scope .ds-skip-link:focus {
-    top: 0.5rem;
-    left: 0.5rem; }
   .ds-scope .ds-subnav {
     color: #E6007C;
     font-size: clamp(1.25rem, 2.5vw, 1.5625rem); }
@@ -865,3 +878,8 @@
     max-width: 40em;
     margin-top: 4.76837rem;
     padding: 0 1.25rem; }
+
+.ds-scope *,
+.ds-scope *::before,
+.ds-scope *::after {
+  box-sizing: border-box; }

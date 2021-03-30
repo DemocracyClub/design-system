@@ -18,6 +18,7 @@
 @import 'partials/_card.scss';
 @import 'partials/_candidate.scss';
 @import 'partials/_table.scss';
+@import 'partials/_language.scss';
 @import 'partials/_header.scss';
 @import 'partials/_subnav.scss';
 @import 'partials/_footer.scss';
@@ -35,7 +36,8 @@
 // containers with `class="ds-scope"`
 $scope: false;
 
-// Remove components not needed here
+// Comment out the component styles
+// you don’t need
 @mixin optional-styles {
   @include description-lists;
   @include button;
@@ -48,33 +50,46 @@ $scope: false;
   @include candidate;
   @include breadcrumbs;
   @include table;
+  @include language;
+  @include language;
   @include header;
   @include subnav;
   @include footer;
   @include radio;
   @include checkbox;
-  @include page;
   @include select;
   @include filter;
   @include codeblock;
 }
 
-// Don't touch!
 @if $scope {
   .ds-scope {
-    font-size: clamp(#{$s1}, 1.5vw, #{$s2});
+    font-size: clamp(#{$s1}, 2vw, #{$s2});
     @include fontMain;
     @include type;
     @include forms;
     @include stack;
     @include optional-styles;
     @include dark;
+    @include page;
     @include utilities;
+  }
+
+  .ds-scope *,
+  .ds-scope *::before,
+  .ds-scope *::after {
+    box-sizing: border-box;
   }
 } @else {
   :root {
-    font-size: clamp(#{$s1}, 1.5vw, #{$s2});
+    font-size: clamp(#{$s1}, 2vw, #{$s2});
     @include fontMain;
+  }
+
+  :root *,
+  :root *::before,
+  :root *::after {
+    box-sizing: border-box;
   }
 
   body {
@@ -86,5 +101,6 @@ $scope: false;
   @include stack;
   @include optional-styles;
   @include dark;
+  @include page;
   @include utilities;
 }

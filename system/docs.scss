@@ -15,6 +15,7 @@
 @import 'partials/_candidate.scss';
 @import 'partials/_breadcrumbs.scss';
 @import 'partials/_table.scss';
+@import 'partials/_language.scss';
 @import 'partials/_header.scss';
 @import 'partials/_subnav.scss';
 @import 'partials/_footer.scss';
@@ -47,6 +48,7 @@ $scope: true;
   @include candidate;
   @include breadcrumbs;
   @include table;
+  @include language;
   @include header;
   @include subnav;
   @include footer;
@@ -69,10 +71,22 @@ $scope: true;
     @include page;
     @include utilities;
   }
+
+  .ds-scope *,
+  .ds-scope *::before,
+  .ds-scope *::after {
+    box-sizing: border-box;
+  }
 } @else {
   :root {
     font-size: clamp(#{$s1}, 2vw, #{$s2});
     @include fontMain;
+  }
+
+  :root *,
+  :root *::before,
+  :root *::after {
+    box-sizing: border-box;
   }
 
   body {
