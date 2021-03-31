@@ -61,3 +61,14 @@ Welsh versions of the logo should be in English _and_ Welsh, using an `<em>` ele
   </span>
 </a>
 ```
+
+## Dark theme
+
+<div class="ds-scope">
+  <div class="ds-dark ds-padded">
+    <a class="ds-logo" href="/">
+      <img src="{{site.basedir}}/images/logo_icon.svg" alt="" />
+      <span>democracy<br>club</span>
+    </a>    
+  </div>
+</div>
