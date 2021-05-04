@@ -67,7 +67,7 @@ layout: layouts/bare.njk
     </ul>
   </aside>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur iusto officia necessitatibus distinctio nemo perspiciatis placeat illo facilis enim soluta et accusamus sunt ipsa fugit earum, voluptas assumenda aspernatur.</p>
-    <dl class="ds-descriptions">
+  <dl class="ds-descriptions">
     <div>
       <dt>Facebook</dt>
       <dd><a href="https://www.facebook.com/shaunbaileyuk">www.facebook.com/shaunbaileyuk</a></dd>
@@ -88,6 +88,41 @@ layout: layouts/bare.njk
     </div>
   </dl>
   <p>Distinctio iure explicabo quaerat repudiandae, nulla officia corporis! Eaque sapiente excepturi quas, nostrum cumque nisi. Quis eligendi necessitatibus, fugit voluptatem a, voluptatibus praesentium fugiat, nostrum doloremque eum est ratione provident.</p>
+  <ul class="ds-grid">
+    <li class="ds-candidate">
+      <div class="ds-candidate-body ds-stack-smallest">
+        <h3 class="ds-candidate-name ds-h5">
+          <a href="path/to/candidate">Michael Rosen</a>
+        </h3>
+        <div class="ds-h6">Labour</div>
+      </div>
+      <div class="ds-candidate-image">
+        <img src="{{site.basedir}}/images/candidate_example.jpg" alt="">
+      </div>
+    </li>
+    <li class="ds-candidate">
+      <div class="ds-candidate-body ds-stack-smallest">
+        <h3 class="ds-candidate-name ds-h5">
+          <a href="path/to/candidate">David Moreland</a>
+        </h3>
+        <div class="ds-h6">Independent</div>
+      </div>
+      <div class="ds-candidate-image">
+        <img src="{{site.basedir}}/images/candidate_example_2.jpg" alt="">
+      </div>
+    </li>
+    <li class="ds-candidate">
+      <div class="ds-candidate-body ds-stack-smallest">
+        <h3 class="ds-candidate-name ds-h5">
+          <a href="path/to/candidate">Giles Orpen-Smellie</a>
+        </h3>
+        <div class="ds-h6">Conservative & Unionist Party</div>
+      </div>
+      <div class="ds-candidate-image">
+        <img src="{{site.basedir}}/images/candidate_example_3.jpg" alt="">
+      </div>
+    </li>
+  </ul>
   <h2>A subheading</h2>
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
   <div class="ds-candidate">
