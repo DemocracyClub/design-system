@@ -44,6 +44,28 @@
   max-width: $measureReduced;
 }
 
+%ds-width-full {
+  display: block;
+  max-width: none;
+  width: auto;
+}
+
+%ds-width-full-text {
+  max-width: $measure;
+}
+
+%ds-width-reduced-text {
+  max-width: $measureReduced;
+}
+
+%ds-width-half-text {
+  max-width: $measureHalf;
+}
+
+%ds-width-third-text {
+  max-width: $measureThird;
+}
+
 @mixin utilities {
   .ds-visually-hidden { @extend %ds-visually-hidden }
   .ds-padded { @extend %ds-padded }
@@ -54,4 +76,9 @@
   .ds-text-right { @extend %ds-text-right }
   .ds-block-centered { @extend %ds-block-centered }
   .ds-block-centered-narrow { @extend %ds-block-centered-narrow }
+  .ds-width-full { @extend %ds-width-full }
+  .ds-width-full-text { @extend %ds-width-full-text }
+  .ds-width-reduced-text { @extend %ds-width-reduced-text }
+  .ds-width-half-text { @extend %ds-width-half-text }
+  .ds-width-third-text { @extend %ds-width-third-text }
 }

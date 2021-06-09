@@ -63,8 +63,10 @@ $lineHeight: 1.5; // WCAG 1.4.12 recommended minimum
 $lineHeightTight: 1.125;
 
 // Measure (characters per line; used with max-width typically)
-$measure: 40em;
-$measureReduced: 30em;
+$measure: 70ch;
+$measureReduced: 50ch;
+$measureHalf: 35ch;
+$measureThird: 23ch;
 
 @mixin fontMain {
   font-family: $familyMain;
