@@ -197,13 +197,30 @@
 .ds-scope .ds-block-centered,
 .ds-scope .ds-block-centered-narrow {
   display: block;
-  max-width: 40em;
+  max-width: 70ch;
   margin-left: auto;
   margin-right: auto; }
 
 
 .ds-scope .ds-block-centered-narrow {
-  max-width: 30em; }
+  max-width: 50ch; }
+
+.ds-scope .ds-width-full {
+  display: block;
+  max-width: none;
+  width: auto; }
+
+.ds-scope .ds-width-full-text {
+  max-width: 70ch; }
+
+.ds-scope .ds-width-reduced-text {
+  max-width: 50ch; }
+
+.ds-scope .ds-width-half-text {
+  max-width: 35ch; }
+
+.ds-scope .ds-width-third-text {
+  max-width: 23ch; }
 
 .ds-color-black {
   color: #403F41; }
@@ -401,7 +418,7 @@
     padding-left: 1rem; }
   .ds-scope p, .ds-scope li, .ds-scope dt, .ds-scope dd, .ds-scope blockquote,
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
-    max-width: 40em; }
+    max-width: 70ch; }
   .ds-scope small {
     font-size: 0.875rem; }
   .ds-scope h1, .ds-scope .ds-h1,
@@ -482,7 +499,7 @@
     padding: 0.5rem;
     border: 2px solid;
     width: 100%;
-    max-width: 30em;
+    max-width: 50ch;
     box-shadow: inset 0.25rem 0.25rem 0 rgba(64, 63, 65, 0.2);
     box-sizing: border-box; }
   .ds-scope .ds-field-error {
@@ -491,7 +508,7 @@
   .ds-scope .ds-error {
     padding: 1.25rem;
     background-color: #D91714;
-    max-width: 30em; }
+    max-width: 50ch; }
   .ds-scope .ds-error, .ds-scope .ds-error * {
     color: #fff; }
   .ds-scope .ds-error span[role="img"] {
@@ -849,7 +866,7 @@
     display: block;
     display: inline-block;
     width: 100%;
-    max-width: 30em;
+    max-width: 50ch;
     position: relative; }
   @supports (-moz-appearance: none) or (-webkit-appearance: none) or (appearance: none) {
     .ds-scope .ds-select select {
@@ -936,7 +953,7 @@
   .ds-scope .ds-page main {
     margin-left: auto;
     margin-right: auto;
-    max-width: 40em;
+    max-width: 70ch;
     margin-top: 4.76837rem;
     padding: 0 1.25rem; }
 

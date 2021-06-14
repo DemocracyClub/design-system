@@ -160,3 +160,67 @@ Match the size of arbitrary text to a heading level. Only use where a heading el
     </td>
   </tr>
 </table>
+
+## Widths
+
+Widths are set relative to font-size, using the `ch` unit and `max-width` to allow wrapping. 
+
+### ds-width-full
+
+This resets an element to use the full width of the container (`width: auto` on a block-level element; `display: block` is enforced).
+
+<div class="ds-scope">
+  <p class="ds-width-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+</div>
+
+```html
+<p class="ds-width-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+```
+
+### ds-width-full-text
+
+This uses the full measure of {% var '$measure' %} (`$measure`). Where the container is narrower than {% var '$measure' %}, it will take up the full width.
+
+<div class="ds-scope">
+  <p class="ds-width-full-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+</div>
+
+```html
+<p class="ds-width-full-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+```
+
+### ds-width-reduced-text
+
+A reduced value of {% var '$measureReduced' %} (`$measureReduced`).
+
+<div class="ds-scope">
+  <p class="ds-width-reduced-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+</div>
+
+```html
+<p class="ds-width-reduced-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+```
+
+### ds-width-half-text
+
+Half the `$measure` value.
+
+<div class="ds-scope">
+  <p class="ds-width-half-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+</div>
+
+```html
+<p class="ds-width-half-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+```
+
+### ds-width-half-text
+
+A third of the `$measure` value.
+
+<div class="ds-scope">
+  <p class="ds-width-third-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+</div>
+
+```html
+<p class="ds-width-third-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, est ac sodales maximus, eros purus ultricies libero, non tempor ex augue eu diam. Proin a lectus risus. In pulvinar, tortor quis vulputate scelerisque, ligula est faucibus nisi, varius tincidunt purus nibh eget dui. In ut sollicitudin elit.</p>
+```

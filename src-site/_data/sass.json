@@ -177,13 +177,23 @@
     },
     {
       "name": "$measure",
-      "value": "40em",
-      "compiledValue": "40em"
+      "value": "70ch",
+      "compiledValue": "70ch"
     },
     {
       "name": "$measureReduced",
-      "value": "30em",
-      "compiledValue": "30em"
+      "value": "50ch",
+      "compiledValue": "50ch"
+    },
+    {
+      "name": "$measureHalf",
+      "value": "35ch",
+      "compiledValue": "35ch"
+    },
+    {
+      "name": "$measureThird",
+      "value": "23ch",
+      "compiledValue": "23ch"
     },
     {
       "name": "$cardShadow",
