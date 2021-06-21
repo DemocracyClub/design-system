@@ -2,7 +2,7 @@
 title: Table
 ---
 
-Data tables must be accessible. Each must have a `<caption>` element. It is permissable to use a heading element _inside_ the `<caption>` so screen reader users can navigate to it using heading shortcuts. For the sake of avoiding redundancy, if you do use a heading element inside the `<caption>` you should longer introduce the table with a heading.
+Data tables must be accessible. Each must have a `<caption>` element. It is permissable to use a heading element _inside_ the `<caption>` so screen reader users can navigate to it using heading shortcuts. For the sake of avoiding redundancy, if you do use a heading element inside the `<caption>` you should no longer introduce the table with a heading.
 
 <div class="ds-scope">
   <div class="ds-table">
