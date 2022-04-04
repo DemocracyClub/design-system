@@ -142,7 +142,9 @@
   max-width: none; }
 
 .ds-scope .ds-copyright p {
-  margin: 0 !important; }
+  max-width: 100ch; 
+  margin: 0 !important; 
+}
 
 .ds-scope .ds-copyright img {
   max-width: 15rem;
