@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/site.css" />
     <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
-    <title>Breadcrumbs (Democracy Club Design System)</title>
+    <title>Party (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -124,38 +124,55 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Breadcrumbs</h1>
-        <p>Use the Breadcrumbs component when the site structure is several levels deep and a secondary wayfinding mechanism (in addition to the <a href="https://DemocracyClub.github.io/design-system/components/header">Header’s</a> navigation links) may be useful.</p>
-<p>Unlike <a href="https://DemocracyClub.github.io/design-system/components/subnavigation">Sub-navigation</a>, breadcrumbs represent levels of depth reading from left to right. Use <a href="https://DemocracyClub.github.io/design-system/components/subnavigation">Sub-navigation</a> where each link represents a topic belonging to the <em>same</em> level.</p>
+        <h1>Party</h1>
+        <p>Use the Party component for summarizing key information about a party manifestos.</p>
+<p>The Party component is a special kind of card. For all other card use cases, see the generic <a href="https://DemocracyClub.github.io/design-system/components/card">Card</a>.</p>
 <div class="ds-scope">
-  <nav class="ds-breadcrumbs" aria-label="Where you are">
-    <ol>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="https://whocanivotefor.co.uk/elections/">Elections</a>
-      </li>
-      <li>
-        Cheltenham local election
-      </li>
-    </ol>
-  </nav>
+  <section class="ds-party">
+    <div class="ds-party-body ds-stack-smaller">
+      <h2 class="ds-party-name ds-h3">
+        Party Manifesto 
+      </h2>
+      <p>
+        Candidate X is the Party candidate. Find out more about their policies in the Party manifesto.
+      <p>
+      <ul>
+        <li>
+          <a href="https://democracyclub.org.uk/"> 
+            Party manifesto website 
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ds-party-image">
+      <img src="https://DemocracyClub.github.io/design-system/images/logo_icon.png" alt="emblem">
+    </div>
+  </section>
 </div>
-<p>Since breadcrumbs constitute a kind of navigation, a <code>&lt;nav&gt;</code> element is required, along with a descriptive label using <code>aria-label</code>. The current page (the final breadcrumb) should be unlinked.</p>
-<pre><code class="language-html">&lt;nav class=&quot;ds-breadcrumbs&quot; aria-label=&quot;Where you are&quot;&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;/elections&quot;&gt;Elections&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      Cheltenham local election
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/nav&gt;
+<pre><code class="language-html">Here’s a demo:
+
+&lt;div class=&quot;ds-scope&quot;&gt;
+  &lt;section class=&quot;ds-party&quot;&gt;
+    &lt;div class=&quot;ds-party-body ds-stack-smaller&quot;&gt;
+      &lt;h2 class=&quot;ds-party-name ds-h3&quot;&gt;
+        Party Manifesto 
+      &lt;/h2&gt;
+      &lt;p&gt;
+        Candidate X is the Party candidate. Find out more about their policies in the Party manifesto.
+      &lt;p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;https://democracyclub.org.uk/&quot;&gt; 
+            Party manifesto website 
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ds-party-image&quot;&gt;
+      &lt;img src=&quot;https://DemocracyClub.github.io/design-system/images/logo_icon.png&quot; alt=&quot;emblem&quot;&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
 </code></pre>
 
       </main>

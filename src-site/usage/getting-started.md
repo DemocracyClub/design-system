@@ -66,6 +66,7 @@ Note the `optional-styles` block in that file. For efficiency, you should commen
   @include checkbox;
   // @include select;
   @include filter;
+  @include party;
 }
 ```
 
