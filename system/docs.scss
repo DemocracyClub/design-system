@@ -28,6 +28,7 @@
 @import 'partials/_codeblock.scss';
 @import 'partials/_dark.scss';
 @import 'partials/_page.scss';
+@import 'partials/_party.scss';
 @import 'partials/_utilities.scss';
 
 // Generate atomic classes for documentation demos
@@ -61,6 +62,7 @@ $scope: true;
   @include filter;
   @include status;
   @include codeblock;
+  @include party
 }
 
 @if $scope {
