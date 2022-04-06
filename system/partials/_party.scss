@@ -15,11 +15,16 @@
 		justify-content: center;
 		flex-basis: 50%
 	}
+
+	.ds-party-body li a {
+		font-weight: bold;
+	}
+	
 	.ds-party-name {
 		hyphens: auto;
 		word-break: break-word;
 	}
-	
+
 	.ds-party-name a::after {
 		content: '';
 		position: absolute;
