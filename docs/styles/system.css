@@ -142,9 +142,7 @@
   max-width: none; }
 
 .ds-scope .ds-copyright p {
-  max-width: 100ch; 
-  margin: 0 !important; 
-}
+  margin: 0 !important; }
 
 .ds-scope .ds-copyright img {
   max-width: 15rem;
@@ -414,7 +412,7 @@
   .ds-scope p + p {
     margin-top: 1rem !important; }
   .ds-scope blockquote {
-    font-size: 1.4625rem;
+    font-size: 1.5625rem;
     font-style: italic;
     border-left: 0.5rem solid #FFC037;
     padding-left: 1rem; }
@@ -925,14 +923,10 @@
     color: #fff; }
   .ds-scope .ds-status-message {
     background-color: #007CAD; }
-  .ds-status-message a {
-    color: #fff;
-  } 
   .ds-scope .ds-status-success {
     background-color: #32841A; }
   .ds-scope .ds-status-error {
     background-color: #D91714; }
-  
   .ds-scope pre.ds-codeblock {
     padding: 1rem;
     background-color: rgba(64, 63, 65, 0.2);
@@ -980,6 +974,11 @@
     justify-content: center;
     flex-basis: 50%
   }
+  
+  .ds-scope .ds-party-body li a {
+      font-weight: bold;
+  }
+
   .ds-scope .ds-party-name {
     hyphens: auto;
     word-break: break-word;

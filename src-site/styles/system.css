@@ -974,6 +974,11 @@
     justify-content: center;
     flex-basis: 50%
   }
+  
+  .ds-scope .ds-party-body li a {
+      font-weight: bold;
+  }
+
   .ds-scope .ds-party-name {
     hyphens: auto;
     word-break: break-word;
