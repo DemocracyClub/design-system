@@ -43,7 +43,8 @@ layout: layouts/bare.njk
     </ul>
   </nav>
 </header>
-<main id="main" tabindex="-1" class="ds-stack">
+<main id="main" tabindex="-``1" class="ds-stack">
+<div class="page-container ds-stack">
   <nav class="ds-subnav" aria-label="About">
     <ul>
       <li>
@@ -123,6 +124,15 @@ layout: layouts/bare.njk
       </div>
     </li>
   </ul>
+</div>
+<div class="fill-width-callout">
+<div class="page-container ds-stack">
+  <h2>A subheading</h2>
+  <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
+</div>
+</div>
+
+<div class="page-container ds-stack">
   <h2>A subheading</h2>
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
   <div class="ds-candidate">
@@ -137,6 +147,7 @@ layout: layouts/bare.njk
       <img src="{{site.basedir}}/images/candidate_example_2.jpg" alt="">
     </div>
   </div>
+</div>
 </main>
 <footer class="ds-footer">
   <div class="ds-block-centered ds-text-centered ds-stack">

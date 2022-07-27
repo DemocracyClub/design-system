@@ -15,6 +15,7 @@
 
 .ds-scope .ds-stack-larger > *,
 .ds-scope .ds-stack > *,
+.ds-scope .ds-page .fill-width-callout > *,
 .ds-scope .ds-card .ds-card-body > *,
 .ds-scope .ds-stack-smaller > *,
 .ds-scope .ds-filter > *,
@@ -26,7 +27,7 @@
 .ds-scope .ds-stack-larger > * + * {
   margin-top: 4.76837rem; }
 
-.ds-scope .ds-stack > * + * {
+.ds-scope .ds-stack > * + *, .ds-scope .ds-page .fill-width-callout > * + * {
   margin-top: 3.05176rem; }
 
 .ds-scope .ds-card .ds-card-body > * + *, .ds-scope .ds-stack-smaller > * + *, .ds-scope .ds-filter > * + * {
@@ -149,23 +150,25 @@
   max-width: 15rem;
   margin-bottom: 0.5rem; }
 
-.ds-scope .ds-footer, .ds-scope .ds-language, .ds-scope .ds-dark, .ds-scope .ds-footer *, .ds-scope .ds-language *, .ds-scope .ds-dark * {
+.ds-scope .ds-footer, .ds-scope .ds-language, .ds-scope .ds-dark, .ds-scope .ds-page .fill-width-callout, .ds-scope .ds-footer *, .ds-scope .ds-language *, .ds-scope .ds-dark *, .ds-scope .ds-page .fill-width-callout * {
   color: #fff;
   background-color: #403F41; }
 
-.ds-scope .ds-footer .ds-card, .ds-scope .ds-language .ds-card, .ds-scope .ds-dark .ds-card,
+.ds-scope .ds-footer .ds-card, .ds-scope .ds-language .ds-card, .ds-scope .ds-dark .ds-card, .ds-scope .ds-page .fill-width-callout .ds-card,
 .ds-scope .ds-footer form,
 .ds-scope .ds-language form,
 .ds-scope .ds-dark form,
+.ds-scope .ds-page .fill-width-callout form,
 .ds-scope .ds-footer .ds-candidate,
 .ds-scope .ds-language .ds-candidate,
-.ds-scope .ds-dark .ds-candidate {
+.ds-scope .ds-dark .ds-candidate,
+.ds-scope .ds-page .fill-width-callout .ds-candidate {
   border: 1px solid; }
 
-.ds-scope .ds-footer .ds-select::after, .ds-scope .ds-language .ds-select::after, .ds-scope .ds-dark .ds-select::after {
+.ds-scope .ds-footer .ds-select::after, .ds-scope .ds-language .ds-select::after, .ds-scope .ds-dark .ds-select::after, .ds-scope .ds-page .fill-width-callout .ds-select::after {
   border-top-color: #fff; }
 
-.ds-scope .ds-footer [class*="ds-button"]:not(:active), .ds-scope .ds-language [class*="ds-button"]:not(:active), .ds-scope .ds-dark [class*="ds-button"]:not(:active) {
+.ds-scope .ds-footer [class*="ds-button"]:not(:active), .ds-scope .ds-language [class*="ds-button"]:not(:active), .ds-scope .ds-dark [class*="ds-button"]:not(:active), .ds-scope .ds-page .fill-width-callout [class*="ds-button"]:not(:active) {
   border-bottom-color: #000; }
 
 .ds-scope .ds-visually-hidden {
@@ -374,7 +377,6 @@
   }*/ }
   .ds-scope input,
   .ds-scope button,
-  .ds-scope textarea,
   .ds-scope select {
     font: inherit; }
   .ds-scope * {
@@ -413,7 +415,7 @@
   .ds-scope p + p {
     margin-top: 1rem !important; }
   .ds-scope blockquote {
-    font-size: 1.5625rem;
+    font-size: 1.25rem;
     font-style: italic;
     border-left: 0.5rem solid #FFC037;
     padding-left: 1rem; }
@@ -428,22 +430,22 @@
     word-break: break-word; }
   .ds-scope h1, .ds-scope .ds-h1 {
     font-size: 3.8147rem;
-    font-size: clamp(2.44141rem, 7vw, 3.8147rem); }
+    font-size: clamp(1.95312rem, 7vw, 3.8147rem); }
   .ds-scope h2, .ds-scope .ds-h2 {
     font-size: 3.05176rem;
-    font-size: clamp(2.44141rem, 6vw, 3.05176rem); }
+    font-size: clamp(1.95312rem, 6vw, 3.05176rem); }
   .ds-scope h3, .ds-scope .ds-h3 {
     font-size: 2.44141rem;
-    font-size: clamp(1.95312rem, 5vw, 2.44141rem); }
+    font-size: clamp(1.5625rem, 5vw, 2.44141rem); }
   .ds-scope h4, .ds-scope .ds-h4 {
     font-size: 1.95312rem;
-    font-size: clamp(1.5625rem, 4vw, 1.95312rem); }
+    font-size: clamp(1.25rem, 4vw, 1.95312rem); }
   .ds-scope h5, .ds-scope .ds-h5 {
     font-size: 1.5625rem;
-    font-size: clamp(1.25rem, 3vw, 1.5625rem); }
+    font-size: clamp(1rem, 3vw, 1.5625rem); }
   .ds-scope h6, .ds-scope .ds-h6 {
     font-size: 1.25rem;
-    font-size: clamp(0.875rem, 2vw, 1.25rem); }
+    font-size: clamp(0.75rem, 2vw, 1.25rem); }
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
     font-weight: 500;
     word-break: break-word; }
@@ -690,7 +692,6 @@
     color: #403F41;
     line-height: 1.5;
     margin: 0;
-    padding: 0;
     list-style: none; }
   .ds-scope nav.ds-breadcrumbs li {
     display: inline-block; }
@@ -924,6 +925,8 @@
     color: #fff; }
   .ds-scope .ds-status-message {
     background-color: #007CAD; }
+  .ds-scope .ds-status-message a {
+    color: #fff; }
   .ds-scope .ds-status-success {
     background-color: #32841A; }
   .ds-scope .ds-status-error {
@@ -949,23 +952,12 @@
     background-color: #403F41; }
   .ds-scope ::-webkit-scrollbar-thumb {
     background-color: #007CAD; }
-  .ds-scope .ds-page {
-    overflow-x: hidden; }
-  .ds-scope .ds-page main {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 70ch;
-    margin-top: 4.76837rem;
-    padding: 0 1.25rem; }
-
   .ds-scope .ds-party {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid rgba(64, 63, 65, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);;
-  }
-  
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .ds-scope .ds-party-body {
     padding: 1.5625rem;
     flex-grow: 999;
@@ -973,13 +965,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 50%
-  }
+    flex-basis: 50%; }
   .ds-scope .ds-party-name {
     hyphens: auto;
-    word-break: break-word;
-  }
-  
+    word-break: break-word; }
   .ds-scope .ds-party-name a::after {
     content: '';
     position: absolute;
@@ -987,8 +976,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 2;
-  }
+    z-index: 2; }
   .ds-scope .ds-party-image {
     background-color: #fff;
     flex-grow: 1;
@@ -997,65 +985,51 @@
     min-height: 10rem;
     max-width: 100%;
     position: relative;
-    order:2;
-  }
-  
+    order: 2; }
   .ds-scope .ds-party-image img {
-    padding: 2.44141rem;
+    padding: 1.5625rem;
     display: block;
     height: 100%;
-    position: absolute;
-  }
-  
+    position: absolute; }
   @supports (object-fit: contain) {
     .ds-scope .ds-party-image img {
       object-fit: contain;
-      width: 100%;
-    }
-  }
-  
+      width: 100%; } }
   @media (max-width: 400px) {
     .ds-scope li.ds-party {
-      flex-wrap: nowrap;
-    }
-    
-    .ds-scope li .ds-party-body, li .ds-party-image {
-      padding: 1.5625rem;
-    }
-    
+      flex-wrap: nowrap; }
+    .ds-scope li .ds-party-body, .ds-scope li .ds-party-image {
+      padding: 1rem; }
     .ds-scope li .ds-party-image {
       background-color: transparent;
       min-width: 0;
       display: flex;
       align-items: center;
-      min-height: 0;
-    } 
-    
+      min-height: 0; }
     .ds-scope li .ds-party-image img {
       position: static;
       object-fit: inherit;
       height: 12vh;
       width: auto;
-      margin-left: auto;
-    }
-  }
-  
+      margin-left: auto; } }
   .ds-scope .ds-party:focus-within {
-    outline: 0.25rem solid #FFC037;
-  }
-  
-  .ds-scope .ds-scope .ds-party:focus-within a:focus {
-    outline: none;
-  }
-  
+    outline: 0.25rem solid #FFC037; }
+  .ds-scope .ds-party:focus-within a:focus {
+    outline: none; }
   .ds-scope :not(li).ds-party .ds-party-body {
-    flex-basis: 50%;
-  }
-  
+    flex-basis: 50%; }
   .ds-scope :not(li).ds-party .ds-party-image {
     min-width: 20rem;
-    min-width: min(20rem, 100%);
-  }
+    min-width: min(20rem, 100%); }
+  .ds-scope .ds-page {
+    overflow-x: hidden; }
+  .ds-scope .ds-page .page-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70ch;
+    padding: 0 1.25rem; }
+  .ds-scope .ds-page .fill-width-callout > * {
+    padding: 1.25rem 1.25rem; }
 
 .ds-scope *,
 .ds-scope *::before,
