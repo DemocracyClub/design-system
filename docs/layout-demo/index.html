@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="https://DemocracyClub.github.io/design-system/images/favicon.svg">
-    <link rel="stylesheet" href="https://DemocracyClub.github.io/design-system/styles/system.css" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="stylesheet" href="/styles/system.css" />
     <title>Page layout demo (Democracy Club Design System)</title>
   </head>
   <body class="ds-scope" style="margin: 0">
@@ -18,7 +18,7 @@
 </aside>
 <header class="ds-header">
   <a class="ds-logo" href="/">
-    <img src="https://DemocracyClub.github.io/design-system/images/logo_icon.svg" alt="" />
+    <img src="/images/logo_icon.svg" alt="" />
     <span>democracy<br>club</span>
   </a>
   <nav>
@@ -47,7 +47,8 @@
     </ul>
   </nav>
 </header>
-<main id="main" tabindex="-1" class="ds-stack">
+<main id="main" tabindex="-``1" class="ds-stack">
+<div class="page-container ds-stack">
   <nav class="ds-subnav" aria-label="About">
     <ul>
       <li>
@@ -101,7 +102,7 @@
         <div class="ds-h6">Labour</div>
       </div>
       <div class="ds-candidate-image">
-        <img src="https://DemocracyClub.github.io/design-system/images/candidate_example.jpg" alt="">
+        <img src="/images/candidate_example.jpg" alt="">
       </div>
     </li>
     <li class="ds-candidate">
@@ -112,7 +113,7 @@
         <div class="ds-h6">Independent</div>
       </div>
       <div class="ds-candidate-image">
-        <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_2.jpg" alt="">
+        <img src="/images/candidate_example_2.jpg" alt="">
       </div>
     </li>
     <li class="ds-candidate">
@@ -123,10 +124,18 @@
         <div class="ds-h6">Conservative & Unionist Party</div>
       </div>
       <div class="ds-candidate-image">
-        <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_3.jpg" alt="">
+        <img src="/images/candidate_example_3.jpg" alt="">
       </div>
     </li>
   </ul>
+</div>
+<div class="fill-width-callout">
+<div class="page-container ds-stack">
+  <h2>A subheading</h2>
+  <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
+</div>
+</div>
+<div class="page-container ds-stack">
   <h2>A subheading</h2>
   <p>Dignissimos asperiores sequi soluta, nemo voluptatum molestias repudiandae sunt mollitia placeat magnam sapiente inventore optio iure corporis facere laboriosam dolorem nisi nobis amet minima modi, adipisci tempora voluptatibus? Id, perspiciatis.</p>
   <div class="ds-candidate">
@@ -138,9 +147,10 @@
       <p>Animi maiores, earum quisquam porro mollitia maxime pariatur iure esse nesciunt obcaecati deleniti explicabo a, veritatis voluptatum, suscipit ipsum illo provident temporibus.</p>
     </div>
     <div class="ds-candidate-image">
-      <img src="https://DemocracyClub.github.io/design-system/images/candidate_example_2.jpg" alt="">
+      <img src="/images/candidate_example_2.jpg" alt="">
     </div>
   </div>
+</div>
 </main>
 <footer class="ds-footer">
   <div class="ds-block-centered ds-text-centered ds-stack">
@@ -171,7 +181,7 @@
     </div>
     <div class="ds-copyright ds-text-centered">
       <a href="https://democracyclub.org.uk/">
-        <img src="https://DemocracyClub.github.io/design-system/images/logo_white_text.svg" alt="Democracy Club Home" />
+        <img src="/images/logo_white_text.svg" alt="Democracy Club Home" />
       </a>
       <p>Copyright © 2021 Democracy Club</p>
       <p>Community Interest Company</p>
@@ -179,6 +189,7 @@
     </div>
   </div>
 </footer>
+
     </div>
   </body>
 </html>

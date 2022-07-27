@@ -3,10 +3,18 @@
     overflow-x: hidden;
   }
 
-  .ds-page main {
+  .ds-page .page-container {
     margin-left: auto;
     margin-right: auto;
     max-width: $measure;
     padding: 0 $s2;
+  }
+
+  .ds-page .fill-width-callout {
+    @extend %ds-dark;
+    @extend .ds-stack;
+    & > * {
+      padding: $s2 $s2;
+    }
   }
 }
