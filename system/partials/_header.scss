@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: $s2;
+    margin-bottom: clamp($ss1, 2vw, $s4);
   }
 
   .ds-header-home {
