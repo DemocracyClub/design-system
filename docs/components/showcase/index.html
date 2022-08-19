@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="stylesheet" href="/styles/site.css" />
     <link rel="stylesheet" href="/styles/system.css" />
-    <title>Sub-navigation (Democracy Club Design System)</title>
+    <title>Showcase (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -130,65 +130,19 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Sub-navigation</h1>
-        <p>Use the Sub-navigation component when there are pages available related to the chosen main navigation link (as indicated by <code>aria-current=&quot;true&quot;</code> in the <a href="/components/header">Header</a> component above it). For example, if the chosen route on <a href="https://democracyclub.org.uk">democracyclub.org.uk</a> is “About”, use Sub-navigation to provide links to “About” (the index page), “The Team”, “Jobs”, and “Funding”. This group of pages represents a subsection of the site called “About”.</p>
-<div class="ds-scope">
-  <nav class="ds-subnav" aria-label="About">
-    <ul>
-      <li>
-        <a href="/about" aria-current="true">About</a>
-      </li>
-      <li>
-        <a href="/team">The Team</a>
-      </li>
-      <li>
-        <a href="/jobs">Jobs</a>
-      </li>
-      <li>
-        <a href="/funding">Funding</a>
-      </li>
-    </ul>
-  </nav>
+        <h1>Showcase</h1>
+        <p>A Showcase is used for showing off a set of nubmers with some text.</p>
+<p>It's typically used for dashboards or for showing off some figures, for example
+stats about an election cycle.</p>
+<p>Use with a Switcher for a grid display.</p>
+<div class="ds-scope site-resizer">
+  <ul class="ds-switcher ds-showcase" style="--gridCellMin: 15ch;--gridGap:3rem;">
+    <li><strong>12,200</strong> people have contributed to improving our democratic&nbsp;data</li>
+    <li><strong>60,000</strong> edits were made by our community in the 2022 local&nbsp;elections</li>
+    <li><strong>900</strong> people in our Democracy Club Slack. <a class="ds-text-left" href="#">Join us</a></li>
+  </ul>
 </div>
-<aside class="site-note site-stack" style="--stack-space: 1rem" aria-labelledby="breadcrumbs">
-  <h3 id="breadcrumbs">🗒️ Breadcrumbs</h3>
-  <div class="site-stack">
-<p>If you wish to indicate <em>depth</em> of location (how many links deep into a subsection of the site), use the <a href="/components/breadcrumbs">Breadcrumbs</a> component instead.</p>
-</div>
-</aside>
-<p>The <code>class=&quot;ds-subnav&quot;</code> element is a <code>&lt;nav&gt;</code>, exposing it as a landmark region to screen readers. Note the use of <code>aria-label=&quot;About&quot;</code>. This differentiates this navigation landmark from the main one above it in screen reader landmark listings. Where the section is “Our work”, use <code>aria-label=&quot;Our work&quot;</code>.</p>
-<p>The <code>aria-current=&quot;true&quot;</code> attribution indicates the current page, in this case the first, index page.</p>
-<pre><code class="language-html">  &lt;nav class=&quot;ds-subnav&quot; aria-label=&quot;About&quot;&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/about&quot; aria-current=&quot;true&quot;&gt;About&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/team&quot;&gt;The Team&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/jobs&quot;&gt;Jobs&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/funding&quot;&gt;Funding&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/nav&gt;
-</code></pre>
-<aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="source-order">
-  <h3 id="source-order">⚠️ Source order</h3>
-  <div class="site-stack">
-<p>As demonstrated in the <a href="/layout-demo">page layout demo</a>, the Sub-navigation component should appear first inside the <code>&lt;main&gt;</code> element, <em>before</em> the page’s <code>&lt;h1&gt;</code>. This is better for screen reader accessibility than the reverse configuration used in the live <a href="https://democracyclub.org.uk">democracyclub.org.uk</a> site at the time of writing.</p>
-<pre><code class="language-html">&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;
-  &lt;nav class=&quot;ds-subnav&quot; aria-label=&quot;About&quot;&gt;
-    &lt;!-- Sub-navigation links --&gt;
-  &lt;/nav&gt;
-  &lt;h1&gt;About&lt;/h1&gt;
-  &lt;!-- main content --&gt;
-&lt;/main&gt;
-</code></pre>
-</div>
-</aside>
+
       </main>
     </div>
   </body>
