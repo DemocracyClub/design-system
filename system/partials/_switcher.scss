@@ -1,0 +1,18 @@
+// https://every-layout.dev/layouts/switcher/
+
+@mixin switcher {
+  .ds-switcher {
+    --gridGap: #{$s2};
+    --gridCellMin: 30ch;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gridGap);
+  }
+
+  .ds-switcher > * {
+    flex-grow: 1;
+    flex-basis: var(--gridCellMin);
+    @extend .ds-width-full;
+  }
+}
