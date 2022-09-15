@@ -20,7 +20,7 @@
     height: auto;
   }
 
-  .ds-header nav {
+  .ds-header nav a:not(.ds-cta){
     @extend %ds-cluster;
     margin: $s1 0 $s1;
   }
