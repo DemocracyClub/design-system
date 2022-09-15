@@ -6,6 +6,8 @@ Use Calls-to-action (CTAs) for linking to important places. Calls-to-action are 
 
 Omitting the `href` is equivalent to using `disabled` on a `<button>` element, hence the opacity and cursor styles matching those of disabled [Buttons]({{site.basedir}}/components/button).
 
+To accomodate consistency, there is a modified style for CTA's used in header navigation. 
+
 <table class="site-table" style="table-layout: fixed">
   <tr>
     <th>markup</th>

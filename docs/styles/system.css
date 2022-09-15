@@ -767,7 +767,7 @@
     width: 100%;
     max-width: 20rem;
     height: auto; }
-  .ds-scope .ds-header nav {
+  .ds-scope .ds-header nav :not(.ds-cta){
     margin: 1rem 0 1rem; }
   .ds-scope .ds-header ul {
     font-size: clamp(0.875rem, 3vw, 1rem); }
@@ -777,7 +777,7 @@
     line-height: 1.125;
     color: #403F41;
     display: inline-block; }
-  .ds-scope .ds-header nav a {
+  .ds-scope .ds-header nav a:not(.ds-cta){
     text-decoration: none;
     color: inherit;
     display: block;
