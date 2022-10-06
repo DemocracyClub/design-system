@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="stylesheet" href="/styles/site.css" />
     <link rel="stylesheet" href="/styles/system.css" />
-    <title>Card (Democracy Club Design System)</title>
+    <title>Text filter (Democracy Club Design System)</title>
   </head>
   <body>
     <a href="#main">skip to content</a>
@@ -133,59 +133,93 @@
         </ul>
       </nav>
       <main id="main" tabindex="-1">
-        <h1>Card</h1>
-        <p>Use the Card component to encapsulate and highlight key information among prose. To make the <em>whole</em> card clickable apply <code>class=&quot;ds-card-link&quot;</code> to the principle link inside the card. Other, supplementary links are raised above this clickable area to still be operable.</p>
+        <h1>Text filter</h1>
+        <p>WIP: filter text.</p>
 <div class="ds-scope">
-  <div class="ds-card">
-    <div class="ds-card-body">
-      <h3><a class="ds-card-link" href="#">Card</a></h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!</p>
-    </div>
-  </div>
+<div class="ds-stack">
+<div class="ds-field">
+  <label for="ds-filter-input">
+    Filter
+    <small>Start typing</small>
+  </label>
+  <input type="text" id="ds-filter-input">
 </div>
-<p>The <code>.ds-card-body</code> class extends the <code>.ds-card-smaller</code> class from <a href="/components/stack">Stack</a> to space the elements inside it.</p>
-<pre><code class="language-html">&lt;div class=&quot;ds-card&quot;&gt;
-  &lt;div class=&quot;ds-card-body&quot;&gt;
-    &lt;h3&gt;&lt;a class=&quot;ds-card-link&quot; href=&quot;#&quot;&gt;Card&lt;/a&gt;&lt;/h3&gt;
-    &lt;p&gt;
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem &lt;a href=&quot;#other-link&quot;&gt;aliquid provident&lt;/a&gt; aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<aside class="site-note-warning site-stack" style="--stack-space: 1rem" aria-labelledby="not-everything-is-a-card!">
-  <h3 id="not-everything-is-a-card!">⚠️ Not everything is a card!</h3>
-  <div class="site-stack">
-<p>At the time of writing, Cards are used liberally across the Democracy Club sites. Don’t “turn everything up to eleven”; as a rule of thumb, only use a standalone Card once or twice in a page.</p>
-<p>Only use multiple successive cards within a <a href="/components/grid">Grid</a>. See an example on the <a href="/components/grid">Grid</a> page.</p>
+<div id="election-urls" class="ds-filterable-group">
+        <h3 class="grouper-date">
+            March 31, 2022
+        </h3>
+<ul>
+    <li class="ds-filterable" data-filter-text="Doncaster Metropolitan Borough Council by-election">
+        <a class="local" href="/elections/local.doncaster.2022-03-31/doncaster-metropolitan-borough-council/">Doncaster Metropolitan Borough Council by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Melton local  by-election">
+        <a class="local" href="/elections/local.melton.2022-03-31/melton-local-election/">Melton local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Scarborough local  by-election">
+        <a class="local" href="/elections/local.scarborough.2022-03-31/scarborough-local-election/">Scarborough local  by-election</a>
+    </li>
+</ul>
 </div>
-</aside>
-<h2>Image cards</h2>
-<p>Insert an element with <code>class=&quot;ds-card-image&quot;</code> enclosing an image above the <code>class=&quot;ds-card-body&quot;</code> element. Regardless of the aspect ratio of the supplied image, it will be displayed at 16:9. The <code>object-fit: cover</code> declaration ensures the image is cropped rather than squashed within the space.</p>
-<div class="ds-scope">
-  <div class="ds-card">
-    <div class="ds-card-image">
-      <img src="/images/card_example.jpg" alt="">
-    </div>
-    <div class="ds-card-body">
-      <h3><a class="ds-card-link" href="#">Card with image</a></h3>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!
-      </p>
-    </div>
-  </div>
+<div id="election-urls" class="ds-filterable-group">
+<h3 class="grouper-date">
+March 24, 2022
+</h3>
+<ul>
+    <li class="ds-filterable" data-filter-text="City of London Common Council election">
+        <a class="local" href="/elections/local.city-of-london.2022-03-24/city-of-london-common-council-election/">City of London Common Council election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Horsham local  by-election">
+        <a class="local" href="/elections/local.horsham.2022-03-24/horsham-local-election/">Horsham local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Northumberland local  by-election">
+        <a class="local" href="/elections/local.northumberland.2022-03-24/northumberland-local-election/">Northumberland local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Test Valley local  by-election">
+        <a class="local" href="/elections/local.test-valley.2022-03-24/test-valley-local-election/">Test Valley local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Thanet local  by-election">
+        <a class="local" href="/elections/local.thanet.2022-03-24/thanet-local-election/">Thanet local  by-election</a>
+    </li>
+</ul>
 </div>
-<h2>Dark theme</h2>
-<p>Invoke the dark theme on any component by applying <code>class=&quot;ds-dark&quot;</code> to a container element.</p>
-<div class="ds-scope">
-  <div class="ds-dark ds-padded">
-    <div class="ds-card">
-      <div class="ds-card-body">
-        <h3><a class="ds-card-link" href="#">Card</a></h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste rem <a href="#other-link">aliquid provident</a> aspernatur molestiae, totam voluptatibus fugit perspiciatis quo corrupti esse, voluptates, tenetur explicabo. Blanditiis provident dolor molestias hic. Aut!</p>
-      </div>
-    </div>
-  </div>
+<div id="election-urls" class="ds-filterable-group">
+<h3 class="grouper-date">
+March 10, 2022
+</h3>
+<ul>
+    <li class="ds-filterable" data-filter-text="Herefordshire local  by-election">
+        <a class="local" href="/elections/local.herefordshire.2022-03-10/herefordshire-local-election/">Herefordshire local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Hertfordshire local  by-election">
+        <a class="local" href="/elections/local.hertfordshire.2022-03-10/hertfordshire-local-election/">Hertfordshire local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="North Hertfordshire local  by-election">
+        <a class="local" href="/elections/local.north-hertfordshire.2022-03-10/north-hertfordshire-local-election/">North Hertfordshire local  by-election</a>
+    </li>
+</ul>
+<ul>
+    <li class="ds-filterable" data-filter-text="Rutland local  by-election">
+        <a class="local" href="/elections/local.rutland.2022-03-10/rutland-local-election/">Rutland local  by-election</a>
+    </li>
+</ul>
+</div>
+</div>
 </div>
 
       </main>

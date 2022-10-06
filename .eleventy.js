@@ -4,6 +4,7 @@ const sassVars = require('./src-site/_data/sass.json').variables;
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPassthroughCopy('src-site/styles');
+  eleventyConfig.addPassthroughCopy('src-site/javascript');
   eleventyConfig.addPassthroughCopy('src-site/images');
 
   const filterAscending = (collection, glob) => {

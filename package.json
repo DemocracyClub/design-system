@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copyAssets": "cp ./system/images/* ./src-site/images && cp -R ./system/fonts ./src-site/styles",
+    "copyAssets": "cp ./system/images/* ./src-site/images && cp -R ./system/fonts ./src-site/styles && cp -R ./system/javascript/ ./src-site/",
     "cssMin": "csso src-site/styles/system.css --output src-site/styles/system.min.css",
-    "watch:eleventy": "npm run exportSass && eleventy --serve",
+    "watch:eleventy": "npm run copyAssets && npm run exportSass && eleventy --serve",
     "build:eleventy": "cross-env DESTINATION=github eleventy --output=docs",
     "exportSass": "sass-export system/partials/_variables.scss -o src-site/_data/sass.json --dependencies system/",
     "watch:sass": "node-sass --watch system/docs.scss src-site/styles/system.css",
