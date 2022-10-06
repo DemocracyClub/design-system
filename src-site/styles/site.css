@@ -140,3 +140,7 @@ table.site-table th, table.site-table td {
   border: 1px dashed;
 }
 
+
+.ds-filtered {
+  display: none;
+}
