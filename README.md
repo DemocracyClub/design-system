@@ -36,7 +36,7 @@ At this point you can follow the main usage instructions (TODO) to implement.
 
 #### Django
 
-If you are using Djanog, you should include `dc_design_system` in your INSTALLED_APPS. This will ensure `collectstatic` picks up the fonts and images. You will still need to tell `libsass` about the `DC_SYSTEM_PATH
+If you are using Django, you should include `dc_design_system` in your INSTALLED_APPS. This will ensure `collectstatic` picks up the fonts and images. You will still need to tell `libsass` about the `DC_SYSTEM_PATH
 
 ### Versioning
 
