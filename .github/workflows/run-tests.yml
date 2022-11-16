@@ -2,9 +2,9 @@ name: Run Tests
 
 on:
   push:
-    branches: [feature/lighthouse_ci]
-#  pull_request:
-#    branches: [master]
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
