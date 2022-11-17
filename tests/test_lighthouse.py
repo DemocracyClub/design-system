@@ -25,9 +25,10 @@ paths_to_test = ["/layout-demo/index.html", "/usage/composition/index.html"]
 
 
 @pytest.mark.parametrize("path", paths_to_test)
-def test_accessibility(path):
+@pytest.mark.parametrize("form_factor", ["desktop", "mobile"])
+def test_accessibility(path, form_factor):
     base_url = "http://localhost:8080"
     report = LighthouseRunner(
-        f"{base_url}{path}", form_factor="desktop", quiet=True
+        f"{base_url}{path}", form_factor=form_factor, quiet=True
     ).report
     assert report.score["accessibility"] > 0.9

@@ -103,7 +103,9 @@ Although the design system—even including _all_ of the components—is relativ
 ## Local development
 This project can be run locally if you want to view the in-browser docs/demo.
 
-In order to do this, you'll need to have node v14 in use due to this project's dependency on node-sass.
+In order to do this, you'll need to have node v14 available due to this project's dependency on node-sass.
+
+If you're using nvm, you can run `nvm use` from the project's root to switch version.
 
 Run the following commands to get everything nicely set up.
 
