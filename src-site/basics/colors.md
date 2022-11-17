@@ -40,7 +40,7 @@ title: Colors
     <td><code>$blueLight</code></td>
     <td>{% var '$blueLight' %}</td>
     <td>
-      <div class="site-swatch ds-bg-color-blueForBlack"></div>
+      <div class="site-swatch ds-bg-color-blueLight"></div>
     </td>
   </tr>
   <tr>
