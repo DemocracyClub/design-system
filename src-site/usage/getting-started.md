@@ -104,6 +104,13 @@ Although the design system—even including _all_ of the components—is relativ
 
 Follow the HTML examples in individual components docs. If you are making a page layout from scratch, see [Page layout]({{site.basedir}}/usage/page-layout).
 
+## Adding or changing components
 
+Update or create a partial file containing the component style such as `system/partials/_date-picker.scss`.
 
-
+If a new component is added:
+  1. Create a src-site/components/new-component.md file to explain it's use with an html example.
+  2. Add the html example to `src-site/usage/composition.md` to be sure it's included in Lighthouse tests. 
+  3. Add the partial to system/docs.scss (twice, import the `mixin` at the top, then add it to `optional-styles`)
+  4. Run `npm run watch:eleventy` to view changes to source site.
+  5. Once changes are complete, update the version in `package.json` and lock it with `npm install` 

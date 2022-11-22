@@ -105,8 +105,22 @@ By combining [Stacks]({{site.basedir}}/components/stack), [Grids]({{site.basedir
         <div class="ds-field">
           <button class="ds-button" type="submit">Log in</button>
         </div>
-      </form>
-    </div>
+      </form> 
+      <div>
+      <div class="ds-date">
+        <div class="ds-field">
+          <label for="day_0">Day</label>
+          <input type="number" name="day_0" value="12" required="" id="id_date-date_0">
+        </div>
+        <div class="ds-field">
+          <label for="month_1">Month</label>
+          <input type="number" name="month_1" value="12" required="" id="id_date-date_1">
+        </div>
+        <div class="ds-field">
+          <label for="year_2">Year</label>
+          <input type="number" name="year_2" value="2025" required="" id="id_date-date_2">
+        </div>
+      </div>
+      </div>
   </div>
 </div>
-
