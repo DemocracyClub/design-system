@@ -1,0 +1,19 @@
+@mixin date-picker {
+  .ds-date {
+    @extend %ds-cluster-element;
+    .ds-field {
+      input {
+        margin: 10px 15px 5px 0;
+        border: 2px solid $black;
+        padding: $ss4;
+        max-width: 5em;
+        color:$black;
+        box-shadow: inset $ss2 $ss2 0 $blackOpacity;
+        box-sizing: border-box;
+      }
+      &:last-child input {
+        max-width: 6em;
+      }
+    }
+  }
+}

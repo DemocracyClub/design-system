@@ -48,4 +48,8 @@
   .ds-table th:not([scope="row"]) {
     border-bottom: 1px solid;
   }
+
+  .ds-table code {
+    word-break: normal
+  }
 }

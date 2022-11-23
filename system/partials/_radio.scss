@@ -14,17 +14,28 @@
     white-space: nowrap;
     width: 1px;
   }
+  .ds-field-radio > span {
+    order: 1px solid #dee0e2;
+    background-color: #dee0e2;
+    padding:1em;
+    margin: $ss2;
+    display: inline-block;
+  }
 
   .ds-field-radio > span::before {
     content: '';
     border-radius: 50%;
     display: inline-block;
-    width: 0.75em;
-    height: 0.75em;
+    width: 1.5em;
+    height: 1.5em;
     border: 2px solid $black;
-    margin-right: $ss3;
-    vertical-align: -0.125em;
+    margin-right: $ss4;
+    vertical-align: middle;
     background-color: $white;
+  }
+
+  .ds-field-radio > input:checked + span {
+    background-color: white !important;
   }
 
   .ds-field-radio > input:checked + span::before {
@@ -36,5 +47,6 @@
     text-decoration: underline;
     text-decoration-color: $amber;
     text-decoration-thickness: 2px;
+    outline: solid $amber; 
   }
 }
