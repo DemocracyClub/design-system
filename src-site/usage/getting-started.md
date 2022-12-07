@@ -100,6 +100,27 @@ Although the design system—even including _all_ of the components—is relativ
 <link rel="stylesheet" href="path/to/system.min.css" />
 ```
 
+## Local development
+This project can be run locally if you want to view the in-browser docs/demo.
+
+In order to do this, you'll need to have node v14 available due to this project's dependency on node-sass.
+
+If you're using nvm, you can run `nvm use` from the project's root to switch version.
+
+Run the following commands to get everything nicely set up.
+
+```commandline
+npm install
+npm run exportSass
+npm start
+```
+
+You will then be able to access via localhost in your browser.
+The demo page is at `/layout-demo/index.html`.
+
+If you want to run the Lighthouse tests locally, you'll also need to make sure the Lighthouse node package is available globally:
+`npm install -g lighthouse`
+
 ## Next steps
 
 Follow the HTML examples in individual components docs. If you are making a page layout from scratch, see [Page layout]({{site.basedir}}/usage/page-layout).
