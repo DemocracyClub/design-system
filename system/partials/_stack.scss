@@ -26,4 +26,8 @@
   .ds-stack { @extend %ds-stack }
   .ds-stack-smaller { @extend %ds-stack-smaller }
   .ds-stack-smallest { @extend %ds-stack-smallest }
+
+  .ds-stack > :is(h1,h2,h3,h4,h5,hgroup) + *:not(article) {
+    margin-top: $s1;
+  }
 }
