@@ -53,8 +53,8 @@
     @include fontBody;
   }
 
-  // successive paragraphs are immune to Stack
-  p + p {
+  // successive paragraphs and lists are immune to Stack
+  :is(p,ul,ol) + :is(p,ul,ol) {
     margin-top: $s1 !important;
   }
 
