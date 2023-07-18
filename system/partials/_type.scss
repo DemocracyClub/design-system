@@ -130,4 +130,8 @@
   dl > * + * {
     margin-top: $ss6;
   }
+
+  hgroup {
+    @extend %ds-stack-smaller;
+  }
 }
