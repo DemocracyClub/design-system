@@ -81,10 +81,11 @@ You will more than likely want to use a Stack when dealing with any kind of flow
 
 {% note 'Paragraphs' %}
 
-Paragraphs are immune to stack value variations. In all cases, successive paragraphs are separated by a value of `$s1` ({% var '$s1' %}). This is enforced using an `!important` marker.
+Paragraphs and lists are immune to stack value variations. In all cases, 
+successive paragraphs are separated by a value of `$s1` ({% var '$s1' %}). This is enforced using an `!important` marker.
 
 ```css
-p + p {
+:is(p,ul,ol) + :is(p,ul,ol) {
   margin-top: $s1 !important;
 }
 ```

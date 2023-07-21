@@ -53,8 +53,8 @@
     @include fontBody;
   }
 
-  // successive paragraphs are immune to Stack
-  p + p {
+  // successive paragraphs and lists are immune to Stack
+  :is(p,ul,ol) + :is(p,ul,ol) {
     margin-top: $s1 !important;
   }
 
@@ -79,6 +79,10 @@
   h3, .ds-h3
   h4, .ds-h4 {
     word-break: break-word;
+    font-family: $familyMain;
+    font-weight: 300;
+
+
 
   }
 
@@ -96,6 +100,9 @@
 
   h1, h2 {
     font-weight: 300;
+    letter-spacing: -0.05em;
+;
+
   }
 
   a {
@@ -122,5 +129,9 @@
 
   dl > * + * {
     margin-top: $ss6;
+  }
+
+  hgroup {
+    @extend %ds-stack-smaller;
   }
 }
