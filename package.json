@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/DemocracyClub/design-system#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.1",
     "cross-env": "^7.0.3",
     "csso-cli": "^3.0.0",
     "husky": "^5.0.9",
