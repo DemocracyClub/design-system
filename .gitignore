@@ -109,3 +109,5 @@ _site
 # Python package
 .eggs
 *.egg-info
+
+docs
