@@ -4,7 +4,7 @@ title: Language
 
 Include the language component as the first element after the skip link (see the [layout demo]({{site.basedir}}/layout-demo) source). 
 
-<div class="ds-scope">
+{% ds-example %}
   <aside class="ds-language" aria-labelledby="language-label">
     <ul>
       <li id="language-label" aria-hidden="true">Language:</li>
@@ -12,7 +12,8 @@ Include the language component as the first element after the skip link (see the
       <li><a href="/cymraeg" lang="cy">Cymraeg</a></li>
     </ul>
   </aside>
-</div>
+{% endds-example %}
+
 
 ## Markup
 

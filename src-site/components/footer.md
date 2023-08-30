@@ -8,7 +8,7 @@ A basic footer looks something like the following (as seen in [the page layout d
 
 Aside from that, only `ds-copyright` is unique to this component. The content of the footer can be constructed from other components according to your needs. In the following example, a list of “quick links” is provided alongside the copyright.
 
-<div class="ds-scope">
+{% ds-example %}
   <footer class="ds-footer">
     <div class="ds-block-centered ds-text-centered ds-stack">
       <div class="ds-cluster-center">
@@ -46,7 +46,8 @@ Aside from that, only `ds-copyright` is unique to this component. The content of
       </div>
     </div>
   </footer>
-</div>
+{% endds-example %}
+
 
 ## Markup
 

@@ -4,8 +4,8 @@ title: Filter
 
 Use the Filter component to offer search filters so that users can focus in on what they are looking for. The outer element takes `class="ds-filter"`.
 
-<div class="ds-scope">
-  <aside class="ds-filter" aria-labelledby="filter-label">
+{% ds-example %}
+<aside class="ds-filter" aria-labelledby="filter-label">
     <div class="ds-filter-cluster">
       <ul>
         <li id="filter-label" class="ds-filter-label" aria-hidden="true">Filter:</li>
@@ -48,7 +48,8 @@ Use the Filter component to offer search filters so that users can focus in on w
       </div>
     </details>
   </aside>
-</div>
+{% endds-example %}
+
 
 ## Markup
 

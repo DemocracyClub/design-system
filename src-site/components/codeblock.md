@@ -8,7 +8,8 @@ When sharing blocks of code, you have two formatting options: _wrapping_ or _scr
 
 This is the default, using `class="ds-codeblock"`.
 
-<div class="ds-scope">
+{% ds-example %}
+
 <pre class="ds-codeblock"><code>{
   "notifications": [
     {
@@ -19,7 +20,8 @@ This is the default, using `class="ds-codeblock"`.
     }
   ]
 }</code></pre>
-</div>
+{% endds-example %}
+
 
 ```html
 <pre class="ds-codeblock"><code>{
@@ -44,7 +46,8 @@ To be clear, the black code blocks here are part of the documentation _for_ code
 
 Add `class="ds-codeblock-scroll"`. This option may be better for readability for some kinds of code.
 
-<div class="ds-scope">
+{% ds-example %}
+
 <pre class="ds-codeblock ds-codeblock-scroll"><code>{
   "notifications": [
     {
@@ -55,7 +58,8 @@ Add `class="ds-codeblock-scroll"`. This option may be better for readability for
     }
   ]
 }</code></pre>
-</div>
+{% endds-example %}
+
 
 ```html
 <pre class="ds-codeblock ds-codeblock-scroll"><code>{
@@ -74,6 +78,6 @@ Add `class="ds-codeblock-scroll"`. This option may be better for readability for
 
 Snippets of inline code (placed in paragraphs, typically) are styled by default. Just use the `<code>` tag:
 
-<div class="ds-scope">
+{% ds-example %}
   <p>Let me tell you about the <code>$variable</code> I came up with.</p>
-</div>
+{% endds-example %}

@@ -20,7 +20,8 @@ Note the use of the `<small>` element to provide “hint” text to the label. P
 
 Each input must be associated to its label by making their respective `id` and `for` attributes share the same value.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <form>
     <div class="ds-field">
       <label for="username">
@@ -39,7 +40,8 @@ Each input must be associated to its label by making their respective `id` and `
       <button class="ds-button" type="submit">Log in</button>
     </div>
   </form>
-</div>
+
+{% endds-example %}
 
 ## Invalid fields
 
@@ -49,7 +51,8 @@ For accessibility, each invalid field must have
 * An error message associated to the input with `aria-describedby` and placed below the input
 * An cross emoji prefixed to the error message with alternative text reading “error”
 
-<div class="ds-scope">
+{% ds-example %}
+
   <form>
     <div class="ds-field">
       <label for="username">
@@ -63,7 +66,8 @@ For accessibility, each invalid field must have
       </small>
     </div>
   </form>
-</div>
+{% endds-example %}
+
 
 Field errors are `<small>` elements with `class="ds-field-error"`. Their `id` value must match the input’s `aria-describedby` value.
 
@@ -87,7 +91,8 @@ Also note the use of `role="img"` and `aria-label="Error"` to ensure an appropri
 
 If the form is invalid upon submission, a message should be displayed. Importantly, if submission is handled with JavaScript (and without a page load) this message should appear directly above the submit button, so the user can see it without scrolling.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <form>
     <div class="ds-field">
       <label for="username">
@@ -111,7 +116,8 @@ If the form is invalid upon submission, a message should be displayed. Important
       <button class="ds-button" type="submit">Log in</button>
     </div>
   </form>
-</div>
+{% endds-example %}
+
 
 In addition, it should be appended to an [ARIA live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). This will announce its content in screen readers, ensuring blind screen reader users are aware the error has been invoked. Note the `role="alert"` in the below example:
 
@@ -127,7 +133,7 @@ In addition, it should be appended to an [ARIA live region](https://developer.mo
 
 Fieldsets are useful for grouping fields together under a group label (`<legend>`). In fact, fieldsets/legends are the recommended way to label groups of radio buttons. The legend must be the first child element inside the fieldset.
 
-<div class="ds-scope">
+{% ds-example %}
   <form>
     <fieldset>
       <legend>Favorite type of democracy</legend>
@@ -147,7 +153,7 @@ Fieldsets are useful for grouping fields together under a group label (`<legend>
       </div>
     </fieldset>
   </form>
-</div>
+{% endds-example %}
 
 ```html
 <fieldset>

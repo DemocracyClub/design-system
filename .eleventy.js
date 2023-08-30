@@ -35,6 +35,30 @@ module.exports = function (eleventyConfig) {
 </aside>`;
   });
 
+
+  eleventyConfig.addPairedShortcode('ds-example', function (content) {
+  var dark_content = content.replace(/id="/g, 'id="dark_');
+  dark_content = dark_content.replace(/for="/g, 'for="dark_');
+  return `
+<div class="site-stack" style="--stack-space: 1rem">
+<div class="site-stack">
+<h2>Light theme</h2>
+<div class="ds-scope">
+${content}
+</div>
+<h2>Dark theme</h2>
+<small>Invoke the dark theme on any component by applying <code>class="ds-dark"</code> to a container element.</small>
+<div class="ds-scope">
+<div class="ds-dark">
+${dark_content}
+</div>
+</div>
+</div>
+</div>
+
+`;
+  });
+
   eleventyConfig.addPairedShortcode('warning', function (content, title) {
     const slug = slugify(title).toLowerCase();
     return `

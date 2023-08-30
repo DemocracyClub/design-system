@@ -4,8 +4,8 @@ title: Description lists
 
 Use a description (or “definition”) list to highlight key information, such a contact details. Use a [Table]({{site.basedir}}/components/table) if the information is more complex than simple key/value pairs.
 
-<div class="ds-scope">
-  <dl class="ds-descriptions">
+{% ds-example %}
+<dl class="ds-descriptions">
     <div>
       <dt>Facebook</dt>
       <dd><a href="https://www.facebook.com/shaunbaileyuk">www.facebook.com/shaunbaileyuk</a></dd>
@@ -25,7 +25,8 @@ Use a description (or “definition”) list to highlight key information, such 
       <dd>shaunbailey@shaunbailey.co.uk</dd>
     </div>
   </dl>
-</div>
+{% endds-example %}
+
 
 ## Markup
 
