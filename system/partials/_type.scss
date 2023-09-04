@@ -7,6 +7,7 @@
 
   * {
     margin: 0;
+    color: $black;
   }
 
   *:focus {
@@ -106,7 +107,7 @@
   }
 
   a {
-    color: $pinkForWhite;
+    color: $black;
     text-decoration: underline;
   }
 

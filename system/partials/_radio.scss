@@ -47,6 +47,21 @@
     text-decoration: underline;
     text-decoration-color: $amber;
     text-decoration-thickness: 2px;
-    outline: solid $amber; 
+    outline: solid $amber;
   }
+
+  // Dark theme
+  .ds-dark {
+    .ds-field-radio > span::before,
+    .ds-field-radio > span,
+     {
+      background-color: $whiteOpacity;
+    }
+    .ds-field-radio > input:checked + span {
+      color:$black;
+      background-color: $white;
+    }
+
+  }
+
 }

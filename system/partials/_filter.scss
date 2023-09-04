@@ -47,4 +47,11 @@
   .ds-advanced-filters {
     @extend %ds-stack-smallest;
   }
+
+  // Dark theme
+  .ds-dark {
+    .ds-filter {
+      background-color: $black;
+    }
+  }
 }

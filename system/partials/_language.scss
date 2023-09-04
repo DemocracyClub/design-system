@@ -1,15 +1,29 @@
 @mixin language {
   .ds-language {
-    @extend %ds-dark;
     @extend %ds-cluster;
     @extend %ds-cluster-right;
     padding: $ss5;
     font-size: $ss8;
+    background-color: $black;
+
+  }
+
+
+
+  .ds-language * {
+    color: white;
   }
 
   .ds-language [aria-current] {
     text-decoration: underline;
     text-decoration-thickness: $ss1;
     color: $blueForBlack;
+  }
+
+  // Dark theme
+  .ds-dark  {
+    .ds-language {
+      background-color: $darkBlack;
+    }
   }
 }

@@ -2,8 +2,17 @@
   padding: $s8 $s2;
   border-top: $ss4 solid $blueForWhite;
   margin-top: $s8;
-  @extend %ds-dark;
+  background-color: $black;
 }
+
+%ds-footer a {
+  color: $white;
+}
+
+%ds-footer * {
+  color: $white;
+}
+
 
 %ds-copyright {
   max-width: none;
@@ -12,7 +21,7 @@
 
 %ds-copyright p {
   max-width: 100ch;
-  margin: 0 !important; 
+  margin: 0 !important;
 }
 
 %ds-copyright img {
@@ -21,6 +30,13 @@
 }
 
 @mixin footer {
-  .ds-footer { @extend %ds-footer }
+  .ds-footer { @extend %ds-footer; }
   .ds-copyright { @extend %ds-copyright }
+
+  // Dark theme
+  .ds-dark {
+      .ds-footer {
+        background-color: $darkBlack;
+      }
+    }
 }

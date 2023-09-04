@@ -69,5 +69,18 @@
   .ds-error span[role="img"] {
     filter: invert(1) grayscale(1) contrast(100);
   }
-}
 
+  // Dark theme
+  .ds-dark {
+    form {
+      background-color: $black;
+    }
+
+    .ds-field-error {
+      color: $redForBlack;
+      font-size: 1em;
+  }
+
+  }
+
+}

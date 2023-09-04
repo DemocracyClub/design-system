@@ -29,4 +29,12 @@
       pointer-events: none;
     }
   }
+
+  // Dark theme
+  .ds-dark {
+    .ds-select select {
+      background-color: $black;
+    }
+  }
+
 }
