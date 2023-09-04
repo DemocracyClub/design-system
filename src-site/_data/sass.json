@@ -61,6 +61,11 @@
       "compiledValue": "#D91714"
     },
     {
+      "name": "$redForBlack",
+      "value": "#FF6347",
+      "compiledValue": "#FF6347"
+    },
+    {
       "name": "$redForBlueLight",
       "value": "$redForWhite",
       "compiledValue": "#D91714"
