@@ -8,6 +8,8 @@ Omitting the `href` is equivalent to using `disabled` on a `<button>` element, h
 
 To accomodate consistency, there is a modified style for CTA's used in header navigation. 
 
+{% ds-example %}
+
 <table class="site-table" style="table-layout: fixed">
   <tr>
     <th>markup</th>
@@ -71,85 +73,4 @@ To accomodate consistency, there is a modified style for CTA's used in header na
   </tr>
 </table>
 
-## Dark theme
-
-Invoke the dark theme on any component by applying class="ds-dark" to a container element.
-
-<table class="site-table" style="table-layout: fixed">
-  <tr>
-    <th>markup</th>
-    <th>demo</th>
-  </tr>
-  <tr>
-    <td>
-
-```html
-<div class="ds-dark">
-  <a class="ds-cta" href="#">Link to something</a>
-</div>
-```
-
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta" href="#">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-
-```html
-<div class="ds-dark">
-  <a class="ds-cta">Link to something</a>
-</div>
-```
-
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-
-```html
-<div class="ds-dark">
-  <a class="ds-cta ds-cta-blue" href="#">Link to something</a>
-</div>
-```
-
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta ds-cta-blue" href="#">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-  <tr>
-    <td>
-
-```html
-<div class="ds-dark">
-  <a class="ds-cta ds-cta-blue">Link to something</a>
-</div>
-```
-
-</td>
-<td>
-  <div class="ds-scope">
-    <div class="ds-dark" style="padding: 1rem">
-      <a class="ds-cta ds-cta-blue">Link to something</a>
-    </div>
-  </div>
-</td>
-  </tr>
-</table>
+{% endds-example %}

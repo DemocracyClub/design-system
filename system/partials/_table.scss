@@ -52,4 +52,12 @@
   .ds-table code {
     word-break: normal
   }
+
+  // Dark theme
+  .ds-dark {
+    .ds-table tr:nth-child(even) {
+    background-color: $whiteOpacity;
+  }
+  }
+
 }

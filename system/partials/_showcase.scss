@@ -9,4 +9,13 @@
     font-family: $familyMain;
     @extend .ds-h4;
   }
+
+  // Dark theme
+  .ds-dark {
+    .ds-showcase strong {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+
 }

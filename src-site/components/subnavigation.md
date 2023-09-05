@@ -4,7 +4,8 @@ title: Sub-navigation
 
 Use the Sub-navigation component when there are pages available related to the chosen main navigation link (as indicated by `aria-current="true"` in the [Header]({{site.basedir}}/components/header) component above it). For example, if the chosen route on [democracyclub.org.uk](https://democracyclub.org.uk) is “About”, use Sub-navigation to provide links to “About” (the index page), “The Team”, “Jobs”, and “Funding”. This group of pages represents a subsection of the site called “About”.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <nav class="ds-subnav" aria-label="About">
     <ul>
       <li>
@@ -21,7 +22,8 @@ Use the Sub-navigation component when there are pages available related to the c
       </li>
     </ul>
   </nav>
-</div>
+{% endds-example %}
+
 
 {% note 'Breadcrumbs' %}
 

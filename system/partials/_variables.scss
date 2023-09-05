@@ -5,9 +5,11 @@
 
 // Colours
 
+$darkBlack: #0D1117;
 $black: #403F41;
 $blackOpacity: rgba($black, 0.2);
 $white: #fff;
+$whiteOpacity: rgba($white, 0.2);
 $pinkForWhite: #E6007C;
 $blueForWhite: #007CAD;
 $blueForBlack: #00B6FF;
@@ -15,6 +17,7 @@ $blueLight: #E4F4FB;
 $greenForWhite: #32841A;
 $greenForBlack: #4BC427;
 $redForWhite: #D91714;
+$redForBlack: #FF6347;
 $redForBlueLight: $redForWhite;
 $amber: #FFC037;
 

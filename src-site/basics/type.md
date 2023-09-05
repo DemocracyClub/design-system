@@ -88,9 +88,14 @@ Classes in the form `.ds-[heading level]` (e.g. `.ds-h2`) are provided to match 
 ```
 
 </td>
-    <td class="ds-scope">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni <a href="#">culpa praesentium</a> aliquam magnam temporibus.</p>
-    </td>
+    <td>
+{% ds-example %}
+<div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni <a href="#">culpa praesentium</a> aliquam magnam temporibus.</p>
+</div>
+{% endds-example %}
+
+</td>
   </tr>
 </table>
 
@@ -109,9 +114,14 @@ Classes in the form `.ds-[heading level]` (e.g. `.ds-h2`) are provided to match 
 ```
 
 </td>
-    <td class="ds-scope">
+    <td>
+{% ds-example %}
+<div>
       <blockquote>Porro voluptatum inventore fugiat, esse ducimus enim totam numquam adipisci? Ipsa cum sequi iste ex eius magni aliquam magnam temporibus.</blockquote>
-    </td>
+</div>
+{% endds-example %}
+
+</td>
   </tr>
 </table>
 

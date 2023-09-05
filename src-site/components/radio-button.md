@@ -4,7 +4,7 @@ title: Radio buttons
 
 Sets of radio buttons come in a common fieldset and are labeled by the fieldsetâ€™s legend.
 
-<div class="ds-scope">
+{% ds-example %}
   <form>
     <fieldset>
       <legend>Favorite type of democracy</legend>
@@ -24,7 +24,8 @@ Sets of radio buttons come in a common fieldset and are labeled by the fieldsetâ
       </div>
     </fieldset>
   </form>
-</div>
+{% endds-example %}
+
 
 Each radio button is wrapped in a `<label>` with `class="ds-field-radio"` and the label text must be wrapped in a `<span>` for custom styling purposes.
 
@@ -52,7 +53,8 @@ We can use a [Stack]({{site.basedir}}/components/stack) component to space out e
 
 ## Inline radio buttons
 
-<div class="ds-scope">
+{% ds-example %}
+
   <form class="ds-cluster">
     <fieldset>
       <legend>Favorite type of democracy</legend>
@@ -70,7 +72,8 @@ We can use a [Stack]({{site.basedir}}/components/stack) component to space out e
       </label>
     </fieldset>
   </form>
-</div>
+{% endds-example %}
+
 
 For inline radio buttons, we can use a [Cluster]({{site.basedir}}/components/cluster) component, like so:
 
@@ -93,27 +96,3 @@ For inline radio buttons, we can use a [Cluster]({{site.basedir}}/components/clu
   </fieldset>
 </div>
 ```
-
-## Dark theme
-
-Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
-
-<div class="ds-scope">
-  <form class="ds-cluster ds-dark">
-    <fieldset>
-      <legend>Favorite type of democracy</legend>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy" checked>
-        <span>Representative</span>
-      </label>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy">
-        <span>Direct</span>
-      </label>
-      <label class="ds-field-radio">
-        <input type="radio" name="democracy">
-        <span>Monitory</span>
-      </label>
-    </fieldset>
-  </form>
-</div>

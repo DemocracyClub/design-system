@@ -4,7 +4,8 @@ title: Table
 
 Data tables must be accessible. Each must have a `<caption>` element. It is permissable to use a heading element _inside_ the `<caption>` so screen reader users can navigate to it using heading shortcuts. For the sake of avoiding redundancy, if you do use a heading element inside the `<caption>` you should no longer introduce the table with a heading.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <div class="ds-table">
     <table>
       <caption><h2>Basic table with column headers</h2></caption>
@@ -30,7 +31,9 @@ Data tables must be accessible. Each must have a `<caption>` element. It is perm
       </tr>
     </table>
   </div>
-</div>
+{% endds-example %}
+
+
 
 ```html
 <div class="ds-table">
@@ -50,7 +53,8 @@ Data tables must be accessible. Each must have a `<caption>` element. It is perm
 
 You can use either column headers (`<th>` in the above example), row headers (`<th>` with `scope="row"` on each row’s first child) or both.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <div class="ds-table">
     <table>
       <caption>Basic table with column and row headers</caption>
@@ -76,7 +80,8 @@ You can use either column headers (`<th>` in the above example), row headers (`<
       </tr>
     </table>
   </div>
-</div>
+{% endds-example %}
+
 
 ```html
 <div class="ds-table">
@@ -110,7 +115,8 @@ You can use either column headers (`<th>` in the above example), row headers (`<
 
 Tables should retain their structure for comprehension. Ensuring they can be used and viewed with many columns, or in smaller viewports, the containing `class="ds-table"` element is scrollable along the horizontal axis.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <div class="ds-table">
     <table>
       <caption><h2>Basic table with column headers</h2></caption>
@@ -167,13 +173,15 @@ Tables should retain their structure for comprehension. Ensuring they can be use
       </tr>
     </table>
   </div>
-</div>
+{% endds-example %}
+
 
 ## Tables in cards
 
 You can use a [Card]({{site.basedir}}/components/card) to “lift” a table and give it more affordance in the page.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <div class="ds-card ds-padded">
     <div class="ds-table">
       <table>
@@ -201,7 +209,8 @@ You can use a [Card]({{site.basedir}}/components/card) to “lift” a table and
       </table>
     </div>
   </div>
-</div>
+{% endds-example %}
+
 
 ```html
 <div class="ds-card ds-padded">
@@ -230,38 +239,3 @@ In this case, the `ds-padded` [utility class]({{site.basedir}}/components/utilit
 ```
 
 {% endnote %}
-
-## Dark theme
-
-Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
-
-<div class="ds-scope">
-  <div class="ds-dark" style="padding: 1rem">
-    <div class="ds-table">
-      <table>
-        <caption>Basic table with column headers</caption>
-        <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-        </tr>
-        <tr>
-          <th scope="row">Row 1 / row header</th>
-          <td>Row 1 / cell 2</td>
-          <td>Row 1 / cell 3</td>
-        </tr>
-        <tr>
-          <th scope="row">Row 2 / row header</th>
-          <td>Row 2 / cell 2</td>
-          <td>Row 2 / cell 3</td>
-        </tr>
-        <tr>
-          <th scope="row">Row 3 / row header</th>
-          <td>Row 3 / cell 2</td>
-          <td>Row 3 / cell 3</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-

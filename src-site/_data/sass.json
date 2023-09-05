@@ -1,6 +1,11 @@
 {
   "variables": [
     {
+      "name": "$darkBlack",
+      "value": "#0D1117",
+      "compiledValue": "#0D1117"
+    },
+    {
       "name": "$black",
       "value": "#403F41",
       "compiledValue": "#403F41"
@@ -14,6 +19,11 @@
       "name": "$white",
       "value": "#fff",
       "compiledValue": "#fff"
+    },
+    {
+      "name": "$whiteOpacity",
+      "value": "rgba($white, 0.2)",
+      "compiledValue": "rgba(255, 255, 255, 0.2)"
     },
     {
       "name": "$pinkForWhite",
@@ -49,6 +59,11 @@
       "name": "$redForWhite",
       "value": "#D91714",
       "compiledValue": "#D91714"
+    },
+    {
+      "name": "$redForBlack",
+      "value": "#FF6347",
+      "compiledValue": "#FF6347"
     },
     {
       "name": "$redForBlueLight",
@@ -88,27 +103,27 @@
     {
       "name": "$s4",
       "value": "#{pow($ratio, 3)}rem",
-      "compiledValue": "1.953125rem"
+      "compiledValue": "1.95312rem"
     },
     {
       "name": "$s5",
       "value": "#{pow($ratio, 4)}rem",
-      "compiledValue": "2.44140625rem"
+      "compiledValue": "2.44141rem"
     },
     {
       "name": "$s6",
       "value": "#{pow($ratio, 5)}rem",
-      "compiledValue": "3.0517578125rem"
+      "compiledValue": "3.05176rem"
     },
     {
       "name": "$s7",
       "value": "#{pow($ratio, 6)}rem",
-      "compiledValue": "3.8146972656rem"
+      "compiledValue": "3.8147rem"
     },
     {
       "name": "$s8",
       "value": "#{pow($ratio, 7)}rem",
-      "compiledValue": "4.768371582rem"
+      "compiledValue": "4.76837rem"
     },
     {
       "name": "$increment-small-scale",

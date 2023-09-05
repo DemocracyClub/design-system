@@ -9,10 +9,13 @@ stats about an election cycle.
 
 Use with a Switcher for a grid display.
 
-<div class="ds-scope site-resizer">
+{% ds-example %}
+
+<div class="site-resizer">
   <ul class="ds-switcher ds-showcase" style="--gridCellMin: 15ch;--gridGap:3rem;">
     <li><strong>12,200</strong> people have contributed to improving our democratic&nbsp;data</li>
     <li><strong>60,000</strong> edits were made by our community in the 2022 local&nbsp;elections</li>
     <li><strong>900</strong> people in our Democracy Club Slack. <a class="ds-text-left" href="#">Join us</a></li>
   </ul>
 </div>
+{% endds-example %}

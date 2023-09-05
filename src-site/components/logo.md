@@ -4,7 +4,8 @@ title: Logo
 
 The logo component is a link back to the local site’s homepage, most commonly included in the [Header]({{site.basedir}}/components/header). This text-based logo replaces purely image-based versions for ease of translation.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <div class="ds-stack-smaller">
     <div>
       <a class="ds-logo" href="/">
@@ -25,7 +26,8 @@ The logo component is a link back to the local site’s homepage, most commonly 
       </a>
     </div>
   </div>
-</div>
+{% endds-example %}
+
 
 ## Markup
 
@@ -40,7 +42,8 @@ Since the text itself acts as the accessible label for the `ds-logo` link, the c
 
 ### Welsh variant
 
-<div class="ds-scope">
+{% ds-example %}
+
   <a class="ds-logo" href="/">
     <img src="{{site.basedir}}/images/logo_icon.svg" alt="" />
     <span>
@@ -48,7 +51,8 @@ Since the text itself acts as the accessible label for the `ds-logo` link, the c
       <em lang="cy">Ble Ydw i’n Pleidleisio?</em>
     </span>
   </a>
-</div>
+{% endds-example %}
+
 
 Welsh versions of the logo should be in English _and_ Welsh, using an `<em>` element to encapsulate the Welsh translation. The `<em>` needs to take `lang="cy"`.
 
@@ -61,14 +65,3 @@ Welsh versions of the logo should be in English _and_ Welsh, using an `<em>` ele
   </span>
 </a>
 ```
-
-## Dark theme
-
-<div class="ds-scope">
-  <div class="ds-dark ds-padded">
-    <a class="ds-logo" href="/">
-      <img src="{{site.basedir}}/images/logo_icon.svg" alt="" />
-      <span>democracy<br>club</span>
-    </a>    
-  </div>
-</div>

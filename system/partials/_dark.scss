@@ -1,12 +1,21 @@
-%ds-dark, %ds-dark * {
+
+%ds-dark {
   color: $white;
   background-color: $black;
+}
+
+%ds-dark * {
+  color: $white;
 }
 
 %ds-dark .ds-card,
 %ds-dark form,
 %ds-dark .ds-candidate {
   border: 1px solid;
+}
+
+%ds-dark code {
+  background-color: $whiteOpacity;
 }
 
 %ds-dark .ds-select::after {
@@ -18,5 +27,7 @@
 }
 
 @mixin dark {
-  .ds-dark { @extend %ds-dark }
+  .ds-dark {
+    @extend %ds-dark;
+  }
 }

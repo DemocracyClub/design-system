@@ -6,6 +6,7 @@
     align-items: center;
     padding: $s2;
     margin-bottom: clamp($ss1, 2vw, $s4);
+    background-color: $white;
   }
 
   .ds-header-home {
@@ -48,5 +49,27 @@
 
   .ds-header [aria-current] {
     border-bottom-color: $pinkForWhite;
+  }
+
+  // Dark theme
+  .ds-dark {
+    .ds-header {
+      background-color: $darkBlack;
+      border-bottom: 1px solid $white;
+      li {
+        color: $white;
+      }
+      a {
+        border-bottom-color: transparent;
+        &:hover {
+          border-bottom-color: $blueForBlack;
+
+        }
+      }
+      [aria-current] {
+        border-bottom-color: $pinkForWhite;
+      }
+    }
+
   }
 }

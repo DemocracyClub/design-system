@@ -6,7 +6,7 @@ Use the Breadcrumbs component when the site structure is several levels deep and
 
 Unlike [Sub-navigation]({{site.basedir}}/components/subnavigation), breadcrumbs represent levels of depth reading from left to right. Use [Sub-navigation]({{site.basedir}}/components/subnavigation) where each link represents a topic belonging to the _same_ level.
 
-<div class="ds-scope">
+{% ds-example %}
   <nav class="ds-breadcrumbs" aria-label="Where you are">
     <ol>
       <li>
@@ -20,7 +20,7 @@ Unlike [Sub-navigation]({{site.basedir}}/components/subnavigation), breadcrumbs 
       </li>
     </ol>
   </nav>
-</div>
+{% endds-example %}
 
 Since breadcrumbs constitute a kind of navigation, a `<nav>` element is required, along with a descriptive label using `aria-label`. The current page (the final breadcrumb) should be unlinked.
 

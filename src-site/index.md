@@ -93,21 +93,54 @@ TODO: describe the component
 In the body of the markdown file, you will need to include the following:
 
 1. An introduction to the component starting “Use the [component name] when you need to...”
-2. A code block showing the HTML needed for the component, and further code blocks to demonstrate changes to the markup based on state (where applicable)
+2. Use the `{% raw %}{% ds-example %}{% endraw %}` shortcode to include a code block showing the
+   HTML needed for the component. Add more examples for further code
+   blocks to demonstrate changes to the markup based on state (where applicable)
 3. An inline demo of the component. This should use the same markup as the code block in (2) (except (2) might be truncated or use dummy paths). Importantly, it must be nested in a `<div>` with `class="ds-scope"` since styles need to be scoped/separated within the docs pages. See below for a demo&hellip; of a demo.
 
-```html
 Here’s a demo:
 
-<div class="ds-scope">
+```html
+{% raw %}{% ds-example %}{% endraw %}
   <div class="ds-component">
     <!-- contents of the component -->
   </div>
-</div>
+{% raw %}{% endds-example %}{% endraw %}
+```
+
+{% note 'ds-example' %}
+
+Using `ds-example` is better than just writing the HTML directly, as it will 
+wrap your code in both light and dark theme versions. 
+
+{% endnote %}
+
+## Dark theme
+
+The design system includes a dark theme. Anything wrapped in `.ds-dark` will 
+use the dark theme.
+
+When writing components, you can implement this in your component SASS:
+
+```css
+
+%ds-component {
+  color: $blueForWhite;
+}
+
+@mixin component {
+  .ds-component {
+    @extend %ds-component;
+  }
+  
+  // Dark theme
+  .ds-dark .ds-component {
+    color: red;
+  }
+}
+
 ```
 
 ### Other contribution
 
 If you see anything missing or not right with these docs, [raise an issue](https://github.com/DemocracyClub/design-system/issues/new) using the **docs** label.
-
-

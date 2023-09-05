@@ -4,8 +4,9 @@ title: Composing content
 
 By combining [Stacks]({{site.basedir}}/components/stack), [Grids]({{site.basedir}}/components/grid), and the various components, you can quickly compose responsive layouts like the following “kitchen sink” example.
 
+{% ds-example %}
+
 <div class="site-resizer">
-  <div class="ds-scope">
     <div class="ds-stack">
       <h1>Lorem ipsum dolor sit amet</h1>
       <p>Iure explicabo quasi tempore <a href="#">tempora deserunt quaerat</a> dignissimos obcaecati placeat dolor. Nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo iure alias ipsum porro ut eaque corrupti, voluptatibus exercitationem iste consequatur?</p>
@@ -124,4 +125,5 @@ By combining [Stacks]({{site.basedir}}/components/stack), [Grids]({{site.basedir
       </div>
   </div>
 </div>
-</div>
+
+{% endds-example %}

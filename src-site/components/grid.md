@@ -6,7 +6,9 @@ Use the Grid component to display related/equivalent items such as [Cards]({{sit
 
 Grid progressively enhances a single column layout (with basic [Stack]({{site.basedir}}/components/stack)-like spacing) into a configurable CSS Grid layout.
 
-<div class="ds-scope site-resizer">
+{% ds-example %}
+
+<div class="site-resizer">
   <ul class="ds-grid">
     <li class="ds-card">
       <div class="ds-card-body ds-stack-smaller">
@@ -46,6 +48,8 @@ Grid progressively enhances a single column layout (with basic [Stack]({{site.ba
     </li>
   </ul>
 </div>
+{% endds-example %}
+
 
 {% warning 'List semantics' %}
 

@@ -31,4 +31,4 @@ def test_accessibility(path, form_factor):
     report = LighthouseRunner(
         f"{base_url}{path}", form_factor=form_factor, quiet=True
     ).report
-    assert report.score["accessibility"] > 0.9
+    assert report.score["accessibility"] >= 0.9

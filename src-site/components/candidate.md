@@ -6,7 +6,8 @@ Use the Candidate component for summarizing key information about a political ca
 
 The Candidate component is a special kind of card. For all other card use cases, see the generic [Card]({{site.basedir}}/components/card). The following demo uses a [Grid]({{site.basedir}}/components/grid) as a list (`<ul>`) to display a list of cards.
 
-<div class="ds-scope">
+{% ds-example %}
+
   <div class="site-resizer">
     <ul class="ds-grid">
       <li class="ds-candidate">
@@ -44,7 +45,8 @@ The Candidate component is a special kind of card. For all other card use cases,
       </li>
     </ul>
   </div>
-</div>
+{% endds-example %}
+
 
 Each Candidate in the list of Candidates from the previous example uses the following markup. Do not place any more content than the (linked) candidate name and party affiliation for Candidates in a list.
 
@@ -84,8 +86,9 @@ Each Candidate in the list of Candidates from the previous example uses the foll
 
 ### Standalone Candidate
 
-<div class="ds-scope">
-  <div class="ds-candidate">
+{% ds-example %}
+
+<div class="ds-candidate">
     <div class="ds-candidate-body ds-stack-smaller">
       <h2 class="ds-candidate-name ds-h3">
         Candidate name
@@ -97,48 +100,4 @@ Each Candidate in the list of Candidates from the previous example uses the foll
       <img src="{{site.basedir}}/images/candidate_example.jpg" alt="">
     </div>
   </div>
-</div>
-
-## Dark theme
-
-Invoke the dark theme on any component by applying `class="ds-dark"` to a container element.
-
-<div class="ds-scope">
-  <div class="site-resizer ds-dark">
-    <ul class="ds-grid">
-      <li class="ds-candidate">
-        <div class="ds-candidate-body ds-stack-smallest">
-          <h3 class="ds-candidate-name ds-h5">
-            <a href="path/to/candidate">Michael Rosen</a>
-          </h3>
-          <div class="ds-h6">Labour</div>
-        </div>
-        <div class="ds-candidate-image">
-          <img src="{{site.basedir}}/images/candidate_example.jpg" alt="">
-        </div>
-      </li>
-      <li class="ds-candidate">
-        <div class="ds-candidate-body ds-stack-smallest">
-          <h3 class="ds-candidate-name ds-h5">
-            <a href="path/to/candidate">David Moreland</a>
-          </h3>
-          <div class="ds-h6">Independent</div>
-        </div>
-        <div class="ds-candidate-image">
-          <img src="{{site.basedir}}/images/candidate_example_2.jpg" alt="">
-        </div>
-      </li>
-      <li class="ds-candidate">
-        <div class="ds-candidate-body ds-stack-smallest">
-          <h3 class="ds-candidate-name ds-h5">
-            <a href="path/to/candidate">Giles Orpen-Smellie</a>
-          </h3>
-          <div class="ds-h6">Conservative & Unionist Party</div>
-        </div>
-        <div class="ds-candidate-image">
-          <img src="{{site.basedir}}/images/candidate_example_3.jpg" alt="">
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
+{% endds-example %}
