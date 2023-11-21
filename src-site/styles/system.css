@@ -136,6 +136,9 @@
   margin-top: 4.76837rem;
   background-color: #403F41; }
 
+.ds-scope .ds-footer form {
+  background-color: #403F41; }
+
 .ds-scope .ds-footer a {
   color: #fff; }
 
@@ -848,6 +851,9 @@
     border-bottom: 2px solid; }
   .ds-scope .ds-dark .ds-footer {
     background-color: #0D1117; }
+  .ds-scope .ds-dark .ds-footer form {
+    background-color: #0D1117;
+    border: none; }
   .ds-scope .ds-field-radio {
     display: flex;
     align-items: center;
