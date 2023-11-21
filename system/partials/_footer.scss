@@ -5,6 +5,10 @@
   background-color: $black;
 }
 
+%ds-footer form {
+  background-color: $black;
+}
+
 %ds-footer a {
   color: $white;
 }
@@ -35,8 +39,13 @@
 
   // Dark theme
   .ds-dark {
-      .ds-footer {
-        background-color: $darkBlack;
-      }
+    .ds-footer {
+      background-color: $darkBlack;
     }
+
+    .ds-footer form {
+      background-color: $darkBlack;
+      border:none;
+    }
+  }
 }

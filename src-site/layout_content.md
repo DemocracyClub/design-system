@@ -135,6 +135,15 @@
 </main>
 <footer class="ds-footer">
   <div class="ds-block-centered ds-text-centered ds-stack">
+    <form>
+      <div class="ds-field">
+        <label for="username">
+          Username
+          <small>Or enter your email address</small>
+        </label>
+        <input type="text" id="username">
+      </div>
+    </form>
     <div class="ds-cluster-center">
       <ul>
         <li>
