@@ -33,15 +33,15 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "cross-env": "^7.0.3",
-    "csso-cli": "^3.0.0",
-    "husky": "^5.0.9",
-    "node-sass": "^8.0.0",
+    "csso-cli": "^4.0.2",
+    "husky": "^8.0.3",
+    "node-sass": "^9.0.0",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.49.11",
+    "sass": "^1.69.5",
     "sass-export": "^2.1.2",
     "slugify": "^1.6.5"
   },
   "dependencies": {
-    "npm": "^8.6.0"
+    "npm": "^10.2.4"
   }
 }
