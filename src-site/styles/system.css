@@ -470,6 +470,9 @@
   .ds-scope a {
     color: #E6007C;
     text-decoration: underline; }
+  .ds-scope a * {
+    color: #E6007C;
+    text-decoration: underline; }
   .ds-scope ul, .ds-scope ol {
     font-family: Georgia, serif;
     font-weight: normal;

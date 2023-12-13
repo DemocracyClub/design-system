@@ -111,6 +111,10 @@
     text-decoration: underline;
   }
 
+  a * {
+    color: $pinkForWhite;
+    text-decoration: underline;
+  }
 
   ul, ol {
     @include fontBody;
