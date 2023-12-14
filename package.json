@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "The Democracy Club design system",
   "main": "index.js",
   "scripts": {
