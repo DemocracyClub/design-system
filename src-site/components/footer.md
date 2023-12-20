@@ -41,7 +41,7 @@ Aside from that, only `ds-copyright` is unique to this component. The content of
             <img src="{{site.basedir}}/images/logo_icon.svg" alt="Democracy Club" width='80'/>
             <span class="ds-text-left">democracy<br>club</span>
         </a>
-        <p>Copyright © 2021 Democracy Club</p>
+        <p>Copyright © 2023 Democracy Club</p>
         <p>Community Interest Company</p>
         <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
       </div>
@@ -67,7 +67,8 @@ The unique class names for this component are the containing `ds-footer` and `ds
         <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
         <span>democracy<br>club</span>
       </a>
-      <p>Copyright © 2021 Democracy Club</p>
+      <p>Copyright © 2024
+         Democracy Club</p>
       <p>Community Interest Company</p>
       <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
     </div>
