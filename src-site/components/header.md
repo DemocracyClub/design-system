@@ -46,6 +46,7 @@ Use the Header to brand your Democracy Club site and provide the main navigation
   <a class="ds-skip-link" href="#main">skip to content</a>
   <a class="ds-header-home" href="/">
     <img src="/path/to/logo.svg" alt="Democracy Club home" />
+    <span>democracy<br>club</span>
   </a>
   <nav>
     <ul>

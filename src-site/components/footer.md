@@ -37,8 +37,9 @@ Aside from that, only `ds-copyright` is unique to this component. The content of
         </ul>
       </div>
       <div class="ds-copyright">
-        <a href="https://democracyclub.org.uk/">
-          <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
+        <a class="ds-logo" href="https://democracyclub.org.uk/">
+            <img src="{{site.basedir}}/images/logo_icon.svg" alt="Democracy Club" width='80'/>
+            <span class="ds-text-left">democracy<br>club</span>
         </a>
         <p>Copyright © 2021 Democracy Club</p>
         <p>Community Interest Company</p>
@@ -64,6 +65,7 @@ The unique class names for this component are the containing `ds-footer` and `ds
     <div class="ds-copyright">
       <a href="https://democracyclub.org.uk/">
         <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
+        <span>democracy<br>club</span>
       </a>
       <p>Copyright © 2021 Democracy Club</p>
       <p>Community Interest Company</p>
