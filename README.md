@@ -44,3 +44,8 @@ After making changes to the design system:
 1. Bump the version number in package.json according to the semver system (https://semver.org/)
 2. Take that version number and, in the GitHub UI make a new release with that version and a description of the work.
 3. Update the requirement version in projects that use the package.
+
+Viewing and compiling edits: 
+
+`npm run build`
+`npm start`
