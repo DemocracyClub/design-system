@@ -7,21 +7,24 @@
     color: inherit;
   }
 
-  .ds-logo:not(:last-child):not(:only-child) {
-    margin-right: $s3;
-  }
 
   .ds-logo img {
     height: 4.5rem;
-    margin-right: $ss5;
+    margin-right: $ss3;
   }
 
   .ds-logo span {
     font-weight: 300;
     font-size: $s3;
     text-decoration: none;
+    text-align: left;
     color: $black;
   }
+
+  .ds-header .ds-logo span em {
+    color: $black;
+  }
+
 
   .ds-logo em {
     display: block;
@@ -29,5 +32,18 @@
     font-weight: normal;
     font-style: normal;
     margin-top: $ss3;
+    color: $black;
   }
+}
+
+.ds-dark .ds-header .ds-logo span {
+  color: $white;
+}
+
+.ds-dark .ds-header .ds-logo span em {
+  color: $white;
+}
+
+.ds-dark .ds-logo span em {
+  color: $white;
 }

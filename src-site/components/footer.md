@@ -63,7 +63,7 @@ The unique class names for this component are the containing `ds-footer` and `ds
       </ul>
     </div>
     <div class="ds-copyright">
-      <a href="https://democracyclub.org.uk/">
+      <a class="ds-logo" href="https://democracyclub.org.uk/">
         <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
         <span>democracy<br>club</span>
       </a>

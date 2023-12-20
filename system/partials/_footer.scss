@@ -3,6 +3,7 @@
   border-top: $ss4 solid $blueForWhite;
   margin-top: $s8;
   background-color: $black;
+  color: $white;
 }
 
 %ds-footer form {
@@ -13,10 +14,17 @@
   color: $white;
 }
 
-%ds-footer * {
+%ds-footer .ds-copyright p {
   color: $white;
 }
 
+%ds-footer .ds-logo img {
+  margin-right: 0;
+}
+
+%ds-footer .ds-logo span {
+  color: $white;
+}
 
 %ds-copyright {
   max-width: none;
@@ -27,11 +35,11 @@
   max-width: 100ch;
   margin: 0 !important;
 }
-
 %ds-copyright img {
   max-width: 15rem;
   margin-bottom: $ss4;
 }
+
 
 @mixin footer {
   .ds-footer { @extend %ds-footer; }
@@ -43,9 +51,17 @@
       background-color: $darkBlack;
     }
 
+    .ds-footer .ds-copyright {
+      color: $white;
+    }
+
     .ds-footer form {
       background-color: $darkBlack;
       border:none;
+    }
+
+    .ds-logo span {
+      color: $white;
     }
   }
 }

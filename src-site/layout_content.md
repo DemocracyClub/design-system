@@ -170,8 +170,9 @@
       </ul>
     </div>
     <div class="ds-copyright ds-text-centered">
-      <a href="https://democracyclub.org.uk/">
-        <img src="{{site.basedir}}/images/logo_white_text.svg" alt="Democracy Club Home" />
+      <a class="ds-logo" href="https://democracyclub.org.uk/">
+        <img src="{{site.basedir}}/images/logo_icon.svg" alt="Democracy Club Home" width='80'/>
+        <span>democracy<br>club</span>
       </a>
       <p>Copyright © 2024 Democracy Club</p>
       <p>Community Interest Company</p>
