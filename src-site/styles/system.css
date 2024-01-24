@@ -130,11 +130,21 @@
 .ds-scope .ds-card .ds-card-body {
   padding: 1.95312rem; }
 
+.ds-dark .ds-header .ds-logo span {
+  color: #fff; }
+
+.ds-dark .ds-header .ds-logo span em {
+  color: #fff; }
+
+.ds-dark .ds-logo span em {
+  color: #fff; }
+
 .ds-scope .ds-footer {
   padding: 4.76837rem 1.25rem;
   border-top: 0.5rem solid #007CAD;
   margin-top: 4.76837rem;
-  background-color: #403F41; }
+  background-color: #403F41;
+  color: #fff; }
 
 .ds-scope .ds-footer form {
   background-color: #403F41; }
@@ -142,7 +152,13 @@
 .ds-scope .ds-footer a {
   color: #fff; }
 
-.ds-scope .ds-footer * {
+.ds-scope .ds-footer .ds-copyright p {
+  color: #fff; }
+
+.ds-scope .ds-footer .ds-logo img {
+  margin-right: 0; }
+
+.ds-scope .ds-footer .ds-logo span {
   color: #fff; }
 
 .ds-scope .ds-copyright {
@@ -173,6 +189,12 @@
 
 .ds-scope .ds-dark .ds-select::after {
   border-top-color: #fff; }
+
+.ds-scope .ds-dark .ds-logo span {
+  font-weight: 300;
+  font-size: 1.5625rem;
+  text-decoration: none;
+  color: white; }
 
 .ds-scope .ds-dark [class*="ds-button"]:not(:active) {
   border-bottom-color: #000; }
@@ -518,6 +540,7 @@
   .ds-scope input[type="password"],
   .ds-scope input[type="email"],
   .ds-scope select {
+    color: #403F41;
     padding: 0.5rem;
     border: 2px solid;
     width: 100%;
@@ -775,23 +798,24 @@
     text-decoration: none;
     line-height: 1;
     color: inherit; }
-  .ds-scope .ds-logo:not(:last-child):not(:only-child) {
-    margin-right: 1.5625rem; }
   .ds-scope .ds-logo img {
     height: 4.5rem;
-    margin-right: 0.625rem; }
+    margin-right: 0.375rem; }
   .ds-scope .ds-logo span {
     font-weight: 300;
     font-size: 1.5625rem;
-    color: black;
-    text-decoration: none; 
-  }
+    text-decoration: none;
+    text-align: left;
+    color: #403F41; }
+  .ds-scope .ds-header .ds-logo span em {
+    color: #403F41; }
   .ds-scope .ds-logo em {
     display: block;
     font-size: 1.25rem;
     font-weight: normal;
     font-style: normal;
-    margin-top: 0.375rem; }
+    margin-top: 0.375rem;
+    color: #403F41; }
   .ds-scope .ds-header {
     display: flex;
     flex-wrap: wrap;
@@ -857,9 +881,13 @@
     border-bottom: 2px solid; }
   .ds-scope .ds-dark .ds-footer {
     background-color: #0D1117; }
+  .ds-scope .ds-dark .ds-footer .ds-copyright {
+    color: #fff; }
   .ds-scope .ds-dark .ds-footer form {
     background-color: #0D1117;
     border: none; }
+  .ds-scope .ds-dark .ds-logo span {
+    color: #fff; }
   .ds-scope .ds-field-radio {
     display: flex;
     align-items: center;
