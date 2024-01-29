@@ -22,6 +22,13 @@
   border-top-color: $white;
 }
 
+%ds-dark .ds-logo span {
+  font-weight: 300;
+  font-size: $s3;
+  text-decoration: none;
+  color: white;
+}
+
 %ds-dark [class*="ds-button"]:not(:active) {
   border-bottom-color: #000;
 }

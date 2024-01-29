@@ -103,27 +103,27 @@
     {
       "name": "$s4",
       "value": "#{pow($ratio, 3)}rem",
-      "compiledValue": "1.95312rem"
+      "compiledValue": "1.953125rem"
     },
     {
       "name": "$s5",
       "value": "#{pow($ratio, 4)}rem",
-      "compiledValue": "2.44141rem"
+      "compiledValue": "2.44140625rem"
     },
     {
       "name": "$s6",
       "value": "#{pow($ratio, 5)}rem",
-      "compiledValue": "3.05176rem"
+      "compiledValue": "3.0517578125rem"
     },
     {
       "name": "$s7",
       "value": "#{pow($ratio, 6)}rem",
-      "compiledValue": "3.8147rem"
+      "compiledValue": "3.8146972656rem"
     },
     {
       "name": "$s8",
       "value": "#{pow($ratio, 7)}rem",
-      "compiledValue": "4.76837rem"
+      "compiledValue": "4.768371582rem"
     },
     {
       "name": "$increment-small-scale",
