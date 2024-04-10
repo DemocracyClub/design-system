@@ -1,0 +1,26 @@
+[project]
+name = "dc_design_system"
+version = "2.6.6"
+description = "SCSS and images for the DC design system"
+readme = "README.md"
+authors = [{name = "Sym Roe"}, {name = "Heydon Pickering"}]
+
+dependencies = [
+	"pytest"
+	"lighthouse-python-plus"
+]
+
+[project.urls]
+Homepage = "https://github.com/DemocracyClub//design-syste"
+Changelog = "https://github.com/DemocracyClub//design-syste/releases"
+Issues = "https://github.com/DemocracyClub/design-system/issues"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 80
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-flakes"]
