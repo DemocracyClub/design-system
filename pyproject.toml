@@ -6,7 +6,6 @@ readme = "README.md"
 authors = [{name = "Sym Roe"}, {name = "Heydon Pickering"}]
 
 dependencies = [
-	"npm-run-all",
 	"pytest",
 	"lighthouse @ git+https://github.com/f02h/lighthouse-python.git#egg=lighthouse",
 ]
