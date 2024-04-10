@@ -9,7 +9,7 @@
     "cssMin": "csso src-site/styles/system.css --output src-site/styles/system.min.css",
     "watch:eleventy": "npm run exportSass && eleventy --serve",
     "build:eleventy": "cross-env DESTINATION=github eleventy --output=docs",
-    "reinstallNodeModules": "rm -rf node_modules && npm install",
+    "reinstallNodeModules": "rm -rf node_modules && npm install && npm install npm-run-all --save-dev",
     "exportSass": "sass-export system/partials/_variables.scss -o src-site/_data/sass.json --dependencies system/",
     "watch:sass": "node-sass --watch system/docs.scss src-site/styles/system.css",
     "build:sass": "node-sass system/docs.scss src-site/styles/system.css",
