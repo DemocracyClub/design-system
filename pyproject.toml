@@ -11,8 +11,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/DemocracyClub//design-system"
-Changelog = "https://github.com/DemocracyClub//design-syste/releases"
+Homepage = "https://github.com/DemocracyClub/design-system"
+Changelog = "https://github.com/DemocracyClub/design-system/releases"
 Issues = "https://github.com/DemocracyClub/design-system/issues"
 
 [build-system]
