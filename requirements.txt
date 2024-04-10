@@ -1,2 +1,2 @@
 pytest
-lighthouse-python-plus
+git+https://github.com/f02h/lighthouse-python.git#egg=lighthouse
