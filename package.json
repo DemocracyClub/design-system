@@ -9,12 +9,12 @@
     "cssMin": "csso src-site/styles/system.css --output src-site/styles/system.min.css",
     "watch:eleventy": "npm run exportSass && eleventy --serve",
     "build:eleventy": "cross-env DESTINATION=github eleventy --output=docs",
-    "reinstallNodeModules": "rm -rf node_modules && npm install && npm install npm-run-all --save-dev",
+    "reinstallNodeModules": "rm -rf node_modules && npm install && npx npm-run-all --save-dev",
     "exportSass": "sass-export system/partials/_variables.scss -o src-site/_data/sass.json --dependencies system/",
     "watch:sass": "node-sass --watch system/docs.scss src-site/styles/system.css",
     "build:sass": "node-sass system/docs.scss src-site/styles/system.css",
-    "start": "npm run copyAssets && npm rebuild node-sass && npm-run-all build:sass --parallel watch:*",
-    "build": "npm run copyAssets && npm run exportSass && npm-run-all build:*"
+    "start": "npm run copyAssets && npm rebuild node-sass && npx npm-run-all build:sass --parallel watch:*",
+    "build": "npm run copyAssets && npm run exportSass && npx npm-run-all build:*"
   },
   "husky": {
     "hooks": {
