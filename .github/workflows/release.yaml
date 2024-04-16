@@ -1,6 +1,14 @@
 name: Publish Python Package
 
 on:
+  workflow_run:
+    workflows: ["Run Tests"]
+    types:
+      - completed
+    branches:
+      - master
+  if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
   release:
     types: [created]
 
