@@ -1,6 +1,6 @@
 [project]
 name = "dc_design_system"
-version = "0.4.13"
+version = "0.4.14"
 description = "SCSS and images for the DC design system"
 readme = "README.md"
 authors = [{name = "Sym Roe"}, {name = "Heydon Pickering"}]
