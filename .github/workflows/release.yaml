@@ -1,8 +1,16 @@
 name: Publish Python Package
 
 on:
+  workflow_run:
+    workflows: ["Run Tests"]
+    types:
+      - completed
+    branches:
+      - master
+  if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
   release:
-    types: [created, edited]
+    types: [created]
 
 jobs:
   test:
@@ -22,9 +30,6 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -e '.[test]'
-    - name: Run tests
-      run: |
-        pytest
   deploy:
     runs-on: ubuntu-latest
     needs: [test]

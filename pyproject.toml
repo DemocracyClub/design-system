@@ -5,11 +5,6 @@ description = "SCSS and images for the DC design system"
 readme = "README.md"
 authors = [{name = "Sym Roe"}, {name = "Heydon Pickering"}]
 
-dependencies = [
-	"pytest",
-	"lighthouse @ git+https://github.com/f02h/lighthouse-python.git#egg=lighthouse",
-]
-
 [project.urls]
 Homepage = "https://github.com/DemocracyClub/design-system"
 Changelog = "https://github.com/DemocracyClub/design-system/releases"
@@ -22,5 +17,3 @@ build-backend = "setuptools.build_meta"
 [tool.black]
 line-length = 80
 
-[project.optional-dependencies]
-test = ["pytest", "pytest-flakes"]
