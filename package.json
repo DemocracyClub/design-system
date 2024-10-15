@@ -41,5 +41,8 @@
     "sass": "^1.75.0",
     "sass-export": "^2.1.2",
     "slugify": "^1.6.5"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
