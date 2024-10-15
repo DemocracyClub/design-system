@@ -119,7 +119,7 @@ You will then be able to access via localhost in your browser.
 The demo page is at `/layout-demo/index.html`.
 
 If you want to run the Lighthouse tests locally, you'll also need to make sure the Lighthouse node package is available globally:
-`npm install -g lighthouse@11.7.1`
+`npm install -g lighthouse@^12`
 
 ## Next steps
 
