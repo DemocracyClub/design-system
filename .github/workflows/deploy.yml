@@ -27,7 +27,7 @@ jobs:
           node-version: 18
 
       - name: NPM install
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
