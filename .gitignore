@@ -111,3 +111,7 @@ _site
 *.egg-info
 
 docs
+
+# Python cache files
+__pycache__/
+*.py[cod]
