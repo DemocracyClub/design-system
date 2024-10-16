@@ -42,7 +42,7 @@
     "sass-export": "^2.1.2",
     "slugify": "^1.6.5"
   },
-  "dependencies": {
-    "npm": "^10.5.2"
+  "engines": {
+    "node": ">=18"
   }
 }

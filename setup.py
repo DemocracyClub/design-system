@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-import os
 import json
 
 from setuptools import setup
 
+
 def get_version():
     package_json = json.load(open("package.json"))
     return package_json["version"]
+
 
 setup(
     name="dc_design_system",
@@ -41,7 +42,7 @@ setup(
         ],
         "dc_design_system": [
             "*.py",
-        ]
+        ],
     },
     setup_requires=["wheel"],
 )
