@@ -15,11 +15,11 @@
 
 .ds-scope .ds-stack-larger > *,
 .ds-scope .ds-stack > *,
+.ds-scope .ds-footer > *,
 .ds-scope .ds-card .ds-card-body > *,
 .ds-scope hgroup > *,
 .ds-scope .ds-stack-smaller > *,
 .ds-scope .ds-filter > *,
-.ds-scope .ds-copyright > *,
 .ds-scope .ds-stack-smallest > *,
 .ds-scope .ds-advanced-filters > * {
   margin: 0; }
@@ -27,13 +27,13 @@
 .ds-scope .ds-stack-larger > * + * {
   margin-top: 4.76837rem; }
 
-.ds-scope .ds-stack > * + * {
+.ds-scope .ds-stack > * + *, .ds-scope .ds-footer > * + * {
   margin-top: 3.05176rem; }
 
 .ds-scope .ds-card .ds-card-body > * + *, .ds-scope hgroup > * + *, .ds-scope .ds-stack-smaller > * + *, .ds-scope .ds-filter > * + * {
   margin-top: 1.5625rem; }
 
-.ds-scope .ds-copyright > * + *, .ds-scope .ds-stack-smallest > * + *, .ds-scope .ds-advanced-filters > * + * {
+.ds-scope .ds-stack-smallest > * + *, .ds-scope .ds-advanced-filters > * + * {
   margin-top: 0.25rem; }
 
 .ds-scope .ds-cluster > *, .ds-scope .ds-language > *, .ds-scope .ds-header nav a:not(.ds-cta) > *, .ds-scope .ds-subnav > *, .ds-scope .ds-filter-cluster > *,
@@ -140,7 +140,7 @@
   color: #fff; }
 
 .ds-scope .ds-footer {
-  padding: 4.76837rem 1.25rem;
+  padding: 1.95312rem 1.25rem;
   border-top: 0.5rem solid #007CAD;
   margin-top: 4.76837rem;
   background-color: #403F41;
@@ -149,28 +149,24 @@
 .ds-scope .ds-footer form {
   background-color: #403F41; }
 
-.ds-scope .ds-footer a {
-  color: #fff; }
+.ds-scope .ds-footer * {
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch; }
 
-.ds-scope .ds-footer .ds-copyright p {
-  color: #fff; }
+.ds-scope .ds-footer-links > * {
+  --gridCellMin: 20ch; }
 
-.ds-scope .ds-footer .ds-logo img {
-  margin-right: 0.375rem; }
-
-.ds-scope .ds-footer .ds-logo span {
-  color: #fff; }
+.ds-scope .ds-footer-links nav ul {
+  margin-top: 1.25rem;
+  list-style: none;
+  padding: 0; }
 
 .ds-scope .ds-copyright {
-  max-width: none; }
-
-.ds-scope .ds-copyright p {
-  max-width: 100ch;
-  margin: 0 !important; }
-
-.ds-scope .ds-copyright img {
-  max-width: 15rem;
-  margin-bottom: 0.5rem; }
+  padding: 1.95312rem;
+  background-color: #403F41;
+  max-width: 100%; }
 
 .ds-scope .ds-dark {
   color: #fff;
@@ -220,7 +216,7 @@
 .ds-scope .ds-text-left {
   text-align: left; }
 
-.ds-scope .ds-text-centered {
+.ds-scope .ds-text-centered, .ds-scope .ds-footer, .ds-scope .ds-footer-links {
   text-align: center; }
 
 .ds-scope .ds-text-right {
@@ -237,7 +233,7 @@
 .ds-scope .ds-block-centered-narrow {
   max-width: 50ch; }
 
-.ds-scope .ds-width-full, .ds-scope .ds-switcher > * {
+.ds-scope .ds-width-full, .ds-scope .ds-switcher > *, .ds-scope .ds-footer-links > * {
   display: block;
   max-width: none;
   width: auto; }
@@ -477,7 +473,7 @@
   .ds-scope h4, .ds-scope .ds-h4, .ds-scope .ds-showcase strong {
     font-size: 1.95312rem;
     font-size: clamp(1.25rem, 4vw, 1.95312rem); }
-  .ds-scope h5, .ds-scope .ds-h5 {
+  .ds-scope h5, .ds-scope .ds-h5, .ds-scope .ds-footer-links h2 {
     font-size: 1.5625rem;
     font-size: clamp(1rem, 3vw, 1.5625rem); }
   .ds-scope h6, .ds-scope .ds-h6 {
@@ -563,7 +559,7 @@
   .ds-scope .ds-dark .ds-field-error {
     color: #FF6347;
     font-size: 1em; }
-  .ds-scope .ds-stack > :is(h1, h2, h3, h4, h5, hgroup) + *:not(article) {
+  .ds-scope .ds-stack > :is(h1, h2, h3, h4, h5, hgroup) + *:not(article), .ds-scope .ds-footer > :is(h1, h2, h3, h4, h5, hgroup) + *:not(article) {
     margin-top: 1rem; }
   .ds-scope dl.ds-descriptions > div {
     display: flex;
@@ -882,12 +878,11 @@
   .ds-scope .ds-dark .ds-footer {
     background-color: #0D1117; }
   .ds-scope .ds-dark .ds-footer .ds-copyright {
-    color: #fff; }
+    color: #fff;
+    background-color: #0D1117; }
   .ds-scope .ds-dark .ds-footer form {
     background-color: #0D1117;
     border: none; }
-  .ds-scope .ds-dark .ds-logo span {
-    color: #fff; }
   .ds-scope .ds-field-radio {
     display: flex;
     align-items: center;
@@ -1136,13 +1131,13 @@
     box-sizing: border-box; }
   .ds-scope .ds-date .ds-field:last-child input {
     max-width: 6em; }
-  .ds-scope .ds-switcher {
+  .ds-scope .ds-switcher, .ds-scope .ds-footer-links {
     --gridGap: 1.25rem;
     --gridCellMin: 30ch;
     display: flex;
     flex-wrap: wrap;
     gap: var(--gridGap); }
-  .ds-scope .ds-switcher > * {
+  .ds-scope .ds-switcher > *, .ds-scope .ds-footer-links > * {
     flex-grow: 1;
     flex-basis: var(--gridCellMin); }
   .ds-scope .ds-showcase li {
