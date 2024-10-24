@@ -144,39 +144,24 @@
         <input type="text" id="username">
       </div>
     </form>
-    <div class="ds-cluster-center">
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a aria-current="true" href=".path/to/about">About</a>
-        </li>
-        <li>
-          <a href="/path/to/">Our work</a>
-        </li>
-        <li>
-          <a href="#">Quests</a>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="#">Donate</a>
-        </li>
-      </ul>
+    <div class="ds-footer-links">
+      <nav>
+        <h2 class="ds-h5">Contact Democracy Club</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a aria-current="true" href="/path/to/about">About</a></li>
+          <li><a href="/path/to/">Our work</a></li>
+          <li><a href="#">Quests</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Donate</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="ds-copyright ds-text-centered">
-      <a class="ds-logo" href="https://democracyclub.org.uk/">
-        <img src="{{site.basedir}}/images/logo_icon.svg" alt="Democracy Club Home" width='80'/>
-        <span>democracy<br>club</span>
-      </a>
-      <p>Copyright © 2024 Democracy Club</p>
-      <p>Community Interest Company</p>
-      <p>Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
+    <div class="ds-copyright">
+      <p>Democracy Club is a UK-based Community Interest Company that builds digital infrastructure for a 21st century democracy.</p>
+      <p>Copyright © 2024 Democracy Club Community Interest Company No: <a href="https://beta.companieshouse.gov.uk/company/09461226">09461226</a></p>
     </div>
   </div>
 </footer>
+```

@@ -1,49 +1,61 @@
 %ds-footer {
-  padding: $s8 $s2;
+  @extend .ds-stack;
+  padding: $s4 $s2;
   border-top: $ss4 solid $blueForWhite;
   margin-top: $s8;
   background-color: $black;
   color: $white;
+
 }
 
 %ds-footer form {
   background-color: $black;
 }
 
-%ds-footer a {
+%ds-footer * {
   color: $white;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
 }
 
-%ds-footer .ds-copyright p {
-  color: $white;
+%ds-footer {
+    @extend .ds-text-centered;
 }
 
-%ds-footer .ds-logo img {
-  margin-right: $ss3;
-}
+%ds-footer-links {
 
-%ds-footer .ds-logo span {
-  color: $white;
+  @extend .ds-switcher;
+  @extend .ds-text-centered;
+
+  &> * {
+    --gridCellMin: 20ch;
+  }
+
+  h2 {
+    @extend .ds-h5;
+  }
+
+  nav {
+    ul {
+      margin-top: $s2;
+      list-style: none;
+      padding:0;
+    }
+
+  }
 }
 
 %ds-copyright {
-  max-width: none;
-  @extend %ds-stack-smallest;
+  padding: $s4;
+  background-color: $black;
+  max-width:100%;
 }
-
-%ds-copyright p {
-  max-width: 100ch;
-  margin: 0 !important;
-}
-%ds-copyright img {
-  max-width: 15rem;
-  margin-bottom: $ss4;
-}
-
 
 @mixin footer {
   .ds-footer { @extend %ds-footer; }
-  .ds-copyright { @extend %ds-copyright }
+  .ds-copyright { @extend %ds-copyright; }
+  .ds-footer-links { @extend %ds-footer-links; }
 
   // Dark theme
   .ds-dark {
@@ -53,15 +65,12 @@
 
     .ds-footer .ds-copyright {
       color: $white;
+      background-color: $darkBlack;
     }
 
     .ds-footer form {
       background-color: $darkBlack;
       border:none;
-    }
-
-    .ds-logo span {
-      color: $white;
     }
   }
 }
