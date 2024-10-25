@@ -1,6 +1,6 @@
 [project]
 name = "dc_design_system"
-version = "0.5.0"
+version = "0.6.0"
 description = "SCSS and images for the DC design system"
 readme = "README.md"
 authors = [{name = "Sym Roe"}, {name = "Heydon Pickering"}]
@@ -16,4 +16,3 @@ build-backend = "setuptools.build_meta"
 
 [tool.black]
 line-length = 80
-
