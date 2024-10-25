@@ -1,5 +1,5 @@
 %ds-footer {
-  @extend .ds-stack;
+  @extend .ds-stack-smaller;
   padding: $s4 $s2;
   border-top: $ss4 solid $blueForWhite;
   margin-top: $s8;
@@ -37,8 +37,12 @@
   }
 
   nav {
+
+    margin-top: $s2;
+
+
+
     ul {
-      margin-top: $s2;
       list-style: none;
       padding:0;
     }
