@@ -21,16 +21,13 @@ to your needs. In the following example, a list of “quick links” is provided
           <h2>ProjectName</h2>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a aria-current="true" href="/path/to/about">About</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="/path/to/">Our work</a>
-            </li>
-            <li>
-              <a href="#">Quests</a>
+              <a href="#">Our work</a>
             </li>
             <li>
               <a href="#">Blog</a>
@@ -47,13 +44,13 @@ to your needs. In the following example, a list of “quick links” is provided
           <h2>About</h2>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a aria-current="true" href="/path/to/about">About</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="/path/to/">Our work</a>
+              <a href="#">Our work</a>
             </li>
             <li>
               <a href="#">Quests</a>
@@ -73,25 +70,13 @@ to your needs. In the following example, a list of “quick links” is provided
           <h2>Contact</h2>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#">Email</a>
             </li>
             <li>
-              <a aria-current="true" href="/path/to/about">About</a>
+              <a href="#">Mastodon</a>
             </li>
             <li>
-              <a href="/path/to/">Our work</a>
-            </li>
-            <li>
-              <a href="#">Quests</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Donate</a>
+              <a href="#">LinkedIn</a>
             </li>
           </ul>
         </nav>
@@ -116,16 +101,13 @@ to your needs. In the following example, a list of “quick links” is provided
           <h2>ProjectName</h2>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a aria-current="true" href="/path/to/about">About</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="/path/to/">Our work</a>
-            </li>
-            <li>
-              <a href="#">Quests</a>
+              <a href="#">Our work</a>
             </li>
             <li>
               <a href="#">Blog</a>
@@ -142,13 +124,13 @@ to your needs. In the following example, a list of “quick links” is provided
           <h2>About</h2>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a aria-current="true" href="/path/to/about">About</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="/path/to/">Our work</a>
+              <a href="#">Our work</a>
             </li>
             <li>
               <a href="#">Quests</a>
@@ -168,25 +150,13 @@ to your needs. In the following example, a list of “quick links” is provided
           <h2>Contact</h2>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#">Email</a>
             </li>
             <li>
-              <a aria-current="true" href="/path/to/about">About</a>
+              <a href="#">Mastodon</a>
             </li>
             <li>
-              <a href="/path/to/">Our work</a>
-            </li>
-            <li>
-              <a href="#">Quests</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Donate</a>
+              <a href="#">LinkedIn</a>
             </li>
           </ul>
         </nav>
