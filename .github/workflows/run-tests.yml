@@ -23,7 +23,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm install -g lighthouse@11.7.1
+      - run: npm install -g lighthouse@^12
 
       - name: Install dependencies
         run: |
