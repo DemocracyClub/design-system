@@ -49,3 +49,22 @@ Viewing and compiling edits:
 
 `npm run build`
 `npm start`
+
+# Hosted static assets
+
+This project is designed to be included in projects and for their existing 
+pipelines to deal with serving assets.
+
+There are some cases (e.g 500 pages) when we want to render a very simple 
+page that still uses the design system.
+
+Because the asset pipeline may well be the thing that causes a 500, we don't 
+want to rely on a project's pipeline to render the 500 page.
+
+To that end, we make a serve a small version of the design system at
+`http://dc-shared-frontend-assets.s3-website.eu-west-2.amazonaws.com/styles.css`.
+
+That bucket is manually maintained at the moment, and the CSS file is the 
+output of `npm run build:sass-core`. To update this file, run that command 
+and manually upload it to the S3 bucket in the DC shared production AWS 
+account. 

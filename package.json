@@ -13,6 +13,7 @@
     "exportSass": "sass-export system/partials/_variables.scss -o src-site/_data/sass.json --dependencies system/",
     "watch:sass": "node-sass --watch system/docs.scss src-site/styles/system.css",
     "build:sass": "node-sass system/docs.scss src-site/styles/system.css",
+    "build:sass-core": "node-sass --output-style compressed system/system-core.scss src-site/styles/system-core.css",
     "start": "npm run copyAssets && npm rebuild node-sass && npx npm-run-all build:sass --parallel watch:*",
     "build": "npm run copyAssets && npm run exportSass && npx npm-run-all build:*"
   },

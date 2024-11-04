@@ -1,0 +1,36 @@
+// This is a 'core' slimmed down version of the design system, used for very basic layout only.
+
+
+@import 'partials/_fonts.scss';
+@import 'partials/_variables.scss';
+@import 'partials/_type.scss';
+@import 'partials/_stack.scss';
+@import 'partials/_language.scss';
+@import 'partials/_header.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_dark.scss';
+@import 'partials/_page.scss';
+@import 'partials/_utilities.scss';
+@import 'partials/_switcher.scss';
+
+:root {
+    font-size: clamp(#{$s1}, 2vw, #{$s2});
+    @include fontMain;
+  }
+
+  :root *,
+  :root *::before,
+  :root *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  @include type;
+  @include switcher;
+  @include stack;
+  @include dark;
+  @include page;
+  @include utilities;
