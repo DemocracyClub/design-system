@@ -102,8 +102,6 @@
   h1, h2 {
     font-weight: 300;
     letter-spacing: -0.05em;
-;
-
   }
 
   a {
@@ -114,6 +112,11 @@
   a * {
     color: $pinkForWhite;
     text-decoration: underline;
+  }
+
+  a[role="button"],
+  a[role="button"] * {
+    text-decoration: none;
   }
 
   ul, ol {

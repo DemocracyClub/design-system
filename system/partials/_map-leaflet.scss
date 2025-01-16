@@ -1,0 +1,16 @@
+@mixin map-leaflet {
+    .ds-map-leaflet {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        max-width: 1000px;
+    }
+
+    .ds-dark {
+        .ds-map-leaflet {
+            .leaflet-control,
+            .leaflet-control * {
+                background-color: $black;
+            }
+        }
+    }
+}

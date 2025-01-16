@@ -29,6 +29,7 @@
 @import 'partials/_dark.scss';
 @import 'partials/_page.scss';
 @import 'partials/_party.scss';
+@import 'partials/_map-leaflet.scss';
 @import 'partials/_utilities.scss';
 @import 'partials/_date-picker.scss';
 @import 'partials/_switcher.scss';
@@ -66,6 +67,7 @@ $scope: true;
   @include status;
   @include codeblock;
   @include party;
+  @include map-leaflet;
   @include date-picker;
   @include switcher;
   @include showcase;
