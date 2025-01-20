@@ -2,6 +2,7 @@
 // Do not delete these
 // You can configure which are included
 // within the 'optional-styles' mixin below
+@import 'partials/_switcher.scss';
 @import 'partials/_fonts.scss';
 @import 'partials/_variables.scss';
 @import 'partials/_type.scss';
@@ -42,6 +43,7 @@ $scope: false;
 // Comment out the component styles
 // you don’t need
 @mixin optional-styles {
+  @include switcher;
   @include description-lists;
   @include button;
   @include cta;
