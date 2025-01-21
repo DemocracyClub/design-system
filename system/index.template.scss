@@ -2,6 +2,7 @@
 // Do not delete these
 // You can configure which are included
 // within the 'optional-styles' mixin below
+@import 'partials/_switcher.scss';
 @import 'partials/_fonts.scss';
 @import 'partials/_variables.scss';
 @import 'partials/_type.scss';
@@ -31,6 +32,7 @@
 @import 'partials/_dark.scss';
 @import 'partials/_page.scss';
 @import 'partials/_party.scss';
+@import 'partials/_map-leaflet.scss';
 @import 'partials/_utilities.scss';
 
 // Whether to scope basic styles to the .ds-scope class
@@ -41,6 +43,7 @@ $scope: false;
 // Comment out the component styles
 // you don’t need
 @mixin optional-styles {
+  @include switcher;
   @include description-lists;
   @include button;
   @include cta;
@@ -64,6 +67,7 @@ $scope: false;
   @include status;
   @include codeblock;
   @include party;
+  @include map-leaflet;
 }
 
 @if $scope {

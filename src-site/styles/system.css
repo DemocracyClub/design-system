@@ -492,6 +492,9 @@
   .ds-scope a * {
     color: #E6007C;
     text-decoration: underline; }
+  .ds-scope a[role="button"],
+  .ds-scope a[role="button"] * {
+    text-decoration: none; }
   .ds-scope ul, .ds-scope ol {
     font-family: Georgia, serif;
     font-weight: normal;
@@ -1122,6 +1125,13 @@
     min-width: min(20rem, 100%); }
   .ds-scope .ds-dark .ds-party-image {
     background-color: transparent; }
+  .ds-scope .ds-map-leaflet {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 1000px; }
+  .ds-scope .ds-dark .ds-map-leaflet .leaflet-control,
+  .ds-scope .ds-dark .ds-map-leaflet .leaflet-control * {
+    background-color: #403F41; }
   .ds-scope .ds-date .ds-field input {
     margin: 10px 15px 5px 0;
     border: 2px solid #403F41;
