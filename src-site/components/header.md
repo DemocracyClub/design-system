@@ -4,6 +4,8 @@ title: Header
 
 Use the Header to brand your Democracy Club site and provide the main navigation. It includes a logo which links to [https://democracyclub.org.uk/](https://democracyclub.org.uk/) and a set of main navigation links for the local site. The “Home” link should link to the local site’s homepage, not [https://democracyclub.org.uk/](https://democracyclub.org.uk/) (unless the site in question _is_ democracyclub.org.uk).
 
+Headers should be wrapped in a `<div data-nosnippet>` to stop google from using the content in [snippets](https://developers.google.com/search/docs/appearance/snippet).
+
 {% ds-example %}
 <div class="site-resizer">
   <header class="ds-header">
@@ -42,38 +44,40 @@ Use the Header to brand your Democracy Club site and provide the main navigation
 
 
 ```html
-<header class="ds-header">
-  <a class="ds-skip-link" href="#main">skip to content</a>
-  <a class="ds-logo" href="/">
-    <img src="/path/to/logo.svg" alt="Democracy Club home" />
-    <span>democracy<br>club</span>
-  </a>
-  <nav>
-    <ul>
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a aria-current="true" href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Our work</a>
-      </li>
-      <li>
-        <a href="#">Quests</a>
-      </li>
-      <li>
-        <a href="#">Blog</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-      <li>
-        <a href="#">Donate</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<div data-nosnippet>
+  <header class="ds-header">
+    <a class="ds-skip-link" href="#main">skip to content</a>
+    <a class="ds-logo" href="/">
+      <img src="/path/to/logo.svg" alt="Democracy Club home" />
+      <span>democracy<br>club</span>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a aria-current="true" href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Our work</a>
+        </li>
+        <li>
+          <a href="#">Quests</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">Donate</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
 ```
 
 {% note 'Current page indication' %}
