@@ -61,6 +61,7 @@
       <li class="ds-status-message">Everything is okay</li>
     </ul>
   </aside>
+  <h2>A heading</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur iusto officia necessitatibus distinctio nemo perspiciatis placeat illo facilis enim soluta et accusamus sunt ipsa fugit earum, voluptas assumenda aspernatur.</p>
   <dl class="ds-descriptions">
     <div>
@@ -69,9 +70,7 @@
     </div>
     <div>
       <dt>Homepage</dt>
-      <div>
         <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
-      </div>
     </div>
     <div>
       <dt>Instagram</dt>

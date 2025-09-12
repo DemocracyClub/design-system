@@ -1,3 +1,4 @@
 pytest
-git+https://github.com/f02h/lighthouse-python.git#egg=lighthouse
 ruff==0.6.9
+pytest-playwright==0.7.1
+pytest-subtests==0.14.2

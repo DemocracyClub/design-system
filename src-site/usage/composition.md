@@ -76,9 +76,7 @@ By combining [Stacks]({{site.basedir}}/components/stack), [Grids]({{site.basedir
         </div>
         <div>
           <dt>Homepage</dt>
-          <div>
-            <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
-          </div>
+          <dd><a href="https://shaunbailey.uk/">https://shaunbailey.uk</a></dd>
         </div>
         <div>
           <dt>Instagram</dt>
