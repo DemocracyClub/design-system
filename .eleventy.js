@@ -44,14 +44,14 @@ module.exports = function (eleventyConfig) {
 <div class="site-stack">
 <h2>Light theme</h2>
 <div class="ds-scope">
-<div  style="padding: 1em">
+<div class="ds-example-light" style="padding: 1em">
 ${content}
 </div>
 </div>
 <h2>Dark theme</h2>
 <small>Invoke the dark theme on any component by applying <code>class="ds-dark"</code> to a container element.</small>
 <div class="ds-scope">
-<div class="ds-dark" style="padding: 1em">
+<div class="ds-dark ds-example-dark" style="padding: 1em">
 ${dark_content}
 </div>
 </div>
