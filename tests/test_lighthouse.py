@@ -1,31 +1,12 @@
 import json
-from random import randrange
 from urllib.parse import urljoin
 
 import pytest
-import time
 import os
-import signal
 import subprocess
 
-
-@pytest.fixture(scope="session", autouse=True)
-def local_server():
-    port = randrange(8010, 8100)
-    npm_runner = subprocess.Popen(
-        f"npm run watch:eleventy -- --port={port}",
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        shell=True,
-        preexec_fn=os.setsid,
-    )
-    time.sleep(2)
-    assert not npm_runner.poll(), npm_runner.stdout.read().decode("utf-8")
-    yield f"http://localhost:{port}/"
-    os.killpg(os.getpgid(npm_runner.pid), signal.SIGTERM)
-
-
 paths_to_test = ["/layout-demo/index.html", "/usage/composition/index.html"]
+
 
 @pytest.mark.parametrize(
     "path",

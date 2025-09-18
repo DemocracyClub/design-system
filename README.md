@@ -68,3 +68,27 @@ That bucket is manually maintained at the moment, and the CSS file is the
 output of `npm run build:sass-core`. To update this file, run that command 
 and manually upload it to the S3 bucket in the DC shared production AWS 
 account. 
+
+# Testing
+
+This project uses `lighthouse` for some basic automated accessibility testing, 
+and `playwright` for creating visual diffs.
+
+In order to ensure re-producable visual tests, we run test inside a Docker 
+container. Docker needs to be installed before running tests. 
+
+To run the tests, run `./scripts/run-tests.sh`.
+
+This will set up a new Docker container and run tests inside it.
+
+## Generating a new baseline
+
+If you make a change to the project that changes the visual aspects of a 
+component, you will need to generate a new baseline set of images. 
+
+To do this, run `./scripts/write-image-baseline.sh`. This will write 
+images to `tests/screenshots/baseline`. All future tests will be compared to 
+this baseline. 
+
+Baseline images should be checked into git. This makes it easier to spot 
+changes in pull requests etc.

@@ -115,3 +115,8 @@ docs
 # Python cache files
 __pycache__/
 *.py[cod]
+
+
+# Test images
+tests/screenshots/test/
+tests/screenshots/diff/
