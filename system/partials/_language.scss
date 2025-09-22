@@ -1,5 +1,5 @@
 @mixin language {
-  .ds-language {
+  .ds-language, .ds-language > form {
     @extend %ds-cluster;
     @extend %ds-cluster-right;
     padding: $ss5;
@@ -8,7 +8,9 @@
 
   }
 
-
+  .ds-language > form button, .ds-language > form li {
+    @extend %link-button;
+  }
 
   .ds-language * {
     color: white;
@@ -22,8 +24,10 @@
 
   // Dark theme
   .ds-dark  {
-    .ds-language {
+    .ds-language, .ds-language > form {
       background-color: $darkBlack;
+      border:none;
     }
+
   }
 }

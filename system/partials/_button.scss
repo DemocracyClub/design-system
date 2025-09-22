@@ -31,3 +31,27 @@
   }
 }
 
+
+/*
+USE WITH CARE.
+
+"links go somewhere, buttons do something" should remain true,
+unless there is a very good reason to break this.
+
+We can use this when it's very obvious what will happen if it's
+pressed, and an `a` element can't be used.
+
+For example Django uses HTTP POST for 'log out' to avoid automated
+(e.g pre-fetch) GET requests from logging a user out. A link is
+reasonable from a user's point of view, but we use a button for
+technical reasons.
+
+This isn't exposed as a component, to avoid ad-hoc use. It is used by higher order
+components only.
+*/
+%link-button {
+  border: 0;
+  background: none;
+  font-family: $familyMain;
+  cursor: pointer;
+}
