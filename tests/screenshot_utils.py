@@ -177,6 +177,7 @@ def iterate_matrix(playwright, elements, baseline=False):
                         )
                     """
                 )
+                page.wait_for_timeout(30)
                 filename = get_screenshot_filename(viewport_name, browser_name, element)
 
                 el = page.locator(f".ds-example-{element.theme}").nth(element.selector)
