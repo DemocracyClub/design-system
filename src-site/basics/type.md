@@ -3,7 +3,7 @@ title: Type
 ---
 
 ## Headings
-
+{% ds-example %}
 <table class="site-table">
   <tr>
     <th>Markup</th>
@@ -70,6 +70,8 @@ title: Type
     </td>
   </tr>
 </table>
+{% endds-example %}
+
 
 Classes in the form `.ds-[heading level]` (e.g. `.ds-h2`) are provided to match heading font sizes where the use of a semantic heading is not appropriate. Headings should only be used to introduce sections of content.
 
