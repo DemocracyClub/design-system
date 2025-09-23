@@ -82,10 +82,3 @@ tag and use `buttons` for each language:
   </form>
 </aside>
 ```
-
-## Behavior
-
-It is recommended the language component is removed from the top of the page
-once a language has been selected, to reduce clutter. This should be persisted
-across pages using `localStorage` or similar. The language options should be
-repreated in the footer and persist so they can be accessed at all times.
