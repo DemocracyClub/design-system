@@ -17,6 +17,7 @@
 @import 'partials/_table.scss';
 @import 'partials/_language.scss';
 @import 'partials/_logo.scss';
+@import 'partials/_logout.scss';
 @import 'partials/_header.scss';
 @import 'partials/_subnav.scss';
 @import 'partials/_footer.scss';
@@ -57,6 +58,7 @@ $scope: true;
   @include table;
   @include language;
   @include logo;
+  @include logout;
   @include header;
   @include subnav;
   @include footer;
@@ -115,5 +117,3 @@ $scope: true;
   @include page;
   @include utilities;
 }
-
-
