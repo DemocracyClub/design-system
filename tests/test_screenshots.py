@@ -1,11 +1,9 @@
 import shutil
 from pathlib import Path
 
-from screenshot_utils import generate_screenshots, get_screenshot_root
-
-
 import numpy as np
 from PIL import Image, ImageChops
+from screenshot_utils import generate_screenshots, get_screenshot_root
 
 
 def visual_diff(
@@ -78,8 +76,14 @@ def visual_diff(
 def test_live_images_against_baseline(local_server, subtests, playwright):
     diff_root = get_screenshot_root("diff")
     test_root = get_screenshot_root("test")
-    shutil.rmtree(test_root)
-    shutil.rmtree(diff_root)
+
+    # We can't use shutil.rmtree in Docker because we're mounting the directories with tmpfs.
+    for dir in (diff_root, test_root):
+        for item in test_root.iterdir():
+            if item.is_dir():
+                shutil.rmtree(item)
+            else:
+                item.unlink()
 
     for filename in generate_screenshots(
         local_server, baseline=False, playwright_instance=playwright

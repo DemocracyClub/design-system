@@ -130,7 +130,7 @@ components only.
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 
 .ds-scope .ds-card .ds-card-link::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;

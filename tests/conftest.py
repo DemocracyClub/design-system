@@ -11,13 +11,7 @@ import pytest
 @contextmanager
 def run_local_server():
     port = randrange(8010, 8100)
-    subprocess.Popen(
-        "npm run build",
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        shell=True,
-        preexec_fn=os.setsid,
-    )
+    subprocess.run("npm run build", shell=True, preexec_fn=os.setsid, check=True)
     npm_runner = subprocess.Popen(
         f"npm run watch:eleventy -- --port={port}",
         stdout=subprocess.PIPE,
