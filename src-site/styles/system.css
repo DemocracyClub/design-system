@@ -13,6 +13,29 @@
   font-style: normal;
   font-display: swap; }
 
+/*
+USE WITH CARE.
+
+"links go somewhere, buttons do something" should remain true,
+unless there is a very good reason to break this.
+
+We can use this when it's very obvious what will happen if it's
+pressed, and an `a` element can't be used.
+
+For example Django uses HTTP POST for 'log out' to avoid automated
+(e.g pre-fetch) GET requests from logging a user out. A link is
+reasonable from a user's point of view, but we use a button for
+technical reasons.
+
+This isn't exposed as a component, to avoid ad-hoc use. It is used by higher order
+components only.
+*/
+.ds-scope .ds-language > form button, .ds-scope .ds-language > form li, .ds-scope form.ds-logout button {
+  border: 0;
+  background: none;
+  font-family: Montserrat, sans-serif;
+  cursor: pointer; }
+
 .ds-scope .ds-stack-larger > *,
 .ds-scope .ds-stack > *,
 .ds-scope .ds-card .ds-card-body > *,
@@ -36,7 +59,7 @@
 .ds-scope .ds-stack-smallest > * + *, .ds-scope .ds-advanced-filters > * + * {
   margin-top: 0.25rem; }
 
-.ds-scope .ds-cluster > *, .ds-scope .ds-language > *, .ds-scope .ds-header nav a:not(.ds-cta) > *, .ds-scope .ds-subnav > *, .ds-scope .ds-filter-cluster > *,
+.ds-scope .ds-cluster > *, .ds-scope .ds-language > *, .ds-scope .ds-language > form > *, .ds-scope .ds-header nav a:not(.ds-cta) > *, .ds-scope .ds-subnav > *, .ds-scope .ds-filter-cluster > *,
 .ds-scope .ds-cluster-right > *,
 .ds-scope .ds-cluster-center > *, .ds-scope .ds-date {
   padding-left: 0;
@@ -47,13 +70,14 @@
   align-items: center;
   margin: calc(0.625rem * -1); }
 
-.ds-scope .ds-cluster > * > *, .ds-scope .ds-language > * > *, .ds-scope .ds-header nav a:not(.ds-cta) > * > *, .ds-scope .ds-subnav > * > *, .ds-scope .ds-filter-cluster > * > *,
+.ds-scope .ds-cluster > * > *, .ds-scope .ds-language > * > *, .ds-scope .ds-language > form > * > *, .ds-scope .ds-header nav a:not(.ds-cta) > * > *, .ds-scope .ds-subnav > * > *, .ds-scope .ds-filter-cluster > * > *,
 .ds-scope .ds-cluster-right > * > *,
 .ds-scope .ds-language > * > *,
+.ds-scope .ds-language > form > * > *,
 .ds-scope .ds-cluster-center > * > * {
   margin: 0.625rem; }
 
-.ds-scope .ds-cluster-right > *, .ds-scope .ds-language > * {
+.ds-scope .ds-cluster-right > *, .ds-scope .ds-language > *, .ds-scope .ds-language > form > * {
   justify-content: flex-end; }
 
 .ds-scope .ds-cluster-center > * {
@@ -106,7 +130,7 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 
 .ds-scope .ds-card .ds-card-link::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -780,7 +804,7 @@
     word-break: normal; }
   .ds-scope .ds-dark .ds-table tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.2); }
-  .ds-scope .ds-language {
+  .ds-scope .ds-language, .ds-scope .ds-language > form {
     padding: 0.625rem;
     font-size: 1rem;
     background-color: #403F41; }
@@ -790,8 +814,9 @@
     text-decoration: underline;
     text-decoration-thickness: 0.125rem;
     color: #00B6FF; }
-  .ds-scope .ds-dark .ds-language {
-    background-color: #0D1117; }
+  .ds-scope .ds-dark .ds-language, .ds-scope .ds-dark .ds-language > form {
+    background-color: #0D1117;
+    border: none; }
   .ds-scope .ds-logo {
     display: inline-flex;
     align-items: center;
@@ -816,6 +841,26 @@
     font-style: normal;
     margin-top: 0.375rem;
     color: #403F41; }
+  .ds-scope form.ds-logout {
+    border: 0;
+    background: none;
+    padding: 0;
+    display: inline-block; }
+  .ds-scope form.ds-logout button {
+    color: #E6007C;
+    text-decoration: underline;
+    border-bottom: 2px solid #fff; }
+  .ds-scope .ds-header form.ds-logout button:hover {
+    border-bottom-color: #007CAD; }
+  .ds-scope .ds-header form.ds-logout button {
+    padding: 0.5rem;
+    color: inherit;
+    text-decoration: none; }
+  .ds-scope .ds-dark form.ds-logout button {
+    color: inherit;
+    border-bottom-color: transparent; }
+  .ds-scope .ds-dark .ds-header form.ds-logout button:hover {
+    border-bottom-color: #00B6FF; }
   .ds-scope .ds-header {
     display: flex;
     flex-wrap: wrap;

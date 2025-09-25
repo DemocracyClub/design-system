@@ -76,3 +76,21 @@ Only use the blue version as a supplementary option; the pink (default version) 
 </table>
 
 {% endds-example %}
+
+
+{% note 'Link buttons' %}
+
+Buttons should look like buttons. This is so that users have some idea of 
+what's about to happen when they press them. "links go somewhere, buttons do 
+something" is a good guide. 
+
+There are sometimes technical reasons for things that could be links to 
+actually be buttons. For example, a 'log out' link might need to be an 
+HTTP POST, but a user would understand what will happen if it looks like a link.
+
+We don't expose this pattern as a top level component, as it should be used 
+by exception, but there are some cases where we have 'link buttons'. 
+Currently, these are 'log out' and language pickers. Try to avoid adding 
+more link-buttons if possible.
+
+{% endnote %}
