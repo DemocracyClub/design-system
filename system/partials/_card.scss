@@ -33,6 +33,11 @@
 %ds-card .ds-card-body {
     padding: $s4;
     @extend %ds-stack-smaller;
+
+    h1, h2, h3, h4 {
+      font-weight: 500;
+    }
+
 }
 
 @mixin card {
