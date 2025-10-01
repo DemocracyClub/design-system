@@ -1177,6 +1177,20 @@ components only.
   .ds-scope .ds-dark .ds-map-leaflet .leaflet-control,
   .ds-scope .ds-dark .ds-map-leaflet .leaflet-control * {
     background-color: #403F41; }
+  .ds-scope div.ds-map-maplibre {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #403F41;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 1000px; }
+  .ds-scope .maplibregl-ctrl-attrib-button::before {
+    display: none; }
+  .ds-scope .ds-dark div.ds-map-maplibre .maplibregl-ctrl,
+  .ds-scope .ds-dark div.ds-map-maplibre .maplibregl-ctrl * {
+    background-color: #403F41;
+    color: #fff; }
   .ds-scope .ds-date .ds-field input {
     margin: 10px 15px 5px 0;
     border: 2px solid #403F41;

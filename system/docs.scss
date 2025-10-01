@@ -31,6 +31,7 @@
 @import 'partials/_page.scss';
 @import 'partials/_party.scss';
 @import 'partials/_map-leaflet.scss';
+@import 'partials/_map-maplibre.scss';
 @import 'partials/_utilities.scss';
 @import 'partials/_date-picker.scss';
 @import 'partials/_switcher.scss';
@@ -70,6 +71,7 @@ $scope: true;
   @include codeblock;
   @include party;
   @include map-leaflet;
+  @include map-maplibre;
   @include date-picker;
   @include switcher;
   @include showcase;
