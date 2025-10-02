@@ -13,6 +13,7 @@ from playwright.sync_api import sync_playwright
 IGNORE_URLS = (
     # Maps render a little differently and cause flakey tests.
     "/components/map-leaflet/",
+    "/components/map-maplibre/",
 )
 
 BROWSERS = {
