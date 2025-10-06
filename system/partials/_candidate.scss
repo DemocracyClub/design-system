@@ -20,6 +20,7 @@
   .ds-candidate-name {
     hyphens: auto;
     word-break: break-word;
+    font-weight: 500;
   }
 
   .ds-candidate-name a::after {
@@ -71,8 +72,8 @@
       display: flex;
       align-items: center;
       min-height: 0;
-    } 
-    
+    }
+
     li .ds-candidate-image img {
       position: static;
       object-fit: inherit;

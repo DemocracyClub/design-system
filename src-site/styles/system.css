@@ -153,6 +153,8 @@ components only.
 
 .ds-scope .ds-card .ds-card-body {
   padding: 1.95312rem; }
+  .ds-scope .ds-card .ds-card-body h1, .ds-scope .ds-card .ds-card-body h2, .ds-scope .ds-card .ds-card-body h3, .ds-scope .ds-card .ds-card-body h4 {
+    font-weight: 500; }
 
 .ds-dark .ds-header .ds-logo span {
   color: #fff; }
@@ -505,11 +507,8 @@ components only.
     font-size: 1.25rem;
     font-size: clamp(0.75rem, 2vw, 1.25rem); }
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
-    font-weight: 500;
-    word-break: break-word; }
-  .ds-scope h1, .ds-scope h2 {
     font-weight: 300;
-    letter-spacing: -0.05em; }
+    word-break: break-word; }
   .ds-scope a {
     color: #E6007C;
     text-decoration: underline; }
@@ -706,7 +705,8 @@ components only.
     flex-basis: 50%; }
   .ds-scope .ds-candidate-name {
     hyphens: auto;
-    word-break: break-word; }
+    word-break: break-word;
+    font-weight: 500; }
   .ds-scope .ds-candidate-name a::after {
     content: '';
     position: absolute;
