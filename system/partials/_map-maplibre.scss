@@ -1,0 +1,22 @@
+@mixin map-maplibre {
+    div.ds-map-maplibre {
+        @include fontBody;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        max-width: 1000px;
+    }
+    // fixes a visual bug caused by our css clashing with maplibre's default styles
+    .maplibregl-ctrl-attrib-button::before {
+        display: none;
+    }
+
+    .ds-dark {
+        div.ds-map-maplibre {
+            .maplibregl-ctrl,
+            .maplibregl-ctrl * {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}

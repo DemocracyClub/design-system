@@ -13,6 +13,7 @@ from playwright.sync_api import sync_playwright
 IGNORE_URLS = (
     # Maps render a little differently and cause flakey tests.
     "/components/map-leaflet/",
+    "/components/map-maplibre/",
 )
 
 BROWSERS = {
@@ -169,6 +170,11 @@ def iterate_matrix(playwright, elements, baseline=False):
                 if element.url_path in IGNORE_URLS:
                     continue
                 page.goto(element.url, wait_until="domcontentloaded")
+                if viewport["width"] < 400:
+                    page.evaluate(
+                        "() => { const nav = document.querySelector('body > div > nav'); if (nav) nav.remove(); }"
+                    )
+
                 page.wait_for_function(
                     """() =>
                         document.fonts?.status === 'loaded' &&
