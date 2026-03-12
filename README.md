@@ -90,5 +90,60 @@ To do this, run `./scripts/write-image-baseline.sh`. This will write
 images to `tests/screenshots/baseline`. All future tests will be compared to 
 this baseline. 
 
-Baseline images should be checked into git. This makes it easier to spot 
+Baseline images should be checked into git. This makes it easier to spot
 changes in pull requests etc.
+
+# Updating fonts
+
+The design system uses subsetted versions of Montserrat (Light and Medium) to
+keep file sizes small. The subsets include Latin characters needed for UK place
+names, including Welsh and Scottish Gaelic diacritics.
+
+## Adding new characters
+
+If you encounter a place name rendering incorrectly (typically falling back to
+a system font and appearing bold or mismatched), you need to add the missing
+Unicode codepoints to the font subsets.
+
+1. Open `scripts/update-fonts.py` and add the codepoint(s) to `EXTRA_UNICODES`:
+
+   ```python
+   EXTRA_UNICODES = [
+       ...
+       "U+XXXX",  # description of why it's needed
+   ]
+   ```
+
+2. Run the script:
+
+   ```
+   uv run --with fonttools --with brotli scripts/update-fonts.py
+   ```
+
+   The script will:
+   - Download the full Montserrat TTF source files from Google Fonts' GitHub
+     repository (cached in `.font-cache/` on first run)
+   - Merge the new codepoints into the existing character sets
+   - Regenerate all four font files (`montserrat-light` and `montserrat-medium`,
+     both `.woff` and `.woff2`) in `system/fonts/` and mirror them to
+     `src-site/styles/fonts/`
+
+3. Commit the updated font files and bump the version in `package.json`.
+
+## Finding missing characters
+
+To audit which characters appear in UK election division names but are absent
+from the current font subsets, you can use the scraper in the script comments
+or run:
+
+```python
+uv run --with fonttools --with brotli --with httpx --with beautifulsoup4 python3 -c "
+from fontTools.ttLib import TTFont
+font = TTFont('system/fonts/montserrat-medium.woff2')
+cmap = set(font.getBestCmap().keys())
+test = 'ŵŷŴŶôìòàáÈÙ′'
+for c in test:
+    cp = ord(c)
+    print(f'{c!r} U+{cp:04X}: {\"OK\" if cp in cmap else \"MISSING\"}')
+"
+```

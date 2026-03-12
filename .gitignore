@@ -120,3 +120,9 @@ __pycache__/
 # Test images
 tests/screenshots/test/
 tests/screenshots/diff/
+
+# Font update script cache (downloaded full TTF source files)
+.font-cache/
+
+# Python virtual environment
+.venv/
