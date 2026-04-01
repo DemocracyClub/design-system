@@ -130,20 +130,3 @@ Unicode codepoints to the font subsets.
 
 3. Commit the updated font files and bump the version in `package.json`.
 
-## Finding missing characters
-
-To audit which characters appear in UK election division names but are absent
-from the current font subsets, you can use the scraper in the script comments
-or run:
-
-```python
-uv run --with fonttools --with brotli --with httpx --with beautifulsoup4 python3 -c "
-from fontTools.ttLib import TTFont
-font = TTFont('system/fonts/montserrat-medium.woff2')
-cmap = set(font.getBestCmap().keys())
-test = 'ŵŷŴŶôìòàáÈÙ′'
-for c in test:
-    cp = ord(c)
-    print(f'{c!r} U+{cp:04X}: {\"OK\" if cp in cmap else \"MISSING\"}')
-"
-```
