@@ -562,6 +562,11 @@ components only.
   .ds-scope input[type="text"],
   .ds-scope input[type="password"],
   .ds-scope input[type="email"],
+  .ds-scope input[type="number"],
+  .ds-scope input[type="search"],
+  .ds-scope input[type="tel"],
+  .ds-scope input[type="url"],
+  .ds-scope textarea,
   .ds-scope select {
     color: #403F41;
     padding: 0.5rem;
