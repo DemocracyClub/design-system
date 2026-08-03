@@ -5,7 +5,7 @@ title: Modular scale
 Both scales are defined as CSS custom properties in `tokens.css`. The Sass
 variables still work — they are now aliases onto those properties — but new
 code should use the custom properties directly. See
-[CSS custom properties]({{site.basedir}}/usage/css-custom-properties) for the
+[CSS custom properties]({{site.basedir}}/basics/css-custom-properties) for the
 background.
 
 The scale is named `--ds-size-*` rather than `--ds-font-size-*` or

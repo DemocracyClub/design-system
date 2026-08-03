@@ -5,7 +5,7 @@ title: Colors
 Every colour is defined as a CSS custom property in `tokens.css`. 
 This project is migrating from SASS vars to CSS vars. At the moment the SASS 
 vars still exist and are aliases of the CSS vars. SASS vars are deprecated 
-and should be converted to CSS vars. See [CSS custom properties]({{site.basedir}}/usage/css-custom-properties) for the background.
+and should be converted to CSS vars. See [CSS custom properties]({{site.basedir}}/basics/css-custom-properties) for the background.
 
 ## Primitive palette
 
