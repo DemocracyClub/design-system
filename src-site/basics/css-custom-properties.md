@@ -98,7 +98,9 @@ property being renamed.
 ## What happens next
 
 1. **Consumers move onto the custom properties.** This is the step this change
-   exists to unblock. Nothing needs to happen all at once.
+   exists to unblock. Nothing needs to happen all at once — see
+   [Migrating to CSS custom properties]({{site.basedir}}/basics/migrating-to-css-custom-properties)
+   for a step-by-step guide.
 2. **The design system’s own partials move onto the semantic properties.** They
    currently still use the Sass variables, which resolve to the primitives.
    This is what will let `.ds-dark` become a short list of property overrides
