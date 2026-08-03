@@ -111,7 +111,6 @@ Run the following commands to get everything nicely set up.
 
 ```commandline
 npm install
-npm run exportSass
 npm start
 ```
 
