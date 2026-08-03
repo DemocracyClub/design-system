@@ -78,8 +78,8 @@ def test_live_images_against_baseline(local_server, subtests, playwright):
     test_root = get_screenshot_root("test")
 
     # We can't use shutil.rmtree in Docker because we're mounting the directories with tmpfs.
-    for dir in (diff_root, test_root):
-        for item in test_root.iterdir():
+    for directory in (diff_root, test_root):
+        for item in directory.iterdir():
             if item.is_dir():
                 shutil.rmtree(item)
             else:
