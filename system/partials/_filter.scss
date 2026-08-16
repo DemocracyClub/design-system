@@ -40,6 +40,11 @@
     font-size: inherit;
   }
 
+  .ds-filter form small {
+    text-transform: initial;
+    font-size: $ss7;
+  }
+
   .ds-filter details ul {
     font-size: 0.85em;
   }
