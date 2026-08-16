@@ -50,6 +50,32 @@ Use the Filter component to offer search filters so that users can focus in on w
   </aside>
 {% endds-example %}
 
+## Form filters
+
+A filter can contain form fields when choosing an option is not enough. Place the
+`form` directly inside the filter so it uses the filter's existing background and
+spacing rather than adding a second padded panel.
+
+Use a `small` element inside the field label for help text. This keeps the hint
+associated with the input for screen reader users while displaying it in normal
+case at the design system's small-text size.
+
+```html
+<aside class="ds-filter" aria-labelledby="filter-label">
+  <h2 id="filter-label" class="ds-filter-label">Filter</h2>
+  <form>
+    <div class="ds-field">
+      <label for="filter-postcode" class="ds-filter-label">
+        Postcode
+        <small>For example, SS1 1AA</small>
+      </label>
+      <input id="filter-postcode" name="postcode" type="text">
+    </div>
+    <button class="ds-button" type="submit">Apply filters</button>
+  </form>
+</aside>
+```
+
 
 ## Markup
 
