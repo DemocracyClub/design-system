@@ -1062,6 +1062,8 @@ components only.
     text-transform: uppercase; }
   .ds-scope .ds-filter summary {
     font-size: inherit; }
+  .ds-scope .ds-filter > form {
+    padding: 0; }
   .ds-scope .ds-filter form small {
     text-transform: initial;
     font-size: 0.875rem; }
