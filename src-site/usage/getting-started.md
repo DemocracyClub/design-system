@@ -33,9 +33,12 @@ The design system folder contains fonts, images and Sass partials:
 📁 fonts
 📁 images
 📁 partials
+tokens.css
 index.template.scss
 docs.scss
 ```
+
+The `tokens.css` file holds the design system’s values — colours, scales, type — as CSS custom properties. It is the single source of truth for them, and `partials/_variables.scss` maps the Sass variables onto it. You do not need to do anything with this file to compile the Sass, but it is what you should reference if you are writing your own CSS against the design system. See [CSS custom properties]({{site.basedir}}/basics/css-custom-properties).
 
 The `docs.scss` file can be ignored. This just powers the design system used inside this documentation.
 
@@ -103,15 +106,14 @@ Although the design system—even including _all_ of the components—is relativ
 ## Local development
 This project can be run locally if you want to view the in-browser docs/demo.
 
-In order to do this, you'll need to have node v14 available due to this project's dependency on node-sass.
+In order to do this, you'll need to have node v18 available due to this project's dependency on node-sass. Newer versions of node will fail to build `node-sass`'s native binding.
 
-If you're using nvm, you can run `nvm use` from the project's root to switch version.
+If you're using nvm, you can run `nvm use` from the project's root to switch version — `.nvmrc` pins the correct one.
 
 Run the following commands to get everything nicely set up.
 
 ```commandline
 npm install
-npm run exportSass
 npm start
 ```
 

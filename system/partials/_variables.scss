@@ -1,75 +1,76 @@
+// Consider this file frozen in terms of adding new value.
+// It will exist until all projects have moved from SASS vars to CSS vars.
+
+// Because these variables now hold `var()` references rather than literal
+// values, Sass colour functions and arithmetic can no longer be applied to
+// them. Use `calc()` for arithmetic, as the partials already do.
+
+
+// The import is deliberately extensionless. libsass inlines the contents of
+// `tokens.css` that way; writing `@import 'tokens.css'` would instead emit a
+// runtime `@import url(...)` rule.
+@import '../tokens';
+
 // Fix min function for libsass
 @function min($numbers...) {
   @return m#{i}n(#{$numbers})
 }
 
-// Colours
-
-$darkBlack: #0D1117;
-$black: #403F41;
-$blackOpacity: rgba($black, 0.2);
-$white: #fff;
-$whiteOpacity: rgba($white, 0.2);
-$pinkForWhite: #E6007C;
-$blueForWhite: #007CAD;
-$blueForBlack: #00B6FF;
-$blueLight: #E4F4FB;
-$greenForWhite: #32841A;
-$greenForBlack: #4BC427;
-$redForWhite: #D91714;
-$redForBlack: #FF6347;
+$darkBlack: var(--ds-colour-grey-950);
+$black: var(--ds-colour-grey-900);
+$blackOpacity: var(--ds-colour-grey-900-alpha);
+$white: var(--ds-colour-white);
+$whiteOpacity: var(--ds-colour-white-alpha);
+$pinkForWhite: var(--ds-colour-pink-700);
+$blueForWhite: var(--ds-colour-blue-700);
+$blueForBlack: var(--ds-colour-blue-400);
+$blueLight: var(--ds-colour-blue-100);
+$greenForWhite: var(--ds-colour-green-700);
+$greenForBlack: var(--ds-colour-green-400);
+$redForWhite: var(--ds-colour-red-700);
+$redForBlack: var(--ds-colour-red-400);
 $redForBlueLight: $redForWhite;
-$amber: #FFC037;
+$amber: var(--ds-colour-amber-400);
 
-// Scales
 
-@function pow($number, $exponent) {
-  $value: 1;
-  @if $exponent > 0 {
-    @for $i from 1 through $exponent {
-      $value: $value * $number;
-    }
-  }
-  @return $value;
-}
+$ratio: 1.25;
 
 // Large scale
-$ratio: 1.25;
-$s1: 1rem;
-$s2: #{$ratio}rem;
-$s3: #{pow($ratio, 2)}rem;
-$s4: #{pow($ratio, 3)}rem;
-$s5: #{pow($ratio, 4)}rem;
-$s6: #{pow($ratio, 5)}rem;
-$s7: #{pow($ratio, 6)}rem;
-$s8: #{pow($ratio, 7)}rem;
+$s1: var(--ds-size-1);
+$s2: var(--ds-size-2);
+$s3: var(--ds-size-3);
+$s4: var(--ds-size-4);
+$s5: var(--ds-size-5);
+$s6: var(--ds-size-6);
+$s7: var(--ds-size-7);
+$s8: var(--ds-size-8);
 
 // Small scale
-$increment-small-scale: 0.125rem;
-$ss1: $increment-small-scale;
-$ss2: $ss1 + $increment-small-scale;
-$ss3: $ss2 + $increment-small-scale;
-$ss4: $ss3 + $increment-small-scale;
-$ss5: $ss4 + $increment-small-scale;
-$ss6: $ss5 + $increment-small-scale;
-$ss7: $ss6 + $increment-small-scale;
-$ss8: $ss7 + $increment-small-scale;
+$increment-small-scale: var(--ds-size-small-1);
+$ss1: var(--ds-size-small-1);
+$ss2: var(--ds-size-small-2);
+$ss3: var(--ds-size-small-3);
+$ss4: var(--ds-size-small-4);
+$ss5: var(--ds-size-small-5);
+$ss6: var(--ds-size-small-6);
+$ss7: var(--ds-size-small-7);
+$ss8: var(--ds-size-small-8);
 
 // Type
 
 // Font families
-$familyMain: Montserrat, sans-serif;
-$familyBody: Georgia, serif;
+$familyMain: var(--ds-font-family-main);
+$familyBody: var(--ds-font-family-body);
 
 // Line heights
-$lineHeight: 1.5; // WCAG 1.4.12 recommended minimum
-$lineHeightTight: 1.125;
+$lineHeight: var(--ds-line-height-default);
+$lineHeightTight: var(--ds-line-height-tight);
 
 // Measure (characters per line; used with max-width typically)
-$measure: 70ch;
-$measureReduced: 50ch;
-$measureHalf: 35ch;
-$measureThird: 23ch;
+$measure: var(--ds-width-measure);
+$measureReduced: var(--ds-width-measure-reduced);
+$measureHalf: var(--ds-width-measure-half);
+$measureThird: var(--ds-width-measure-third);
 
 @mixin fontMain {
   font-family: $familyMain;
@@ -85,4 +86,4 @@ $measureThird: 23ch;
   color: $black;
 }
 
-$cardShadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+$cardShadow: var(--ds-shadow-card);

@@ -1,5 +1,50 @@
 const slugify = require('slugify');
-const sassVars = require('./src-site/_data/sass.json').variables;
+const fs = require('fs');
+const path = require('path');
+
+const read = file => fs.readFileSync(path.join(__dirname, file), 'utf8');
+
+const parseTokens = () => {
+  const defs = {};
+  for (const [, name, value] of read('system/tokens.css')
+    .matchAll(/(--ds-[a-z0-9-]+)\s*:\s*([^;}]+);/g)) {
+    defs[name] = value.trim();
+  }
+
+  const resolve = (value, depth = 0) => {
+    if (depth > 10) throw new Error(`Token alias chain too deep: ${value}`);
+    return value.replace(/var\((--ds-[a-z0-9-]+)\)/g, (_, ref) => {
+      if (!(ref in defs)) throw new Error(`Undefined token referenced: ${ref}`);
+      return resolve(defs[ref], depth + 1);
+    }).trim();
+  };
+
+  return Object.fromEntries(
+    Object.entries(defs).map(([name, value]) => [name, resolve(value)])
+  );
+};
+
+// Maps a Sass variable name to the custom property it aliases, following
+// variable-to-variable aliases such as `$redForBlueLight: $redForWhite`.
+const parseSassAliases = () => {
+  const raw = {};
+  for (const [, name, value] of read('system/partials/_variables.scss')
+    .matchAll(/^\$([\w-]+):\s*([^;]+);/gm)) {
+    raw['$' + name] = value.trim();
+  }
+
+  const aliases = {};
+  for (const name of Object.keys(raw)) {
+    let value = raw[name];
+    for (let i = 0; value.startsWith('$') && i < 10; i++) value = raw[value];
+    const match = /^var\((--ds-[a-z0-9-]+)\)$/.exec(value || '');
+    if (match) aliases[name] = match[1];
+  }
+  return aliases;
+};
+
+const tokens = parseTokens();
+const sassAliases = parseSassAliases();
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
@@ -79,10 +124,20 @@ ${dark_content}
     //return vars.find(v => v.name === name).compiledValue;
   });*/
 
-  eleventyConfig.addShortcode('var', function(name) {
-    let theOne = sassVars.find(v => v.name === name);
-    let value = theOne && theOne.compiledValue;
-    return value ? value : 'undefined';
+  // Resolved value behind a Sass variable, e.g. {% var '$black' %}.
+  eleventyConfig.addShortcode('var', function (name) {
+    const token = sassAliases[name];
+    return (token && tokens[token]) || 'undefined';
+  });
+
+  // The custom property a Sass variable aliases, e.g. {% cssvar '$black' %}.
+  eleventyConfig.addShortcode('cssvar', function (name) {
+    return sassAliases[name] || 'undefined';
+  });
+
+  // Resolved value of a token by property name, e.g. {% token '--ds-colour-text' %}.
+  eleventyConfig.addShortcode('token', function (name) {
+    return tokens[name] || 'undefined';
   });
 
   return {

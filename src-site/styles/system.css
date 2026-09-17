@@ -14,6 +14,155 @@
   font-display: swap; }
 
 /*
+ * Single source of truth for the design system's design tokens.
+ *
+ * `partials/_variables.scss` imports this file and maps SASS
+ * variables onto these custom properties. This allows existing SASS
+ * consumers to move from SASS vars to CSS vars.
+ *
+ * Names follow the design system's custom property convention:
+ * --ds-[category]-[concept]-[variant]-[state].
+ *
+ * For example `ds-colour-grey-900-alpha`
+ *
+ */
+:root {
+  /*
+     * Primitive colours
+     *
+     * Numeric steps describe relative strength, and the value
+     * behind a step may change without the property being renamed.
+     *
+     * Within each hue, -700 is contrast-safe against white and -400 is
+     * contrast-safe against the dark backgrounds.
+     *
+     * Prefer the semantic colours further down over these
+     * for actual classes.
+     */
+  --ds-colour-white: #fff;
+  --ds-colour-grey-900: #403F41;
+  --ds-colour-grey-950: #0D1117;
+  --ds-colour-blue-100: #E4F4FB;
+  --ds-colour-blue-400: #00B6FF;
+  --ds-colour-blue-700: #007CAD;
+  --ds-colour-green-400: #4BC427;
+  --ds-colour-green-700: #32841A;
+  --ds-colour-red-400: #FF6347;
+  --ds-colour-red-700: #D91714;
+  /*
+     * There is no -400 pink. One was tried and it looked gross.
+     */
+  --ds-colour-pink-700: #E6007C;
+  --ds-colour-amber-400: #FFC037;
+  --ds-colour-grey-900-alpha: rgba(64, 63, 65, 0.2);
+  --ds-colour-white-alpha: rgba(255, 255, 255, 0.2);
+  /*
+     * Primitive size scale
+     *
+     * A modular scale with a ratio of 1.25, from a 1rem base:
+     * each step is the previous step multiplied by 1.25.
+     *
+     * CSS support pow(), however SASS rounds differently to pow(),
+     * in a big enough way that the tests fail. For this transition,
+     * the priority was to ensure identical output, so the numbers are
+     * hard-coded.
+     *
+     * Used for font sizes, padding and margins alike, so the scale is named
+     * neutrally rather than as `--ds-font-size-*` or `--ds-space-*`.
+     */
+  --ds-size-1: 1rem;
+  --ds-size-2: 1.25rem;
+  --ds-size-3: 1.5625rem;
+  --ds-size-4: 1.95312rem;
+  --ds-size-5: 2.44141rem;
+  --ds-size-6: 3.05176rem;
+  --ds-size-7: 3.8147rem;
+  --ds-size-8: 4.76837rem;
+  /*
+     * Primitive small size scale
+     *
+     * A linear scale in 0.125rem increments, for borders, outlines, small gaps
+     * and control heights. Note that --ds-size-small-8 and --ds-size-1 are both
+     * 1rem: the two scales meet there.
+     */
+  --ds-size-small-1: 0.125rem;
+  --ds-size-small-2: 0.25rem;
+  --ds-size-small-3: 0.375rem;
+  --ds-size-small-4: 0.5rem;
+  --ds-size-small-5: 0.625rem;
+  --ds-size-small-6: 0.75rem;
+  --ds-size-small-7: 0.875rem;
+  --ds-size-small-8: 1rem;
+  /*
+     * Primitive typography
+     */
+  --ds-font-family-main: Montserrat, sans-serif;
+  --ds-font-family-body: Georgia, serif;
+  --ds-font-weight-light: 300;
+  --ds-font-weight-normal: normal;
+  --ds-font-weight-medium: 500;
+  --ds-line-height-default: 1.5;
+  --ds-line-height-tight: 1.125;
+  /*
+     * Semantic colours
+     *
+     * These describe the role a colour plays. Prefer them in application and
+     * component CSS.
+     */
+  --ds-colour-text: var(--ds-colour-grey-900);
+  --ds-colour-text-inverse: var(--ds-colour-white);
+  --ds-colour-link: var(--ds-colour-pink-700);
+  --ds-colour-background-page: var(--ds-colour-white);
+  --ds-colour-background-panel: var(--ds-colour-blue-100);
+  --ds-colour-background-inverse: var(--ds-colour-grey-950);
+  --ds-colour-background-subtle: var(--ds-colour-grey-900-alpha);
+  --ds-colour-border: var(--ds-colour-grey-900-alpha);
+  --ds-colour-border-inverse: var(--ds-colour-white-alpha);
+  /*
+     * Actions: buttons, calls to action and other interactive surfaces.
+     */
+  --ds-colour-action: var(--ds-colour-blue-700);
+  --ds-colour-action-inverse: var(--ds-colour-blue-400);
+  /*
+     * Used for keyboard focus indicators, applied as an outline. Must stay
+     * clearly visible against the page, panel and inverse backgrounds alike,
+     * which is why it is a single colour rather than a themed pair.
+     */
+  --ds-colour-focus: var(--ds-colour-amber-400);
+  --ds-colour-success: var(--ds-colour-green-700);
+  --ds-colour-success-inverse: var(--ds-colour-green-400);
+  --ds-colour-error: var(--ds-colour-red-700);
+  --ds-colour-error-inverse: var(--ds-colour-red-400);
+  --ds-colour-info: var(--ds-colour-blue-700);
+  /*
+     * Semantic typography
+     *
+     * The heading sizes match the h1–h6 elements. Each heading also applies a
+     * `clamp()` for fluid sizing, so these are the upper bound rather than the
+     * size rendered at every viewport width.
+     */
+  --ds-font-size-body: var(--ds-size-1);
+  --ds-font-size-heading-1: var(--ds-size-7);
+  --ds-font-size-heading-2: var(--ds-size-6);
+  --ds-font-size-heading-3: var(--ds-size-5);
+  --ds-font-size-heading-4: var(--ds-size-4);
+  --ds-font-size-heading-5: var(--ds-size-3);
+  --ds-font-size-heading-6: var(--ds-size-2);
+  --ds-line-height-body: var(--ds-line-height-default);
+  --ds-line-height-heading: var(--ds-line-height-tight);
+  /*
+     * Measure — maximum line lengths for readable text, in characters.
+     */
+  --ds-width-measure: 70ch;
+  --ds-width-measure-reduced: 50ch;
+  --ds-width-measure-half: 35ch;
+  --ds-width-measure-third: 23ch;
+  /*
+     * Shadows
+     */
+  --ds-shadow-card: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+
+/*
 USE WITH CARE.
 
 "links go somewhere, buttons do something" should remain true,
@@ -33,7 +182,7 @@ components only.
 .ds-scope .ds-language > form button, .ds-scope .ds-language > form li, .ds-scope form.ds-logout button {
   border: 0;
   background: none;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--ds-font-family-main);
   cursor: pointer; }
 
 .ds-scope .ds-stack-larger > *,
@@ -48,16 +197,16 @@ components only.
   margin: 0; }
 
 .ds-scope .ds-stack-larger > * + * {
-  margin-top: 4.76837rem; }
+  margin-top: var(--ds-size-8); }
 
 .ds-scope .ds-stack > * + * {
-  margin-top: 3.05176rem; }
+  margin-top: var(--ds-size-6); }
 
 .ds-scope .ds-card .ds-card-body > * + *, .ds-scope hgroup > * + *, .ds-scope .ds-stack-smaller > * + *, .ds-scope .ds-footer > * + *, .ds-scope .ds-filter > * + * {
-  margin-top: 1.5625rem; }
+  margin-top: var(--ds-size-3); }
 
 .ds-scope .ds-stack-smallest > * + *, .ds-scope .ds-advanced-filters > * + * {
-  margin-top: 0.25rem; }
+  margin-top: var(--ds-size-small-2); }
 
 .ds-scope .ds-cluster > *, .ds-scope .ds-language > *, .ds-scope .ds-language > form > *, .ds-scope .ds-header nav a:not(.ds-cta) > *, .ds-scope .ds-subnav > *, .ds-scope .ds-filter-cluster > *,
 .ds-scope .ds-cluster-right > *,
@@ -68,14 +217,14 @@ components only.
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin: calc(0.625rem * -1); }
+  margin: calc(var(--ds-size-small-5) * -1); }
 
 .ds-scope .ds-cluster > * > *, .ds-scope .ds-language > * > *, .ds-scope .ds-language > form > * > *, .ds-scope .ds-header nav a:not(.ds-cta) > * > *, .ds-scope .ds-subnav > * > *, .ds-scope .ds-filter-cluster > * > *,
 .ds-scope .ds-cluster-right > * > *,
 .ds-scope .ds-language > * > *,
 .ds-scope .ds-language > form > * > *,
 .ds-scope .ds-cluster-center > * > * {
-  margin: 0.625rem; }
+  margin: var(--ds-size-small-5); }
 
 .ds-scope .ds-cluster-right > *, .ds-scope .ds-language > *, .ds-scope .ds-language > form > * {
   justify-content: flex-end; }
@@ -84,10 +233,10 @@ components only.
   justify-content: center; }
 
 .ds-scope .ds-cluster-tight > *, .ds-scope .ds-filter-cluster > * {
-  margin: calc(0.25rem * -1); }
+  margin: calc(var(--ds-size-small-2) * -1); }
 
 .ds-scope .ds-cluster-tight > * > *, .ds-scope .ds-filter-cluster > * > * {
-  margin: 0.25rem; }
+  margin: var(--ds-size-small-2); }
 
 .ds-scope .ds-grid {
   padding: 0; }
@@ -98,36 +247,36 @@ components only.
   max-width: none; }
 
 .ds-scope .ds-grid > * + * {
-  margin-top: 1.5625rem; }
+  margin-top: var(--ds-size-3); }
 
 @supports (width: calc(min(20px, 100%))) {
   .ds-scope .ds-grid > * + * {
     margin-top: 0; }
   .ds-scope .ds-grid {
     display: grid;
-    grid-gap: var(--gridGap, 1.25rem);
+    grid-gap: var(--gridGap, var(--ds-size-2));
     --gridCellMin: 30ch;
     grid-template-columns: repeat(auto-fit, minmax(min(var(--gridCellMin), 100%), 1fr)); } }
 
 .ds-scope .ds-with-sidebar > * {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(1rem * -1); }
+  margin: calc(var(--ds-size-1) * -1); }
 
 .ds-scope .ds-with-sidebar .ds-sidebar {
-  margin: 1rem;
+  margin: var(--ds-size-1);
   flex-grow: 1; }
 
 .ds-scope .ds-with-sidebar .ds-not-sidebar {
-  margin: 1rem;
+  margin: var(--ds-size-1);
   flex-basis: 0;
   flex-grow: 999;
-  min-width: calc(50% - 1rem); }
+  min-width: calc(50% - var(--ds-size-1)); }
 
 .ds-scope .ds-card {
   position: relative;
-  border: 1px solid rgba(64, 63, 65, 0.2);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+  border: 1px solid var(--ds-colour-grey-900-alpha);
+  box-shadow: var(--ds-shadow-card); }
 
 .ds-scope .ds-card .ds-card-link::after {
   content: "";
@@ -152,31 +301,31 @@ components only.
   object-fit: cover; }
 
 .ds-scope .ds-card .ds-card-body {
-  padding: 1.95312rem; }
+  padding: var(--ds-size-4); }
   .ds-scope .ds-card .ds-card-body h1, .ds-scope .ds-card .ds-card-body h2, .ds-scope .ds-card .ds-card-body h3, .ds-scope .ds-card .ds-card-body h4 {
     font-weight: 500; }
 
 .ds-dark .ds-header .ds-logo span {
-  color: #fff; }
+  color: var(--ds-colour-white); }
 
 .ds-dark .ds-header .ds-logo span em {
-  color: #fff; }
+  color: var(--ds-colour-white); }
 
 .ds-dark .ds-logo span em {
-  color: #fff; }
+  color: var(--ds-colour-white); }
 
 .ds-scope .ds-footer {
-  padding: 1.95312rem 1.25rem;
-  border-top: 0.5rem solid #007CAD;
-  margin-top: 4.76837rem;
-  background-color: #403F41;
-  color: #fff; }
+  padding: var(--ds-size-4) var(--ds-size-2);
+  border-top: var(--ds-size-small-4) solid var(--ds-colour-blue-700);
+  margin-top: var(--ds-size-8);
+  background-color: var(--ds-colour-grey-900);
+  color: var(--ds-colour-white); }
 
 .ds-scope .ds-footer form {
-  background-color: #403F41; }
+  background-color: var(--ds-colour-grey-900); }
 
 .ds-scope .ds-footer * {
-  color: #fff;
+  color: var(--ds-colour-white);
   margin-left: auto;
   margin-right: auto;
   max-width: 70ch; }
@@ -185,22 +334,22 @@ components only.
   --gridCellMin: 20ch; }
 
 .ds-scope .ds-footer-links nav {
-  margin-top: 1.25rem; }
+  margin-top: var(--ds-size-2); }
   .ds-scope .ds-footer-links nav ul {
     list-style: none;
     padding: 0; }
 
 .ds-scope .ds-copyright {
-  padding: 1.95312rem;
-  background-color: #403F41;
+  padding: var(--ds-size-4);
+  background-color: var(--ds-colour-grey-900);
   max-width: 100%; }
 
 .ds-scope .ds-dark {
-  color: #fff;
-  background-color: #403F41; }
+  color: var(--ds-colour-white);
+  background-color: var(--ds-colour-grey-900); }
 
 .ds-scope .ds-dark * {
-  color: #fff; }
+  color: var(--ds-colour-white); }
 
 .ds-scope .ds-dark .ds-card,
 .ds-scope .ds-dark form,
@@ -208,14 +357,14 @@ components only.
   border: 1px solid; }
 
 .ds-scope .ds-dark code {
-  background-color: rgba(255, 255, 255, 0.2); }
+  background-color: var(--ds-colour-white-alpha); }
 
 .ds-scope .ds-dark .ds-select::after {
-  border-top-color: #fff; }
+  border-top-color: var(--ds-colour-white); }
 
 .ds-scope .ds-dark .ds-logo span {
   font-weight: 300;
-  font-size: 1.5625rem;
+  font-size: var(--ds-size-3);
   text-decoration: none;
   color: white; }
 
@@ -232,10 +381,10 @@ components only.
   width: 1px; }
 
 .ds-scope .ds-padded {
-  padding: 1rem; }
+  padding: var(--ds-size-1); }
 
 .ds-scope .ds-padded-large {
-  padding: 2.44141rem; }
+  padding: var(--ds-size-5); }
 
 .ds-scope .ds-bordered {
   border: 2px solid; }
@@ -252,13 +401,13 @@ components only.
 .ds-scope .ds-block-centered,
 .ds-scope .ds-block-centered-narrow {
   display: block;
-  max-width: 70ch;
+  max-width: var(--ds-width-measure);
   margin-left: auto;
   margin-right: auto; }
 
 
 .ds-scope .ds-block-centered-narrow {
-  max-width: 50ch; }
+  max-width: var(--ds-width-measure-reduced); }
 
 .ds-scope .ds-width-full, .ds-scope .ds-switcher > *, .ds-scope .ds-footer-links > * {
   display: block;
@@ -266,131 +415,131 @@ components only.
   width: auto; }
 
 .ds-scope .ds-width-full-text {
-  max-width: 70ch; }
+  max-width: var(--ds-width-measure); }
 
 .ds-scope .ds-width-reduced-text {
-  max-width: 50ch; }
+  max-width: var(--ds-width-measure-reduced); }
 
 .ds-scope .ds-width-half-text {
-  max-width: 35ch; }
+  max-width: var(--ds-width-measure-half); }
 
 .ds-scope .ds-width-third-text {
-  max-width: 23ch; }
+  max-width: var(--ds-width-measure-third); }
 
 .ds-color-black {
-  color: #403F41; }
+  color: var(--ds-colour-grey-900); }
 
 .ds-color-blackOpacity {
-  color: rgba(64, 63, 65, 0.2); }
+  color: var(--ds-colour-grey-900-alpha); }
 
 .ds-color-white {
-  color: #fff; }
+  color: var(--ds-colour-white); }
 
 .ds-color-pinkForWhite {
-  color: #E6007C; }
+  color: var(--ds-colour-pink-700); }
 
 .ds-color-blueForWhite {
-  color: #007CAD; }
+  color: var(--ds-colour-blue-700); }
 
 .ds-color-blueForBlack {
-  color: #00B6FF; }
+  color: var(--ds-colour-blue-400); }
 
 .ds-color-blueLight {
-  color: #E4F4FB; }
+  color: var(--ds-colour-blue-100); }
 
 .ds-color-greenForWhite {
-  color: #32841A; }
+  color: var(--ds-colour-green-700); }
 
 .ds-color-greenForBlack {
-  color: #4BC427; }
+  color: var(--ds-colour-green-400); }
 
 .ds-color-amber {
-  color: #FFC037; }
+  color: var(--ds-colour-amber-400); }
 
 .ds-bg-color-black {
-  background-color: #403F41; }
+  background-color: var(--ds-colour-grey-900); }
 
 .ds-bg-color-blackOpacity {
-  background-color: rgba(64, 63, 65, 0.2); }
+  background-color: var(--ds-colour-grey-900-alpha); }
 
 .ds-bg-color-white {
-  background-color: #fff; }
+  background-color: var(--ds-colour-white); }
 
 .ds-bg-color-pinkForWhite {
-  background-color: #E6007C; }
+  background-color: var(--ds-colour-pink-700); }
 
 .ds-bg-color-blueForWhite {
-  background-color: #007CAD; }
+  background-color: var(--ds-colour-blue-700); }
 
 .ds-bg-color-blueForBlack {
-  background-color: #00B6FF; }
+  background-color: var(--ds-colour-blue-400); }
 
 .ds-bg-color-blueLight {
-  background-color: #E4F4FB; }
+  background-color: var(--ds-colour-blue-100); }
 
 .ds-bg-color-greenForWhite {
-  background-color: #32841A; }
+  background-color: var(--ds-colour-green-700); }
 
 .ds-bg-color-greenForBlack {
-  background-color: #4BC427; }
+  background-color: var(--ds-colour-green-400); }
 
 .ds-bg-color-amber {
-  background-color: #FFC037; }
+  background-color: var(--ds-colour-amber-400); }
 
 .ds-font-size-s1 {
-  font-size: 1rem; }
+  font-size: var(--ds-size-1); }
 
 .ds-font-size-s2 {
-  font-size: 1.25rem; }
+  font-size: var(--ds-size-2); }
 
 .ds-font-size-s3 {
-  font-size: 1.5625rem; }
+  font-size: var(--ds-size-3); }
 
 .ds-font-size-s4 {
-  font-size: 1.95312rem; }
+  font-size: var(--ds-size-4); }
 
 .ds-font-size-s5 {
-  font-size: 2.44141rem; }
+  font-size: var(--ds-size-5); }
 
 .ds-font-size-s6 {
-  font-size: 3.05176rem; }
+  font-size: var(--ds-size-6); }
 
 .ds-font-size-s7 {
-  font-size: 3.8147rem; }
+  font-size: var(--ds-size-7); }
 
 .ds-font-size-s8 {
-  font-size: 4.76837rem; }
+  font-size: var(--ds-size-8); }
 
 .ds-height-ss1 {
-  height: 0.125rem; }
+  height: var(--ds-size-small-1); }
 
 .ds-height-ss2 {
-  height: 0.25rem; }
+  height: var(--ds-size-small-2); }
 
 .ds-height-ss3 {
-  height: 0.375rem; }
+  height: var(--ds-size-small-3); }
 
 .ds-height-ss4 {
-  height: 0.5rem; }
+  height: var(--ds-size-small-4); }
 
 .ds-height-ss5 {
-  height: 0.625rem; }
+  height: var(--ds-size-small-5); }
 
 .ds-height-ss6 {
-  height: 0.75rem; }
+  height: var(--ds-size-small-6); }
 
 .ds-height-ss7 {
-  height: 0.875rem; }
+  height: var(--ds-size-small-7); }
 
 .ds-height-ss8 {
-  height: 1rem; }
+  height: var(--ds-size-small-8); }
 
 .ds-scope {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-family: Montserrat, sans-serif;
+  font-size: clamp(var(--ds-size-1), 2vw, var(--ds-size-2));
+  font-family: var(--ds-font-family-main);
   font-weight: 500;
-  line-height: 1.125;
-  color: #403F41;
+  line-height: var(--ds-line-height-tight);
+  color: var(--ds-colour-grey-900);
   /*dl.ds-descriptions > div {
     display: flex;
     align-items: center;
@@ -425,7 +574,7 @@ components only.
   }
 
   dl.ds-descriptions dt {
-    flex-basis: calc(25% - 1.25rem);
+    flex-basis: calc(25% - var(--ds-size-2));
   }
 
   dl.ds-descriptions dt + * {
@@ -438,9 +587,9 @@ components only.
     font: inherit; }
   .ds-scope * {
     margin: 0;
-    color: #403F41; }
+    color: var(--ds-colour-grey-900); }
   .ds-scope *:focus {
-    outline: 0.25rem solid #FFC037; }
+    outline: var(--ds-size-small-2) solid var(--ds-colour-amber-400); }
   .ds-scope header, .ds-scope main, .ds-scope footer, .ds-scope nav, .ds-scope aside, .ds-scope section, .ds-scope details, .ds-scope summary {
     display: block; }
   .ds-scope img {
@@ -448,10 +597,10 @@ components only.
     max-width: 100%;
     height: auto; }
   .ds-scope code {
-    color: #403F41;
-    background-color: rgba(64, 63, 65, 0.2);
+    color: var(--ds-colour-grey-900);
+    background-color: var(--ds-colour-grey-900-alpha);
     word-break: break-word;
-    padding: 0 0.375rem; }
+    padding: 0 var(--ds-size-small-3); }
   .ds-scope div:focus,
   .ds-scope [tabindex="-1"]:focus,
   .ds-scope body:focus {
@@ -460,105 +609,105 @@ components only.
     position: absolute;
     top: -5rem;
     display: inline-block;
-    padding: 1rem;
-    background-color: #fff; }
+    padding: var(--ds-size-1);
+    background-color: var(--ds-colour-white); }
   .ds-scope .ds-skip-link:focus {
     top: 0.5rem;
     left: 0.5rem; }
   .ds-scope p, .ds-scope blockquote {
-    font-family: Georgia, serif;
+    font-family: var(--ds-font-family-body);
     font-weight: normal;
-    line-height: 1.5;
-    color: #403F41; }
+    line-height: var(--ds-line-height-default);
+    color: var(--ds-colour-grey-900); }
   .ds-scope :is(p, ul, ol) + :is(p, ul, ol) {
-    margin-top: 1rem !important; }
+    margin-top: var(--ds-size-1) !important; }
   .ds-scope blockquote {
-    font-size: 1.25rem;
+    font-size: var(--ds-size-2);
     font-style: italic;
-    border-left: 0.5rem solid #FFC037;
-    padding-left: 1rem; }
+    border-left: var(--ds-size-small-4) solid var(--ds-colour-amber-400);
+    padding-left: var(--ds-size-1); }
   .ds-scope p, .ds-scope li, .ds-scope dt, .ds-scope dd, .ds-scope blockquote,
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
-    max-width: 70ch; }
+    max-width: var(--ds-width-measure); }
   .ds-scope small {
-    font-size: 0.875rem; }
+    font-size: var(--ds-size-small-7); }
   .ds-scope h1, .ds-scope .ds-h1,
   .ds-scope h2, .ds-scope .ds-h2,
   .ds-scope h3, .ds-scope .ds-h3 h4, .ds-scope .ds-h4, .ds-scope .ds-showcase strong {
     word-break: break-word;
-    font-family: Montserrat, sans-serif;
+    font-family: var(--ds-font-family-main);
     font-weight: 300; }
   .ds-scope h1, .ds-scope .ds-h1 {
-    font-size: 3.8147rem;
-    font-size: clamp(1.95312rem, 7vw, 3.8147rem); }
+    font-size: var(--ds-size-7);
+    font-size: clamp(var(--ds-size-4), 7vw, var(--ds-size-7)); }
   .ds-scope h2, .ds-scope .ds-h2 {
-    font-size: 3.05176rem;
-    font-size: clamp(1.95312rem, 6vw, 3.05176rem); }
+    font-size: var(--ds-size-6);
+    font-size: clamp(var(--ds-size-4), 6vw, var(--ds-size-6)); }
   .ds-scope h3, .ds-scope .ds-h3 {
-    font-size: 2.44141rem;
-    font-size: clamp(1.5625rem, 5vw, 2.44141rem); }
+    font-size: var(--ds-size-5);
+    font-size: clamp(var(--ds-size-3), 5vw, var(--ds-size-5)); }
   .ds-scope h4, .ds-scope .ds-h4, .ds-scope .ds-showcase strong {
-    font-size: 1.95312rem;
-    font-size: clamp(1.25rem, 4vw, 1.95312rem); }
+    font-size: var(--ds-size-4);
+    font-size: clamp(var(--ds-size-2), 4vw, var(--ds-size-4)); }
   .ds-scope h5, .ds-scope .ds-h5, .ds-scope .ds-footer-links h2 {
-    font-size: 1.5625rem;
-    font-size: clamp(1rem, 3vw, 1.5625rem); }
+    font-size: var(--ds-size-3);
+    font-size: clamp(var(--ds-size-1), 3vw, var(--ds-size-3)); }
   .ds-scope h6, .ds-scope .ds-h6 {
-    font-size: 1.25rem;
-    font-size: clamp(0.75rem, 2vw, 1.25rem); }
+    font-size: var(--ds-size-2);
+    font-size: clamp(var(--ds-size-small-6), 2vw, var(--ds-size-2)); }
   .ds-scope h1, .ds-scope h2, .ds-scope h3, .ds-scope h4, .ds-scope h5, .ds-scope h6 {
     font-weight: 300;
     word-break: break-word; }
   .ds-scope a {
-    color: #E6007C;
+    color: var(--ds-colour-pink-700);
     text-decoration: underline; }
   .ds-scope a * {
-    color: #E6007C;
+    color: var(--ds-colour-pink-700);
     text-decoration: underline; }
   .ds-scope a[role="button"],
   .ds-scope a[role="button"] * {
     text-decoration: none; }
   .ds-scope ul, .ds-scope ol {
-    font-family: Georgia, serif;
+    font-family: var(--ds-font-family-body);
     font-weight: normal;
-    line-height: 1.5;
-    color: #403F41;
-    padding-left: 1.95312rem; }
+    line-height: var(--ds-line-height-default);
+    color: var(--ds-colour-grey-900);
+    padding-left: var(--ds-size-4); }
   .ds-scope ul[class], .ds-scope ol[class],
   .ds-scope [class] > ul:first-child,
   .ds-scope [class] > ol:first-child {
-    font-family: Montserrat, sans-serif;
+    font-family: var(--ds-font-family-main);
     font-weight: 500;
-    line-height: 1.125;
-    color: #403F41;
+    line-height: var(--ds-line-height-tight);
+    color: var(--ds-colour-grey-900);
     padding-left: 0; }
   .ds-scope dd {
-    font-family: Georgia, serif;
+    font-family: var(--ds-font-family-body);
     font-weight: normal;
-    line-height: 1.5;
-    color: #403F41;
-    margin-left: 1.5625rem; }
+    line-height: var(--ds-line-height-default);
+    color: var(--ds-colour-grey-900);
+    margin-left: var(--ds-size-3); }
   .ds-scope dl > * + * {
-    margin-top: 0.75rem; }
+    margin-top: var(--ds-size-small-6); }
   .ds-scope form {
-    background-color: #E4F4FB; }
+    background-color: var(--ds-colour-blue-100); }
   .ds-scope form, .ds-scope fieldset {
-    padding: 1.5625rem; }
+    padding: var(--ds-size-3); }
   .ds-scope form * {
     margin: 0; }
   .ds-scope fieldset {
     border: 2px solid; }
   .ds-scope legend {
-    padding: 0 0.625rem; }
+    padding: 0 var(--ds-size-small-5); }
   .ds-scope form > * + *, .ds-scope fieldset > *:not(legend) + * {
-    margin-top: 1.95312rem; }
+    margin-top: var(--ds-size-4); }
   .ds-scope .ds-field label {
     display: block; }
   .ds-scope .ds-field label small {
     display: block;
-    margin-top: 0.25rem; }
+    margin-top: var(--ds-size-small-2); }
   .ds-scope .ds-field > * + * {
-    margin-top: 0.5rem; }
+    margin-top: var(--ds-size-small-4); }
   .ds-scope input[type="text"],
   .ds-scope input[type="password"],
   .ds-scope input[type="email"],
@@ -568,39 +717,39 @@ components only.
   .ds-scope input[type="url"],
   .ds-scope textarea,
   .ds-scope select {
-    color: #403F41;
-    padding: 0.5rem;
+    color: var(--ds-colour-grey-900);
+    padding: var(--ds-size-small-4);
     border: 2px solid;
     width: 100%;
-    max-width: 50ch;
-    box-shadow: inset 0.25rem 0.25rem 0 rgba(64, 63, 65, 0.2);
+    max-width: var(--ds-width-measure-reduced);
+    box-shadow: inset var(--ds-size-small-2) var(--ds-size-small-2) 0 var(--ds-colour-grey-900-alpha);
     box-sizing: border-box; }
   .ds-scope .ds-field-error {
-    color: #D91714;
+    color: var(--ds-colour-red-700);
     display: block; }
   .ds-scope .ds-error {
-    padding: 1.25rem;
-    background-color: #D91714;
-    max-width: 50ch; }
+    padding: var(--ds-size-2);
+    background-color: var(--ds-colour-red-700);
+    max-width: var(--ds-width-measure-reduced); }
   .ds-scope .ds-error, .ds-scope .ds-error * {
     color: #fff; }
   .ds-scope .ds-error span[role="img"] {
     filter: invert(1) grayscale(1) contrast(100); }
   .ds-scope .ds-dark form {
-    background-color: #403F41; }
+    background-color: var(--ds-colour-grey-900); }
   .ds-scope .ds-dark .ds-field-error {
-    color: #FF6347;
+    color: var(--ds-colour-red-400);
     font-size: 1em; }
   .ds-scope .ds-stack > :is(h1, h2, h3, h4, h5, hgroup) + *:not(article) {
-    margin-top: 1rem; }
+    margin-top: var(--ds-size-1); }
   .ds-scope dl.ds-descriptions > div {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
   .ds-scope dl.ds-descriptions > div + div {
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid rgba(64, 63, 65, 0.2); }
+    margin-top: var(--ds-size-small-6);
+    padding-top: var(--ds-size-small-6);
+    border-top: 1px solid var(--ds-colour-grey-900-alpha); }
   .ds-scope dl.ds-descriptions dt,
   .ds-scope dl.ds-descriptions dd {
     margin: 0;
@@ -609,7 +758,7 @@ components only.
   .ds-scope dl.ds-descriptions > div > dt {
     line-height: 1.125;
     flex-basis: 10rem;
-    padding-right: 1.25rem;
+    padding-right: var(--ds-size-2);
     flex-grow: 1; }
   .ds-scope dl.ds-descriptions dt + * {
     flex-basis: calc(100% - 12rem);
@@ -618,23 +767,23 @@ components only.
   .ds-scope dl.ds-descriptions dt + * {
     word-break: break-word; }
   .ds-scope dl.ds-descriptions dd + dd {
-    margin-top: 0.75rem; }
+    margin-top: var(--ds-size-small-6); }
   .ds-scope button[class*="ds-button"] {
     border: 0;
     cursor: pointer;
-    color: #fff;
-    background-color: #E6007C;
-    font-size: 1.25rem;
-    padding: 0.625rem 1.25rem;
-    border-bottom: 0.375rem solid #403F41; }
+    color: var(--ds-colour-white);
+    background-color: var(--ds-colour-pink-700);
+    font-size: var(--ds-size-2);
+    padding: var(--ds-size-small-5) var(--ds-size-2);
+    border-bottom: var(--ds-size-small-3) solid var(--ds-colour-grey-900); }
   .ds-scope button[class*="ds-button"]:active:not([disabled]) {
     position: relative;
-    top: 0.375rem;
+    top: var(--ds-size-small-3);
     border-bottom: 0;
     outline: none;
-    margin-bottom: 0.375rem; }
+    margin-bottom: var(--ds-size-small-3); }
   .ds-scope button.ds-button-blue {
-    background-color: #007CAD; }
+    background-color: var(--ds-colour-blue-700); }
   .ds-scope button[class*="ds-button"][disabled] {
     cursor: not-allowed;
     opacity: 0.666; }
@@ -642,30 +791,30 @@ components only.
     border-bottom-color: #000; }
   .ds-scope a.ds-cta {
     display: inline-block;
-    color: #E6007C;
-    background-color: #fff;
-    font-size: 1.25rem;
-    padding: 0.875rem 1.25rem;
-    border: 0.25rem solid;
+    color: var(--ds-colour-pink-700);
+    background-color: var(--ds-colour-white);
+    font-size: var(--ds-size-2);
+    padding: var(--ds-size-small-7) var(--ds-size-2);
+    border: var(--ds-size-small-2) solid;
     text-decoration: none; }
   .ds-scope a.ds-cta[href]:hover {
     transform: scale(1.05); }
   .ds-scope a.ds-cta-blue {
-    color: #007CAD; }
+    color: var(--ds-colour-blue-700); }
   .ds-scope a.ds-cta:not([href]) {
     opacity: 0.666;
     cursor: not-allowed;
     border-style: dashed; }
   .ds-scope .ds-dark a.ds-cta {
     background: transparent;
-    color: #fff; }
+    color: var(--ds-colour-white); }
   .ds-scope .ds-dark a.ds-cta-blue {
-    color: #00B6FF; }
+    color: var(--ds-colour-blue-400); }
   .ds-scope ul.ds-details {
     padding: 0;
     list-style: none; }
   .ds-scope details {
-    padding: 1rem 0;
+    padding: var(--ds-size-1) 0;
     border-style: solid;
     border-width: 1px 0; }
   .ds-scope details + details,
@@ -673,19 +822,19 @@ components only.
     margin-top: 0;
     border-top-width: 0; }
   .ds-scope summary {
-    font-family: Montserrat, sans-serif;
+    font-family: var(--ds-font-family-main);
     font-weight: 500;
-    line-height: 1.125;
-    color: #403F41;
+    line-height: var(--ds-line-height-tight);
+    color: var(--ds-colour-grey-900);
     font-style: normal;
     cursor: pointer;
-    font-size: 1.5625rem;
-    color: #E6007C; }
+    font-size: var(--ds-size-3);
+    color: var(--ds-colour-pink-700); }
   .ds-scope summary > * {
     font: inherit;
     display: inline; }
   .ds-scope details[open] summary {
-    margin-bottom: 1rem; }
+    margin-bottom: var(--ds-size-1); }
   .ds-scope summary::marker,
   .ds-scope summary::-webkit-details-marker {
     display: none; }
@@ -698,10 +847,10 @@ components only.
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid rgba(64, 63, 65, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+    border: 1px solid var(--ds-colour-grey-900-alpha);
+    box-shadow: var(--ds-shadow-card); }
   .ds-scope .ds-candidate-body {
-    padding: 1.5625rem;
+    padding: var(--ds-size-3);
     flex-grow: 999;
     align-self: center;
     display: flex;
@@ -741,7 +890,7 @@ components only.
     .ds-scope li.ds-candidate {
       flex-wrap: nowrap; }
     .ds-scope li .ds-candidate-body, .ds-scope li .ds-candidate-image {
-      padding: 1rem; }
+      padding: var(--ds-size-1); }
     .ds-scope li .ds-candidate-image {
       background-color: transparent;
       min-width: 0;
@@ -755,7 +904,7 @@ components only.
       width: auto;
       margin-left: auto; } }
   .ds-scope .ds-candidate:focus-within {
-    outline: 0.25rem solid #FFC037; }
+    outline: var(--ds-size-small-2) solid var(--ds-colour-amber-400); }
   .ds-scope .ds-candidate:focus-within a:focus {
     outline: none; }
   .ds-scope :not(li).ds-candidate .ds-candidate-body {
@@ -764,11 +913,11 @@ components only.
     min-width: 20rem;
     min-width: min(20rem, 100%); }
   .ds-scope nav.ds-breadcrumbs ol {
-    font-family: Montserrat, sans-serif;
+    font-family: var(--ds-font-family-main);
     font-weight: 500;
-    line-height: 1.125;
-    color: #403F41;
-    line-height: 1.5;
+    line-height: var(--ds-line-height-tight);
+    color: var(--ds-colour-grey-900);
+    line-height: var(--ds-line-height-default);
     margin: 0;
     list-style: none; }
   .ds-scope nav.ds-breadcrumbs li {
@@ -784,15 +933,15 @@ components only.
     min-width: 100%;
     text-align: left; }
   .ds-scope .ds-table th, .ds-scope .ds-table td, .ds-scope .ds-table caption {
-    padding: 1rem; }
+    padding: var(--ds-size-1); }
   .ds-scope .ds-table caption {
     padding-left: 0; }
   .ds-scope .ds-table td {
-    font-family: Georgia, serif; }
+    font-family: var(--ds-font-family-body); }
   .ds-scope .ds-table tr:nth-child(even) {
-    background-color: #E4F4FB; }
+    background-color: var(--ds-colour-blue-100); }
   .ds-scope .ds-table caption {
-    font-size: 1.5625rem;
+    font-size: var(--ds-size-3);
     text-align: left;
     font-weight: bold;
     border-bottom: 1px solid; }
@@ -808,19 +957,19 @@ components only.
   .ds-scope .ds-table code {
     word-break: normal; }
   .ds-scope .ds-dark .ds-table tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.2); }
+    background-color: var(--ds-colour-white-alpha); }
   .ds-scope .ds-language, .ds-scope .ds-language > form {
-    padding: 0.625rem;
-    font-size: 1rem;
-    background-color: #403F41; }
+    padding: var(--ds-size-small-5);
+    font-size: var(--ds-size-small-8);
+    background-color: var(--ds-colour-grey-900); }
   .ds-scope .ds-language * {
     color: white; }
   .ds-scope .ds-language [aria-current] {
     text-decoration: underline;
-    text-decoration-thickness: 0.125rem;
-    color: #00B6FF; }
+    text-decoration-thickness: var(--ds-size-small-1);
+    color: var(--ds-colour-blue-400); }
   .ds-scope .ds-dark .ds-language, .ds-scope .ds-dark .ds-language > form {
-    background-color: #0D1117;
+    background-color: var(--ds-colour-grey-950);
     border: none; }
   .ds-scope .ds-logo {
     display: inline-flex;
@@ -830,112 +979,112 @@ components only.
     color: inherit; }
   .ds-scope .ds-logo img {
     height: 4.5rem;
-    margin-right: 0.375rem; }
+    margin-right: var(--ds-size-small-3); }
   .ds-scope .ds-logo span {
     font-weight: 300;
-    font-size: 1.5625rem;
+    font-size: var(--ds-size-3);
     text-decoration: none;
     text-align: left;
-    color: #403F41; }
+    color: var(--ds-colour-grey-900); }
   .ds-scope .ds-header .ds-logo span em {
-    color: #403F41; }
+    color: var(--ds-colour-grey-900); }
   .ds-scope .ds-logo em {
     display: block;
-    font-size: 1.25rem;
+    font-size: var(--ds-size-2);
     font-weight: normal;
     font-style: normal;
-    margin-top: 0.375rem;
-    color: #403F41; }
+    margin-top: var(--ds-size-small-3);
+    color: var(--ds-colour-grey-900); }
   .ds-scope form.ds-logout {
     border: 0;
     background: none;
     padding: 0;
     display: inline-block; }
   .ds-scope form.ds-logout button {
-    color: #E6007C;
+    color: var(--ds-colour-pink-700);
     text-decoration: underline;
-    border-bottom: 2px solid #fff; }
+    border-bottom: 2px solid var(--ds-colour-white); }
   .ds-scope .ds-header form.ds-logout button:hover {
-    border-bottom-color: #007CAD; }
+    border-bottom-color: var(--ds-colour-blue-700); }
   .ds-scope .ds-header form.ds-logout button {
-    padding: 0.5rem;
+    padding: var(--ds-size-small-4);
     color: inherit;
     text-decoration: none; }
   .ds-scope .ds-dark form.ds-logout button {
     color: inherit;
     border-bottom-color: transparent; }
   .ds-scope .ds-dark .ds-header form.ds-logout button:hover {
-    border-bottom-color: #00B6FF; }
+    border-bottom-color: var(--ds-colour-blue-400); }
   .ds-scope .ds-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
-    margin-bottom: clamp(0.125rem, 2vw, 1.95312rem);
-    background-color: #fff; }
+    padding: var(--ds-size-2);
+    margin-bottom: clamp(var(--ds-size-small-1), 2vw, var(--ds-size-4));
+    background-color: var(--ds-colour-white); }
   .ds-scope .ds-header-home {
     flex-basis: 15rem;
     flex-grow: 0;
-    margin-right: 1.25rem; }
+    margin-right: var(--ds-size-2); }
   .ds-scope .ds-header-home img {
     width: 100%;
     max-width: 20rem;
     height: auto; }
   .ds-scope .ds-header nav a:not(.ds-cta) {
-    margin: 1rem 0 1rem; }
+    margin: var(--ds-size-1) 0 var(--ds-size-1); }
   .ds-scope .ds-header ul {
-    font-size: clamp(0.875rem, 3vw, 1rem); }
+    font-size: clamp(var(--ds-size-small-7), 3vw, var(--ds-size-1)); }
   .ds-scope .ds-header li {
-    font-family: Montserrat, sans-serif;
+    font-family: var(--ds-font-family-main);
     font-weight: 500;
-    line-height: 1.125;
-    color: #403F41;
+    line-height: var(--ds-line-height-tight);
+    color: var(--ds-colour-grey-900);
     display: inline-block; }
   .ds-scope .ds-header nav a {
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 0.5rem;
-    border-bottom: 2px solid #fff; }
+    padding: var(--ds-size-small-4);
+    border-bottom: 2px solid var(--ds-colour-white); }
   .ds-scope .ds-header a:hover {
-    border-bottom-color: #007CAD; }
+    border-bottom-color: var(--ds-colour-blue-700); }
   .ds-scope .ds-header [aria-current] {
-    border-bottom-color: #E6007C; }
+    border-bottom-color: var(--ds-colour-pink-700); }
   .ds-scope .ds-dark .ds-header {
-    background-color: #0D1117;
-    border-bottom: 1px solid #fff; }
+    background-color: var(--ds-colour-grey-950);
+    border-bottom: 1px solid var(--ds-colour-white); }
     .ds-scope .ds-dark .ds-header li {
-      color: #fff; }
+      color: var(--ds-colour-white); }
     .ds-scope .ds-dark .ds-header a {
       border-bottom-color: transparent; }
       .ds-scope .ds-dark .ds-header a:hover {
-        border-bottom-color: #00B6FF; }
+        border-bottom-color: var(--ds-colour-blue-400); }
     .ds-scope .ds-dark .ds-header [aria-current] {
-      border-bottom-color: #E6007C; }
+      border-bottom-color: var(--ds-colour-pink-700); }
   .ds-scope .ds-subnav {
-    color: #E6007C;
-    font-size: clamp(1.25rem, 2.5vw, 1.5625rem); }
+    color: var(--ds-colour-pink-700);
+    font-size: clamp(var(--ds-size-2), 2.5vw, var(--ds-size-3)); }
   .ds-scope .ds-subnav > * {
-    margin: calc(0.75rem * -1) calc(1.95312rem * -1); }
+    margin: calc(var(--ds-size-small-6) * -1) calc(var(--ds-size-4) * -1); }
   .ds-scope .ds-subnav > * > * {
-    margin: 0.75rem 1.95312rem;
+    margin: var(--ds-size-small-6) var(--ds-size-4);
     position: relative; }
   .ds-scope .ds-subnav a {
     text-decoration: none; }
   .ds-scope .ds-subnav li:not(:last-child) a::after {
     content: '\00b7';
     position: absolute;
-    right: calc(1.95312rem * -1 - 4px); }
+    right: calc(var(--ds-size-4) * -1 - 4px); }
   .ds-scope .ds-subnav [aria-current] {
     border-bottom: 2px solid; }
   .ds-scope .ds-dark .ds-footer {
-    background-color: #0D1117; }
+    background-color: var(--ds-colour-grey-950); }
   .ds-scope .ds-dark .ds-footer .ds-copyright {
-    color: #fff;
-    background-color: #0D1117; }
+    color: var(--ds-colour-white);
+    background-color: var(--ds-colour-grey-950); }
   .ds-scope .ds-dark .ds-footer form {
-    background-color: #0D1117;
+    background-color: var(--ds-colour-grey-950);
     border: none; }
   .ds-scope .ds-field-radio {
     display: flex;
@@ -953,7 +1102,7 @@ components only.
     order: 1px solid #dee0e2;
     background-color: #dee0e2;
     padding: 1em;
-    margin: 0.25rem;
+    margin: var(--ds-size-small-2);
     display: inline-block; }
   .ds-scope .ds-field-radio > span::before {
     content: '';
@@ -961,26 +1110,26 @@ components only.
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
-    border: 2px solid #403F41;
-    margin-right: 0.5rem;
+    border: 2px solid var(--ds-colour-grey-900);
+    margin-right: var(--ds-size-small-4);
     vertical-align: middle;
-    background-color: #fff; }
+    background-color: var(--ds-colour-white); }
   .ds-scope .ds-field-radio > input:checked + span {
     background-color: white !important; }
   .ds-scope .ds-field-radio > input:checked + span::before {
-    background-color: #E6007C;
-    box-shadow: inset 0 0 0 0.25rem #fff; }
+    background-color: var(--ds-colour-pink-700);
+    box-shadow: inset 0 0 0 var(--ds-size-small-2) var(--ds-colour-white); }
   .ds-scope .ds-field-radio > input:focus + span {
     text-decoration: underline;
-    text-decoration-color: #FFC037;
+    text-decoration-color: var(--ds-colour-amber-400);
     text-decoration-thickness: 2px;
-    outline: solid #FFC037; }
+    outline: solid var(--ds-colour-amber-400); }
   .ds-scope .ds-dark .ds-field-radio > span::before,
   .ds-scope .ds-dark .ds-field-radio > span {
-    background-color: rgba(255, 255, 255, 0.2); }
+    background-color: var(--ds-colour-white-alpha); }
   .ds-scope .ds-dark .ds-field-radio > input:checked + span {
-    color: #403F41;
-    background-color: #fff; }
+    color: var(--ds-colour-grey-900);
+    background-color: var(--ds-colour-white); }
   .ds-scope .ds-field-checkbox {
     display: flex;
     align-items: center;
@@ -1000,64 +1149,64 @@ components only.
     content: '';
     width: 1em;
     height: 1em;
-    border: 2px solid #403F41;
-    margin-right: 0.375rem;
-    background-color: #fff;
+    border: 2px solid var(--ds-colour-grey-900);
+    margin-right: var(--ds-size-small-3);
+    background-color: var(--ds-colour-white);
     float: left; }
   .ds-scope .ds-field-checkbox > input:checked + span::before {
     text-align: center;
     content: '✓';
-    color: #E6007C; }
+    color: var(--ds-colour-pink-700); }
   .ds-scope .ds-field-checkbox > input:focus + span {
     text-decoration: underline;
-    text-decoration-color: #FFC037;
+    text-decoration-color: var(--ds-colour-amber-400);
     text-decoration-thickness: 2px; }
   .ds-scope .ds-select {
     display: block;
     display: inline-block;
     width: 100%;
-    max-width: 50ch;
+    max-width: var(--ds-width-measure-reduced);
     position: relative; }
   @supports (-moz-appearance: none) or (-webkit-appearance: none) or (appearance: none) {
     .ds-scope .ds-select select {
       -moz-appearance: none;
       -webkit-appearance: none;
       appearance: none;
-      padding-right: 2.44141rem; }
+      padding-right: var(--ds-size-5); }
     .ds-scope .ds-select::after {
       content: '';
       height: 0;
       width: 0;
       border: 1rem solid transparent;
-      border-top-color: #E6007C;
+      border-top-color: var(--ds-colour-pink-700);
       border-top-width: 0.9rem;
       position: absolute;
-      right: 0.75rem;
+      right: var(--ds-size-small-6);
       top: 50%;
       transform: translateY(-12.5%);
       pointer-events: none; } }
   .ds-scope .ds-dark .ds-select select {
-    background-color: #403F41; }
+    background-color: var(--ds-colour-grey-900); }
   .ds-scope .ds-filter {
-    background-color: #E4F4FB;
-    padding: 1.25rem; }
+    background-color: var(--ds-colour-blue-100);
+    padding: var(--ds-size-2); }
   .ds-scope .ds-filter ul {
-    font-family: Montserrat, sans-serif;
+    font-family: var(--ds-font-family-main);
     font-weight: 500;
-    line-height: 1.125;
-    color: #403F41; }
+    line-height: var(--ds-line-height-tight);
+    color: var(--ds-colour-grey-900); }
   .ds-scope .ds-filter ul a {
     display: inline-block;
     text-decoration: none;
-    padding: 0.375rem 1rem;
+    padding: var(--ds-size-small-3) var(--ds-size-1);
     border: 2px solid; }
   .ds-scope .ds-filter ul a[aria-current] {
     display: inline-block;
-    color: #fff;
-    background-color: #E6007C;
-    border-color: #E6007C; }
+    color: var(--ds-colour-white);
+    background-color: var(--ds-colour-pink-700);
+    border-color: var(--ds-colour-pink-700); }
   .ds-scope .ds-filter > a {
-    padding: 1rem 0; }
+    padding: var(--ds-size-1) 0; }
   .ds-scope .ds-filter-label {
     text-transform: uppercase; }
   .ds-scope .ds-filter summary {
@@ -1065,30 +1214,30 @@ components only.
   .ds-scope .ds-filter details ul {
     font-size: 0.85em; }
   .ds-scope .ds-dark .ds-filter {
-    background-color: #403F41; }
+    background-color: var(--ds-colour-grey-900); }
   .ds-scope .ds-status ul {
     list-style: none; }
   .ds-scope .ds-status ul li {
     max-width: none; }
   .ds-scope [class*="ds-status-"] {
-    padding: 0.625rem;
-    font-size: 1rem;
-    background-color: #403F41;
-    color: #fff; }
+    padding: var(--ds-size-small-5);
+    font-size: var(--ds-size-small-8);
+    background-color: var(--ds-colour-grey-900);
+    color: var(--ds-colour-white); }
   .ds-scope .ds-status-message {
-    background-color: #007CAD; }
+    background-color: var(--ds-colour-blue-700); }
   .ds-scope .ds-status-message a {
-    color: #fff; }
+    color: var(--ds-colour-white); }
   .ds-scope .ds-status-success {
-    background-color: #32841A; }
+    background-color: var(--ds-colour-green-700); }
   .ds-scope .ds-status-error {
-    background-color: #D91714; }
+    background-color: var(--ds-colour-red-700); }
   .ds-scope pre.ds-codeblock {
-    padding: 1rem;
-    background-color: rgba(64, 63, 65, 0.2);
-    line-height: 1.125;
+    padding: var(--ds-size-1);
+    background-color: var(--ds-colour-grey-900-alpha);
+    line-height: var(--ds-line-height-tight);
     scrollbar-width: thin;
-    scrollbar-color: #007CAD #403F41; }
+    scrollbar-color: var(--ds-colour-blue-700) var(--ds-colour-grey-900); }
   .ds-scope pre.ds-codeblock code {
     display: block;
     white-space: pre-wrap;
@@ -1099,17 +1248,17 @@ components only.
   .ds-scope pre.ds-codeblock.ds-codeblock-scroll code {
     white-space: pre; }
   .ds-scope ::-webkit-scrollbar {
-    width: 1rem; }
+    width: var(--ds-size-1); }
   .ds-scope ::-webkit-scrollbar-track {
-    background-color: #403F41; }
+    background-color: var(--ds-colour-grey-900); }
   .ds-scope ::-webkit-scrollbar-thumb {
-    background-color: #007CAD; }
+    background-color: var(--ds-colour-blue-700); }
   .ds-scope .ds-party {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid rgba(64, 63, 65, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+    border: 1px solid var(--ds-colour-grey-900-alpha);
+    box-shadow: var(--ds-shadow-card); }
   .ds-scope .ds-party-body {
     padding: 1.5625rem;
     flex-grow: 999;
@@ -1130,7 +1279,7 @@ components only.
     left: 0;
     z-index: 2; }
   .ds-scope .ds-party-image {
-    background-color: #fff;
+    background-color: var(--ds-colour-white);
     flex-grow: 1;
     min-width: 10rem;
     min-width: min(10rem, 100%);
@@ -1139,7 +1288,7 @@ components only.
     position: relative;
     order: 2; }
   .ds-scope .ds-party-image img {
-    padding: 1.5625rem;
+    padding: var(--ds-size-3);
     display: block;
     height: 100%;
     position: absolute; }
@@ -1151,7 +1300,7 @@ components only.
     .ds-scope li.ds-party {
       flex-wrap: nowrap; }
     .ds-scope li .ds-party-body, .ds-scope li .ds-party-image {
-      padding: 1rem; }
+      padding: var(--ds-size-1); }
     .ds-scope li .ds-party-image {
       background-color: transparent;
       min-width: 0;
@@ -1165,7 +1314,7 @@ components only.
       width: auto;
       margin-left: auto; } }
   .ds-scope .ds-party:focus-within {
-    outline: 0.25rem solid #FFC037; }
+    outline: var(--ds-size-small-2) solid var(--ds-colour-amber-400); }
   .ds-scope .ds-party:focus-within a:focus {
     outline: none; }
   .ds-scope :not(li).ds-party .ds-party-body {
@@ -1181,12 +1330,12 @@ components only.
     max-width: 1000px; }
   .ds-scope .ds-dark .ds-map-leaflet .leaflet-control,
   .ds-scope .ds-dark .ds-map-leaflet .leaflet-control * {
-    background-color: #403F41; }
+    background-color: var(--ds-colour-grey-900); }
   .ds-scope div.ds-map-maplibre {
-    font-family: Georgia, serif;
+    font-family: var(--ds-font-family-body);
     font-weight: normal;
-    line-height: 1.5;
-    color: #403F41;
+    line-height: var(--ds-line-height-default);
+    color: var(--ds-colour-grey-900);
     width: 100%;
     aspect-ratio: 1 / 1;
     max-width: 1000px; }
@@ -1194,20 +1343,20 @@ components only.
     display: none; }
   .ds-scope .ds-dark div.ds-map-maplibre .maplibregl-ctrl,
   .ds-scope .ds-dark div.ds-map-maplibre .maplibregl-ctrl * {
-    background-color: #403F41;
-    color: #fff; }
+    background-color: var(--ds-colour-grey-900);
+    color: var(--ds-colour-white); }
   .ds-scope .ds-date .ds-field input {
     margin: 10px 15px 5px 0;
-    border: 2px solid #403F41;
-    padding: 0.5rem;
+    border: 2px solid var(--ds-colour-grey-900);
+    padding: var(--ds-size-small-4);
     max-width: 5em;
-    color: #403F41;
-    box-shadow: inset 0.25rem 0.25rem 0 rgba(64, 63, 65, 0.2);
+    color: var(--ds-colour-grey-900);
+    box-shadow: inset var(--ds-size-small-2) var(--ds-size-small-2) 0 var(--ds-colour-grey-900-alpha);
     box-sizing: border-box; }
   .ds-scope .ds-date .ds-field:last-child input {
     max-width: 6em; }
   .ds-scope .ds-switcher, .ds-scope .ds-footer-links {
-    --gridGap: 1.25rem;
+    --gridGap: var(--ds-size-2);
     --gridCellMin: 30ch;
     display: flex;
     flex-wrap: wrap;
@@ -1216,21 +1365,21 @@ components only.
     flex-grow: 1;
     flex-basis: var(--gridCellMin); }
   .ds-scope .ds-showcase li {
-    font-family: Georgia, serif; }
+    font-family: var(--ds-font-family-body); }
   .ds-scope .ds-showcase strong {
-    color: #E6007C;
+    color: var(--ds-colour-pink-700);
     display: block;
-    font-family: Montserrat, sans-serif; }
+    font-family: var(--ds-font-family-main); }
   .ds-scope .ds-dark .ds-showcase strong {
-    color: #fff;
+    color: var(--ds-colour-white);
     font-weight: bold; }
   .ds-scope .ds-page {
     overflow-x: hidden; }
   .ds-scope .ds-page main {
     margin-left: auto;
     margin-right: auto;
-    max-width: 70ch;
-    padding: 0 1.25rem; }
+    max-width: var(--ds-width-measure);
+    padding: 0 var(--ds-size-2); }
 
 .ds-scope *,
 .ds-scope *::before,

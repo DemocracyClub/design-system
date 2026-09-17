@@ -1,0 +1,171 @@
+/*
+ * Single source of truth for the design system's design tokens.
+ *
+ * `partials/_variables.scss` imports this file and maps SASS
+ * variables onto these custom properties. This allows existing SASS
+ * consumers to move from SASS vars to CSS vars.
+ *
+ * Names follow the design system's custom property convention:
+ * --ds-[category]-[concept]-[variant]-[state].
+ *
+ * For example `ds-colour-grey-900-alpha`
+ *
+ */
+
+:root {
+    /*
+     * Primitive colours
+     *
+     * Numeric steps describe relative strength, and the value
+     * behind a step may change without the property being renamed.
+     *
+     * Within each hue, -700 is contrast-safe against white and -400 is
+     * contrast-safe against the dark backgrounds.
+     *
+     * Prefer the semantic colours further down over these
+     * for actual classes.
+     */
+    --ds-colour-white: #fff;
+    --ds-colour-grey-900: #403F41;
+    --ds-colour-grey-950: #0D1117;
+
+    --ds-colour-blue-100: #E4F4FB;
+    --ds-colour-blue-400: #00B6FF;
+    --ds-colour-blue-700: #007CAD;
+
+    --ds-colour-green-400: #4BC427;
+    --ds-colour-green-700: #32841A;
+
+    --ds-colour-red-400: #FF6347;
+    --ds-colour-red-700: #D91714;
+
+    /*
+     * There is no -400 pink. One was tried and it looked gross.
+     */
+    --ds-colour-pink-700: #E6007C;
+    --ds-colour-amber-400: #FFC037;
+
+    --ds-colour-grey-900-alpha: rgba(64, 63, 65, 0.2);
+    --ds-colour-white-alpha: rgba(255, 255, 255, 0.2);
+
+    /*
+     * Primitive size scale
+     *
+     * A modular scale with a ratio of 1.25, from a 1rem base:
+     * each step is the previous step multiplied by 1.25.
+     *
+     * CSS support pow(), however SASS rounds differently to pow(),
+     * in a big enough way that the tests fail. For this transition,
+     * the priority was to ensure identical output, so the numbers are
+     * hard-coded.
+     *
+     * Used for font sizes, padding and margins alike, so the scale is named
+     * neutrally rather than as `--ds-font-size-*` or `--ds-space-*`.
+     */
+    --ds-size-1: 1rem;
+    --ds-size-2: 1.25rem;
+    --ds-size-3: 1.5625rem;
+    --ds-size-4: 1.95312rem;
+    --ds-size-5: 2.44141rem;
+    --ds-size-6: 3.05176rem;
+    --ds-size-7: 3.8147rem;
+    --ds-size-8: 4.76837rem;
+
+    /*
+     * Primitive small size scale
+     *
+     * A linear scale in 0.125rem increments, for borders, outlines, small gaps
+     * and control heights. Note that --ds-size-small-8 and --ds-size-1 are both
+     * 1rem: the two scales meet there.
+     */
+    --ds-size-small-1: 0.125rem;
+    --ds-size-small-2: 0.25rem;
+    --ds-size-small-3: 0.375rem;
+    --ds-size-small-4: 0.5rem;
+    --ds-size-small-5: 0.625rem;
+    --ds-size-small-6: 0.75rem;
+    --ds-size-small-7: 0.875rem;
+    --ds-size-small-8: 1rem;
+
+    /*
+     * Primitive typography
+     */
+    --ds-font-family-main: Montserrat, sans-serif;
+    --ds-font-family-body: Georgia, serif;
+
+    --ds-font-weight-light: 300;
+    --ds-font-weight-normal: normal;
+    --ds-font-weight-medium: 500;
+
+    --ds-line-height-default: 1.5;
+    --ds-line-height-tight: 1.125;
+
+    /*
+     * Semantic colours
+     *
+     * These describe the role a colour plays. Prefer them in application and
+     * component CSS.
+     */
+    --ds-colour-text: var(--ds-colour-grey-900);
+    --ds-colour-text-inverse: var(--ds-colour-white);
+    --ds-colour-link: var(--ds-colour-pink-700);
+
+    --ds-colour-background-page: var(--ds-colour-white);
+    --ds-colour-background-panel: var(--ds-colour-blue-100);
+    --ds-colour-background-inverse: var(--ds-colour-grey-950);
+
+    --ds-colour-background-subtle: var(--ds-colour-grey-900-alpha);
+
+    --ds-colour-border: var(--ds-colour-grey-900-alpha);
+    --ds-colour-border-inverse: var(--ds-colour-white-alpha);
+
+    /*
+     * Actions: buttons, calls to action and other interactive surfaces.
+     */
+    --ds-colour-action: var(--ds-colour-blue-700);
+    --ds-colour-action-inverse: var(--ds-colour-blue-400);
+
+    /*
+     * Used for keyboard focus indicators, applied as an outline. Must stay
+     * clearly visible against the page, panel and inverse backgrounds alike,
+     * which is why it is a single colour rather than a themed pair.
+     */
+    --ds-colour-focus: var(--ds-colour-amber-400);
+
+    --ds-colour-success: var(--ds-colour-green-700);
+    --ds-colour-success-inverse: var(--ds-colour-green-400);
+    --ds-colour-error: var(--ds-colour-red-700);
+    --ds-colour-error-inverse: var(--ds-colour-red-400);
+    --ds-colour-info: var(--ds-colour-blue-700);
+
+    /*
+     * Semantic typography
+     *
+     * The heading sizes match the h1–h6 elements. Each heading also applies a
+     * `clamp()` for fluid sizing, so these are the upper bound rather than the
+     * size rendered at every viewport width.
+     */
+    --ds-font-size-body: var(--ds-size-1);
+    --ds-font-size-heading-1: var(--ds-size-7);
+    --ds-font-size-heading-2: var(--ds-size-6);
+    --ds-font-size-heading-3: var(--ds-size-5);
+    --ds-font-size-heading-4: var(--ds-size-4);
+    --ds-font-size-heading-5: var(--ds-size-3);
+    --ds-font-size-heading-6: var(--ds-size-2);
+
+    --ds-line-height-body: var(--ds-line-height-default);
+    --ds-line-height-heading: var(--ds-line-height-tight);
+
+    /*
+     * Measure — maximum line lengths for readable text, in characters.
+     */
+    --ds-width-measure: 70ch;
+    --ds-width-measure-reduced: 50ch;
+    --ds-width-measure-half: 35ch;
+    --ds-width-measure-third: 23ch;
+
+    /*
+     * Shadows
+     */
+    --ds-shadow-card: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
