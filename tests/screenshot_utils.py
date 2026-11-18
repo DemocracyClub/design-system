@@ -157,6 +157,48 @@ def generate_screenshots(url, baseline=False, playwright_instance=None):
                 yield filename
 
 
+PIN_EXAMPLE_JS = """
+([selector, index]) => {
+  // Render the example at the same place (0,0) whatever is above it on the
+  // page. Browsers anti-alias curves differently depending on where on the
+  // page they're painted, even when moved by whole pixels (in Chromium, e.g.
+  // which raster tile they fall in). So without this, a prose change or a new
+  // nav item above an example alters its screenshot.
+  const el = document.querySelectorAll(selector)[index];
+  const rect = el.getBoundingClientRect();
+  // Examples without their own background show the page's through them; keep
+  // that colour now the example is lifted out of the page.
+  let background = 'rgb(255, 255, 255)';
+  for (let node = el; node; node = node.parentElement) {
+    const colour = getComputedStyle(node).backgroundColor;
+    if (colour && colour !== 'transparent' && colour !== 'rgba(0, 0, 0, 0)') {
+      background = colour;
+      break;
+    }
+  }
+  Object.assign(el.style, {
+    position: 'fixed',
+    top: '0px',
+    left: '0px',
+    margin: '0px',
+    boxSizing: 'border-box',
+    width: `${rect.width}px`,
+    zIndex: '2147483647',
+    backgroundColor: background,
+  });
+  // Stop the rest of the page painting, so nothing behind the example can
+  // show through its anti-aliased (fractional) edges.
+  document.body.style.visibility = 'hidden';
+  el.style.visibility = 'visible';
+  window.scrollTo(0, 0);
+}
+"""
+
+
+def pin_example(page, element):
+    page.evaluate(PIN_EXAMPLE_JS, [f".ds-example-{element.theme}", element.selector])
+
+
 def iterate_matrix(playwright, elements, baseline=False):
     for browser_name, browser_config in BROWSERS.items():
         context = getattr(playwright, browser_name).launch_persistent_context(
@@ -170,11 +212,6 @@ def iterate_matrix(playwright, elements, baseline=False):
                 if element.url_path in IGNORE_URLS:
                     continue
                 page.goto(element.url, wait_until="domcontentloaded")
-                if viewport["width"] < 400:
-                    page.evaluate(
-                        "() => { const nav = document.querySelector('body > div > nav'); if (nav) nav.remove(); }"
-                    )
-
                 page.wait_for_function(
                     """() =>
                         document.fonts?.status === 'loaded' &&
@@ -184,6 +221,7 @@ def iterate_matrix(playwright, elements, baseline=False):
                     """
                 )
                 page.wait_for_timeout(30)
+                pin_example(page, element)
                 filename = get_screenshot_filename(viewport_name, browser_name, element)
 
                 el = page.locator(f".ds-example-{element.theme}").nth(element.selector)
